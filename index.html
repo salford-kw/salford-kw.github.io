@@ -18,27 +18,30 @@
 :root{--gold:#C8A96E;--gold-light:#E8D5A3;--dark:#0D0D0D;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:Tajawal,sans-serif;background:var(--dark);color:#F9F4EC;direction:rtl;overflow-x:hidden;padding-bottom:56px;}
-header{background:linear-gradient(160deg,#111008,#1c1508);text-align:center;padding:28px 20px 18px;border-bottom:1px solid rgba(200,169,110,.25);}
-.logo{font-size:clamp(28px,7vw,44px);font-weight:900;color:var(--gold);}
-.logo-sub{font-size:15px;color:var(--gold-light);opacity:.8;margin-top:3px;}
-.badge{display:inline-flex;align-items:center;gap:5px;background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.3);color:var(--gold-light);font-size:13px;padding:5px 14px;border-radius:20px;margin-top:10px;}
-.gallery{padding:14px 12px 4px;}
-.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
-.g-wide{grid-column:1/-1;}
-.g-item{border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:#1a1208;}
-.g-item img{width:100%;height:100%;object-fit:cover;display:block;}
-.products{padding:20px 14px 8px;text-align:center;}
+header{background:linear-gradient(160deg,#111008,#1c1508);text-align:center;padding:36px 20px 24px;border-bottom:1px solid rgba(200,169,110,.25);}
+.logo{font-size:clamp(32px,8vw,52px);font-weight:900;color:var(--gold);}
+.logo-sub{font-size:16px;color:var(--gold-light);opacity:.8;margin-top:4px;}
+.badge{display:inline-flex;align-items:center;gap:5px;background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.3);color:var(--gold-light);font-size:13px;padding:6px 16px;border-radius:20px;margin-top:12px;}
+.hero{background:linear-gradient(135deg,#1a1208,#2a1f0a);padding:32px 20px;text-align:center;border-bottom:1px solid rgba(200,169,110,.15);}
+.hero-icon{font-size:56px;margin-bottom:12px;}
+.hero-title{font-size:clamp(18px,5vw,26px);font-weight:700;color:var(--gold);margin-bottom:8px;}
+.hero-sub{font-size:14px;color:rgba(200,169,110,.7);line-height:1.7;}
+.products{padding:24px 16px 8px;text-align:center;}
 .sec-title{font-size:16px;font-weight:700;color:var(--gold);margin-bottom:14px;display:inline-block;border-bottom:2px solid rgba(200,169,110,.4);padding-bottom:4px;}
-.tags{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;}
-.tag{background:rgba(200,169,110,.1);border:1px solid rgba(200,169,110,.3);color:var(--gold-light);padding:6px 14px;border-radius:6px;font-size:13px;font-weight:600;}
-.cta{padding:18px 14px 10px;display:flex;flex-direction:column;gap:11px;}
-.btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:15px 20px;border-radius:10px;font-family:Tajawal,sans-serif;font-size:17px;font-weight:700;text-decoration:none;border:none;cursor:pointer;width:100%;}
+.tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+.tag{background:rgba(200,169,110,.1);border:1px solid rgba(200,169,110,.3);color:var(--gold-light);padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;}
+.why{padding:20px 16px;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.why-item{background:rgba(200,169,110,.06);border:1px solid rgba(200,169,110,.15);border-radius:10px;padding:14px;text-align:center;}
+.why-icon{font-size:28px;margin-bottom:6px;}
+.why-text{font-size:12px;color:var(--gold-light);font-weight:600;}
+.cta{padding:12px 16px 16px;display:flex;flex-direction:column;gap:11px;}
+.btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:16px 20px;border-radius:10px;font-family:Tajawal,sans-serif;font-size:18px;font-weight:700;text-decoration:none;border:none;cursor:pointer;width:100%;}
 .btn-wa{background:linear-gradient(135deg,#1ebe52,#128c3e);color:#fff;animation:pulse 2.5s infinite;}
 .btn-call{background:linear-gradient(135deg,#C8A96E,#a07839);color:#0d0d0d;}
 .btn svg{width:22px;height:22px;fill:currentColor;flex-shrink:0;}
 @keyframes pulse{0%,100%{box-shadow:0 4px 20px rgba(30,190,82,.3);}50%{box-shadow:0 4px 30px rgba(30,190,82,.6);}}
-.seo-text{padding:4px 14px 16px;font-size:11px;color:rgba(200,169,110,.35);text-align:center;line-height:1.9;}
-footer{background:rgba(200,169,110,.05);border-top:1px solid rgba(200,169,110,.15);text-align:center;padding:12px 14px;font-size:12px;color:rgba(200,169,110,.45);}
+.seo-text{padding:4px 14px 16px;font-size:11px;color:rgba(200,169,110,.3);text-align:center;line-height:2;}
+footer{background:rgba(200,169,110,.05);border-top:1px solid rgba(200,169,110,.15);text-align:center;padding:12px 14px;font-size:12px;color:rgba(200,169,110,.4);}
 .sticky{position:fixed;bottom:0;left:0;right:0;display:grid;grid-template-columns:1fr 1fr;z-index:999;box-shadow:0 -3px 18px rgba(0,0,0,.6);}
 .s-btn{display:flex;align-items:center;justify-content:center;gap:7px;padding:14px;font-family:Tajawal,sans-serif;font-size:15px;font-weight:700;text-decoration:none;border:none;cursor:pointer;}
 .s-wa{background:#1ebe52;color:#fff;}
@@ -53,57 +56,48 @@ footer{background:rgba(200,169,110,.05);border-top:1px solid rgba(200,169,110,.1
   <div class="badge">📍 الكويت — الضجيج</div>
 </header>
 
-<main>
-  <div class="gallery">
-    <div class="gallery-grid">
-      <div class="g-item g-wide">
-        <img src="img2.jpg" alt="مجلس فاخر بموكيت - سالفورد الكويت" loading="lazy">
-      </div>
-      <div class="g-item">
-        <img src="img1.jpg" alt="مجلس سجاد بتصميم عربي - سالفورد الكويت" loading="lazy">
-      </div>
-      <div class="g-item">
-        <img src="img4.jpg" alt="مجلس كنب فاخر وسجاد - سالفورد الكويت" loading="lazy">
-      </div>
-      <div class="g-item">
-        <img src="img3.jpg" alt="سجاد فاخر - سالفورد مفروشات الكويت" loading="lazy">
-      </div>
-      <div class="g-item">
-        <img src="img5.jpg" alt="مجلس خشبي بسجاد بيج - سالفورد الكويت" loading="lazy">
-      </div>
-    </div>
-  </div>
+<div class="hero">
+  <div class="hero-icon">🛋️</div>
+  <div class="hero-title">أفخم المفروشات في الكويت</div>
+  <div class="hero-sub">سجاد • موكيت • زل • ثيل صناعي • مجالس • كنب • ستائر<br>تصاميم فاخرة بأسعار مميزة — توصيل لجميع مناطق الكويت</div>
+</div>
 
-  <section class="products">
-    <div class="sec-title">منتجاتنا</div>
-    <div class="tags">
-      <span class="tag">🧶 سجاد</span>
-      <span class="tag">🌿 موكيت</span>
-      <span class="tag">🟩 زل</span>
-      <span class="tag">🌱 ثيل صناعي</span>
-      <span class="tag">🏠 مجالس</span>
-      <span class="tag">🪑 كنب</span>
-      <span class="tag">🪟 ستائر</span>
-      <span class="tag">🎨 ديكور</span>
-      <span class="tag">🛋️ أثاث</span>
-    </div>
-  </section>
-
-  <div class="cta">
-    <a class="btn btn-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      تواصل واتساب
-    </a>
-    <a class="btn btn-call" href="tel:+96555943343">
-      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-      اتصل بنا الآن
-    </a>
+<section class="products">
+  <div class="sec-title">منتجاتنا</div>
+  <div class="tags">
+    <span class="tag">🧶 سجاد</span>
+    <span class="tag">🌿 موكيت</span>
+    <span class="tag">🟩 زل</span>
+    <span class="tag">🌱 ثيل صناعي</span>
+    <span class="tag">🏠 مجالس</span>
+    <span class="tag">🪑 كنب</span>
+    <span class="tag">🪟 ستائر</span>
+    <span class="tag">🎨 ديكور</span>
+    <span class="tag">🛏️ أثاث</span>
   </div>
+</section>
 
-  <div class="seo-text">
-    سجاد فاخر • موكيت • زل • ثيل صناعي • عشب اصطناعي • مجالس عربية • ديكور داخلي • أثاث منزلي • كنب فاخر • ستائر • مفروشات الكويت • الكويت، الضجيج
-  </div>
-</main>
+<div class="why">
+  <div class="why-item"><div class="why-icon">✨</div><div class="why-text">جودة فاخرة</div></div>
+  <div class="why-item"><div class="why-icon">🚚</div><div class="why-text">توصيل للكويت</div></div>
+  <div class="why-item"><div class="why-icon">💰</div><div class="why-text">أسعار مميزة</div></div>
+  <div class="why-item"><div class="why-icon">📐</div><div class="why-text">تفصيل حسب الطلب</div></div>
+</div>
+
+<div class="cta">
+  <a class="btn btn-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    تواصل واتساب
+  </a>
+  <a class="btn btn-call" href="tel:+96555943343">
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    اتصل بنا الآن
+  </a>
+</div>
+
+<div class="seo-text">
+  سجاد فاخر • موكيت • زل • ثيل صناعي • عشب اصطناعي • مجالس عربية • ديكور داخلي • أثاث منزلي • كنب فاخر • ستائر • تفصيل مجالس • موكيت بالمتر • سجاد تركي • مفروشات الكويت • الكويت، الضجيج
+</div>
 
 <footer>© 2025 سالفورد للأثاث والمفروشات — الكويت، الضجيج | +96555943343</footer>
 
