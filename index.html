@@ -46,6 +46,44 @@
   "sameAs": ["https://wa.me/96555943343"]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "كم سعر الموكيت بالمتر في الكويت؟",
+      "acceptedAnswer": {"@type": "Answer", "text": "يتفاوت سعر الموكيت في الكويت حسب النوع والجودة. تواصل مع سالفورد للأثاث والمفروشات في الضجيج للحصول على أفضل الأسعار."}
+    },
+    {
+      "@type": "Question",
+      "name": "ما الفرق بين الزل والموكيت؟",
+      "acceptedAnswer": {"@type": "Answer", "text": "الموكيت نسيج ناعم يُركَّب على الأرض بالكامل، أما الزل فهو نوع أقوى ومقاوم للبلل يستخدم في المداخل والأماكن الخارجية. سالفورد يوفر النوعين بالكويت."}
+    },
+    {
+      "@type": "Question",
+      "name": "هل توصلون السجاد لجميع مناطق الكويت؟",
+      "acceptedAnswer": {"@type": "Answer", "text": "نعم، سالفورد للأثاث والمفروشات يوفر خدمة التوصيل والتركيب لجميع مناطق الكويت. اتصل بنا على 96555943343."}
+    },
+    {
+      "@type": "Question",
+      "name": "هل تعملون على تفصيل المجالس حسب الطلب؟",
+      "acceptedAnswer": {"@type": "Answer", "text": "نعم، نتخصص في تفصيل المجالس والديوانيات حسب المقاس والذوق. تواصل معنا لمعرفة التفاصيل."}
+    },
+    {
+      "@type": "Question",
+      "name": "ما هو الثيل الصناعي وما استخداماته؟",
+      "acceptedAnswer": {"@type": "Answer", "text": "الثيل الصناعي أو العشب الاصطناعي يُستخدم في الحدائق والملاعب والأماكن الخارجية، مقاوم للحرارة والبلل ولا يحتاج صيانة. متوفر في سالفورد بالكويت."}
+    },
+    {
+      "@type": "Question",
+      "name": "أين يقع محل سالفورد في الكويت؟",
+      "acceptedAnswer": {"@type": "Answer", "text": "يقع سالفورد للأثاث والمفروشات في منطقة الضجيج، الكويت. أوقات العمل من 3 عصراً حتى 9 مساءً."}
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
@@ -118,6 +156,14 @@ header{background:linear-gradient(160deg,#111008,#1c1508);text-align:center;padd
 
 /* SEO */
 .seo-text{padding:4px 14px 14px;font-size:10px;color:rgba(200,169,110,.2);text-align:center;line-height:2.2;}
+.faq{padding:20px 14px 8px;}
+.faq-item{border:1px solid rgba(200,169,110,.2);border-radius:10px;margin-bottom:8px;overflow:hidden;background:rgba(200,169,110,.04);}
+.faq-q{width:100%;background:none;border:none;color:var(--gold-light);font-family:Tajawal,sans-serif;font-size:14px;font-weight:700;padding:14px 16px;text-align:right;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.faq-icon{color:var(--gold);font-size:18px;flex-shrink:0;transition:transform .3s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.faq-item.open .faq-a{max-height:200px;}
+.faq-a p{padding:0 16px 14px;font-size:13px;color:rgba(200,169,110,.6);line-height:1.8;}
 
 /* FOOTER */
 footer{background:rgba(200,169,110,.05);border-top:1px solid rgba(200,169,110,.15);text-align:center;padding:14px;font-size:12px;color:rgba(200,169,110,.4);line-height:1.9;}
@@ -237,6 +283,59 @@ footer{background:rgba(200,169,110,.05);border-top:1px solid rgba(200,169,110,.1
   </a>
 </div>
 
+<section class="faq" aria-label="أسئلة شائعة">
+  <span class="sec-title">أسئلة شائعة</span>
+
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">
+      كم سعر الموكيت بالمتر في الكويت؟
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-a"><p>يتفاوت السعر حسب النوع والجودة. تواصل معنا للحصول على أفضل الأسعار في الكويت.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">
+      ما الفرق بين الزل والموكيت؟
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-a"><p>الموكيت نسيج ناعم للأرض الداخلية، والزل أقوى ومقاوم للبلل يستخدم في المداخل والأماكن الخارجية. نوفر النوعين بأفضل الأسعار.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">
+      هل توصلون لجميع مناطق الكويت؟
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-a"><p>نعم، نوفر خدمة التوصيل والتركيب لجميع مناطق الكويت. اتصل بنا على 96555943343+.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">
+      هل تفصّلون المجالس حسب الطلب؟
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-a"><p>نعم، نتخصص في تفصيل المجالس والديوانيات حسب المقاس والذوق. تواصل معنا لمعرفة التفاصيل.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">
+      ما هو الثيل الصناعي وأين يُستخدم؟
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-a"><p>الثيل الصناعي عشب اصطناعي مقاوم للحرارة والبلل، يُستخدم في الحدائق والملاعب والأماكن الخارجية ولا يحتاج صيانة.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">
+      أين يقع سالفورد في الكويت؟
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-a"><p>يقع سالفورد للأثاث والمفروشات في منطقة الضجيج، الكويت. أوقات العمل من 3 عصراً حتى 9 مساءً يومياً.</p></div>
+  </div>
+
+</section>
+
 <div class="seo-text" aria-hidden="true">
   سجاد فاخر الكويت • موكيت تركي بالمتر • زل الكويت • ثيل صناعي • عشب اصطناعي الكويت •
   مجالس عربية فاخرة • مجالس ديوانيات • ديكور داخلي • أثاث منزلي فاخر • كنب فاخر •
@@ -265,6 +364,13 @@ footer{background:rgba(200,169,110,.05);border-top:1px solid rgba(200,169,110,.1
 </div>
 
 <script>
+function toggleFaq(btn){
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+
 function openLightbox(src){
   document.getElementById('lightbox-img').src = src;
   document.getElementById('lightbox').classList.add('active');
