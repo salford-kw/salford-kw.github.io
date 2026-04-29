@@ -1,10 +1,13 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, router } from "./_core/trpc";
+import { publicProcedure, router, protectedProcedure } from "./_core/trpc";
+import { createProduct, deleteProduct, getProducts } from "./db";
+import { storagePut } from "./storage";
+import { z } from "zod";
+import { TRPCError } from "@trpc/server";
 
 export const appRouter = router({
-    // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
   system: systemRouter,
   auth: router({
     me: publicProcedure.query(opts => opts.ctx.user),
@@ -17,12 +20,55 @@ export const appRouter = router({
     }),
   }),
 
-  // TODO: add feature routers here, e.g.
-  // todo: router({
-  //   list: protectedProcedure.query(({ ctx }) =>
-  //     db.getUserTodos(ctx.user.id)
-  //   ),
-  // }),
+  products: router({
+    list: publicProcedure.query(async () => {
+      return await getProducts();
+    }),
+    create: protectedProcedure
+      .input(z.object({
+        title: z.string().min(1, "عنوان المنتج مطلوب"),
+        description: z.string().optional(),
+        imageUrl: z.string().optional(),
+        storageKey: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user?.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "فقط المسؤول يمكنه إضافة منتجات" });
+        }
+        return await createProduct(input);
+      }),
+    delete: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user?.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "فقط المسؤول يمكنه حذف منتجات" });
+        }
+        return await deleteProduct(input.id);
+      }),
+    uploadImage: protectedProcedure
+      .input(z.object({
+        file: z.instanceof(Buffer),
+        filename: z.string(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user?.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "فقط المسؤول يمكنه رفع الصور" });
+        }
+
+        try {
+          const ext = input.filename.split(".").pop() || "jpg";
+          const key = `products/${Date.now()}.${ext}`;
+          const { url, key: storageKey } = await storagePut(key, input.file, `image/${ext}`);
+          return { url, storageKey };
+        } catch (error) {
+          console.error("Image upload error:", error);
+          throw new TRPCError({
+            code: "INTERNAL_SERVER_ERROR",
+            message: "فشل رفع الصورة",
+          });
+        }
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;
