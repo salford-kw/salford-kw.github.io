@@ -136,6 +136,22 @@ textarea.field-input{height:70px;line-height:1.6;}
 
   <div class="stats-bar" id="stats-bar"></div>
 
+  <!-- ===== GitHub Token — دائماً مرئي ===== -->
+  <div style="padding:12px 16px 0;">
+    <div class="token-box" style="margin-bottom:0;">
+      <div class="token-header">
+        <span class="token-label">🔑 GitHub Token</span>
+        <span class="token-status" id="token-status">جاري الفحص...</span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;margin-top:8px;">
+        <input type="password" class="token-input" id="gh-token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="flex:1;margin:0;">
+        <button class="token-save-btn" style="width:auto;padding:10px 16px;margin:0;" onclick="saveToken()">✅ حفظ</button>
+        <button class="token-save-btn" style="width:auto;padding:10px 12px;margin:0;background:rgba(255,80,80,.1);color:#ff6b6b;border-color:rgba(255,80,80,.2);" onclick="clearToken()">🗑</button>
+      </div>
+      <div class="token-hint" style="margin-top:6px;">💾 يُحفظ في متصفحك — أدخله مرة واحدة فقط &nbsp;|&nbsp; 🔒 لا يُرفع على GitHub</div>
+    </div>
+  </div>
+
   <div class="tabs">
     <div class="tab active" onclick="switchTab('sajjad',this)">🧶 السجاد والموكيت</div>
     <div class="tab" onclick="switchTab('majalis',this)">🏠 المجالس والمساند</div>
@@ -151,23 +167,6 @@ textarea.field-input{height:70px;line-height:1.6;}
        تبويب الأعمال اليومية — رفع الصور مباشرة لـ GitHub
   ============================================================ -->
   <div id="tab-posts" class="tab-content">
-
-    <!-- 1) إعداد GitHub Token -->
-    <div class="token-box">
-      <div class="token-header">
-        <span class="token-label">🔑 GitHub Token</span>
-        <span class="token-status" id="token-status">غير محفوظ</span>
-      </div>
-      <input type="password" class="token-input" id="gh-token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
-      <div class="token-hint">
-        💾 Token يُحفظ في متصفحك بشكل دائم — تدخله مرة واحدة فقط<br>
-        🔒 لا يُرفع على GitHub — محفوظ على جهازك فقط
-      </div>
-      <div style="display:flex;gap:8px;margin-top:8px;">
-        <button class="token-save-btn" style="flex:2" onclick="saveToken()">✅ حفظ Token</button>
-        <button class="token-save-btn" style="flex:1;background:rgba(255,80,80,.1);color:#ff6b6b;border-color:rgba(255,80,80,.2);" onclick="clearToken()">🗑 حذف</button>
-      </div>
-    </div>
 
     <!-- 2) إضافة منشور جديد -->
     <div class="new-post-form">
