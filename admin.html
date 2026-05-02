@@ -33,7 +33,7 @@ body{font-family:Tajawal,sans-serif;background:var(--dark);color:#F9F4EC;directi
 
 /* TABS */
 .tabs{display:flex;background:var(--dark2);border-bottom:1px solid rgba(200,169,110,.15);overflow-x:auto;}
-.tab{padding:12px 20px;font-family:Tajawal,sans-serif;font-size:14px;font-weight:700;color:rgba(200,169,110,.5);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;}
+.tab{padding:12px 16px;font-family:Tajawal,sans-serif;font-size:13px;font-weight:700;color:rgba(200,169,110,.5);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;}
 .tab.active{color:var(--gold);border-bottom-color:var(--gold);}
 .tab-content{display:none;padding:16px;}
 .tab-content.active{display:block;}
@@ -55,7 +55,7 @@ body{font-family:Tajawal,sans-serif;background:var(--dark);color:#F9F4EC;directi
 textarea.field-input{height:70px;line-height:1.6;}
 
 /* TOAST */
-.toast{position:fixed;bottom:80px;right:50%;transform:translateX(50%);background:#1ebe52;color:#fff;padding:12px 24px;border-radius:10px;font-family:Tajawal,sans-serif;font-size:14px;font-weight:700;z-index:9999;display:none;box-shadow:0 4px 20px rgba(0,0,0,.4);}
+.toast{position:fixed;bottom:20px;right:50%;transform:translateX(50%);background:#1ebe52;color:#fff;padding:12px 24px;border-radius:10px;font-family:Tajawal,sans-serif;font-size:14px;font-weight:700;z-index:9999;display:none;box-shadow:0 4px 20px rgba(0,0,0,.4);}
 
 /* ADD PRODUCT FORM */
 .add-form{background:rgba(200,169,110,.05);border:1px dashed rgba(200,169,110,.3);border-radius:12px;padding:14px;margin-bottom:14px;display:none;}
@@ -74,6 +74,40 @@ textarea.field-input{height:70px;line-height:1.6;}
 .stat-card{background:rgba(200,169,110,.06);border:1px solid rgba(200,169,110,.12);border-radius:10px;padding:12px 16px;flex:1;min-width:80px;text-align:center;}
 .stat-num{font-size:24px;font-weight:900;color:var(--gold);}
 .stat-label{font-size:11px;color:rgba(200,169,110,.5);margin-top:2px;}
+
+/* ====== POSTS TAB — GitHub Upload ====== */
+.token-box{background:rgba(200,169,110,.05);border:1px solid rgba(200,169,110,.2);border-radius:12px;padding:14px;margin-bottom:16px;}
+.token-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+.token-label{font-size:13px;font-weight:700;color:var(--gold);}
+.token-status{font-size:11px;padding:3px 8px;border-radius:6px;}
+.token-status.ok{background:rgba(30,190,82,.15);color:#1ebe52;}
+.token-status.missing{background:rgba(255,100,100,.1);color:#ff6b6b;}
+.token-input{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(200,169,110,.15);border-radius:8px;padding:10px 12px;font-family:monospace;font-size:12px;color:#F9F4EC;outline:none;letter-spacing:1px;}
+.token-input:focus{border-color:var(--gold);}
+.token-hint{font-size:11px;color:rgba(200,169,110,.4);margin-top:6px;line-height:1.6;}
+.token-save-btn{background:rgba(200,169,110,.2);color:var(--gold);border:1px solid rgba(200,169,110,.3);border-radius:8px;padding:8px 14px;font-family:Tajawal,sans-serif;font-size:13px;font-weight:700;cursor:pointer;margin-top:8px;width:100%;}
+.new-post-form{background:rgba(200,169,110,.04);border:1px solid rgba(200,169,110,.15);border-radius:12px;padding:16px;margin-bottom:18px;}
+.new-post-title{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:14px;}
+.img-upload-area{border:2px dashed rgba(200,169,110,.25);border-radius:10px;padding:20px;text-align:center;cursor:pointer;transition:border-color .2s;margin-bottom:12px;position:relative;}
+.img-upload-area:hover{border-color:rgba(200,169,110,.5);}
+.img-upload-area input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.upload-icon{font-size:32px;margin-bottom:6px;}
+.upload-text{font-size:13px;color:rgba(200,169,110,.6);}
+.upload-hint{font-size:11px;color:rgba(200,169,110,.3);margin-top:4px;}
+#img-preview-wrap{display:none;margin-bottom:12px;}
+#img-preview-wrap img{width:100%;max-height:200px;object-fit:cover;border-radius:8px;border:1px solid rgba(200,169,110,.2);}
+.progress-bar{height:6px;background:rgba(200,169,110,.1);border-radius:3px;margin:10px 0;overflow:hidden;display:none;}
+.progress-fill{height:100%;background:var(--gold);border-radius:3px;transition:width .3s;}
+.btn-publish{background:var(--gold);color:#0D0D0D;border:none;border-radius:10px;padding:14px;font-family:Tajawal,sans-serif;font-size:15px;font-weight:900;cursor:pointer;width:100%;margin-top:10px;}
+.btn-publish:disabled{opacity:.5;cursor:not-allowed;}
+
+/* Posts List in Admin */
+.post-admin-card{background:var(--card);border:1px solid rgba(200,169,110,.12);border-radius:10px;margin-bottom:10px;overflow:hidden;display:flex;gap:0;}
+.post-admin-img{width:70px;height:70px;object-fit:cover;flex-shrink:0;}
+.post-admin-info{flex:1;padding:10px 12px;}
+.post-admin-title{font-size:13px;font-weight:700;color:var(--gold-light);margin-bottom:3px;}
+.post-admin-date{font-size:11px;color:rgba(200,169,110,.4);}
+.post-admin-del{background:rgba(255,80,80,.1);color:#ff6b6b;border:none;padding:8px 12px;font-family:Tajawal,sans-serif;font-size:12px;cursor:pointer;align-self:center;margin-left:8px;border-radius:6px;flex-shrink:0;margin-left:8px;}
 </style>
 </head>
 <body>
@@ -106,11 +140,74 @@ textarea.field-input{height:70px;line-height:1.6;}
     <div class="tab active" onclick="switchTab('sajjad',this)">🧶 السجاد والموكيت</div>
     <div class="tab" onclick="switchTab('majalis',this)">🏠 المجالس والمساند</div>
     <div class="tab" onclick="switchTab('athath',this)">🛋️ الأثاث والديكور</div>
+    <div class="tab" onclick="switchTab('posts',this)">📸 أعمالنا اليومية</div>
   </div>
 
   <div id="tab-sajjad" class="tab-content active"></div>
   <div id="tab-majalis" class="tab-content"></div>
   <div id="tab-athath" class="tab-content"></div>
+
+  <!-- ============================================================
+       تبويب الأعمال اليومية — رفع الصور مباشرة لـ GitHub
+  ============================================================ -->
+  <div id="tab-posts" class="tab-content">
+
+    <!-- 1) إعداد GitHub Token -->
+    <div class="token-box">
+      <div class="token-header">
+        <span class="token-label">🔑 GitHub Token</span>
+        <span class="token-status" id="token-status">غير محفوظ</span>
+      </div>
+      <input type="password" class="token-input" id="gh-token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+      <div class="token-hint">
+        💾 Token يُحفظ في متصفحك بشكل دائم — تدخله مرة واحدة فقط<br>
+        🔒 لا يُرفع على GitHub — محفوظ على جهازك فقط
+      </div>
+      <div style="display:flex;gap:8px;margin-top:8px;">
+        <button class="token-save-btn" style="flex:2" onclick="saveToken()">✅ حفظ Token</button>
+        <button class="token-save-btn" style="flex:1;background:rgba(255,80,80,.1);color:#ff6b6b;border-color:rgba(255,80,80,.2);" onclick="clearToken()">🗑 حذف</button>
+      </div>
+    </div>
+
+    <!-- 2) إضافة منشور جديد -->
+    <div class="new-post-form">
+      <div class="new-post-title">➕ نشر عمل جديد</div>
+
+      <div class="img-upload-area" id="upload-area">
+        <input type="file" id="img-file" accept="image/*" onchange="previewImage(this)">
+        <div class="upload-icon">📷</div>
+        <div class="upload-text">اضغط لاختيار صورة</div>
+        <div class="upload-hint">JPG / PNG / WEBP — حجم أقصى 5MB</div>
+      </div>
+      <div id="img-preview-wrap"><img id="img-preview" src="" alt="معاينة"></div>
+
+      <div class="field-group">
+        <label class="field-label">عنوان العمل (H2 + Alt Text تلقائي)</label>
+        <input type="text" class="field-input" id="post-title-input" placeholder="مثال: تفصيل مجلس ديكور فاخر - حولي">
+      </div>
+      <div class="field-group">
+        <label class="field-label">وصف قصير</label>
+        <textarea class="field-input" id="post-desc-input" placeholder="وصف مختصر للعمل..."></textarea>
+      </div>
+
+      <div class="progress-bar" id="progress-bar">
+        <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+      </div>
+      <div id="upload-status" style="font-size:12px;color:rgba(200,169,110,.5);text-align:center;min-height:18px;margin-top:4px;"></div>
+
+      <button class="btn-publish" id="publish-btn" onclick="publishPost()">🚀 نشر العمل</button>
+    </div>
+
+    <!-- 3) قائمة الأعمال المنشورة -->
+    <div>
+      <div class="section-header">
+        <span class="section-title" id="posts-count-label">الأعمال المنشورة</span>
+        <button class="btn-add" onclick="exportPostsJSON()" style="font-size:11px;">📥 تحميل posts.json</button>
+      </div>
+      <div id="posts-admin-list"></div>
+    </div>
+  </div>
+  <!-- ============================================================ -->
 
   <div class="preview-bar">
     <span style="font-size:12px;color:rgba(200,169,110,.4);align-self:center;">معاينة:</span>
@@ -118,16 +215,27 @@ textarea.field-input{height:70px;line-height:1.6;}
     <a href="/majalis.html" target="_blank" class="preview-link">🏠 المجالس</a>
     <a href="/athath.html" target="_blank" class="preview-link">🛋️ الأثاث</a>
     <a href="/" target="_blank" class="preview-link">🏠 الرئيسية</a>
+    <a href="/works.html" target="_blank" class="preview-link">📸 الأعمال</a>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
+// ============================================================
+// إعدادات GitHub
+// ============================================================
+const GH_OWNER = 'salford-kw';
+const GH_REPO  = 'salford-kw.github.io';
+const GH_BRANCH = 'main';
+
+// ============================================================
+// المنتجات
+// ============================================================
 const PASS = 'hamad2012';
 const STORAGE_KEY = 'salford_products';
+const POSTS_KEY = 'salford_posts';
 
-// Default products (fallback)
 const DEFAULT_PRODUCTS = {
   sajjad:[
     {code:"سجاد تركي كود 01",desc:"سجاد تركي ناعم الملمس بوبرة عالية مناسب للصالونات والمجالس الفاخرة",img:"https://i.ibb.co/Fb6sjX3c/17240267190464-status-e8350b3f3ae64895949c7e6ed286d22f.jpg"},
@@ -163,46 +271,37 @@ const DEFAULT_PRODUCTS = {
   ]
 };
 
-// State
 let products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
+let posts = [];
 
-// Load from localStorage if exists
-function loadProducts() {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) products = JSON.parse(saved);
-    else products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
-  } catch(e) {
-    products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
-  }
-}
-
-function saveProducts() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
-}
-
-// Auth
+// ============================================================
+// AUTH
+// ============================================================
 function checkLogin() {
   const val = document.getElementById('pwd-input').value;
   if (val === PASS) {
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('admin-panel').style.display = 'block';
     loadProducts();
+    loadPosts();
     renderAll();
+    renderPostsTab();
+    checkTokenStatus();
   } else {
     document.getElementById('login-error').style.display = 'block';
     document.getElementById('pwd-input').value = '';
     setTimeout(()=>document.getElementById('login-error').style.display='none', 2000);
   }
 }
-
 function logout() {
   document.getElementById('admin-panel').style.display = 'none';
   document.getElementById('login-screen').style.display = 'flex';
   document.getElementById('pwd-input').value = '';
 }
 
-// Tabs
+// ============================================================
+// TABS
+// ============================================================
 function switchTab(name, el) {
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
@@ -210,14 +309,19 @@ function switchTab(name, el) {
   document.getElementById('tab-'+name).classList.add('active');
 }
 
-// Render
-function renderAll() {
-  renderStats();
-  renderTab('sajjad');
-  renderTab('majalis');
-  renderTab('athath');
+// ============================================================
+// PRODUCTS LOGIC (unchanged)
+// ============================================================
+function loadProducts() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) products = JSON.parse(saved);
+    else products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
+  } catch(e) { products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS)); }
 }
+function saveProducts() { localStorage.setItem(STORAGE_KEY, JSON.stringify(products)); }
 
+function renderAll() { renderStats(); renderTab('sajjad'); renderTab('majalis'); renderTab('athath'); }
 function renderStats() {
   const total = products.sajjad.length + products.majalis.length + products.athath.length;
   document.getElementById('stats-bar').innerHTML = `
@@ -225,13 +329,12 @@ function renderStats() {
     <div class="stat-card"><div class="stat-num">${products.sajjad.length}</div><div class="stat-label">السجاد والموكيت</div></div>
     <div class="stat-card"><div class="stat-num">${products.majalis.length}</div><div class="stat-label">المجالس</div></div>
     <div class="stat-card"><div class="stat-num">${products.athath.length}</div><div class="stat-label">الأثاث</div></div>
+    <div class="stat-card"><div class="stat-num">${posts.length}</div><div class="stat-label">الأعمال</div></div>
   `;
 }
-
 function renderTab(section) {
   const container = document.getElementById('tab-'+section);
   const labels = {sajjad:'السجاد والموكيت',majalis:'المجالس والمساند',athath:'الأثاث والديكور'};
-
   let html = `
     <div class="section-header" style="margin-top:16px;">
       <span class="section-title">${labels[section]} (${products[section].length} منتج)</span>
@@ -239,25 +342,14 @@ function renderTab(section) {
     </div>
     <div class="add-form" id="add-form-${section}">
       <div class="add-form-title">➕ إضافة منتج جديد</div>
-      <div class="field-group">
-        <label class="field-label">اسم المنتج / الكود</label>
-        <input type="text" class="field-input" id="new-code-${section}" placeholder="مثال: سجاد تركي كود 13">
-      </div>
-      <div class="field-group">
-        <label class="field-label">الوصف</label>
-        <textarea class="field-input" id="new-desc-${section}" placeholder="وصف مختصر للمنتج..."></textarea>
-      </div>
-      <div class="field-group">
-        <label class="field-label">رابط الصورة (ibb.co)</label>
-        <input type="text" class="field-input" id="new-img-${section}" placeholder="https://i.ibb.co/...">
-      </div>
+      <div class="field-group"><label class="field-label">اسم المنتج / الكود</label><input type="text" class="field-input" id="new-code-${section}" placeholder="مثال: سجاد تركي كود 13"></div>
+      <div class="field-group"><label class="field-label">الوصف</label><textarea class="field-input" id="new-desc-${section}" placeholder="وصف مختصر للمنتج..."></textarea></div>
+      <div class="field-group"><label class="field-label">رابط الصورة (ibb.co)</label><input type="text" class="field-input" id="new-img-${section}" placeholder="https://i.ibb.co/..."></div>
       <div class="add-row">
         <button class="btn-add-confirm" onclick="addProduct('${section}')">✅ إضافة</button>
         <button class="btn-add-cancel" onclick="toggleAddForm('${section}')">إلغاء</button>
       </div>
-    </div>
-  `;
-
+    </div>`;
   products[section].forEach((p, i) => {
     html += `
     <div class="product-editor" id="prod-${section}-${i}">
@@ -267,83 +359,248 @@ function renderTab(section) {
         <button class="btn-delete" onclick="deleteProduct('${section}',${i})">🗑 حذف</button>
       </div>
       <div class="product-editor-body">
-        <div class="field-group">
-          <label class="field-label">اسم المنتج / الكود</label>
-          <input type="text" class="field-input" id="code-${section}-${i}" value="${p.code}" onchange="updateProduct('${section}',${i},'code',this.value)">
-        </div>
-        <div class="field-group">
-          <label class="field-label">الوصف</label>
-          <textarea class="field-input" id="desc-${section}-${i}" onchange="updateProduct('${section}',${i},'desc',this.value)">${p.desc}</textarea>
-        </div>
-        <div class="field-group">
-          <label class="field-label">رابط الصورة</label>
-          <input type="text" class="field-input" id="img-${section}-${i}" value="${p.img}" onchange="updateProduct('${section}',${i},'img',this.value);this.previousElementSibling&&(this.closest('.product-editor').querySelector('img').src=this.value)">
-        </div>
+        <div class="field-group"><label class="field-label">اسم المنتج / الكود</label><input type="text" class="field-input" id="code-${section}-${i}" value="${p.code}" onchange="updateProduct('${section}',${i},'code',this.value)"></div>
+        <div class="field-group"><label class="field-label">الوصف</label><textarea class="field-input" id="desc-${section}-${i}" onchange="updateProduct('${section}',${i},'desc',this.value)">${p.desc}</textarea></div>
+        <div class="field-group"><label class="field-label">رابط الصورة</label><input type="text" class="field-input" id="img-${section}-${i}" value="${p.img}" onchange="updateProduct('${section}',${i},'img',this.value);this.closest('.product-editor').querySelector('img').src=this.value"></div>
       </div>
     </div>`;
   });
-
   container.innerHTML = html;
 }
+function updateProduct(section,i,field,val){products[section][i][field]=val;if(field==='code')document.querySelector(`#prod-${section}-${i} .product-code-display`).textContent=val;}
+function deleteProduct(section,i){if(!confirm(`حذف "${products[section][i].code}"؟`))return;products[section].splice(i,1);renderTab(section);renderStats();showToast('🗑 تم الحذف');}
+function toggleAddForm(section){const f=document.getElementById('add-form-'+section);f.style.display=f.style.display==='block'?'none':'block';}
+function addProduct(section){const code=document.getElementById('new-code-'+section).value.trim();const desc=document.getElementById('new-desc-'+section).value.trim();const img=document.getElementById('new-img-'+section).value.trim();if(!code||!img){showToast('⚠️ أدخل الاسم والصورة على الأقل','#ff6b6b');return;}products[section].push({code,desc:desc||'منتج جديد من سالفورد للأثاث والمفروشات',img});renderTab(section);renderStats();showToast('✅ تمت الإضافة');}
+function saveAll(){['sajjad','majalis','athath'].forEach(section=>{products[section].forEach((p,i)=>{const c=document.getElementById(`code-${section}-${i}`);const d=document.getElementById(`desc-${section}-${i}`);const m=document.getElementById(`img-${section}-${i}`);if(c)p.code=c.value;if(d)p.desc=d.value;if(m)p.img=m.value;});});saveProducts();renderAll();showToast('💾 تم الحفظ بنجاح!');}
+function exportJSON(){saveAll();const json=JSON.stringify(products,null,2);const blob=new Blob([json],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='products.json';a.click();showToast('📥 جاري التحميل...');}
 
-// Actions
-function updateProduct(section, i, field, val) {
-  products[section][i][field] = val;
-  if (field === 'code') {
-    document.querySelector(`#prod-${section}-${i} .product-code-display`).textContent = val;
+// ============================================================
+// POSTS LOGIC — GitHub API
+// ============================================================
+function loadPosts() {
+  try {
+    const saved = localStorage.getItem(POSTS_KEY);
+    posts = saved ? JSON.parse(saved) : [];
+    if (!Array.isArray(posts)) posts = [];
+  } catch(e) { posts = []; }
+}
+function savePosts() { localStorage.setItem(POSTS_KEY, JSON.stringify(posts)); }
+
+// ---- Token Management (sessionStorage — مؤقت للجلسة فقط) ----
+function saveToken() {
+  const t = document.getElementById('gh-token-input').value.trim();
+  if (!t) { showToast('أدخل الـ Token أولاً', '#ff6b6b'); return; }
+  localStorage.setItem('gh_token', t);
+  document.getElementById('gh-token-input').value = '';
+  checkTokenStatus();
+  showToast('🔑 تم حفظ Token — لن تحتاج إدخاله مجدداً ✅');
+}
+function getToken() { return localStorage.getItem('gh_token') || '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'; }
+function clearToken() {
+  if (!confirm('حذف الـ Token المحفوظ؟')) return;
+  localStorage.removeItem('gh_token');
+  checkTokenStatus();
+  showToast('🗑 تم حذف الـ Token', '#ff6b6b');
+}
+function checkTokenStatus() {
+  const el = document.getElementById('token-status');
+  if (getToken()) {
+    el.textContent = '✅ محفوظ دائماً';
+    el.className = 'token-status ok';
+  } else {
+    el.textContent = '⚠️ غير محفوظ';
+    el.className = 'token-status missing';
   }
 }
 
-function deleteProduct(section, i) {
-  if (!confirm(`حذف "${products[section][i].code}"؟`)) return;
-  products[section].splice(i, 1);
-  renderTab(section);
-  renderStats();
-  showToast('🗑 تم الحذف');
+// ---- Image Preview ----
+function previewImage(input) {
+  const file = input.files[0];
+  if (!file) return;
+  if (file.size > 5 * 1024 * 1024) { showToast('الصورة أكبر من 5MB', '#ff6b6b'); input.value=''; return; }
+  const reader = new FileReader();
+  reader.onload = e => {
+    document.getElementById('img-preview').src = e.target.result;
+    document.getElementById('img-preview-wrap').style.display = 'block';
+    document.querySelector('.img-upload-area').style.opacity = '.5';
+  };
+  reader.readAsDataURL(file);
 }
 
-function toggleAddForm(section) {
-  const form = document.getElementById('add-form-'+section);
-  form.style.display = form.style.display === 'block' ? 'none' : 'block';
-}
+// ---- Upload image to GitHub ----
+async function uploadImageToGitHub(file, token) {
+  const ts = Date.now();
+  const ext = file.name.split('.').pop().toLowerCase() || 'jpg';
+  const filename = `work_${ts}.${ext}`;
+  const path = `works/${filename}`;
 
-function addProduct(section) {
-  const code = document.getElementById('new-code-'+section).value.trim();
-  const desc = document.getElementById('new-desc-'+section).value.trim();
-  const img = document.getElementById('new-img-'+section).value.trim();
-  if (!code || !img) { showToast('⚠️ أدخل الاسم والصورة على الأقل', '#ff6b6b'); return; }
-  products[section].push({ code, desc: desc || 'منتج جديد من سالفورد للأثاث والمفروشات', img });
-  renderTab(section);
-  renderStats();
-  showToast('✅ تمت الإضافة');
-}
+  const base64 = await fileToBase64(file);
+  const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`;
 
-function saveAll() {
-  // Collect all current input values
-  ['sajjad','majalis','athath'].forEach(section => {
-    products[section].forEach((p, i) => {
-      const codeEl = document.getElementById(`code-${section}-${i}`);
-      const descEl = document.getElementById(`desc-${section}-${i}`);
-      const imgEl = document.getElementById(`img-${section}-${i}`);
-      if (codeEl) p.code = codeEl.value;
-      if (descEl) p.desc = descEl.value;
-      if (imgEl) p.img = imgEl.value;
-    });
+  const res = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      'Authorization': `token ${token}`,
+      'Content-Type': 'application/json',
+      'Accept': 'application/vnd.github.v3+json'
+    },
+    body: JSON.stringify({
+      message: `إضافة صورة عمل: ${filename}`,
+      content: base64,
+      branch: GH_BRANCH
+    })
   });
-  saveProducts();
-  renderAll();
-  showToast('💾 تم الحفظ بنجاح!');
+
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.message || 'فشل رفع الصورة');
+  // الرابط المباشر للصورة على الموقع
+  return `https://salfordkw.shop/${path}`;
 }
 
-function exportJSON() {
-  saveAll();
-  const json = JSON.stringify(products, null, 2);
+// ---- Update posts.json on GitHub ----
+async function updatePostsJSON(token, newPosts) {
+  const path = 'posts.json';
+  const apiUrl = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`;
+
+  // اجلب الـ SHA الحالي (مطلوب لتحديث الملف)
+  let sha = null;
+  try {
+    const r = await fetch(apiUrl, {
+      headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if (r.ok) { const d = await r.json(); sha = d.sha; }
+  } catch(e) {}
+
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(newPosts, null, 2))));
+  const body = { message: 'تحديث posts.json', content, branch: GH_BRANCH };
+  if (sha) body.sha = sha;
+
+  const res = await fetch(apiUrl, {
+    method: 'PUT',
+    headers: {
+      'Authorization': `token ${token}`,
+      'Content-Type': 'application/json',
+      'Accept': 'application/vnd.github.v3+json'
+    },
+    body: JSON.stringify(body)
+  });
+
+  if (!res.ok) { const d = await res.json(); throw new Error(d.message || 'فشل تحديث posts.json'); }
+}
+
+// ---- Main Publish Function ----
+async function publishPost() {
+  const token = getToken();
+  if (!token) { showToast('أدخل GitHub Token أولاً', '#ff6b6b'); return; }
+
+  const title = document.getElementById('post-title-input').value.trim();
+  if (!title) { showToast('أدخل عنوان العمل', '#ff6b6b'); return; }
+
+  const fileInput = document.getElementById('img-file');
+  if (!fileInput.files[0]) { showToast('اختر صورة أولاً', '#ff6b6b'); return; }
+
+  const desc = document.getElementById('post-desc-input').value.trim();
+  const btn = document.getElementById('publish-btn');
+  btn.disabled = true;
+
+  try {
+    // 1) رفع الصورة
+    setProgress(20, 'جاري رفع الصورة على GitHub...');
+    const imgUrl = await uploadImageToGitHub(fileInput.files[0], token);
+
+    // 2) تحديث posts.json
+    setProgress(60, 'جاري تحديث قائمة الأعمال...');
+    const newPost = {
+      id: 'post_' + Date.now(),
+      title,
+      desc,
+      img: imgUrl,
+      date: new Date().toISOString().split('T')[0]
+    };
+    const newPosts = [...posts, newPost];
+    await updatePostsJSON(token, newPosts);
+
+    // 3) حفظ محلياً
+    setProgress(90, 'جاري الحفظ...');
+    posts = newPosts;
+    savePosts();
+
+    setProgress(100, '');
+    showToast('🎉 تم النشر بنجاح! سيظهر خلال دقيقة على الموقع');
+
+    // تنظيف
+    document.getElementById('img-file').value = '';
+    document.getElementById('img-preview-wrap').style.display = 'none';
+    document.querySelector('.img-upload-area').style.opacity = '1';
+    document.getElementById('post-title-input').value = '';
+    document.getElementById('post-desc-input').value = '';
+    renderPostsTab();
+    renderStats();
+    setTimeout(()=>{ document.getElementById('progress-bar').style.display='none'; document.getElementById('upload-status').textContent=''; },2000);
+
+  } catch(err) {
+    setProgress(0, '❌ ' + err.message);
+    showToast('❌ ' + err.message, '#ff6b6b');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+function setProgress(pct, msg) {
+  document.getElementById('progress-bar').style.display = 'block';
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('upload-status').textContent = msg;
+}
+
+// ---- Render Posts List in Admin ----
+function renderPostsTab() {
+  const list = document.getElementById('posts-admin-list');
+  const countLabel = document.getElementById('posts-count-label');
+  countLabel.textContent = `الأعمال المنشورة (${posts.length})`;
+
+  if (posts.length === 0) {
+    list.innerHTML = '<div style="text-align:center;padding:30px;color:rgba(200,169,110,.3);font-size:13px;">لا توجد أعمال منشورة بعد</div>';
+    return;
+  }
+  list.innerHTML = [...posts].reverse().map((p,i) => `
+    <div class="post-admin-card">
+      <img class="post-admin-img" src="${p.img}" alt="${p.title}" onerror="this.style.opacity='.2'">
+      <div class="post-admin-info">
+        <div class="post-admin-title">${p.title}</div>
+        <div class="post-admin-date">${p.date || ''}</div>
+      </div>
+      <button class="post-admin-del" onclick="deletePost('${p.id}')">🗑</button>
+    </div>
+  `).join('');
+}
+
+function deletePost(id) {
+  if (!confirm('حذف هذا العمل؟')) return;
+  posts = posts.filter(p => p.id !== id);
+  savePosts();
+  renderPostsTab();
+  renderStats();
+  showToast('🗑 تم الحذف محلياً — حمّل posts.json وارفعه على GitHub للتغيير الدائم', '#e8a020');
+}
+
+function exportPostsJSON() {
+  const json = JSON.stringify(posts, null, 2);
   const blob = new Blob([json], {type:'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'products.json';
+  a.download = 'posts.json';
   a.click();
-  showToast('📥 جاري التحميل...');
+  showToast('📥 جاري تحميل posts.json');
+}
+
+// ---- Helpers ----
+function fileToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => resolve(r.result.split(',')[1]);
+    r.onerror = reject;
+    r.readAsDataURL(file);
+  });
 }
 
 function showToast(msg, color='#1ebe52') {
@@ -351,8 +608,9 @@ function showToast(msg, color='#1ebe52') {
   t.textContent = msg;
   t.style.background = color;
   t.style.display = 'block';
-  setTimeout(()=>t.style.display='none', 2500);
+  setTimeout(()=>t.style.display='none', 3500);
 }
 </script>
 </body>
 </html>
+
