@@ -83,6 +83,21 @@ textarea.field-input{resize:none;height:80px;line-height:1.6;}
     <textarea class="field-input" id="desc-input" placeholder="مثال: تفصيل مجلس ديكور مع حفر نقشة سجاد - الكويت، صباح الناصر"></textarea>
   </div>
 
+  <div class="price-row" style="display:flex;gap:10px;">
+    <div class="field-group" style="flex:1;">
+      <label class="field-label">💰 السعر (د.ك) - اختياري</label>
+      <input type="text" class="field-input" id="price-input" placeholder="مثلاً 5.500">
+    </div>
+    <div class="field-group" style="flex:1;">
+      <label class="field-label">الوحدة</label>
+      <select class="field-input" id="unit-select">
+        <option value="م">بالمتر</option>
+        <option value="قطعة">بالقطعة</option>
+        <option value="متر مربع">بالمتر المربع</option>
+      </select>
+    </div>
+  </div>
+
   <button class="btn-submit" id="submit-btn" onclick="submitWork()">➕ نشر العمل فوراً</button>
   <div id="status-msg"></div>
 </div>
@@ -188,6 +203,8 @@ async function submitWork() {
   const title = document.getElementById('title-input').value.trim();
   if (!title) { showToast('⚠️ أدخل عنوان العمل', '#ff6b6b'); return; }
   const desc = document.getElementById('desc-input').value.trim();
+  const price = document.getElementById('price-input').value.trim();
+  const unit = document.getElementById('unit-select').value;
 
   const btn = document.getElementById('submit-btn');
   btn.disabled = true;
@@ -207,7 +224,9 @@ async function submitWork() {
       title: title,
       desc: desc || '',
       img: imgUrl,
-      date: today
+      date: today,
+      price: price,
+      unit: unit
     });
 
     const newContent = btoa(unescape(encodeURIComponent(JSON.stringify(posts, null, 2))));
