@@ -109,6 +109,11 @@ textarea.field-input{resize:none;height:80px;line-height:1.6;}
     <textarea class="field-input" id="notes-input" placeholder="أي تفاصيل عن المنتج، الخامة، الألوان المتوفرة..."></textarea>
   </div>
 
+  <div class="field-group" style="display:flex;align-items:center;gap:10px;background:rgba(200,169,110,.05);border:1px solid rgba(200,169,110,.15);border-radius:10px;padding:13px 14px;">
+    <input type="checkbox" id="also-work-checkbox" checked style="width:20px;height:20px;accent-color:#C8A96E;flex-shrink:0;">
+    <label for="also-work-checkbox" style="font-size:13px;color:rgba(249,244,236,.8);margin:0;">📸 انشره أيضاً بقسم "آخر أعمالنا"</label>
+  </div>
+
   <button class="btn-submit" id="submit-btn" onclick="submitProduct()">➕ إضافة المنتج فوراً</button>
   <div id="status-msg"></div>
 </div>
@@ -248,8 +253,26 @@ async function submitProduct() {
     });
     if (!push.ok) throw new Error(push.data.message || 'فشل حفظ المنتج');
 
+    const alsoWork = document.getElementById('also-work-checkbox').checked;
+    if (alsoWork) {
+      setStatus('📸 جاري نشره أيضاً بقسم آخر أعمالنا...');
+      const currentPosts = await ghApi('posts.json');
+      if (currentPosts.ok) {
+        const posts = JSON.parse(decodeURIComponent(escape(atob(currentPosts.data.content.replace(/\n/g,'')))));
+        const today = new Date().toISOString().split('T')[0];
+        posts.push({ id: 'post_' + Date.now(), title: name, desc: notes || '', img: imgUrl, date: today });
+        const newPostsContent = btoa(unescape(encodeURIComponent(JSON.stringify(posts, null, 2))));
+        await ghApi('posts.json', 'PUT', {
+          message: `نشر تلقائي بقسم الأعمال: ${name}`,
+          content: newPostsContent,
+          sha: currentPosts.data.sha,
+          branch: GH_BRANCH
+        });
+      }
+    }
+
     setStatus('');
-    showToast('✅ تمت إضافة المنتج ونشره على الموقع فوراً!');
+    showToast(alsoWork ? '✅ تمت إضافة المنتج ونشره بالأعمال أيضاً!' : '✅ تمت إضافة المنتج ونشره على الموقع فوراً!');
     document.getElementById('name-input').value = '';
     document.getElementById('price-input').value = '';
     document.getElementById('notes-input').value = '';
