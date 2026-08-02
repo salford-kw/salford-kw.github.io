@@ -260,7 +260,7 @@ async function submitProduct() {
       if (currentPosts.ok) {
         const posts = JSON.parse(decodeURIComponent(escape(atob(currentPosts.data.content.replace(/\n/g,'')))));
         const today = new Date().toISOString().split('T')[0];
-        posts.push({ id: 'post_' + Date.now(), title: name, desc: notes || '', img: imgUrl, date: today });
+        posts.push({ id: 'post_' + Date.now(), title: name, desc: notes || '', img: imgUrl, date: today, price: price, unit: unit });
         const newPostsContent = btoa(unescape(encodeURIComponent(JSON.stringify(posts, null, 2))));
         await ghApi('posts.json', 'PUT', {
           message: `نشر تلقائي بقسم الأعمال: ${name}`,
