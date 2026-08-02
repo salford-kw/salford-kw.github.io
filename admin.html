@@ -129,6 +129,7 @@ textarea.field-input{height:70px;line-height:1.6;}
     <div class="top-logo">⚙️ لوحة التحكم</div>
     <div class="top-actions">
       <button class="btn-save-all" onclick="saveAll()">💾 حفظ الكل</button>
+      <button class="btn-export" onclick="publishProducts()">🚀 نشر على الموقع</button>
       <button class="btn-export" onclick="exportJSON()">📥 تحميل JSON</button>
       <button class="btn-logout" onclick="logout()">خروج</button>
     </div>
@@ -344,6 +345,16 @@ function renderTab(section) {
       <div class="field-group"><label class="field-label">اسم المنتج / الكود</label><input type="text" class="field-input" id="new-code-${section}" placeholder="مثال: سجاد تركي كود 13"></div>
       <div class="field-group"><label class="field-label">الوصف</label><textarea class="field-input" id="new-desc-${section}" placeholder="وصف مختصر للمنتج..."></textarea></div>
       <div class="field-group"><label class="field-label">رابط الصورة (ibb.co)</label><input type="text" class="field-input" id="new-img-${section}" placeholder="https://i.ibb.co/..."></div>
+      <div class="add-row" style="gap:8px;">
+        <div class="field-group" style="flex:1;"><label class="field-label">السعر (د.ك)</label><input type="text" class="field-input" id="new-price-${section}" placeholder="مثلاً 5.500 (اتركه فاضي = تواصل للسعر)"></div>
+        <div class="field-group" style="flex:1;"><label class="field-label">الوحدة</label>
+          <select class="field-input" id="new-unit-${section}">
+            <option value="م">بالمتر</option>
+            <option value="قطعة">بالقطعة</option>
+            <option value="متر مربع">بالمتر المربع</option>
+          </select>
+        </div>
+      </div>
       <div class="add-row">
         <button class="btn-add-confirm" onclick="addProduct('${section}')">✅ إضافة</button>
         <button class="btn-add-cancel" onclick="toggleAddForm('${section}')">إلغاء</button>
@@ -361,6 +372,16 @@ function renderTab(section) {
         <div class="field-group"><label class="field-label">اسم المنتج / الكود</label><input type="text" class="field-input" id="code-${section}-${i}" value="${p.code}" onchange="updateProduct('${section}',${i},'code',this.value)"></div>
         <div class="field-group"><label class="field-label">الوصف</label><textarea class="field-input" id="desc-${section}-${i}" onchange="updateProduct('${section}',${i},'desc',this.value)">${p.desc}</textarea></div>
         <div class="field-group"><label class="field-label">رابط الصورة</label><input type="text" class="field-input" id="img-${section}-${i}" value="${p.img}" onchange="updateProduct('${section}',${i},'img',this.value);this.closest('.product-editor').querySelector('img').src=this.value"></div>
+        <div class="add-row" style="gap:8px;">
+          <div class="field-group" style="flex:1;"><label class="field-label">السعر (د.ك)</label><input type="text" class="field-input" id="price-${section}-${i}" value="${p.price||''}" placeholder="فاضي = تواصل للسعر" onchange="updateProduct('${section}',${i},'price',this.value)"></div>
+          <div class="field-group" style="flex:1;"><label class="field-label">الوحدة</label>
+            <select class="field-input" id="unit-${section}-${i}" onchange="updateProduct('${section}',${i},'unit',this.value)">
+              <option value="م" ${(p.unit||'م')==='م'?'selected':''}>بالمتر</option>
+              <option value="قطعة" ${p.unit==='قطعة'?'selected':''}>بالقطعة</option>
+              <option value="متر مربع" ${p.unit==='متر مربع'?'selected':''}>بالمتر المربع</option>
+            </select>
+          </div>
+        </div>
       </div>
     </div>`;
   });
@@ -369,8 +390,8 @@ function renderTab(section) {
 function updateProduct(section,i,field,val){products[section][i][field]=val;if(field==='code')document.querySelector(`#prod-${section}-${i} .product-code-display`).textContent=val;}
 function deleteProduct(section,i){if(!confirm(`حذف "${products[section][i].code}"؟`))return;products[section].splice(i,1);renderTab(section);renderStats();showToast('🗑 تم الحذف');}
 function toggleAddForm(section){const f=document.getElementById('add-form-'+section);f.style.display=f.style.display==='block'?'none':'block';}
-function addProduct(section){const code=document.getElementById('new-code-'+section).value.trim();const desc=document.getElementById('new-desc-'+section).value.trim();const img=document.getElementById('new-img-'+section).value.trim();if(!code||!img){showToast('⚠️ أدخل الاسم والصورة على الأقل','#ff6b6b');return;}products[section].push({code,desc:desc||'منتج جديد من سالفورد للأثاث والمفروشات',img});renderTab(section);renderStats();showToast('✅ تمت الإضافة');}
-function saveAll(){['sajjad','majalis','athath'].forEach(section=>{products[section].forEach((p,i)=>{const c=document.getElementById(`code-${section}-${i}`);const d=document.getElementById(`desc-${section}-${i}`);const m=document.getElementById(`img-${section}-${i}`);if(c)p.code=c.value;if(d)p.desc=d.value;if(m)p.img=m.value;});});saveProducts();renderAll();showToast('💾 تم الحفظ بنجاح!');}
+function addProduct(section){const code=document.getElementById('new-code-'+section).value.trim();const desc=document.getElementById('new-desc-'+section).value.trim();const img=document.getElementById('new-img-'+section).value.trim();const price=document.getElementById('new-price-'+section).value.trim();const unit=document.getElementById('new-unit-'+section).value;if(!code||!img){showToast('⚠️ أدخل الاسم والصورة على الأقل','#ff6b6b');return;}products[section].push({code,desc:desc||'منتج جديد من سالفورد للأثاث والمفروشات',img,price,unit});renderTab(section);renderStats();showToast('✅ تمت الإضافة');}
+function saveAll(){['sajjad','majalis','athath'].forEach(section=>{products[section].forEach((p,i)=>{const c=document.getElementById(`code-${section}-${i}`);const d=document.getElementById(`desc-${section}-${i}`);const m=document.getElementById(`img-${section}-${i}`);const pr=document.getElementById(`price-${section}-${i}`);const u=document.getElementById(`unit-${section}-${i}`);if(c)p.code=c.value;if(d)p.desc=d.value;if(m)p.img=m.value;if(pr)p.price=pr.value;if(u)p.unit=u.value;});});saveProducts();renderAll();showToast('💾 تم الحفظ بنجاح!');}
 function exportJSON(){saveAll();const json=JSON.stringify(products,null,2);const blob=new Blob([json],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='products.json';a.click();showToast('📥 جاري التحميل...');}
 
 // ============================================================
@@ -485,6 +506,39 @@ async function updatePostsJSON(token, newPosts) {
   });
 
   if (!res.ok) { const d = await res.json(); throw new Error(d.message || 'فشل تحديث posts.json'); }
+}
+
+// ---- Update products.json on GitHub (نشر مباشر على الموقع لكل الزوار) ----
+async function updateProductsJSON(token, newProducts) {
+  const path = 'products.json';
+  const apiUrl = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`;
+  let sha = null;
+  try {
+    const r = await fetch(apiUrl, { headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' } });
+    if (r.ok) { const d = await r.json(); sha = d.sha; }
+  } catch(e) {}
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(newProducts, null, 2))));
+  const body = { message: 'تحديث المنتجات من لوحة التحكم', content, branch: GH_BRANCH };
+  if (sha) body.sha = sha;
+  const res = await fetch(apiUrl, {
+    method: 'PUT',
+    headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) { const d = await res.json(); throw new Error(d.message || 'فشل تحديث products.json'); }
+}
+async function publishProducts() {
+  const token = getToken();
+  if (!token) { showToast('⚠️ أدخل GitHub Token أولاً من الأعلى','#ff6b6b'); return; }
+  saveAll();
+  showToast('🚀 جاري النشر على الموقع...');
+  try {
+    await updateProductsJSON(token, products);
+    localStorage.removeItem(STORAGE_KEY); // امسح النسخة المحلية حتى يقرأ كل الأجهزة من الملف المنشور
+    showToast('✅ تم النشر! التحديث يظهر للجميع خلال دقيقة');
+  } catch(e) {
+    showToast('❌ ' + e.message, '#ff6b6b');
+  }
 }
 
 // ---- Main Publish Function ----
