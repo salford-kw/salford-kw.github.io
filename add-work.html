@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إضافة عمل سريعة | سالفورد</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C8A96E;--gold-light:#E8D5A3;--dark:#0D0D0D;--dark2:#111008;--dark3:#1c1508;--green:#1ebe52;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Tajawal,sans-serif;background:var(--dark);color:#F9F4EC;direction:rtl;min-height:100vh;line-height:1.6;}
+header{background:linear-gradient(160deg,var(--dark2),var(--dark3));text-align:center;padding:22px 20px 18px;border-bottom:1px solid rgba(200,169,110,.25);}
+.logo{font-size:28px;font-weight:900;color:var(--gold);}
+.logo-sub{font-size:12px;color:var(--gold-light);opacity:.8;margin-top:3px;}
+#login-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px;}
+#login-screen h2{color:var(--gold-light);font-size:16px;margin-bottom:18px;}
+.login-input{width:100%;max-width:320px;background:rgba(255,255,255,.05);border:1px solid rgba(200,169,110,.2);border-radius:10px;padding:14px 16px;font-family:Tajawal,sans-serif;font-size:16px;color:#F9F4EC;text-align:center;letter-spacing:3px;margin-bottom:14px;outline:none;}
+.login-input:focus{border-color:var(--gold);}
+.login-btn{width:100%;max-width:320px;background:var(--gold);color:#0d0d0d;border:none;border-radius:10px;padding:14px;font-family:Tajawal,sans-serif;font-size:16px;font-weight:700;cursor:pointer;}
+#login-error{color:#ff6b6b;font-size:13px;margin-top:10px;display:none;}
+#panel{display:none;padding:20px 16px 40px;max-width:480px;margin:0 auto;}
+.field-group{margin-bottom:16px;}
+.field-label{display:block;font-size:13px;color:var(--gold);font-weight:700;margin-bottom:7px;}
+.field-input{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(200,169,110,.2);border-radius:10px;padding:13px 14px;font-family:Tajawal,sans-serif;font-size:15px;color:#F9F4EC;outline:none;}
+.field-input:focus{border-color:var(--gold);}
+textarea.field-input{resize:none;height:80px;line-height:1.6;}
+.img-upload-area{position:relative;border:2px dashed rgba(200,169,110,.3);border-radius:14px;padding:30px 16px;text-align:center;background:rgba(200,169,110,.04);}
+.img-upload-area input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.img-upload-area .icon{font-size:34px;margin-bottom:8px;}
+.img-upload-area .txt{font-size:13px;color:rgba(200,169,110,.6);}
+#img-preview-wrap{display:none;margin-top:12px;text-align:center;}
+#img-preview{max-width:100%;max-height:220px;border-radius:12px;border:1px solid rgba(200,169,110,.2);}
+.btn-submit{width:100%;background:linear-gradient(135deg,var(--green),#128c3e);color:#fff;border:none;border-radius:12px;padding:17px;font-family:Tajawal,sans-serif;font-size:17px;font-weight:800;cursor:pointer;margin-top:8px;}
+.btn-submit:disabled{opacity:.5;}
+#status-msg{text-align:center;font-size:13px;margin-top:14px;color:rgba(200,169,110,.7);min-height:18px;}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1c1508;border:1px solid var(--gold);color:#F9F4EC;padding:12px 22px;border-radius:10px;font-size:14px;z-index:9999;display:none;box-shadow:0 6px 24px rgba(0,0,0,.5);}
+.token-row{margin-bottom:18px;padding:12px;background:rgba(200,169,110,.05);border-radius:10px;border:1px solid rgba(200,169,110,.15);}
+.token-row.hide{display:none;}
+.token-row label{font-size:12px;color:rgba(200,169,110,.6);display:block;margin-bottom:6px;}
+.token-row input{width:100%;background:transparent;border:1px solid rgba(200,169,110,.2);border-radius:8px;padding:9px 10px;color:#F9F4EC;font-family:monospace;font-size:12px;}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">📸 إضافة عمل سريعة</div>
+  <div class="logo-sub">سالفورد للأثاث والمفروشات</div>
+</header>
+
+<div id="login-screen">
+  <h2>🔒 أدخل كلمة المرور</h2>
+  <input type="password" class="login-input" id="pwd-input" placeholder="••••••••" onkeydown="if(event.key==='Enter')checkLogin()">
+  <button class="login-btn" onclick="checkLogin()">دخول</button>
+  <div id="login-error">❌ كلمة مرور خاطئة</div>
+</div>
+
+<div id="panel">
+  <div class="token-row" id="token-row">
+    <label>🔑 GitHub Token (مرة وحدة بس، يُحفظ بهذا الجهاز)</label>
+    <input type="password" id="gh-token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+    <button class="login-btn" style="margin-top:8px;padding:10px;font-size:13px;" onclick="saveToken()">حفظ التوكن</button>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label">📸 صورة العمل المنفّذ</label>
+    <div class="img-upload-area" id="upload-area">
+      <div class="icon">📷</div>
+      <div class="txt">اضغط لاختيار صورة أو التصوير مباشرة</div>
+      <input type="file" id="img-file" accept="image/*" onchange="previewImage(this)">
+    </div>
+    <div id="img-preview-wrap"><img id="img-preview" src=""></div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label">✏️ عنوان العمل</label>
+    <input type="text" class="field-input" id="title-input" placeholder="مثال: مجلس ديكور صباح الناصر">
+  </div>
+
+  <div class="field-group">
+    <label class="field-label">📝 الوصف (المنطقة، نوع العمل...)</label>
+    <textarea class="field-input" id="desc-input" placeholder="مثال: تفصيل مجلس ديكور مع حفر نقشة سجاد - الكويت، صباح الناصر"></textarea>
+  </div>
+
+  <button class="btn-submit" id="submit-btn" onclick="submitWork()">➕ نشر العمل فوراً</button>
+  <div id="status-msg"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const PASS = 'hamad2012';
+const GH_OWNER = 'salford-kw';
+const GH_REPO  = 'salford-kw.github.io';
+const GH_BRANCH = 'main';
+let selectedFile = null;
+
+function checkLogin() {
+  const val = document.getElementById('pwd-input').value;
+  if (val === PASS) {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('panel').style.display = 'block';
+    checkTokenStatus();
+  } else {
+    document.getElementById('login-error').style.display = 'block';
+    document.getElementById('pwd-input').value = '';
+    setTimeout(()=>document.getElementById('login-error').style.display='none', 2000);
+  }
+}
+function getToken() { return localStorage.getItem('gh_token') || ''; }
+function saveToken() {
+  const t = document.getElementById('gh-token-input').value.trim();
+  if (!t) return;
+  localStorage.setItem('gh_token', t);
+  document.getElementById('gh-token-input').value = '';
+  checkTokenStatus();
+  showToast('✅ تم حفظ التوكن');
+}
+function checkTokenStatus() {
+  const row = document.getElementById('token-row');
+  row.classList.toggle('hide', !!getToken());
+}
+
+function previewImage(input) {
+  const file = input.files[0];
+  if (!file) return;
+  if (file.size > 6 * 1024 * 1024) { showToast('⚠️ الصورة أكبر من 6MB', '#ff6b6b'); input.value=''; return; }
+  selectedFile = file;
+  const reader = new FileReader();
+  reader.onload = e => {
+    document.getElementById('img-preview').src = e.target.result;
+    document.getElementById('img-preview-wrap').style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+}
+
+function fileToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => resolve(r.result.split(',')[1]);
+    r.onerror = reject;
+    r.readAsDataURL(file);
+  });
+}
+
+function showToast(msg, color) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.borderColor = color || '#C8A96E';
+  t.style.display = 'block';
+  setTimeout(()=>t.style.display='none', 3200);
+}
+function setStatus(msg) { document.getElementById('status-msg').textContent = msg; }
+
+async function ghApi(path, method, body) {
+  const token = getToken();
+  const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`;
+  const res = await fetch(url, {
+    method: method || 'GET',
+    headers: {
+      'Authorization': `token ${token}`,
+      'Accept': 'application/vnd.github.v3+json',
+      ...(body ? {'Content-Type': 'application/json'} : {})
+    },
+    body: body ? JSON.stringify(body) : undefined
+  });
+  const data = await res.json();
+  if (!res.ok && res.status !== 404) throw new Error(data.message || 'خطأ بالاتصال مع GitHub');
+  return { ok: res.ok, status: res.status, data };
+}
+
+async function uploadImage(file) {
+  const ts = Date.now();
+  const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
+  const filename = `work_${ts}.${ext}`;
+  const path = `works/${filename}`;
+  const base64 = await fileToBase64(file);
+  const r = await ghApi(path, 'PUT', { message: `إضافة صورة عمل: ${filename}`, content: base64, branch: GH_BRANCH });
+  if (!r.ok) throw new Error(r.data.message || 'فشل رفع الصورة');
+  return `https://salfordkw.shop/${path}`;
+}
+
+async function submitWork() {
+  const token = getToken();
+  if (!token) { showToast('⚠️ أدخل GitHub Token أولاً بالأعلى', '#ff6b6b'); return; }
+  if (!selectedFile) { showToast('⚠️ اختر صورة العمل', '#ff6b6b'); return; }
+  const title = document.getElementById('title-input').value.trim();
+  if (!title) { showToast('⚠️ أدخل عنوان العمل', '#ff6b6b'); return; }
+  const desc = document.getElementById('desc-input').value.trim();
+
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+
+  try {
+    setStatus('📤 جاري رفع الصورة...');
+    const imgUrl = await uploadImage(selectedFile);
+
+    setStatus('📄 جاري تحديث قائمة الأعمال...');
+    const current = await ghApi('posts.json');
+    if (!current.ok) throw new Error('تعذر قراءة posts.json');
+    const posts = JSON.parse(decodeURIComponent(escape(atob(current.data.content.replace(/\n/g,'')))));
+
+    const today = new Date().toISOString().split('T')[0];
+    posts.push({
+      id: 'post_' + Date.now(),
+      title: title,
+      desc: desc || '',
+      img: imgUrl,
+      date: today
+    });
+
+    const newContent = btoa(unescape(encodeURIComponent(JSON.stringify(posts, null, 2))));
+    const push = await ghApi('posts.json', 'PUT', {
+      message: `إضافة عمل جديد: ${title}`,
+      content: newContent,
+      sha: current.data.sha,
+      branch: GH_BRANCH
+    });
+    if (!push.ok) throw new Error(push.data.message || 'فشل حفظ العمل');
+
+    setStatus('');
+    showToast('✅ تم نشر العمل على الموقع فوراً!');
+    document.getElementById('title-input').value = '';
+    document.getElementById('desc-input').value = '';
+    document.getElementById('img-file').value = '';
+    document.getElementById('img-preview-wrap').style.display = 'none';
+    selectedFile = null;
+  } catch (e) {
+    setStatus('');
+    showToast('❌ ' + e.message, '#ff6b6b');
+  } finally {
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
