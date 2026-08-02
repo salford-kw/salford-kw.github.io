@@ -47,6 +47,8 @@ header{background:linear-gradient(160deg,var(--dark2),var(--dark3));text-align:c
 .product-info h3{font-size:13px;font-weight:700;color:var(--gold-light);margin-bottom:5px;line-height:1.4;}
 .product-info p{font-size:11px;color:rgba(249,244,236,.5);line-height:1.6;}
 .product-badge{display:inline-block;background:rgba(200,169,110,.12);color:var(--gold);font-size:10px;padding:2px 8px;border-radius:10px;margin-bottom:5px;font-weight:700;}
+.product-price{display:inline-block;background:rgba(30,190,82,.12);color:#4ade80;font-size:11px;font-weight:800;padding:3px 9px;border-radius:8px;margin-top:6px;}
+.product-price.tbd{background:rgba(200,169,110,.1);color:rgba(200,169,110,.6);}
 .loading{text-align:center;padding:40px;color:rgba(200,169,110,.4);font-size:14px;}
 .cta{padding:16px 14px;display:flex;flex-direction:column;gap:10px;}
 .btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:16px 20px;border-radius:10px;font-family:Tajawal,sans-serif;font-size:17px;font-weight:700;text-decoration:none;border:none;cursor:pointer;width:100%;}
@@ -95,7 +97,7 @@ footer a{color:rgba(200,169,110,.5);text-decoration:none;}
 <footer>
   <div><strong style="color:rgba(200,169,110,.6)">سالفورد للأثاث والمفروشات</strong></div>
   <div>📍 الكويت — الضجيج &nbsp;|&nbsp; 🕒 10 ص - 9 م</div>
-  <div>📞 <a href="tel:+96555943343">55943343</a> &nbsp;|&nbsp; <a href="https://wa.me/96555943343">واتساب</a></div>
+  <div>📞 <a href="tel:+96555943343">55943343</a> &nbsp;|&nbsp; <a href="https://wa.me/96555943343">واتساب</a> &nbsp;|&nbsp; <a href="/reviews.html">⭐ آراء العملاء</a></div>
   <div style="margin-top:4px;font-size:11px;opacity:.4;">© 2026 جميع الحقوق محفوظة</div>
 </footer>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
@@ -115,7 +117,12 @@ function renderProducts(data) {
   const items = data[SECTION] || [];
   if (!items.length) { grid.innerHTML = '<div class="loading" style="grid-column:1/-1">لا توجد منتجات حالياً</div>'; return; }
 
-  grid.innerHTML = items.map(p => `
+  grid.innerHTML = items.map(p => {
+    const hasPrice = p.price && String(p.price).trim() !== '';
+    const priceHTML = hasPrice
+      ? `<span class="product-price">${p.price} د.ك / ${p.unit || 'م'}</span>`
+      : `<span class="product-price tbd">💬 السعر عند الطلب</span>`;
+    return `
     <article class="product-card" itemscope itemtype="https://schema.org/Product" onclick="openLightbox('${p.img}')">
       <img src="${p.img}" alt="${p.code} - سالفورد الكويت" loading="lazy" itemprop="image"
            onerror="this.src='https://placehold.co/200x200/1c1805/C8A96E?text=سالفورد'">
@@ -123,9 +130,11 @@ function renderProducts(data) {
         <span class="product-badge">✅ متوفر</span>
         <h3 itemprop="name">${p.code}</h3>
         <p itemprop="description">${p.desc}</p>
+        ${priceHTML}
         <meta itemprop="brand" content="سالفورد للأثاث والمفروشات">
       </div>
-    </article>`).join('');
+    </article>`;
+  }).join('');
 
   // Inject ItemList Schema
   const schema = {
@@ -138,6 +147,7 @@ function renderProducts(data) {
         "@type":"Product","name":p.code,"description":p.desc,"image":p.img,
         "brand":{"@type":"Brand","name":"سالفورد للأثاث والمفروشات"},
         "offers":{"@type":"Offer","availability":"https://schema.org/InStock",
+          ...(p.price && String(p.price).trim() !== '' ? {"price":p.price,"priceCurrency":"KWD","unitText":p.unit||'م'} : {}),
           "seller":{"@type":"Organization","name":"سالفورد للأثاث والمفروشات","telephone":"+96555943343"}}
       }
     }))
