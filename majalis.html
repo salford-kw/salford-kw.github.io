@@ -44,6 +44,10 @@ header{background:linear-gradient(160deg,var(--dark2),var(--dark3));text-align:c
 .page-title{background:linear-gradient(135deg,#1a1208,#2a1f0a);padding:24px 20px;text-align:center;border-bottom:1px solid rgba(200,169,110,.15);}
 .page-title h1{font-size:clamp(20px,5vw,28px);font-weight:900;color:var(--gold);margin-bottom:6px;}
 .page-title p{font-size:13px;color:rgba(200,169,110,.65);line-height:1.7;}
+.rating-bar{background:rgba(200,169,110,.05);border-bottom:1px solid rgba(200,169,110,.1);padding:10px 18px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;}
+.rating-stars{color:#FFD700;font-size:16px;}
+.rating-text{font-size:12px;color:var(--gold-light);}
+.rating-sep{color:rgba(200,169,110,.3);}
 .sec-title{font-size:15px;font-weight:700;color:var(--gold);margin:18px 0 16px;text-align:center;display:block;position:relative;}
 .sec-title::before,.sec-title::after{content:'';position:absolute;top:50%;width:20%;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,.4));}
 .sec-title::before{right:0;}.sec-title::after{left:0;transform:scaleX(-1);}
@@ -67,6 +71,7 @@ header{background:linear-gradient(160deg,var(--dark2),var(--dark3));text-align:c
 .areas{padding:14px 16px;background:rgba(200,169,110,.02);border-top:1px solid rgba(200,169,110,.08);}
 .areas h2{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:8px;}
 .areas p{font-size:12px;color:rgba(200,169,110,.35);line-height:2.1;}
+.trust-note{text-align:center;font-size:12px;color:rgba(200,169,110,.55);margin-top:2px;}
 .cta{padding:16px 14px;display:flex;flex-direction:column;gap:10px;}
 .btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:16px 20px;border-radius:10px;font-family:Tajawal,sans-serif;font-size:17px;font-weight:700;text-decoration:none;border:none;cursor:pointer;width:100%;}
 .btn-wa{background:linear-gradient(135deg,#1ebe52,#128c3e);color:#fff;animation:pulse 2.5s infinite;}
@@ -93,8 +98,14 @@ footer a{color:rgba(200,169,110,.5);text-decoration:none;}
   <div class="logo-sub">للأثاث والمفروشات</div>
 </header>
 <div class="page-title">
-  <h1>🏠 المجالس والمساند</h1>
-  <p>تفصيل مجالس عربية وديوانيات فاخرة في الكويت — الضجيج<br>مجالس رجال ونساء — جودة تليق بديوانيتك</p>
+  <h1>🏠 مجالس ديكور فاخرة في الكويت</h1>
+  <p>تفصيل مجالس عربية وديوانيات فاخرة على مقاسك — الضجيج، الكويت<br>مجالس رجال ونساء — معاينة وقياس مجاني بالمنزل</p>
+</div>
+<div class="rating-bar">
+  <span class="rating-stars">★★★★★</span>
+  <span class="rating-text">4.9 / 5</span>
+  <span class="rating-sep">|</span>
+  <span class="rating-text">+87 تقييم عميل راضٍ</span>
 </div>
 <main>
   <span class="sec-title">منتجاتنا</span>
@@ -121,6 +132,7 @@ footer a{color:rgba(200,169,110,.5);text-decoration:none;}
     <a class="btn btn-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});">
       <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> اتصل بنا الآن
     </a>
+    <p class="trust-note">📩 رد سريع خلال دقائق — معاينة وقياس مجاني بالمنزل</p>
   </div>
 </main>
 <footer>
