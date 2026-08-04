@@ -225,5 +225,21 @@
     "date": "2026-08-04",
     "price": "45",
     "unit": "م"
+  },
+  {
+    "id": "post_1785879777751",
+    "title": "مجلس خشب ديكور الصباحية",
+    "desc": "",
+    "img": "https://salfordkw.shop/products/product_1785879769788_1u0b6.jpg",
+    "images": [
+      "https://salfordkw.shop/products/product_1785879769788_1u0b6.jpg",
+      "https://salfordkw.shop/products/product_1785879771266_iijzy.jpg",
+      "https://salfordkw.shop/products/product_1785879772816_0vo63.jpg",
+      "https://salfordkw.shop/products/product_1785879774499_dka6o.jpg"
+    ],
+    "video": "",
+    "date": "2026-08-04",
+    "price": "35",
+    "unit": "م"
   }
 ]
