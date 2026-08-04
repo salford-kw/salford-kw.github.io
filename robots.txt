@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /admin.html
-Disallow: /add.html
-Disallow: /add-work.html
-
-Sitemap: https://salfordkw.shop/sitemap.xml
