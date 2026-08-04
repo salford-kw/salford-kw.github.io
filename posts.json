@@ -157,5 +157,18 @@
     "date": "2026-08-04",
     "price": "13",
     "unit": "م"
+  },
+  {
+    "id": "post_1785879152443",
+    "title": "نقشات حفر سجاد يدوي",
+    "desc": "حفر يدوي للديوانيات",
+    "img": "https://salfordkw.shop/products/product_1785879145377_fyo3w.jpg",
+    "images": [
+      "https://salfordkw.shop/products/product_1785879145377_fyo3w.jpg"
+    ],
+    "video": "https://salfordkw.shop/products/video_1785879148222_92e1b.mp4",
+    "date": "2026-08-04",
+    "price": "13",
+    "unit": "م"
   }
 ]
