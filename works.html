@@ -43,6 +43,17 @@ header{background:linear-gradient(160deg,var(--dark2),var(--dark3));text-align:c
 .page-hero{padding:20px 16px 16px;text-align:center;background:linear-gradient(135deg,#1a1208,#2a1f0a);border-bottom:1px solid rgba(200,169,110,.12);}
 .page-hero h1{font-size:clamp(17px,4.5vw,24px);font-weight:900;color:var(--gold);margin-bottom:8px;}
 .page-hero p{font-size:13px;color:rgba(200,169,110,.6);line-height:1.7;}
+.rating-bar{background:rgba(200,169,110,.05);border-bottom:1px solid rgba(200,169,110,.1);padding:10px 18px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;}
+.rating-stars{color:#FFD700;font-size:16px;}
+.rating-text{font-size:12px;color:var(--gold-light);}
+.rating-sep{color:rgba(200,169,110,.3);}
+.quick-nav{display:flex;gap:8px;padding:14px 12px 4px;overflow-x:auto;}
+.quick-nav a{flex:0 0 auto;background:rgba(200,169,110,.08);border:1px solid rgba(200,169,110,.25);color:var(--gold-light);font-size:12px;font-weight:700;padding:8px 16px;border-radius:20px;text-decoration:none;white-space:nowrap;}
+.quick-nav a:hover{background:rgba(200,169,110,.15);border-color:var(--gold);}
+.areas{padding:14px 16px;background:rgba(200,169,110,.02);border-top:1px solid rgba(200,169,110,.08);}
+.areas h2{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:8px;}
+.areas p{font-size:12px;color:rgba(200,169,110,.35);line-height:2.1;}
+.trust-note{text-align:center;font-size:12px;color:rgba(200,169,110,.55);margin-top:2px;}
 .sec-title{font-size:15px;font-weight:700;color:var(--gold);margin-bottom:14px;text-align:center;display:block;position:relative;}
 .sec-title::before,.sec-title::after{content:'';position:absolute;top:50%;width:20%;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,.4));}
 .sec-title::before{right:0;}.sec-title::after{left:0;transform:scaleX(-1);}
@@ -94,17 +105,32 @@ footer a{color:rgba(200,169,110,.6);text-decoration:none;}
   <div class="logo-sub">للأثاث والمفروشات</div>
 </header>
 <section class="page-hero">
-  <h1>📸 أعمالنا ومشاريعنا الأخيرة</h1>
-  <p>تفصيل مجالس ديكور • سجاد تركي • موكيت • ثيل صناعي • أثاث فاخر<br>نحدّث أعمالنا بشكل مستمر — تابعونا</p>
+  <h1>📸 أعمالنا ومشاريعنا في الكويت</h1>
+  <p>تفصيل مجالس ديكور • سجاد تركي • موكيت • ثيل صناعي • أثاث فاخر — الضجيج، الكويت<br>نحدّث أعمالنا بشكل مستمر — شاهد آخر مشاريعنا الفعلية</p>
 </section>
+<div class="rating-bar">
+  <span class="rating-stars">★★★★★</span>
+  <span class="rating-text">4.9 / 5</span>
+  <span class="rating-sep">|</span>
+  <span class="rating-text">+87 تقييم عميل راضٍ</span>
+</div>
+<nav class="quick-nav" aria-label="تصفح أقسام الموقع">
+  <a href="/majalis.html">🏠 المجالس والمساند</a>
+  <a href="/sajjad.html">🧶 السجاد والموكيت</a>
+  <a href="/athath.html">🛋️ الأثاث والديكور</a>
+</nav>
 <section id="posts-container">
   <span class="sec-title">آخر الأعمال</span>
   <div id="loading" class="loading">⏳ جاري التحميل...</div>
   <div class="posts-grid" id="posts-grid"></div>
   <div id="empty-state" class="empty-state" style="display:none;">
     <div class="empty-icon">📷</div>
-    <div class="empty-text">لا توجد أعمال منشورة بعد<br>تابعونا قريباً لنشارككم أحدث مشاريعنا</div>
+    <div class="empty-text">أعمالنا الجديدة قيد النشر حالياً<br>تواصل معنا مباشرة عبر واتساب وراح نرسلك صور من آخر مشاريعنا فوراً</div>
   </div>
+</section>
+<section class="areas">
+  <h2>نخدم جميع مناطق الكويت</h2>
+  <p>حولي • السالمية • الفروانية • العاصمة • الأحمدي • الجهراء • مبارك الكبير • الضجيج • خيطان • الرقعي • بيان • سلوى • الرميثية • الفحيحيل • المهبولة • الصباحية • القرين • العدان • صباح السالم • الشعب • بنيد القار • كيفان • الروضة • العديلية • النزهة • الشامية • القادسية • الشويخ • جليب الشيوخ • عبد الله المبارك • الصليبية • وجميع أنحاء الكويت</p>
 </section>
 <section class="cta-section">
   <a class="btn btn-wa" href="https://wa.me/96555943343?text=مرحبا،%20شفت%20أعمالكم%20وأريد%20الاستفسار" target="_blank" rel="noopener">
@@ -115,6 +141,7 @@ footer a{color:rgba(200,169,110,.6);text-decoration:none;}
     <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
     اتصل بنا: 55943343
   </a>
+  <p class="trust-note">📩 رد سريع خلال دقائق — معاينة وقياس مجاني بالمنزل</p>
 </section>
 <footer>
   <div><strong style="color:rgba(200,169,110,.7)">سالفورد للأثاث والمفروشات</strong></div>
@@ -126,6 +153,112 @@ footer a{color:rgba(200,169,110,.6);text-decoration:none;}
   <img id="lb-img" src="" alt="">
   <div class="lightbox-title" id="lb-title"></div>
   <div class="lightbox-desc" id="lb-desc"></div>
+</div>
+<div class="sticky">
+  <a class="s-btn s-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener">💬 واتساب</a>
+  <a class="s-btn s-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});">📞 اتصال</a>
+</div>
+<script>
+// ============================================================
+// يقرأ من localStorage أولاً (تحديثات فورية من اللوحة)
+// ثم من posts.json على GitHub (للزوار الجدد)
+// ============================================================
+const POSTS_KEY = 'salford_posts';
+
+async function loadPosts() {
+  // 1) جرّب localStorage
+  const local = localStorage.getItem(POSTS_KEY);
+  if (local) {
+    try {
+      const p = JSON.parse(local);
+      if (Array.isArray(p) && p.length > 0) { renderPosts(p); return; }
+    } catch(e) {}
+  }
+  // 2) جرّب posts.json من الموقع
+  try {
+    const r = await fetch('/posts.json?v=' + Date.now());
+    if (r.ok) {
+      const p = await r.json();
+      if (Array.isArray(p) && p.length > 0) { renderPosts(p); return; }
+    }
+  } catch(e) {}
+  // 3) لا توجد منشورات
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('empty-state').style.display = 'block';
+}
+
+function renderPosts(posts) {
+  document.getElementById('loading').style.display = 'none';
+  const grid = document.getElementById('posts-grid');
+  // ترتيب من الأحدث للأقدم
+  const sorted = [...posts].reverse();
+  // ✅ Schema: ItemList ديناميكي لـ SEO
+  const schema = {
+    "@context":"https://schema.org","@type":"ItemList",
+    "name":"أعمال سالفورد للأثاث والمفروشات",
+    "url":"https://salfordkw.shop/works.html",
+    "numberOfItems": sorted.length,
+    "itemListElement": sorted.map((p,i)=>({
+      "@type":"ListItem","position":i+1,
+      "item":{"@type":"ImageObject","name":p.title,"description":p.desc||"","url":p.img,"author":{"@type":"LocalBusiness","name":"سالفورد للأثاث والمفروشات"}}
+    }))
+  };
+  const s = document.createElement('script');
+  s.type = 'application/ld+json';
+  s.textContent = JSON.stringify(schema);
+  document.head.appendChild(s);
+
+  grid.innerHTML = sorted.map(p => `
+    <article class="post-card" onclick="openLightbox('${p.img}','${escHtml(p.title)}','${escHtml(p.desc||'')}')">
+      <div class="post-img-wrap">
+        <img src="${p.img}" alt="${escHtml(p.title)} - سالفورد للأثاث الكويت" loading="lazy" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="post-info">
+        <div class="post-title">${escHtml(p.title)}</div>
+        ${p.desc ? `<div class="post-desc">${escHtml(p.desc)}</div>` : ''}
+        <div class="post-date">${relativeDate(p.date)}</div>
+      </div>
+    </article>
+  `).join('');
+}
+
+function escHtml(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
+// ✅ حساب التاريخ النسبي بالعربي
+function relativeDate(dateStr) {
+  if (!dateStr) return '';
+  const today = new Date(); today.setHours(0,0,0,0);
+  const d = new Date(dateStr); d.setHours(0,0,0,0);
+  const diff = Math.round((today - d) / 86400000);
+  if (diff <= 0)  return '🟢 اليوم';
+  if (diff === 1) return '🟡 أمس';
+  if (diff === 2) return '⚪ قبل يومين';
+  if (diff <= 6)  return `⚪ منذ ${diff} أيام`;
+  if (diff <= 13) return '⚪ منذ أسبوع';
+  if (diff <= 29) return '⚪ منذ أسبوعين';
+  if (diff <= 59) return '⚪ منذ شهر';
+  return '⚪ منذ فترة';
+}
+
+function formatDate(d){ if(!d) return ''; try{ const dt=new Date(d); return dt.toLocaleDateString('ar-KW',{year:'numeric',month:'long',day:'numeric'}); }catch(e){ return d; } }
+
+function openLightbox(src,title,desc){
+  document.getElementById('lb-img').src=src;
+  document.getElementById('lb-img').alt=title+' - سالفورد الكويت';
+  document.getElementById('lb-title').textContent=title;
+  document.getElementById('lb-desc').textContent=desc;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow='';
+}
+
+loadPosts();
+</script>
+</body>
+</html>  <div class="lightbox-desc" id="lb-desc"></div>
 </div>
 <div class="sticky">
   <a class="s-btn s-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener">💬 واتساب</a>
