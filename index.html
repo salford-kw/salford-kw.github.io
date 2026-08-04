@@ -70,7 +70,7 @@ header{background:linear-gradient(160deg,var(--dark2),var(--dark3));text-align:c
 .work-card{border-radius:10px;overflow:hidden;background:#141414;border:1px solid rgba(200,169,110,.1);cursor:pointer;transition:border-color .2s,transform .15s;}
 .work-card:hover{border-color:rgba(200,169,110,.35);transform:translateY(-2px);}
 .work-card:first-child{grid-column:1/-1;}
-.work-card-img{overflow:hidden;background:#1a1208;}
+.work-card-img{overflow:hidden;background:#1a1208;position:relative;}
 .work-card:first-child .work-card-img{aspect-ratio:16/9;}
 .work-card:not(:first-child) .work-card-img{aspect-ratio:4/3;}
 .work-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
@@ -118,10 +118,20 @@ header{background:linear-gradient(160deg,var(--dark2),var(--dark3));text-align:c
 .faq-a p{padding:0 16px 14px;font-size:13px;color:rgba(200,169,110,.65);line-height:1.8;}
 footer{background:rgba(200,169,110,.04);border-top:1px solid rgba(200,169,110,.15);text-align:center;padding:16px;font-size:12px;color:rgba(200,169,110,.4);line-height:2;}
 footer a{color:rgba(200,169,110,.6);text-decoration:none;}
-.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:9999;align-items:center;justify-content:center;}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:9999;align-items:center;justify-content:center;flex-direction:column;padding:16px;}
 .lightbox.active{display:flex;}
-.lightbox img{max-width:95vw;max-height:90vh;border-radius:10px;object-fit:contain;}
-.lightbox-close{position:absolute;top:16px;left:16px;color:#fff;font-size:26px;cursor:pointer;background:rgba(200,169,110,.35);border:none;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;}
+.lightbox-carousel{position:relative;width:100%;max-width:520px;display:flex;align-items:center;justify-content:center;}
+.lightbox-slide-wrap{width:100%;border-radius:12px;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center;max-height:78vh;}
+.lightbox-slide-wrap img{width:100%;max-height:78vh;object-fit:contain;display:block;}
+.lightbox-slide-wrap video{width:100%;max-height:78vh;display:block;background:#000;}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(200,169,110,.25);border:none;color:#fff;width:38px;height:38px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;}
+.lightbox-nav.prev{right:8px;}
+.lightbox-nav.next{left:8px;}
+.lightbox-dots{display:flex;gap:6px;justify-content:center;margin-top:10px;}
+.lightbox-dot{width:7px;height:7px;border-radius:50%;background:rgba(200,169,110,.3);cursor:pointer;transition:background .2s;}
+.lightbox-dot.active{background:var(--gold);}
+.lightbox-caption{text-align:center;color:var(--gold-light);font-size:13px;margin-top:10px;max-width:520px;}
+.lightbox-close{position:absolute;top:16px;left:16px;color:#fff;font-size:26px;cursor:pointer;background:rgba(200,169,110,.35);border:none;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;z-index:3;}
 .sticky{position:fixed;bottom:0;left:0;right:0;display:grid;grid-template-columns:1fr 1fr;z-index:998;box-shadow:0 -3px 18px rgba(0,0,0,.6);}
 .s-btn{display:flex;align-items:center;justify-content:center;gap:7px;padding:14px;font-family:Tajawal,sans-serif;font-size:15px;font-weight:700;text-decoration:none;border:none;cursor:pointer;}
 .s-wa{background:#1ebe52;color:#fff;}
@@ -219,7 +229,13 @@ footer a{color:rgba(200,169,110,.6);text-decoration:none;}
 </footer>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <img id="lightbox-img" src="" alt="صورة مكبّرة - سالفورد للأثاث والمفروشات الكويت">
+  <div class="lightbox-carousel" onclick="event.stopPropagation()">
+    <button class="lightbox-nav prev" onclick="lbPrev()" id="lb-prev" style="display:none;">›</button>
+    <div class="lightbox-slide-wrap" id="lb-slide-wrap"></div>
+    <button class="lightbox-nav next" onclick="lbNext()" id="lb-next" style="display:none;">‹</button>
+  </div>
+  <div class="lightbox-dots" id="lb-dots"></div>
+  <div class="lightbox-caption" id="lb-caption"></div>
 </div>
 <div class="sticky">
   <a class="s-btn s-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener">💬 واتساب</a>
@@ -230,6 +246,7 @@ footer a{color:rgba(200,169,110,.6);text-decoration:none;}
 // آخر 5 منشورات من posts.json — تظهر في الصفحة الرئيسية
 // ============================================================
 const POSTS_KEY = 'salford_posts';
+let currentLatestWorks = [];
 
 async function loadLatestWorks() {
   let posts = [];
@@ -263,14 +280,17 @@ async function loadLatestWorks() {
 
   // آخر 5 منشورات (الأحدث أولاً)
   const latest = [...posts].reverse().slice(0, 5);
+  currentLatestWorks = latest;
 
   grid.innerHTML = latest.map((p, i) => `
-    <div class="work-card" onclick="openLightbox('${p.img}','${esc(p.title)}')">
+    <div class="work-card" onclick="openLightbox(${i})">
       <div class="work-card-img">
         <img src="${p.img}"
              alt="${esc(p.title)} - سالفورد للأثاث والمفروشات الكويت"
              loading="${i === 0 ? 'eager' : 'lazy'}"
              onerror="this.style.opacity='.2'">
+        ${(p.images && p.images.length > 1) ? `<span style="position:absolute;bottom:6px;left:6px;background:rgba(0,0,0,.6);color:#fff;font-size:10px;padding:2px 7px;border-radius:8px;">📷 ${p.images.length}</span>` : ''}
+        ${p.video ? `<span style="position:absolute;bottom:6px;right:6px;background:rgba(200,169,110,.85);color:#0d0d0d;font-size:10px;font-weight:800;padding:2px 7px;border-radius:8px;">🎬 فيديو</span>` : ''}
       </div>
       <div class="work-card-info">
         <div class="work-card-title">${esc(p.title)}</div>
@@ -307,15 +327,90 @@ function relativeDate(dateStr) {
 // FAQ
 function toggleFaq(btn){const item=btn.parentElement;const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');}
 
-// Lightbox
-function openLightbox(src, title){
-  document.getElementById('lightbox-img').src = src;
-  document.getElementById('lightbox-img').alt = (title||'') + ' - سالفورد الكويت';
+// ============================================================
+// Lightbox — معرض صور/فيديو احترافي (Carousel)
+// ============================================================
+let lbSlides = [];
+let lbIndex = 0;
+
+function buildSlides(post) {
+  const slides = [];
+  if (post.video) slides.push({ type: 'video', src: post.video });
+  const imgs = (post.images && post.images.length > 0) ? post.images : (post.img ? [post.img] : []);
+  imgs.forEach(src => slides.push({ type: 'image', src }));
+  return slides.length ? slides : [{ type: 'image', src: post.img || '' }];
+}
+
+function isYouTube(url) { return /youtube\.com|youtu\.be/.test(url); }
+function youTubeEmbed(url) {
+  let id = '';
+  const m1 = url.match(/[?&]v=([^&]+)/);
+  const m2 = url.match(/youtu\.be\/([^?&]+)/);
+  if (m1) id = m1[1]; else if (m2) id = m2[1];
+  return `https://www.youtube.com/embed/${id}`;
+}
+
+function openLightbox(index) {
+  const post = currentLatestWorks[index];
+  if (!post) return;
+  lbSlides = buildSlides(post);
+  lbIndex = 0;
+  document.getElementById('lb-caption').textContent = post.title || '';
+  renderLbSlide();
   document.getElementById('lightbox').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
+
+function renderLbSlide() {
+  const wrap = document.getElementById('lb-slide-wrap');
+  const slide = lbSlides[lbIndex];
+  wrap.innerHTML = '';
+  if (slide.type === 'video') {
+    if (isYouTube(slide.src)) {
+      wrap.innerHTML = `<iframe src="${youTubeEmbed(slide.src)}" style="width:100%;aspect-ratio:16/9;border:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+    } else {
+      const v = document.createElement('video');
+      v.src = slide.src;
+      v.controls = true;
+      v.playsInline = true;
+      v.style.width = '100%';
+      // أبعاد تلقائية حسب الفيديو الفعلي
+      v.addEventListener('loadedmetadata', () => {
+        if (v.videoWidth && v.videoHeight) {
+          wrap.style.aspectRatio = `${v.videoWidth} / ${v.videoHeight}`;
+        }
+      });
+      wrap.appendChild(v);
+    }
+  } else {
+    const img = document.createElement('img');
+    img.src = slide.src;
+    img.alt = 'صورة - سالفورد للأثاث والمفروشات الكويت';
+    wrap.appendChild(img);
+  }
+
+  // أزرار التنقل والنقاط
+  const prevBtn = document.getElementById('lb-prev');
+  const nextBtn = document.getElementById('lb-next');
+  const showNav = lbSlides.length > 1;
+  prevBtn.style.display = showNav ? 'flex' : 'none';
+  nextBtn.style.display = showNav ? 'flex' : 'none';
+
+  const dotsWrap = document.getElementById('lb-dots');
+  if (showNav) {
+    dotsWrap.innerHTML = lbSlides.map((_, i) => `<span class="lightbox-dot ${i===lbIndex?'active':''}" onclick="event.stopPropagation();lbGoTo(${i})"></span>`).join('');
+  } else {
+    dotsWrap.innerHTML = '';
+  }
+}
+
+function lbNext() { lbIndex = (lbIndex + 1) % lbSlides.length; renderLbSlide(); }
+function lbPrev() { lbIndex = (lbIndex - 1 + lbSlides.length) % lbSlides.length; renderLbSlide(); }
+function lbGoTo(i) { lbIndex = i; renderLbSlide(); }
+
 function closeLightbox(){
   document.getElementById('lightbox').classList.remove('active');
+  document.getElementById('lb-slide-wrap').innerHTML = '';
   document.body.style.overflow = '';
 }
 
