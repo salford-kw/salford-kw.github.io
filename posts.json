@@ -197,5 +197,20 @@
     "date": "2026-08-04",
     "price": "13",
     "unit": "م"
+  },
+  {
+    "id": "post_1785879577935",
+    "title": "مجلس ديكور فخم",
+    "desc": "خشب قشر جوز \nتصميم جديد و مميز",
+    "img": "https://salfordkw.shop/products/product_1785879571110_ju0lo.jpg",
+    "images": [
+      "https://salfordkw.shop/products/product_1785879571110_ju0lo.jpg",
+      "https://salfordkw.shop/products/product_1785879572924_s9fwz.jpg",
+      "https://salfordkw.shop/products/product_1785879574393_62oa6.jpg"
+    ],
+    "video": "",
+    "date": "2026-08-04",
+    "price": "45",
+    "unit": "م"
   }
 ]
