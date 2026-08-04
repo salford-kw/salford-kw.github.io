@@ -150,6 +150,18 @@
       "img": "https://salfordkw.shop/products/product_1785878837328.jpg",
       "price": "13",
       "unit": "م"
+    },
+    {
+      "id": "prod_1785879060625_zwks4",
+      "code": "سجاد حفر",
+      "desc": "سجاد حفر نقشات",
+      "img": "https://salfordkw.shop/products/product_1785879057217_2dqhg.jpg",
+      "images": [
+        "https://salfordkw.shop/products/product_1785879057217_2dqhg.jpg"
+      ],
+      "video": "",
+      "price": "13",
+      "unit": "م"
     }
   ],
   "majalis": [
