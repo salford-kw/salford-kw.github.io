@@ -29,16 +29,28 @@ header{background:linear-gradient(160deg,var(--dark2),var(--dark3));text-align:c
 textarea.field-input{resize:none;height:80px;line-height:1.6;}
 .price-row{display:flex;gap:10px;}
 .price-row .field-group{flex:1;}
-.img-upload-area{position:relative;border:2px dashed rgba(200,169,110,.3);border-radius:14px;padding:30px 16px;text-align:center;background:rgba(200,169,110,.04);}
+.img-upload-area{position:relative;border:2px dashed rgba(200,169,110,.3);border-radius:14px;padding:26px 16px;text-align:center;background:rgba(200,169,110,.04);}
 .img-upload-area input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
 .img-upload-area .icon{font-size:34px;margin-bottom:8px;}
 .img-upload-area .txt{font-size:13px;color:rgba(200,169,110,.6);}
-#img-preview-wrap{display:none;margin-top:12px;text-align:center;}
-#img-preview{max-width:100%;max-height:220px;border-radius:12px;border:1px solid rgba(200,169,110,.2);}
+.img-upload-area .hint{font-size:11px;color:rgba(200,169,110,.35);margin-top:4px;}
+#img-preview-grid{display:none;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;}
+.img-thumb{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;border:1px solid rgba(200,169,110,.2);}
+.img-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.img-thumb .cover-badge{position:absolute;top:4px;right:4px;background:rgba(200,169,110,.9);color:#0d0d0d;font-size:9px;font-weight:800;padding:2px 6px;border-radius:6px;}
+.img-thumb .rm-btn{position:absolute;top:4px;left:4px;background:rgba(0,0,0,.7);color:#ff6b6b;border:none;border-radius:50%;width:22px;height:22px;font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.img-count{font-size:11px;color:rgba(200,169,110,.5);margin-top:6px;text-align:center;}
+.video-tabs{display:flex;gap:8px;margin-bottom:10px;}
+.video-tab{flex:1;background:rgba(255,255,255,.04);border:1px solid rgba(200,169,110,.2);color:rgba(249,244,236,.6);border-radius:10px;padding:10px;font-family:Tajawal,sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-align:center;}
+.video-tab.active{background:rgba(200,169,110,.15);border-color:var(--gold);color:var(--gold-light);}
+.video-panel{display:none;}
+.video-panel.active{display:block;}
+#video-preview-wrap{display:none;margin-top:10px;}
+#video-preview-wrap video{width:100%;border-radius:10px;border:1px solid rgba(200,169,110,.2);max-height:200px;}
 .btn-submit{width:100%;background:linear-gradient(135deg,var(--green),#128c3e);color:#fff;border:none;border-radius:12px;padding:17px;font-family:Tajawal,sans-serif;font-size:17px;font-weight:800;cursor:pointer;margin-top:8px;}
 .btn-submit:disabled{opacity:.5;}
 #status-msg{text-align:center;font-size:13px;margin-top:14px;color:rgba(200,169,110,.7);min-height:18px;}
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1c1508;border:1px solid var(--gold);color:#F9F4EC;padding:12px 22px;border-radius:10px;font-size:14px;z-index:9999;display:none;box-shadow:0 6px 24px rgba(0,0,0,.5);}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1c1508;border:1px solid var(--gold);color:#F9F4EC;padding:12px 22px;border-radius:10px;font-size:14px;z-index:9999;display:none;box-shadow:0 6px 24px rgba(0,0,0,.5);max-width:90%;text-align:center;}
 .token-row{margin-bottom:18px;padding:12px;background:rgba(200,169,110,.05);border-radius:10px;border:1px solid rgba(200,169,110,.15);}
 .token-row.hide{display:none;}
 .token-row label{font-size:12px;color:rgba(200,169,110,.6);display:block;margin-bottom:6px;}
@@ -66,13 +78,36 @@ textarea.field-input{resize:none;height:80px;line-height:1.6;}
   </div>
 
   <div class="field-group">
-    <label class="field-label">📸 صورة المنتج</label>
+    <label class="field-label">📸 صور المنتج (يمكن اختيار أكثر من صورة دفعة وحدة)</label>
     <div class="img-upload-area" id="upload-area">
       <div class="icon">📷</div>
-      <div class="txt">اضغط لاختيار صورة أو التصوير مباشرة</div>
-      <input type="file" id="img-file" accept="image/*" onchange="previewImage(this)">
+      <div class="txt">اضغط لاختيار صورة أو عدة صور</div>
+      <div class="hint">حتى 8 صور — كل صورة أقصى 6MB</div>
+      <input type="file" id="img-file" accept="image/*" multiple onchange="handleImageSelect(this)">
     </div>
-    <div id="img-preview-wrap"><img id="img-preview" src=""></div>
+    <div id="img-preview-grid"></div>
+    <div class="img-count" id="img-count-txt"></div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label">🎬 فيديو المنتج (اختياري)</label>
+    <div class="video-tabs">
+      <button type="button" class="video-tab active" id="tab-novideo" onclick="setVideoMode('none')">بدون فيديو</button>
+      <button type="button" class="video-tab" id="tab-upload" onclick="setVideoMode('upload')">رفع ملف</button>
+      <button type="button" class="video-tab" id="tab-url" onclick="setVideoMode('url')">رابط فيديو</button>
+    </div>
+    <div class="video-panel" id="panel-upload">
+      <div class="img-upload-area" id="video-upload-area">
+        <div class="icon">🎥</div>
+        <div class="txt">اضغط لاختيار فيديو من جهازك</div>
+        <div class="hint">أقصى حجم 20MB — MP4 يُفضّل</div>
+        <input type="file" id="video-file" accept="video/*" onchange="handleVideoSelect(this)">
+      </div>
+    </div>
+    <div class="video-panel" id="panel-url">
+      <input type="text" class="field-input" id="video-url-input" placeholder="رابط يوتيوب أو رابط فيديو مباشر" oninput="previewVideoUrl()">
+    </div>
+    <div id="video-preview-wrap"><video id="video-preview" controls muted playsinline></video></div>
   </div>
 
   <div class="field-group">
@@ -125,7 +160,10 @@ const PASS = 'hamad2012';
 const GH_OWNER = 'salford-kw';
 const GH_REPO  = 'salford-kw.github.io';
 const GH_BRANCH = 'main';
-let selectedFile = null;
+const MAX_IMAGES = 8;
+let selectedImages = [];   // [{file, dataUrl}]
+let selectedVideoFile = null;
+let videoMode = 'none';
 
 function checkLogin() {
   const val = document.getElementById('pwd-input').value;
@@ -153,17 +191,77 @@ function checkTokenStatus() {
   row.classList.toggle('hide', !!getToken());
 }
 
-function previewImage(input) {
+// ===== Images (multiple) =====
+function handleImageSelect(input) {
+  const files = Array.from(input.files || []);
+  for (const file of files) {
+    if (selectedImages.length >= MAX_IMAGES) { showToast(`⚠️ الحد الأقصى ${MAX_IMAGES} صور`, '#ff6b6b'); break; }
+    if (file.size > 6 * 1024 * 1024) { showToast(`⚠️ صورة "${file.name}" أكبر من 6MB`, '#ff6b6b'); continue; }
+    const reader = new FileReader();
+    reader.onload = e => {
+      selectedImages.push({ file, dataUrl: e.target.result });
+      renderImageGrid();
+    };
+    reader.readAsDataURL(file);
+  }
+  input.value = '';
+}
+function removeImage(idx) {
+  selectedImages.splice(idx, 1);
+  renderImageGrid();
+}
+function renderImageGrid() {
+  const grid = document.getElementById('img-preview-grid');
+  const countTxt = document.getElementById('img-count-txt');
+  if (selectedImages.length === 0) {
+    grid.style.display = 'none';
+    countTxt.textContent = '';
+    return;
+  }
+  grid.style.display = 'grid';
+  grid.innerHTML = selectedImages.map((img, i) => `
+    <div class="img-thumb">
+      ${i === 0 ? '<span class="cover-badge">غلاف</span>' : ''}
+      <img src="${img.dataUrl}">
+      <button type="button" class="rm-btn" onclick="removeImage(${i})">✕</button>
+    </div>
+  `).join('');
+  countTxt.textContent = `${selectedImages.length} من ${MAX_IMAGES} صور — الصورة الأولى هي الغلاف`;
+}
+
+// ===== Video =====
+function setVideoMode(mode) {
+  videoMode = mode;
+  document.getElementById('tab-novideo').classList.toggle('active', mode === 'none');
+  document.getElementById('tab-upload').classList.toggle('active', mode === 'upload');
+  document.getElementById('tab-url').classList.toggle('active', mode === 'url');
+  document.getElementById('panel-upload').classList.toggle('active', mode === 'upload');
+  document.getElementById('panel-url').classList.toggle('active', mode === 'url');
+  if (mode !== 'upload') { selectedVideoFile = null; document.getElementById('video-file').value = ''; }
+  if (mode !== 'url') { document.getElementById('video-url-input').value = ''; }
+  if (mode === 'none') { document.getElementById('video-preview-wrap').style.display = 'none'; }
+}
+function handleVideoSelect(input) {
   const file = input.files[0];
   if (!file) return;
-  if (file.size > 6 * 1024 * 1024) { showToast('⚠️ الصورة أكبر من 6MB', '#ff6b6b'); input.value=''; return; }
-  selectedFile = file;
-  const reader = new FileReader();
-  reader.onload = e => {
-    document.getElementById('img-preview').src = e.target.result;
-    document.getElementById('img-preview-wrap').style.display = 'block';
-  };
-  reader.readAsDataURL(file);
+  if (file.size > 20 * 1024 * 1024) { showToast('⚠️ الفيديو أكبر من 20MB', '#ff6b6b'); input.value = ''; return; }
+  selectedVideoFile = file;
+  const url = URL.createObjectURL(file);
+  const vp = document.getElementById('video-preview');
+  vp.src = url;
+  document.getElementById('video-preview-wrap').style.display = 'block';
+}
+function previewVideoUrl() {
+  const url = document.getElementById('video-url-input').value.trim();
+  const wrap = document.getElementById('video-preview-wrap');
+  const vp = document.getElementById('video-preview');
+  if (!url) { wrap.style.display = 'none'; return; }
+  if (/youtube\.com|youtu\.be/.test(url)) {
+    wrap.style.display = 'none'; // handled on display pages via embed, no local preview for youtube here
+    return;
+  }
+  vp.src = url;
+  wrap.style.display = 'block';
 }
 
 function fileToBase64(file) {
@@ -180,7 +278,7 @@ function showToast(msg, color) {
   t.textContent = msg;
   t.style.borderColor = color || '#C8A96E';
   t.style.display = 'block';
-  setTimeout(()=>t.style.display='none', 3200);
+  setTimeout(()=>t.style.display='none', 3400);
 }
 function setStatus(msg) { document.getElementById('status-msg').textContent = msg; }
 
@@ -201,21 +299,25 @@ async function ghApi(path, method, body) {
   return { ok: res.ok, status: res.status, data };
 }
 
-async function uploadImage(file) {
-  const ts = Date.now();
+async function uploadFileToGitHub(file, folder, prefix) {
+  const ts = Date.now() + '_' + Math.random().toString(36).slice(2,7);
   const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
-  const filename = `product_${ts}.${ext}`;
-  const path = `products/${filename}`;
+  const filename = `${prefix}_${ts}.${ext}`;
+  const path = `${folder}/${filename}`;
   const base64 = await fileToBase64(file);
-  const r = await ghApi(path, 'PUT', { message: `إضافة صورة منتج: ${filename}`, content: base64, branch: GH_BRANCH });
-  if (!r.ok) throw new Error(r.data.message || 'فشل رفع الصورة');
+  const r = await ghApi(path, 'PUT', { message: `رفع ملف: ${filename}`, content: base64, branch: GH_BRANCH });
+  if (!r.ok) throw new Error(r.data.message || 'فشل رفع الملف');
   return `https://salfordkw.shop/${path}`;
+}
+
+function genProductId() {
+  return 'prod_' + Date.now() + '_' + Math.random().toString(36).slice(2,7);
 }
 
 async function submitProduct() {
   const token = getToken();
   if (!token) { showToast('⚠️ أدخل GitHub Token أولاً بالأعلى', '#ff6b6b'); return; }
-  if (!selectedFile) { showToast('⚠️ اختر صورة المنتج', '#ff6b6b'); return; }
+  if (selectedImages.length === 0) { showToast('⚠️ اختر صورة واحدة على الأقل', '#ff6b6b'); return; }
   const name = document.getElementById('name-input').value.trim();
   if (!name) { showToast('⚠️ أدخل اسم المنتج', '#ff6b6b'); return; }
   const section = document.getElementById('section-select').value;
@@ -227,8 +329,21 @@ async function submitProduct() {
   btn.disabled = true;
 
   try {
-    setStatus('📤 جاري رفع الصورة...');
-    const imgUrl = await uploadImage(selectedFile);
+    setStatus(`📤 جاري رفع الصور (0/${selectedImages.length})...`);
+    const imageUrls = [];
+    for (let i = 0; i < selectedImages.length; i++) {
+      const url = await uploadFileToGitHub(selectedImages[i].file, 'products', 'product');
+      imageUrls.push(url);
+      setStatus(`📤 جاري رفع الصور (${i+1}/${selectedImages.length})...`);
+    }
+
+    let videoUrl = '';
+    if (videoMode === 'upload' && selectedVideoFile) {
+      setStatus('🎬 جاري رفع الفيديو...');
+      videoUrl = await uploadFileToGitHub(selectedVideoFile, 'products', 'video');
+    } else if (videoMode === 'url') {
+      videoUrl = document.getElementById('video-url-input').value.trim();
+    }
 
     setStatus('📄 جاري تحديث قائمة المنتجات...');
     const current = await ghApi('products.json');
@@ -237,9 +352,12 @@ async function submitProduct() {
 
     if (!products[section]) products[section] = [];
     products[section].push({
+      id: genProductId(),
       code: name,
       desc: notes || 'منتج جديد من سالفورد للأثاث والمفروشات',
-      img: imgUrl,
+      img: imageUrls[0],
+      images: imageUrls,
+      video: videoUrl,
       price: price,
       unit: unit
     });
@@ -260,7 +378,7 @@ async function submitProduct() {
       if (currentPosts.ok) {
         const posts = JSON.parse(decodeURIComponent(escape(atob(currentPosts.data.content.replace(/\n/g,'')))));
         const today = new Date().toISOString().split('T')[0];
-        posts.push({ id: 'post_' + Date.now(), title: name, desc: notes || '', img: imgUrl, date: today, price: price, unit: unit });
+        posts.push({ id: 'post_' + Date.now(), title: name, desc: notes || '', img: imageUrls[0], images: imageUrls, video: videoUrl, date: today, price: price, unit: unit });
         const newPostsContent = btoa(unescape(encodeURIComponent(JSON.stringify(posts, null, 2))));
         await ghApi('posts.json', 'PUT', {
           message: `نشر تلقائي بقسم الأعمال: ${name}`,
@@ -277,8 +395,9 @@ async function submitProduct() {
     document.getElementById('price-input').value = '';
     document.getElementById('notes-input').value = '';
     document.getElementById('img-file').value = '';
-    document.getElementById('img-preview-wrap').style.display = 'none';
-    selectedFile = null;
+    selectedImages = [];
+    renderImageGrid();
+    setVideoMode('none');
   } catch (e) {
     setStatus('');
     showToast('❌ ' + e.message, '#ff6b6b');
