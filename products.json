@@ -311,6 +311,18 @@
       "video": "",
       "price": "45",
       "unit": "م"
+    },
+    {
+      "id": "prod_1785879672436_medoh",
+      "code": "مجلس ديكور الكويت صباح الاحمد",
+      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1785879667561_iyhvi.jpg",
+      "images": [
+        "https://salfordkw.shop/products/product_1785879667561_iyhvi.jpg"
+      ],
+      "video": "https://salfordkw.shop/products/video_1785879669350_lvfpm.mp4",
+      "price": "45",
+      "unit": "م"
     }
   ],
   "athath": [
