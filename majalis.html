@@ -21,6 +21,14 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://salfordkw.shop/"},{"@type":"ListItem","position":2,"name":"مجالس ومساند سالفورد الكويت","item":"https://salfordkw.shop/majalis.html"}]}
 </script>
+<!-- ✅ SCHEMA: LocalBusiness (يشير لنفس الكيان في الصفحة الرئيسية) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["FurnitureStore","LocalBusiness"],"@id":"https://salfordkw.shop/#business","name":"سالفورد للأثاث والمفروشات","url":"https://salfordkw.shop/majalis.html","telephone":"+96555943343","priceRange":"$$","currenciesAccepted":"KWD","paymentAccepted":"Cash, Bank Transfer","address":{"@type":"PostalAddress","streetAddress":"الضجيج","addressLocality":"الفروانية","addressRegion":"الفروانية","addressCountry":"KW"},"areaServed":{"@type":"Country","name":"Kuwait"},"makesOffer":{"@type":"Offer","itemOffered":{"@type":"Service","serviceType":"تفصيل مجالس وديوانيات ومساند ظهر","name":"تفصيل مجالس عربية وديوانيات كويتية","description":"تفصيل مجالس ديكور فاخرة، مساند ظهر، وديوانيات كويتية حسب الطلب مع خدمة المعاينة والقياس بالمنزل داخل الكويت.","areaServed":{"@type":"Country","name":"Kuwait"}}}}
+</script>
+<!-- ✅ SCHEMA: FAQ -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ما هي أنواع الأقمشة المتوفرة لتفصيل المجالس؟","acceptedAnswer":{"@type":"Answer","text":"نوفر تشكيلة واسعة من الأقمشة تشمل الجوبلان، الشنيل، المخمل، والأقمشة المقاومة للبقع والاستخدام اليومي، بألوان ودرجات تناسب ذوقك."}},{"@type":"Question","name":"هل تقدمون خدمة المعاينة والقياس في المنزل؟","acceptedAnswer":{"@type":"Answer","text":"نعم، نوفر خدمة المعاينة والقياس المجاني داخل المنزل لجميع مناطق الكويت لضمان تفصيل المجلس على المقاس الصحيح."}},{"@type":"Question","name":"كم تستغرق مدة تفصيل المجلس؟","acceptedAnswer":{"@type":"Answer","text":"تختلف المدة حسب حجم الطلب وتفاصيل التصميم، وغالباً تتراوح بين عدة أيام إلى أسبوعين. تواصل معنا لتحديد المدة الدقيقة حسب طلبك."}},{"@type":"Question","name":"هل تفصّلون مجالس الديكور ومساند الظهر حسب الطلب؟","acceptedAnswer":{"@type":"Answer","text":"نعم، نتخصص في تفصيل مجالس ديكور فاخرة ومساند ظهر والديوانيات الكويتية حسب المقاس والذوق."}},{"@type":"Question","name":"هل يوجد ضمان على تفصيل المجالس؟","acceptedAnswer":{"@type":"Answer","text":"نعم، نوفر ضمان على جودة التفصيل والخياطة. تواصل معنا على 55943343 لمعرفة تفاصيل الضمان."}}]}
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-6824246360"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-6824246360');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,9 +55,15 @@ header{background:linear-gradient(160deg,var(--dark2),var(--dark3));text-align:c
 .product-info h3{font-size:13px;font-weight:700;color:var(--gold-light);margin-bottom:5px;line-height:1.4;}
 .product-info p{font-size:11px;color:rgba(249,244,236,.5);line-height:1.6;}
 .product-badge{display:inline-block;background:rgba(200,169,110,.12);color:var(--gold);font-size:10px;padding:2px 8px;border-radius:10px;margin-bottom:5px;font-weight:700;}
-.product-price{display:inline-block;background:rgba(30,190,82,.12);color:#4ade80;font-size:11px;font-weight:800;padding:3px 9px;border-radius:8px;margin-top:6px;}
-.product-price.tbd{background:rgba(200,169,110,.1);color:rgba(200,169,110,.6);}
 .loading{text-align:center;padding:40px;color:rgba(200,169,110,.4);font-size:14px;}
+.faq{padding:18px 14px 8px;}
+.faq-item{border:1px solid rgba(200,169,110,.2);border-radius:10px;margin-bottom:8px;overflow:hidden;background:rgba(200,169,110,.04);}
+.faq-q{width:100%;background:none;border:none;color:var(--gold-light);font-family:Tajawal,sans-serif;font-size:14px;font-weight:700;padding:14px 16px;text-align:right;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.faq-icon{color:var(--gold);font-size:18px;flex-shrink:0;transition:transform .3s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.faq-item.open .faq-a{max-height:220px;}
+.faq-a p{padding:0 16px 14px;font-size:13px;color:rgba(200,169,110,.65);line-height:1.8;}
 .cta{padding:16px 14px;display:flex;flex-direction:column;gap:10px;}
 .btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:16px 20px;border-radius:10px;font-family:Tajawal,sans-serif;font-size:17px;font-weight:700;text-decoration:none;border:none;cursor:pointer;width:100%;}
 .btn-wa{background:linear-gradient(135deg,#1ebe52,#128c3e);color:#fff;animation:pulse 2.5s infinite;}
@@ -85,6 +99,14 @@ footer a{color:rgba(200,169,110,.5);text-decoration:none;}
     <div class="loading" style="grid-column:1/-1">جاري التحميل...</div>
   </div>
   <div id="schema-container"></div>
+  <section class="faq" aria-label="أسئلة شائعة عن تفصيل المجالس">
+    <span class="sec-title">أسئلة شائعة</span>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">ما هي أنواع الأقمشة المتوفرة لتفصيل المجالس؟<span class="faq-icon">+</span></button><div class="faq-a"><p>نوفر تشكيلة واسعة من الأقمشة تشمل الجوبلان، الشنيل، المخمل، والأقمشة المقاومة للبقع، بألوان ودرجات تناسب ذوقك.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">هل تقدمون خدمة المعاينة والقياس في المنزل؟<span class="faq-icon">+</span></button><div class="faq-a"><p>نعم، نوفر خدمة المعاينة والقياس المجاني داخل المنزل لجميع مناطق الكويت لضمان تفصيل المجلس على المقاس الصحيح.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">كم تستغرق مدة تفصيل المجلس؟<span class="faq-icon">+</span></button><div class="faq-a"><p>تختلف المدة حسب حجم الطلب وتفاصيل التصميم، وغالباً تتراوح بين عدة أيام إلى أسبوعين. تواصل معنا لتحديد المدة الدقيقة.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">هل تفصّلون مجالس الديكور ومساند الظهر حسب الطلب؟<span class="faq-icon">+</span></button><div class="faq-a"><p>نعم، نتخصص في تفصيل مجالس ديكور فاخرة ومساند ظهر والديوانيات الكويتية حسب المقاس والذوق.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">هل يوجد ضمان على تفصيل المجالس؟<span class="faq-icon">+</span></button><div class="faq-a"><p>نعم، نوفر ضمان على جودة التفصيل والخياطة. تواصل معنا على 55943343 لمعرفة تفاصيل الضمان.</p></div></div>
+  </section>
   <div class="cta">
     <a class="btn btn-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20المجالس%20والمساند" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> استفسر عبر واتساب
@@ -97,7 +119,7 @@ footer a{color:rgba(200,169,110,.5);text-decoration:none;}
 <footer>
   <div><strong style="color:rgba(200,169,110,.6)">سالفورد للأثاث والمفروشات</strong></div>
   <div>📍 الكويت — الضجيج &nbsp;|&nbsp; 🕒 10 ص - 9 م</div>
-  <div>📞 <a href="tel:+96555943343">55943343</a> &nbsp;|&nbsp; <a href="https://wa.me/96555943343">واتساب</a> &nbsp;|&nbsp; <a href="/reviews.html">⭐ آراء العملاء</a></div>
+  <div>📞 <a href="tel:+96555943343">55943343</a> &nbsp;|&nbsp; <a href="https://wa.me/96555943343">واتساب</a></div>
   <div style="margin-top:4px;font-size:11px;opacity:.4;">© 2026 جميع الحقوق محفوظة</div>
 </footer>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
@@ -117,12 +139,7 @@ function renderProducts(data) {
   const items = data[SECTION] || [];
   if (!items.length) { grid.innerHTML = '<div class="loading" style="grid-column:1/-1">لا توجد منتجات حالياً</div>'; return; }
 
-  grid.innerHTML = items.map(p => {
-    const hasPrice = p.price && String(p.price).trim() !== '';
-    const priceHTML = hasPrice
-      ? `<span class="product-price">${p.price} د.ك / ${p.unit || 'م'}</span>`
-      : `<span class="product-price tbd">💬 السعر عند الطلب</span>`;
-    return `
+  grid.innerHTML = items.map(p => `
     <article class="product-card" itemscope itemtype="https://schema.org/Product" onclick="openLightbox('${p.img}')">
       <img src="${p.img}" alt="${p.code} - سالفورد الكويت" loading="lazy" itemprop="image"
            onerror="this.src='https://placehold.co/200x200/1c1805/C8A96E?text=سالفورد'">
@@ -130,11 +147,9 @@ function renderProducts(data) {
         <span class="product-badge">✅ متوفر</span>
         <h3 itemprop="name">${p.code}</h3>
         <p itemprop="description">${p.desc}</p>
-        ${priceHTML}
         <meta itemprop="brand" content="سالفورد للأثاث والمفروشات">
       </div>
-    </article>`;
-  }).join('');
+    </article>`).join('');
 
   // Inject ItemList Schema
   const schema = {
@@ -147,7 +162,6 @@ function renderProducts(data) {
         "@type":"Product","name":p.code,"description":p.desc,"image":p.img,
         "brand":{"@type":"Brand","name":"سالفورد للأثاث والمفروشات"},
         "offers":{"@type":"Offer","availability":"https://schema.org/InStock",
-          ...(p.price && String(p.price).trim() !== '' ? {"price":p.price,"priceCurrency":"KWD","unitText":p.unit||'م'} : {}),
           "seller":{"@type":"Organization","name":"سالفورد للأثاث والمفروشات","telephone":"+96555943343"}}
       }
     }))
@@ -186,6 +200,9 @@ function closeLightbox() {
 }
 
 loadProducts();
+
+// FAQ
+function toggleFaq(btn){const item=btn.parentElement;const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');}
 </script>
 </body>
 </html>
