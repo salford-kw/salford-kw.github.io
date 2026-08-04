@@ -170,5 +170,19 @@
     "date": "2026-08-04",
     "price": "13",
     "unit": "م"
+  },
+  {
+    "id": "post_1785879282972",
+    "title": "مجلس ديوانية كنب",
+    "desc": "خشب قشر جوز \nتصميم خاص لك غير مكرر",
+    "img": "https://salfordkw.shop/products/product_1785879277026_qkty9.jpg",
+    "images": [
+      "https://salfordkw.shop/products/product_1785879277026_qkty9.jpg",
+      "https://salfordkw.shop/products/product_1785879279281_idjg6.jpg"
+    ],
+    "video": "",
+    "date": "2026-08-04",
+    "price": "45",
+    "unit": "م"
   }
 ]
