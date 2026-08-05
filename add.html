@@ -82,7 +82,7 @@ textarea.field-input{resize:none;height:80px;line-height:1.6;}
     <div class="img-upload-area" id="upload-area">
       <div class="icon">📷</div>
       <div class="txt">اضغط لاختيار صورة أو عدة صور</div>
-      <div class="hint">حتى 8 صور — كل صورة أقصى 6MB</div>
+      <div class="hint">حتى 8 صور — كل صورة أقصى 6MB — تُضغط تلقائياً قبل الرفع</div>
       <input type="file" id="img-file" accept="image/*" multiple onchange="handleImageSelect(this)">
     </div>
     <div id="img-preview-grid"></div>
@@ -192,17 +192,73 @@ function checkTokenStatus() {
 }
 
 // ===== Images (multiple) =====
-function handleImageSelect(input) {
+const COMPRESS_MAX_DIM = 1600;   // أقصى بُعد (طول/عرض) للصورة بعد الضغط
+const COMPRESS_QUALITY = 0.8;    // جودة الضغط (0-1)
+
+// يفحص إن كان المتصفح يدعم تصدير WebP فعلياً (وليس فقط قراءته)
+function supportsWebpExport() {
+  const c = document.createElement('canvas');
+  c.width = c.height = 1;
+  return c.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+}
+const CAN_EXPORT_WEBP = supportsWebpExport();
+
+// يضغط صورة عبر canvas: يعيد تحجيمها لأقصى بُعد COMPRESS_MAX_DIM ويحوّلها WebP
+// (أو JPEG كبديل للمتصفحات القديمة) بجودة COMPRESS_QUALITY، دون تعديل يدوي من المستخدم.
+function compressImage(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = e => {
+      const img = new Image();
+      img.onload = () => {
+        let { width, height } = img;
+        if (width > COMPRESS_MAX_DIM || height > COMPRESS_MAX_DIM) {
+          if (width > height) { height = Math.round(height * COMPRESS_MAX_DIM / width); width = COMPRESS_MAX_DIM; }
+          else { width = Math.round(width * COMPRESS_MAX_DIM / height); height = COMPRESS_MAX_DIM; }
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = width; canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, width, height);
+        const mime = CAN_EXPORT_WEBP ? 'image/webp' : 'image/jpeg';
+        const ext = CAN_EXPORT_WEBP ? 'webp' : 'jpg';
+        const dataUrl = canvas.toDataURL(mime, COMPRESS_QUALITY);
+        canvas.toBlob(blob => {
+          if (!blob) { reject(new Error('فشل ضغط الصورة')); return; }
+          const baseName = file.name.replace(/\.[^.]+$/, '');
+          const compressedFile = new File([blob], `${baseName}.${ext}`, { type: mime });
+          resolve({ compressedFile, dataUrl });
+        }, mime, COMPRESS_QUALITY);
+      };
+      img.onerror = () => reject(new Error('تعذّرت قراءة الصورة'));
+      img.src = e.target.result;
+    };
+    reader.onerror = () => reject(new Error('تعذّرت قراءة الملف'));
+    reader.readAsDataURL(file);
+  });
+}
+
+async function handleImageSelect(input) {
   const files = Array.from(input.files || []);
   for (const file of files) {
     if (selectedImages.length >= MAX_IMAGES) { showToast(`⚠️ الحد الأقصى ${MAX_IMAGES} صور`, '#ff6b6b'); break; }
     if (file.size > 6 * 1024 * 1024) { showToast(`⚠️ صورة "${file.name}" أكبر من 6MB`, '#ff6b6b'); continue; }
-    const reader = new FileReader();
-    reader.onload = e => {
-      selectedImages.push({ file, dataUrl: e.target.result });
+    try {
+      setStatus('🗜️ جاري ضغط الصورة...');
+      const { compressedFile, dataUrl } = await compressImage(file);
+      selectedImages.push({ file: compressedFile, dataUrl });
       renderImageGrid();
-    };
-    reader.readAsDataURL(file);
+    } catch (e) {
+      // في حال فشل الضغط لأي سبب، تُستخدم الصورة الأصلية بدل فقدانها بالكامل
+      await new Promise(resolve => {
+        const reader = new FileReader();
+        reader.onload = ev => { selectedImages.push({ file, dataUrl: ev.target.result }); renderImageGrid(); resolve(); };
+        reader.onerror = resolve;
+        reader.readAsDataURL(file);
+      });
+    } finally {
+      setStatus('');
+    }
   }
   input.value = '';
 }
