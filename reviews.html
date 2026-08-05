@@ -22,8 +22,15 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://salfordkw.shop/"},{"@type":"ListItem","position":2,"name":"آراء العملاء","item":"https://salfordkw.shop/reviews.html"}]}
 </script>
 <script id="reviews-schema" type="application/ld+json"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"هل هذه التقييمات حقيقية؟","acceptedAnswer":{"@type":"Answer","text":"نعم، كل تقييم في هذه الصفحة من عميل تعامل فعلياً مع سالفورد ونفّذنا له مشروعاً حقيقياً (مجلس ديكور، سجاد، موكيت، أو أثاث). لا نضع تقييمات مصطنعة."}},
+{"@type":"Question","name":"كيف أضيف تقييمي بعد تجربتي مع سالفورد؟","acceptedAnswer":{"@type":"Answer","text":"أرسل رأيك مباشرة عبر واتساب، ونقوم بنشره باسمك أو باسم مختصر إذا فضّلت."}},
+{"@type":"Question","name":"وين أشوف صور فعلية للمشاريع اللي التقييمات تتحدث عنها؟","acceptedAnswer":{"@type":"Answer","text":"صفحة أعمالنا على موقع سالفورد فيها صور حقيقية لمشاريع منفّذة بالكويت، بعضها نفس المشاريع التي تركها عملاؤنا آراءهم عنها."}}
+]}
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-6824246360"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-6824246360');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-6824246360');gtag('config','G-8WRQFKRYXP');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
@@ -66,6 +73,15 @@ footer a{color:rgba(200,169,110,.5);text-decoration:none;}
 .s-btn{display:flex;align-items:center;justify-content:center;gap:7px;padding:14px;font-family:Tajawal,sans-serif;font-size:15px;font-weight:700;text-decoration:none;border:none;cursor:pointer;}
 .s-wa{background:#1ebe52;color:#fff;}
 .s-call{background:#C8A96E;color:#0d0d0d;}
+.intro-section{padding:4px 20px 8px;font-size:13px;color:rgba(249,244,236,.7);line-height:1.9;text-align:center;}
+.stats-bar{display:flex;justify-content:center;gap:22px;padding:12px 16px 18px;flex-wrap:wrap;}
+.stat-item{text-align:center;}
+.stat-num{font-size:18px;font-weight:900;color:var(--gold);display:block;}
+.stat-label{font-size:11px;color:rgba(249,244,236,.5);}
+.faq-section{padding:8px 16px 4px;}
+.faq-item{background:rgba(200,169,110,.05);border:1px solid rgba(200,169,110,.15);border-radius:12px;padding:14px 16px;margin-bottom:10px;}
+.faq-item h3{font-size:14px;color:var(--gold-light);margin-bottom:6px;}
+.faq-item p{font-size:13px;color:rgba(249,244,236,.7);line-height:1.8;}
 </style>
 </head>
 <body>
@@ -82,6 +98,12 @@ footer a{color:rgba(200,169,110,.5);text-decoration:none;}
   <div class="rating-num">4.9</div>
   <div class="stars">★★★★★</div>
   <div class="rating-count">بناءً على 87+ تقييم عميل</div>
+</div>
+<p class="intro-section">هذه الصفحة تجمع آراء حقيقية من عملاء تعاملوا فعلياً مع سالفورد للأثاث والمفروشات في الكويت، وليست تقييمات مصطنعة أو منشورة نيابةً عن العميل. سالفورد تأسست سنة 2016 ونفّذت أكثر من 790 مشروعاً حقيقياً بين مجالس ديكور وسجاد تركي وموكيت وأثاث، وهذه التقييمات جزء صغير من تجارب عملاء تلك المشاريع.</p>
+<div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">2016</span><span class="stat-label">سنة التأسيس</span></div>
+  <div class="stat-item"><span class="stat-num">+790</span><span class="stat-label">مشروع منفّذ</span></div>
+  <div class="stat-item"><span class="stat-num">4.9★</span><span class="stat-label">تقييم العملاء</span></div>
 </div>
 <main>
   <span class="sec-title">أحدث التقييمات</span>
@@ -116,16 +138,32 @@ footer a{color:rgba(200,169,110,.5);text-decoration:none;}
   <div class="add-review-box">
     <h2>💬 جربت سالفورد؟ شاركنا رأيك</h2>
     <p>رأيك يهمنا ويساعد عملاء آخرين ياخذون قرارهم — أرسل تقييمك عبر واتساب وبننشره هنا</p>
-    <a class="btn btn-wa" style="animation:none;" href="https://wa.me/96555943343?text=مرحبا،%20أحب%20أشارككم%20رأيي%20وتقييمي%20عن%20تجربتي%20مع%20سالفورد" target="_blank" rel="noopener">
+    <a class="btn btn-wa" style="animation:none;" href="https://wa.me/96555943343?text=مرحبا،%20أحب%20أشارككم%20رأيي%20وتقييمي%20عن%20تجربتي%20مع%20سالفورد" target="_blank" rel="noopener" onclick="gtag('event','whatsapp_click');">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> أرسل تقييمك عبر واتساب
     </a>
   </div>
 
+  <span class="sec-title">أسئلة شائعة عن تقييماتنا</span>
+  <div class="faq-section">
+    <div class="faq-item">
+      <h3>هل هذه التقييمات حقيقية؟</h3>
+      <p>نعم، كل تقييم في هذه الصفحة من عميل تعامل فعلياً مع سالفورد ونفّذنا له مشروعاً حقيقياً (مجلس ديكور، سجاد، موكيت، أو أثاث). لا نضع تقييمات مصطنعة.</p>
+    </div>
+    <div class="faq-item">
+      <h3>كيف أضيف تقييمي بعد تجربتي مع سالفورد؟</h3>
+      <p>أرسل رأيك مباشرة عبر واتساب بالضغط على زر "أرسل تقييمك عبر واتساب" أعلاه، ونقوم بنشره هنا باسمك (أو باسم مختصر إذا فضّلت).</p>
+    </div>
+    <div class="faq-item">
+      <h3>وين أشوف صور فعلية للمشاريع اللي التقييمات تتحدث عنها؟</h3>
+      <p>صفحة <a href="/works.html" style="color:var(--gold);">أعمالنا</a> فيها صور حقيقية لمشاريع منفّذة بالكويت، بعضها هو نفس المشاريع التي تركها عملاؤنا آراءهم عنها.</p>
+    </div>
+  </div>
+
   <div class="cta">
-    <a class="btn btn-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener">
+    <a class="btn btn-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener" onclick="gtag('event','whatsapp_click');">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> استفسر عبر واتساب
     </a>
-    <a class="btn btn-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});">
+    <a class="btn btn-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});gtag('event','phone_click');">
       <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> اتصل بنا الآن
     </a>
   </div>
@@ -133,12 +171,13 @@ footer a{color:rgba(200,169,110,.5);text-decoration:none;}
 <footer>
   <div><strong style="color:rgba(200,169,110,.6)">سالفورد للأثاث والمفروشات</strong></div>
   <div>📍 الكويت — الضجيج &nbsp;|&nbsp; 🕒 10 ص - 9 م</div>
-  <div>📞 <a href="tel:+96555943343">55943343</a> &nbsp;|&nbsp; <a href="https://wa.me/96555943343">واتساب</a></div>
+  <div>📞 <a href="tel:+96555943343" onclick="gtag('event','phone_click');">55943343</a> &nbsp;|&nbsp; <a href="https://wa.me/96555943343" onclick="gtag('event','whatsapp_click');">واتساب</a></div>
+  <div>🔗 <a href="/about.html">من نحن</a> &nbsp;|&nbsp; <a href="/faq.html">الأسئلة الشائعة</a> &nbsp;|&nbsp; <a href="/blog.html">مركز المعرفة</a> &nbsp;|&nbsp; <a href="https://www.instagram.com/salforad/" target="_blank" rel="noopener">إنستقرام</a> &nbsp;|&nbsp; <a href="https://www.tiktok.com/@salford_kuwait" target="_blank" rel="noopener">تيك توك</a></div>
   <div style="margin-top:4px;font-size:11px;opacity:.4;">© 2026 جميع الحقوق محفوظة</div>
 </footer>
 <div class="sticky">
-  <a class="s-btn s-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener">💬 واتساب</a>
-  <a class="s-btn s-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});">📞 اتصال</a>
+  <a class="s-btn s-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener" onclick="gtag('event','whatsapp_click');">💬 واتساب</a>
+  <a class="s-btn s-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});gtag('event','phone_click');">📞 اتصال</a>
 </div>
 <script>
 // بناء Schema للتقييمات (AggregateRating + Review) — يساعد بظهور النجوم بنتائج البحث
