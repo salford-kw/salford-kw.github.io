@@ -271,5 +271,19 @@
     "date": "2026-08-06",
     "price": "7",
     "unit": "م"
+  },
+  {
+    "id": "post_1786054435915",
+    "title": "مجلس ديكور الكويت فخم",
+    "desc": "مشغل سالفورد لتصنيع المجالس وتفصيلها",
+    "img": "https://salfordkw.shop/products/product_1786054430847_2nij8.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1786054430847_2nij8.webp",
+      "https://salfordkw.shop/products/product_1786054432711_6z3n4.webp"
+    ],
+    "video": "",
+    "date": "2026-08-06",
+    "price": "45",
+    "unit": "م"
   }
 ]
