@@ -257,5 +257,19 @@
     "date": "2026-08-06",
     "price": "7.5 KWD",
     "unit": "م"
+  },
+  {
+    "id": "post_1786054385314",
+    "title": "سجاد مسجد جامع",
+    "desc": "تركيب كافة مناطق الكويت",
+    "img": "https://salfordkw.shop/products/product_1786054378846_7sqhc.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1786054378846_7sqhc.webp",
+      "https://salfordkw.shop/products/product_1786054381059_4op8e.webp"
+    ],
+    "video": "",
+    "date": "2026-08-06",
+    "price": "7",
+    "unit": "م"
   }
 ]
