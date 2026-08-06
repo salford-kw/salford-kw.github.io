@@ -172,7 +172,68 @@ footer a{color:rgba(200,169,110,.6);text-decoration:none;}
 <section class="latest-works" aria-label="آخر أعمالنا">
   <span class="sec-title">آخر أعمالنا</span>
   <div style="text-align:center;margin-bottom:10px;" id="works-date-header"></div>
-  <div id="home-works-grid" class="works-grid"></div>
+  <div id="home-works-grid" class="works-grid">
+    <div class="work-card" onclick="openLightbox(0)">
+      <div class="work-card-img">
+        <img src="https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد-2.webp"
+             alt="مجلس خشب ديكور الصباحية - سالفورد للأثاث والمفروشات الكويت"
+             loading="eager"
+             onerror="this.style.opacity='.2'">
+      </div>
+      <div class="work-card-info">
+        <div class="work-card-title">مجلس خشب ديكور الصباحية</div>
+        <div class="work-card-date">4 أغسطس 2026</div>
+      </div>
+    </div>
+    <div class="work-card" onclick="openLightbox(1)">
+      <div class="work-card-img">
+        <img src="https://salfordkw.shop/products/مجلس-ديكور-الكويت-صباح-الاحمد-سالفورد.webp"
+             alt="مجلس ديكور الكويت صباح الاحمد - سالفورد للأثاث والمفروشات الكويت"
+             loading="lazy"
+             onerror="this.style.opacity='.2'">
+      </div>
+      <div class="work-card-info">
+        <div class="work-card-title">مجلس ديكور الكويت صباح الاحمد</div>
+        <div class="work-card-date">4 أغسطس 2026</div>
+      </div>
+    </div>
+    <div class="work-card" onclick="openLightbox(2)">
+      <div class="work-card-img">
+        <img src="https://salfordkw.shop/products/مجلس-ديكور-فخم-سالفورد-3.webp"
+             alt="مجلس ديكور فخم - سالفورد للأثاث والمفروشات الكويت"
+             loading="lazy"
+             onerror="this.style.opacity='.2'">
+      </div>
+      <div class="work-card-info">
+        <div class="work-card-title">مجلس ديكور فخم</div>
+        <div class="work-card-date">4 أغسطس 2026</div>
+      </div>
+    </div>
+    <div class="work-card" onclick="openLightbox(3)">
+      <div class="work-card-img">
+        <img src="https://salfordkw.shop/products/نقشة-حفر-يدوي-سالفورد.webp"
+             alt="نقشة حفر يدوي - سالفورد للأثاث والمفروشات الكويت"
+             loading="lazy"
+             onerror="this.style.opacity='.2'">
+      </div>
+      <div class="work-card-info">
+        <div class="work-card-title">نقشة حفر يدوي</div>
+        <div class="work-card-date">4 أغسطس 2026</div>
+      </div>
+    </div>
+    <div class="work-card" onclick="openLightbox(4)">
+      <div class="work-card-img">
+        <img src="https://salfordkw.shop/products/مجلس-ديوانية-كنب-سالفورد.webp"
+             alt="مجلس ديوانية كنب - سالفورد للأثاث والمفروشات الكويت"
+             loading="lazy"
+             onerror="this.style.opacity='.2'">
+      </div>
+      <div class="work-card-info">
+        <div class="work-card-title">مجلس ديوانية كنب</div>
+        <div class="work-card-date">4 أغسطس 2026</div>
+      </div>
+    </div>
+  </div>
   <a href="/works.html" class="see-all-link" id="see-all-btn" style="display:none;">
     📸 شاهد جميع أعمالنا ←
   </a>
@@ -263,6 +324,10 @@ footer a{color:rgba(200,169,110,.6);text-decoration:none;}
 <script>
 // ============================================================
 // آخر 5 منشورات من posts.json — تظهر في الصفحة الرئيسية
+// ملاحظة: المحتوى الأساسي أصبح مكتوباً ثابتاً في HTML أعلاه
+// (لضمان ظهوره لمحركات البحث وروبوتات الذكاء الاصطناعي التي لا
+// تُنفّذ JavaScript). هذا السكربت يبقى فقط لتحديث المحتوى تلقائياً
+// عند إضافة مشاريع جديدة من لوحة التحكم دون الحاجة لإعادة نشر الملف.
 // ============================================================
 const POSTS_KEY = 'salford_posts';
 let currentLatestWorks = [];
