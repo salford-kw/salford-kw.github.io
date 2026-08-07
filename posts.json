@@ -314,5 +314,21 @@
     "date": "2026-08-07",
     "price": "9",
     "unit": "م"
+  },
+  {
+    "id": "post_1786137979265",
+    "title": "سجاد حفر نقشة",
+    "desc": "سجاد تركي مع حفر يدوي نقشة",
+    "img": "https://salfordkw.shop/products/product_1786137969880_7o88c.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1786137969880_7o88c.webp",
+      "https://salfordkw.shop/products/product_1786137971674_11s02.webp",
+      "https://salfordkw.shop/products/product_1786137973452_r34dc.webp",
+      "https://salfordkw.shop/products/product_1786137975044_ysgp0.webp"
+    ],
+    "video": "",
+    "date": "2026-08-07",
+    "price": "13",
+    "unit": "م"
   }
 ]
