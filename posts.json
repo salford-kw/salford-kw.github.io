@@ -330,5 +330,23 @@
     "date": "2026-08-07",
     "price": "13",
     "unit": "م"
+  },
+  {
+    "id": "post_1786138208849",
+    "title": "كنب قنفات مودرن",
+    "desc": "كنب تفصيل مودرن مميزة وتصميم حديث",
+    "img": "https://salfordkw.shop/products/product_1786138198324_8dbaj.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1786138198324_8dbaj.webp",
+      "https://salfordkw.shop/products/product_1786138199904_m5049.webp",
+      "https://salfordkw.shop/products/product_1786138201192_sr4mb.webp",
+      "https://salfordkw.shop/products/product_1786138202315_16w2l.webp",
+      "https://salfordkw.shop/products/product_1786138203866_y7jqh.webp",
+      "https://salfordkw.shop/products/product_1786138205395_byd6f.webp"
+    ],
+    "video": "",
+    "date": "2026-08-07",
+    "price": "55",
+    "unit": "م"
   }
 ]
