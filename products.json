@@ -230,5 +230,23 @@
       "price": "55",
       "unit": "م"
     }
+  ],
+  "sataer": [
+    {
+      "id": "prod_1786140568904_xlwn0",
+      "code": "ستائر خام ويفي",
+      "desc": "ستائر خام ويفي مميزة \nالخام تركي ملمس حريري",
+      "img": "https://salfordkw.shop/products/product_1786140561206_9ojky.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786140561206_9ojky.webp",
+        "https://salfordkw.shop/products/product_1786140563125_iuomt.webp",
+        "https://salfordkw.shop/products/product_1786140564645_vn0ml.webp",
+        "https://salfordkw.shop/products/product_1786140565779_8w9yq.webp",
+        "https://salfordkw.shop/products/product_1786140566978_1tgir.webp"
+      ],
+      "video": "",
+      "price": "9",
+      "unit": "م"
+    }
   ]
 }
