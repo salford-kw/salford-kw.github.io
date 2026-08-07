@@ -158,11 +158,39 @@ textarea.field-input{height:70px;line-height:1.6;}
     <div class="tab" onclick="switchTab('majalis',this)">🏠 المجالس والمساند</div>
     <div class="tab" onclick="switchTab('athath',this)">🛋️ الأثاث والديكور</div>
     <div class="tab" onclick="switchTab('posts',this)">📸 أعمالنا اليومية</div>
+    <div class="tab" onclick="switchTab('reviews',this)">⭐ التقييمات</div>
   </div>
 
   <div id="tab-sajjad" class="tab-content active"></div>
   <div id="tab-majalis" class="tab-content"></div>
   <div id="tab-athath" class="tab-content"></div>
+
+  <!-- ============================================================
+       تبويب التقييمات — عرض فقط + حذف (لا يوجد تعديل نهائياً)
+       الحذف محمي بتسجيل دخول Firebase حقيقي (منفصل عن كلمة مرور اللوحة)
+  ============================================================ -->
+  <div id="tab-reviews" class="tab-content">
+    <div class="token-box" id="rv-auth-box">
+      <div class="token-header">
+        <span class="token-label">🔐 دخول حذف التقييمات</span>
+        <span class="token-status missing" id="rv-auth-status">غير متصل</span>
+      </div>
+      <div id="rv-login-form">
+        <input type="email" class="field-input" id="rv-email" placeholder="الإيميل" style="margin-bottom:8px;">
+        <input type="password" class="field-input" id="rv-pass" placeholder="كلمة المرور" style="margin-bottom:8px;" onkeydown="if(event.key==='Enter')rvLogin()">
+        <button class="token-save-btn" onclick="rvLogin()">دخول</button>
+        <div class="login-error" id="rv-login-error" style="display:none;">❌ بيانات الدخول غير صحيحة</div>
+      </div>
+      <button class="token-save-btn" id="rv-logout-btn" style="display:none;background:rgba(255,80,80,.1);color:#ff6b6b;" onclick="rvLogout()">خروج من حساب الحذف</button>
+      <div class="token-hint">يجب تسجيل الدخول بحساب Firebase الخاص بك حتى يظهر زر الحذف. هذا الحساب منفصل عن كلمة مرور اللوحة ولا يمكن لأي زائر آخر الوصول له.</div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-title" id="rv-count-label">التقييمات</span>
+    </div>
+    <div id="rv-list"></div>
+  </div>
+  <!-- ============================================================ -->
 
   <!-- ============================================================
        تبويب الأعمال اليومية — رفع الصور مباشرة لـ GitHub
@@ -662,6 +690,91 @@ function showToast(msg, color='#1ebe52') {
   t.style.background = color;
   t.style.display = 'block';
   setTimeout(()=>t.style.display='none', 3500);
+}
+</script>
+
+<!-- ============================================================
+     تبويب التقييمات — Firebase Auth حقيقي + حذف فقط (بدون تعديل)
+============================================================ -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="/reviews-widget.js"></script>
+<script>
+const rvAuth = firebase.auth();
+let rvLoggedIn = false;
+
+rvAuth.onAuthStateChanged(user => {
+  rvLoggedIn = !!user;
+  const statusEl = document.getElementById('rv-auth-status');
+  const formEl = document.getElementById('rv-login-form');
+  const logoutBtn = document.getElementById('rv-logout-btn');
+  if (user) {
+    statusEl.textContent = 'متصل: ' + user.email;
+    statusEl.className = 'token-status ok';
+    formEl.style.display = 'none';
+    logoutBtn.style.display = 'block';
+  } else {
+    statusEl.textContent = 'غير متصل';
+    statusEl.className = 'token-status missing';
+    formEl.style.display = 'block';
+    logoutBtn.style.display = 'none';
+  }
+  renderReviewsAdmin(rvLastReviews);
+});
+
+function rvLogin() {
+  const email = document.getElementById('rv-email').value.trim();
+  const pass = document.getElementById('rv-pass').value;
+  const errEl = document.getElementById('rv-login-error');
+  errEl.style.display = 'none';
+  rvAuth.signInWithEmailAndPassword(email, pass).catch(() => {
+    errEl.style.display = 'block';
+    setTimeout(()=>errEl.style.display='none', 3000);
+  });
+}
+function rvLogout() { rvAuth.signOut(); }
+
+let rvLastReviews = [];
+srSubscribe('site', reviews => {
+  rvLastReviews = reviews;
+  renderReviewsAdmin(reviews);
+});
+
+function renderReviewsAdmin(reviews) {
+  const listEl = document.getElementById('rv-list');
+  const countEl = document.getElementById('rv-count-label');
+  if (!listEl) return;
+  countEl.textContent = `التقييمات (${reviews.length})`;
+
+  if (reviews.length === 0) {
+    listEl.innerHTML = `<p style="font-size:13px;color:rgba(200,169,110,.4);text-align:center;padding:20px 0;">لا توجد تقييمات بعد</p>`;
+    return;
+  }
+
+  listEl.innerHTML = reviews.map(r => `
+    <div class="product-editor">
+      <div class="product-editor-header" style="justify-content:space-between;">
+        <div>
+          <span class="product-code-display">${srEscape(r.name || 'عميل')}</span>
+          <div>${srStarsHtml(r.rating || 0, 13)}</div>
+        </div>
+        ${rvLoggedIn ? `<button class="btn-delete" onclick="rvDeleteReview('${r.id}')">🗑 حذف</button>` : ''}
+      </div>
+      <div class="product-editor-body">
+        ${r.comment ? `<p style="font-size:13px;color:rgba(249,244,236,.7);line-height:1.7;">${srEscape(r.comment)}</p>` : `<p style="font-size:12px;color:rgba(200,169,110,.35);">بدون تعليق</p>`}
+        <div style="font-size:11px;color:rgba(200,169,110,.35);margin-top:8px;">${srRelativeDate(r.createdAt)}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function rvDeleteReview(id) {
+  if (!rvLoggedIn) { showToast('يجب تسجيل الدخول أولاً', '#ff6b6b'); return; }
+  if (!confirm('هل تريد حذف هذا التقييم نهائياً؟')) return;
+  srDb.collection('reviews').doc(id).delete()
+    .then(() => showToast('✅ تم حذف التقييم'))
+    .catch(err => { console.error(err); showToast('❌ فشل الحذف', '#ff6b6b'); });
 }
 </script>
 </body>
