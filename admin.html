@@ -157,6 +157,7 @@ textarea.field-input{height:70px;line-height:1.6;}
     <div class="tab active" onclick="switchTab('sajjad',this)">🧶 السجاد والموكيت</div>
     <div class="tab" onclick="switchTab('majalis',this)">🏠 المجالس والمساند</div>
     <div class="tab" onclick="switchTab('athath',this)">🛋️ الأثاث والديكور</div>
+    <div class="tab" onclick="switchTab('sataer',this)">🪟 الستائر</div>
     <div class="tab" onclick="switchTab('posts',this)">📸 أعمالنا اليومية</div>
     <div class="tab" onclick="switchTab('reviews',this)">⭐ التقييمات</div>
   </div>
@@ -164,6 +165,7 @@ textarea.field-input{height:70px;line-height:1.6;}
   <div id="tab-sajjad" class="tab-content active"></div>
   <div id="tab-majalis" class="tab-content"></div>
   <div id="tab-athath" class="tab-content"></div>
+  <div id="tab-sataer" class="tab-content"></div>
 
   <!-- ============================================================
        تبويب التقييمات — عرض فقط + حذف (لا يوجد تعديل نهائياً)
@@ -242,6 +244,7 @@ textarea.field-input{height:70px;line-height:1.6;}
     <a href="/sajjad.html" target="_blank" class="preview-link">🧶 السجاد</a>
     <a href="/majalis.html" target="_blank" class="preview-link">🏠 المجالس</a>
     <a href="/athath.html" target="_blank" class="preview-link">🛋️ الأثاث</a>
+    <a href="/sataer.html" target="_blank" class="preview-link">🪟 الستائر</a>
     <a href="/" target="_blank" class="preview-link">🏠 الرئيسية</a>
     <a href="/works.html" target="_blank" class="preview-link">📸 الأعمال</a>
   </div>
@@ -296,7 +299,8 @@ const DEFAULT_PRODUCTS = {
     {code:"ديكور مجالس كود 01",desc:"ديكور مجالس يجمع الأصالة والعصرية بلمسة كويتية مميزة",img:"https://salfordkw.shop/products/ديكور-مجالس-سالفورد.webp"},
     {code:"أثاث ديوانية كود 01",desc:"أثاث وديكور ديوانية كويتية مفصّل بأعلى مستوى من الدقة والإتقان",img:"https://salfordkw.shop/products/اثاث-ديوانية-تكايات-سالفورد.webp"},
     {code:"تنجيد أثاث كود 01",desc:"تفصيل وتنجيد أثاث منزلي وديوانيات حسب الطلب بضمان الجودة الكاملة",img:"https://salfordkw.shop/products/تنجيد-اثاث-ديوانية-سالفورد.webp"}
-  ]
+  ],
+  sataer:[]
 };
 
 let products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
@@ -346,23 +350,25 @@ function loadProducts() {
     if (saved) products = JSON.parse(saved);
     else products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
   } catch(e) { products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS)); }
+  if (!Array.isArray(products.sataer)) products.sataer = [];
 }
 function saveProducts() { localStorage.setItem(STORAGE_KEY, JSON.stringify(products)); }
 
-function renderAll() { renderStats(); renderTab('sajjad'); renderTab('majalis'); renderTab('athath'); }
+function renderAll() { renderStats(); renderTab('sajjad'); renderTab('majalis'); renderTab('athath'); renderTab('sataer'); }
 function renderStats() {
-  const total = products.sajjad.length + products.majalis.length + products.athath.length;
+  const total = products.sajjad.length + products.majalis.length + products.athath.length + products.sataer.length;
   document.getElementById('stats-bar').innerHTML = `
     <div class="stat-card"><div class="stat-num">${total}</div><div class="stat-label">إجمالي المنتجات</div></div>
     <div class="stat-card"><div class="stat-num">${products.sajjad.length}</div><div class="stat-label">السجاد والموكيت</div></div>
     <div class="stat-card"><div class="stat-num">${products.majalis.length}</div><div class="stat-label">المجالس</div></div>
     <div class="stat-card"><div class="stat-num">${products.athath.length}</div><div class="stat-label">الأثاث</div></div>
+    <div class="stat-card"><div class="stat-num">${products.sataer.length}</div><div class="stat-label">الستائر</div></div>
     <div class="stat-card"><div class="stat-num">${posts.length}</div><div class="stat-label">الأعمال</div></div>
   `;
 }
 function renderTab(section) {
   const container = document.getElementById('tab-'+section);
-  const labels = {sajjad:'السجاد والموكيت',majalis:'المجالس والمساند',athath:'الأثاث والديكور'};
+  const labels = {sajjad:'السجاد والموكيت',majalis:'المجالس والمساند',athath:'الأثاث والديكور',sataer:'الستائر'};
   let html = `
     <div class="section-header" style="margin-top:16px;">
       <span class="section-title">${labels[section]} (${products[section].length} منتج)</span>
@@ -419,7 +425,7 @@ function updateProduct(section,i,field,val){products[section][i][field]=val;if(f
 function deleteProduct(section,i){if(!confirm(`حذف "${products[section][i].code}"؟`))return;products[section].splice(i,1);renderTab(section);renderStats();showToast('🗑 تم الحذف');}
 function toggleAddForm(section){const f=document.getElementById('add-form-'+section);f.style.display=f.style.display==='block'?'none':'block';}
 function addProduct(section){const code=document.getElementById('new-code-'+section).value.trim();const desc=document.getElementById('new-desc-'+section).value.trim();const img=document.getElementById('new-img-'+section).value.trim();const price=document.getElementById('new-price-'+section).value.trim();const unit=document.getElementById('new-unit-'+section).value;if(!code||!img){showToast('⚠️ أدخل الاسم والصورة على الأقل','#ff6b6b');return;}products[section].push({code,desc:desc||'منتج جديد من سالفورد للأثاث والمفروشات',img,price,unit});renderTab(section);renderStats();showToast('✅ تمت الإضافة');}
-function saveAll(){['sajjad','majalis','athath'].forEach(section=>{products[section].forEach((p,i)=>{const c=document.getElementById(`code-${section}-${i}`);const d=document.getElementById(`desc-${section}-${i}`);const m=document.getElementById(`img-${section}-${i}`);const pr=document.getElementById(`price-${section}-${i}`);const u=document.getElementById(`unit-${section}-${i}`);if(c)p.code=c.value;if(d)p.desc=d.value;if(m)p.img=m.value;if(pr)p.price=pr.value;if(u)p.unit=u.value;});});saveProducts();renderAll();showToast('💾 تم الحفظ بنجاح!');}
+function saveAll(){['sajjad','majalis','athath','sataer'].forEach(section=>{products[section].forEach((p,i)=>{const c=document.getElementById(`code-${section}-${i}`);const d=document.getElementById(`desc-${section}-${i}`);const m=document.getElementById(`img-${section}-${i}`);const pr=document.getElementById(`price-${section}-${i}`);const u=document.getElementById(`unit-${section}-${i}`);if(c)p.code=c.value;if(d)p.desc=d.value;if(m)p.img=m.value;if(pr)p.price=pr.value;if(u)p.unit=u.value;});});saveProducts();renderAll();showToast('💾 تم الحفظ بنجاح!');}
 function exportJSON(){saveAll();const json=JSON.stringify(products,null,2);const blob=new Blob([json],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='products.json';a.click();showToast('📥 جاري التحميل...');}
 
 // ============================================================
