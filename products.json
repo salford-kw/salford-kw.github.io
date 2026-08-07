@@ -1,218 +1,87 @@
 {
   "sajjad": [
     {
-      "code": "سجاد تركي اكادير",
-      "desc": "سجاد تركي ناعم الملمس بوبرة عالية مناسب للصالونات والمجالس الفاخرة\nالمتر : 13 دينار",
+      "code": "سجاد تركي كود 01",
+      "desc": "سجاد تركي ناعم الملمس بوبرة عالية مناسب للصالونات والمجالس الفاخرة",
       "img": "https://salfordkw.shop/products/سجاد-تركي-اكادير-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968607_t3lyc",
-      "images": [
-        "https://salfordkw.shop/products/سجاد-تركي-اكادير-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
-      "code": "سجاد تركي مراكش ",
-      "desc": "سجاد تركي عالي السماكة بألوان كلاسيكية مناسب للمجالس الكويتية\nالمتر : 15",
+      "code": "سجاد تركي كود 02",
+      "desc": "سجاد تركي متوسط السماكة بألوان كلاسيكية مناسب للمجالس الكويتية",
       "img": "https://salfordkw.shop/products/سجاد-تركي-مراكش-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968609_w603b",
-      "images": [
-        "https://salfordkw.shop/products/سجاد-تركي-مراكش-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
-      "code": "سجاد تركي نابل ",
-      "desc": "سجاد تركي بوبرة متوسطة وألوان هادئة مثالي للغرف والمقلط والديوانيات",
+      "code": "سجاد تركي كود 03",
+      "desc": "سجاد تركي بوبرة متوسطة وألوان هادئة مثالي للغرف والممرات",
       "img": "https://salfordkw.shop/products/سجاد-تركي-نابل-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968610_b65xw",
-      "images": [
-        "https://salfordkw.shop/products/سجاد-تركي-نابل-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
-      "code": "سجاد تركي فندقي",
+      "code": "سجاد تركي كود 04",
       "desc": "سجاد تركي عصري بتصميم مودرن وألوان هادئة يناسب الديكورات الحديثة",
       "img": "https://salfordkw.shop/products/سجاد-تركي-فندقي-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968611_pb0nq",
-      "images": [
-        "https://salfordkw.shop/products/سجاد-تركي-فندقي-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "سجاد تركي كود 05",
       "desc": "سجاد تركي بتصاميم جغرافية راقية وألوان عصرية لكل الأذواق",
       "img": "https://salfordkw.shop/products/سجاد-تركي-سالفورد-05.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968612_ekte4",
-      "images": [
-        "https://salfordkw.shop/products/سجاد-تركي-سالفورد-05.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "سجاد تركي كود 06",
       "desc": "سجاد تركي بوبرة ثقيلة وألوان ملكية فاخرة يليق بأرقى المجالس",
       "img": "https://salfordkw.shop/products/سجاد-تركي-سالفورد-06.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968614_gptah",
-      "images": [
-        "https://salfordkw.shop/products/سجاد-تركي-سالفورد-06.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "سجاد تركي كود 07",
       "desc": "سجاد تركي بمقاسات كبيرة مناسب للمجالس والديوانيات الكويتية",
       "img": "https://salfordkw.shop/products/سجاد-تركي-سالفورد-07.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968615_v15up",
-      "images": [
-        "https://salfordkw.shop/products/سجاد-تركي-سالفورد-07.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
-      "code": "مساند كود 01",
-      "desc": "مساند تفصيل اسفنج البغلي",
+      "code": "موكيت تركي كود 01",
+      "desc": "موكيت تركي متين بكثافة عالية قص بالمتر مع تركيب احترافي في الكويت",
       "img": "https://salfordkw.shop/products/مساند-ظهر-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968616_rwln7",
-      "images": [
-        "https://salfordkw.shop/products/مساند-ظهر-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
-      "code": "نقشة كود 02",
+      "code": "موكيت تركي كود 02",
       "desc": "موكيت تركي ناعم الملمس بوبرة كثيفة مريح للقدمين طويل العمر",
       "img": "https://salfordkw.shop/products/نقشة-سجاد-حفر-سالفورد-02.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968618_pblgd",
-      "images": [
-        "https://salfordkw.shop/products/نقشة-سجاد-حفر-سالفورد-02.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
-      "code": "مجالس  كود 03",
-      "desc": "مجلس ديكور تصميم راقي",
+      "code": "موكيت تركي كود 03",
+      "desc": "موكيت تركي بألوان هادئة مناسب للمكاتب والمنازل مع ضمان التركيب",
       "img": "https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968619_rpmww",
-      "images": [
-        "https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
-      "code": "نقشة حفر كود 04",
-      "desc": "نقشة حفر ",
+      "code": "موكيت تركي كود 04",
+      "desc": "موكيت تركي اقتصادي متين مناسب للمكاتب والشركات بأسعار مميزة",
       "img": "https://salfordkw.shop/products/نقشة-حفر-سجاد-سالفورد-04.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968620_l3pyq",
-      "images": [
-        "https://salfordkw.shop/products/نقشة-حفر-سجاد-سالفورد-04.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
-      "code": "مجلس  كود 05",
-      "desc": "مجلس ديكور فخم",
+      "code": "موكيت تركي كود 05",
+      "desc": "موكيت تركي فاخر بألوان راقية من أكبر تشكيلة في الكويت لدى سالفورد",
       "img": "https://salfordkw.shop/products/مجلس-ديكور-سالفورد-05.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968622_q82za",
-      "images": [
-        "https://salfordkw.shop/products/مجلس-ديكور-سالفورد-05.webp"
-      ],
-      "video": ""
-    },
-    {
-      "code": "سجاد حفر",
-      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
-      "img": "https://salfordkw.shop/products/سجاد-حفر-سالفورد.webp",
-      "price": "13",
-      "unit": "م"
-    },
-    {
-      "id": "prod_1785879060625_zwks4",
-      "code": "سجاد حفر",
-      "desc": "سجاد حفر نقشات",
-      "img": "https://salfordkw.shop/products/سجاد-حفر-سالفورد-2.webp",
-      "images": [
-        "https://salfordkw.shop/products/سجاد-حفر-سالفورد-2.webp"
-      ],
-      "video": "",
-      "price": "13",
-      "unit": "م"
-    },
-    {
-      "id": "prod_1785879150962_wbt75",
-      "code": "نقشات حفر سجاد يدوي",
-      "desc": "حفر يدوي للديوانيات",
-      "img": "https://salfordkw.shop/products/نقشات-حفر-سجاد-يدوي-سالفورد.webp",
-      "images": [
-        "https://salfordkw.shop/products/نقشات-حفر-سجاد-يدوي-سالفورد.webp"
-      ],
-      "video": "https://salfordkw.shop/products/video_1785879148222_92e1b.mp4",
-      "price": "13",
-      "unit": "م"
-    },
-    {
-      "id": "prod_1785879430637_z3yip",
-      "code": "نقشة حفر يدوي",
-      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
-      "img": "https://salfordkw.shop/products/نقشة-حفر-يدوي-سالفورد.webp",
-      "images": [
-        "https://salfordkw.shop/products/نقشة-حفر-يدوي-سالفورد.webp"
-      ],
-      "video": "",
-      "price": "13",
-      "unit": "م"
-    },
-    {
-      "id": "prod_1786054275781_4nl2w",
-      "code": "سجاد مسجد مساجد",
-      "desc": "سجاد مساجد تركيب كافة مناطق الكويت",
-      "img": "https://salfordkw.shop/products/product_1786054266661_no8ql.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786054266661_no8ql.webp",
-        "https://salfordkw.shop/products/product_1786054268733_n7ymq.webp",
-        "https://salfordkw.shop/products/product_1786054270730_80wdx.webp",
-        "https://salfordkw.shop/products/product_1786054272896_lm2xl.webp"
-      ],
-      "video": "",
-      "price": "7.5 KWD",
-      "unit": "م"
-    },
-    {
-      "id": "prod_1786054383643_sjdt6",
-      "code": "سجاد مسجد جامع",
-      "desc": "تركيب كافة مناطق الكويت",
-      "img": "https://salfordkw.shop/products/product_1786054378846_7sqhc.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786054378846_7sqhc.webp",
-        "https://salfordkw.shop/products/product_1786054381059_4op8e.webp"
-      ],
-      "video": "",
-      "price": "7",
       "unit": "م"
     }
   ],
@@ -222,177 +91,41 @@
       "desc": "مجلس ديكور فاخر مفصّل بأعلى جودة يليق بأرقى الديوانيات الكويتية",
       "img": "https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968623_nplnw",
-      "images": [
-        "https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "مجلس ديكور كود 02",
       "desc": "مجلس عربي أصيل بتصميم تقليدي كويتي يعكس الهوية والأصالة الخليجية",
       "img": "https://salfordkw.shop/products/مجلس-ديكور-سالفورد-02.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968624_ijs2w",
-      "images": [
-        "https://salfordkw.shop/products/مجلس-ديكور-سالفورد-02.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "مساند ديكور كود 01",
       "desc": "مساند ديكور فاخرة بأشكال وألوان متنوعة تضيف رونقاً على مجلسك",
       "img": "https://salfordkw.shop/products/مساند-ديكور-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968626_b2qed",
-      "images": [
-        "https://salfordkw.shop/products/مساند-ديكور-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "مجلس ديكور كود 03",
       "desc": "نفصّل مجالس رجال ونساء حسب مقاسات ديوانيتك وذوقك الشخصي",
       "img": "https://salfordkw.shop/products/مجلس-ديكور-سالفورد-03.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968627_8xhgs",
-      "images": [
-        "https://salfordkw.shop/products/مجلس-ديكور-سالفورد-03.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "ديوانية كويتية كود 01",
       "desc": "ديوانية كويتية مفصّلة بخامات راقية وأسعار مميزة مع ضمان التنفيذ",
       "img": "https://salfordkw.shop/products/تنجيد-اثاث-ديوانية-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968629_9anen",
-      "images": [
-        "https://salfordkw.shop/products/تنجيد-اثاث-ديوانية-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "تكايات ومراكي كود 01",
       "desc": "تكايات ومراكي ومساند ظهر كويتية تُصنع حسب الطلب بأجود الأقمشة",
       "img": "https://salfordkw.shop/products/اثاث-ديوانية-تكايات-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968630_zdsah",
-      "images": [
-        "https://salfordkw.shop/products/اثاث-ديوانية-تكايات-سالفورد.webp"
-      ],
-      "video": ""
-    },
-    {
-      "code": "مساند اسفنج",
-      "desc": "اسفنج البغلي",
-      "img": "https://salfordkw.shop/products/مساند-اسفنج-سالفورد.webp",
-      "price": "9",
-      "unit": "م",
-      "id": "prod_1785874968631_m08z5",
-      "images": [
-        "https://salfordkw.shop/products/مساند-اسفنج-سالفورد.webp"
-      ],
-      "video": ""
-    },
-    {
-      "code": "مساند ونقشة حفر",
-      "desc": "مساند اسفنج البغلي وخام شانيل تركي",
-      "img": "https://salfordkw.shop/products/مساند-ونقشة-حفر-سالفورد.webp",
-      "price": "9",
-      "unit": "م",
-      "id": "prod_1785874968632_8f3l6",
-      "images": [
-        "https://salfordkw.shop/products/مساند-ونقشة-حفر-سالفورد.webp"
-      ],
-      "video": ""
-    },
-    {
-      "id": "prod_1785879281533_msouq",
-      "code": "مجلس ديوانية كنب",
-      "desc": "خشب قشر جوز \nتصميم خاص لك غير مكرر",
-      "img": "https://salfordkw.shop/products/مجلس-ديوانية-كنب-سالفورد.webp",
-      "images": [
-        "https://salfordkw.shop/products/مجلس-ديوانية-كنب-سالفورد.webp",
-        "https://salfordkw.shop/products/مجلس-ديوانية-كنب-سالفورد-2.webp"
-      ],
-      "video": "",
-      "price": "45",
-      "unit": "م"
-    },
-    {
-      "id": "prod_1785879576652_gfuo6",
-      "code": "مجلس ديكور فخم",
-      "desc": "خشب قشر جوز \nتصميم جديد و مميز",
-      "img": "https://salfordkw.shop/products/مجلس-ديكور-فخم-سالفورد-3.webp",
-      "images": [
-        "https://salfordkw.shop/products/مجلس-ديكور-فخم-سالفورد-3.webp",
-        "https://salfordkw.shop/products/مجلس-ديكور-فخم-سالفورد-2.webp",
-        "https://salfordkw.shop/products/مجلس-ديكور-فخم-سالفورد.webp"
-      ],
-      "video": "",
-      "price": "45",
-      "unit": "م"
-    },
-    {
-      "id": "prod_1785879672436_medoh",
-      "code": "مجلس ديكور الكويت صباح الاحمد",
-      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
-      "img": "https://salfordkw.shop/products/مجلس-ديكور-الكويت-صباح-الاحمد-سالفورد.webp",
-      "images": [
-        "https://salfordkw.shop/products/مجلس-ديكور-الكويت-صباح-الاحمد-سالفورد.webp"
-      ],
-      "video": "https://salfordkw.shop/products/video_1785879669350_lvfpm.mp4",
-      "price": "45",
-      "unit": "م"
-    },
-    {
-      "id": "prod_1785879776493_bp11f",
-      "code": "مجلس خشب ديكور الصباحية",
-      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
-      "img": "https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد-2.webp",
-      "images": [
-        "https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد-2.webp",
-        "https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد.webp",
-        "https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد-3.webp",
-        "https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد-4.webp"
-      ],
-      "video": "",
-      "price": "35",
-      "unit": "م"
-    },
-    {
-      "id": "prod_1786054434338_6ieog",
-      "code": "مجلس ديكور الكويت فخم",
-      "desc": "مشغل سالفورد لتصنيع المجالس وتفصيلها",
-      "img": "https://salfordkw.shop/products/product_1786054430847_2nij8.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786054430847_2nij8.webp",
-        "https://salfordkw.shop/products/product_1786054432711_6z3n4.webp"
-      ],
-      "video": "",
-      "price": "45",
-      "unit": "م"
-    },
-    {
-      "id": "prod_1786054505502_g9db1",
-      "code": "مجلس ديوانية كنب الكويت",
-      "desc": "تفصيل كل انواع المجالس \nخشب جوز افضل الانواع \nخام شانيل تركي \nاسفنج البغلي",
-      "img": "https://salfordkw.shop/products/product_1786054499006_wqdlh.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786054499006_wqdlh.webp",
-        "https://salfordkw.shop/products/product_1786054500516_tinlx.webp",
-        "https://salfordkw.shop/products/product_1786054502119_9v11k.webp",
-        "https://salfordkw.shop/products/product_1786054503449_qtldx.webp"
-      ],
-      "video": "",
-      "price": "45",
       "unit": "م"
     }
   ],
@@ -402,108 +135,56 @@
       "desc": "تصميم ديكور داخلي راقٍ ينقل بيتك وديوانيتك لمستوى آخر من الأناقة",
       "img": "https://salfordkw.shop/products/ديكور-داخلي-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968633_iwce0",
-      "images": [
-        "https://salfordkw.shop/products/ديكور-داخلي-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "كنب مودرن كود 01",
       "desc": "كنب مودرن بأشكال أنيقة وعصرية مناسب لغرف الجلوس الكويتية",
       "img": "https://salfordkw.shop/products/كنب-مودرن-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968634_zdoj5",
-      "images": [
-        "https://salfordkw.shop/products/كنب-مودرن-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "أثاث فاخر كود 01",
       "desc": "أثاث منزلي فاخر بجودة عالية من أرقى الخامات والأقمشة الراقية",
       "img": "https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968636_6pc1x",
-      "images": [
-        "https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "كنب مودرن كود 02",
       "desc": "كنب عصري أنيق بألوان هادئة مناسب لغرف الاستقبال والجلوس",
       "img": "https://salfordkw.shop/products/كنب-مودرن-سالفورد-02.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968637_ddxzf",
-      "images": [
-        "https://salfordkw.shop/products/كنب-مودرن-سالفورد-02.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "كنب تفصيل كود 01",
       "desc": "كنب مفصّل حسب الطلب بأجود الأقمشة والخامات الراقية مع ضمان الجودة",
       "img": "https://salfordkw.shop/products/كنب-تفصيل-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968639_8dq4d",
-      "images": [
-        "https://salfordkw.shop/products/كنب-تفصيل-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "ديكور مجالس كود 01",
       "desc": "ديكور مجالس يجمع الأصالة والعصرية بلمسة كويتية مميزة",
       "img": "https://salfordkw.shop/products/ديكور-مجالس-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968641_mr8xy",
-      "images": [
-        "https://salfordkw.shop/products/ديكور-مجالس-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "أثاث ديوانية كود 01",
       "desc": "أثاث وديكور ديوانية كويتية مفصّل بأعلى مستوى من الدقة والإتقان",
       "img": "https://salfordkw.shop/products/اثاث-ديوانية-تكايات-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968643_p39kq",
-      "images": [
-        "https://salfordkw.shop/products/اثاث-ديوانية-تكايات-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     },
     {
       "code": "تنجيد أثاث كود 01",
       "desc": "تفصيل وتنجيد أثاث منزلي وديوانيات حسب الطلب بضمان الجودة الكاملة",
       "img": "https://salfordkw.shop/products/تنجيد-اثاث-ديوانية-سالفورد.webp",
       "price": "",
-      "unit": "م",
-      "id": "prod_1785874968644_2iyby",
-      "images": [
-        "https://salfordkw.shop/products/تنجيد-اثاث-ديوانية-سالفورد.webp"
-      ],
-      "video": ""
-    },
-    {
-      "code": "مجلس ديكور اعمالنا",
-      "desc": "تصميم مجلس ديكور",
-      "img": "https://salfordkw.shop/products/مجلس-ديكور-اعمالنا-سالفورد.webp",
-      "price": "",
-      "unit": "م",
-      "id": "prod_1785874968645_5o34r",
-      "images": [
-        "https://salfordkw.shop/products/مجلس-ديكور-اعمالنا-سالفورد.webp"
-      ],
-      "video": ""
+      "unit": "م"
     }
   ]
 }
