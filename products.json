@@ -389,6 +389,18 @@
       "video": "",
       "price": "8",
       "unit": "متر مربع"
+    },
+    {
+      "id": "prod_1786198447978_pv5oj",
+      "code": "ستارة ملكية الكويت",
+      "desc": "تنفيذ سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786198442243_katpd.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786198442243_katpd.webp"
+      ],
+      "video": "https://salfordkw.shop/products/video_1786198444099_l4zkq.mp4",
+      "price": "17",
+      "unit": "متر مربع"
     }
   ]
 }
