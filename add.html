@@ -287,6 +287,43 @@ function renderImageGrid() {
 }
 
 // ===== Video =====
+// يلتقط أول لقطة (فريم) من فيديو مرفوع محلياً ويحوّلها لصورة مضغوطة
+// تُستخدم كصورة غلاف تلقائية عند رفع فيديو بدون أي صور مرفقة.
+function generateVideoThumbnail(file) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(file);
+    const video = document.createElement('video');
+    video.src = url;
+    video.muted = true;
+    video.playsInline = true;
+    video.onloadeddata = () => {
+      // نأخذ اللقطة من الثانية 0.3 (تفادي فريم أسود بالبداية أحياناً)
+      try { video.currentTime = Math.min(0.3, (video.duration || 1) / 2); }
+      catch (e) { captureFrame(); }
+    };
+    video.onseeked = captureFrame;
+    video.onerror = () => { URL.revokeObjectURL(url); reject(new Error('تعذّرت قراءة الفيديو لالتقاط صورة الغلاف')); };
+
+    function captureFrame() {
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth || 400;
+        canvas.height = video.videoHeight || 400;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const mime = CAN_EXPORT_WEBP ? 'image/webp' : 'image/jpeg';
+        const ext = CAN_EXPORT_WEBP ? 'webp' : 'jpg';
+        canvas.toBlob(blob => {
+          URL.revokeObjectURL(url);
+          if (!blob) { reject(new Error('فشل استخراج صورة الغلاف من الفيديو')); return; }
+          const baseName = file.name.replace(/\.[^.]+$/, '');
+          const thumbFile = new File([blob], `${baseName}-cover.${ext}`, { type: mime });
+          resolve(thumbFile);
+        }, mime, COMPRESS_QUALITY);
+      } catch (e) { URL.revokeObjectURL(url); reject(e); }
+    }
+  });
+}
 function setVideoMode(mode) {
   videoMode = mode;
   document.getElementById('tab-novideo').classList.toggle('active', mode === 'none');
@@ -374,7 +411,8 @@ function genProductId() {
 async function submitProduct() {
   const token = getToken();
   if (!token) { showToast('⚠️ أدخل GitHub Token أولاً بالأعلى', '#ff6b6b'); return; }
-  if (selectedImages.length === 0) { showToast('⚠️ اختر صورة واحدة على الأقل', '#ff6b6b'); return; }
+  const hasVideo = (videoMode === 'upload' && selectedVideoFile) || (videoMode === 'url' && document.getElementById('video-url-input').value.trim());
+  if (selectedImages.length === 0 && !hasVideo) { showToast('⚠️ ارفق صورة واحدة على الأقل أو فيديو', '#ff6b6b'); return; }
   const name = document.getElementById('name-input').value.trim();
   if (!name) { showToast('⚠️ أدخل اسم المنتج', '#ff6b6b'); return; }
   const section = document.getElementById('section-select').value;
@@ -386,12 +424,25 @@ async function submitProduct() {
   btn.disabled = true;
 
   try {
-    setStatus(`📤 جاري رفع الصور (0/${selectedImages.length})...`);
     const imageUrls = [];
-    for (let i = 0; i < selectedImages.length; i++) {
-      const url = await uploadFileToGitHub(selectedImages[i].file, 'products', 'product');
-      imageUrls.push(url);
-      setStatus(`📤 جاري رفع الصور (${i+1}/${selectedImages.length})...`);
+
+    if (selectedImages.length > 0) {
+      setStatus(`📤 جاري رفع الصور (0/${selectedImages.length})...`);
+      for (let i = 0; i < selectedImages.length; i++) {
+        const url = await uploadFileToGitHub(selectedImages[i].file, 'products', 'product');
+        imageUrls.push(url);
+        setStatus(`📤 جاري رفع الصور (${i+1}/${selectedImages.length})...`);
+      }
+    } else if (videoMode === 'upload' && selectedVideoFile) {
+      // ما فيه صور مرفقة لكن فيه فيديو مرفوع: نولّد صورة غلاف تلقائياً من أول لقطة بالفيديو
+      setStatus('🖼️ جاري إنشاء صورة غلاف من الفيديو...');
+      try {
+        const thumbFile = await generateVideoThumbnail(selectedVideoFile);
+        const url = await uploadFileToGitHub(thumbFile, 'products', 'product');
+        imageUrls.push(url);
+      } catch (e) {
+        // إذا فشل استخراج الغلاف لأي سبب، نكمل بدون صورة (fallback عند العرض للشعار الافتراضي)
+      }
     }
 
     let videoUrl = '';
@@ -400,6 +451,10 @@ async function submitProduct() {
       videoUrl = await uploadFileToGitHub(selectedVideoFile, 'products', 'video');
     } else if (videoMode === 'url') {
       videoUrl = document.getElementById('video-url-input').value.trim();
+      if (imageUrls.length === 0) {
+        // فيديو برابط خارجي بدون صور: نستخدم صورة افتراضية كغلاف لحين إضافة صورة لاحقاً
+        imageUrls.push('https://placehold.co/400x400/1c1805/C8A96E?text=سالفورد');
+      }
     }
 
     setStatus('📄 جاري تحديث قائمة المنتجات...');
@@ -412,7 +467,7 @@ async function submitProduct() {
       id: genProductId(),
       code: name,
       desc: notes || 'منتج جديد من سالفورد للأثاث والمفروشات',
-      img: imageUrls[0],
+      img: imageUrls[0] || 'https://placehold.co/400x400/1c1805/C8A96E?text=سالفورد',
       images: imageUrls,
       video: videoUrl,
       price: price,
@@ -435,7 +490,7 @@ async function submitProduct() {
       if (currentPosts.ok) {
         const posts = JSON.parse(decodeURIComponent(escape(atob(currentPosts.data.content.replace(/\n/g,'')))));
         const today = new Date().toISOString().split('T')[0];
-        posts.push({ id: 'post_' + Date.now(), title: name, desc: notes || '', img: imageUrls[0], images: imageUrls, video: videoUrl, date: today, price: price, unit: unit });
+        posts.push({ id: 'post_' + Date.now(), title: name, desc: notes || '', img: imageUrls[0] || 'https://placehold.co/400x400/1c1805/C8A96E?text=سالفورد', images: imageUrls, video: videoUrl, date: today, price: price, unit: unit });
         const newPostsContent = btoa(unescape(encodeURIComponent(JSON.stringify(posts, null, 2))));
         await ghApi('posts.json', 'PUT', {
           message: `نشر تلقائي بقسم الأعمال: ${name}`,
