@@ -83,21 +83,6 @@
       "img": "https://salfordkw.shop/products/مجلس-ديكور-سالفورد-05.webp",
       "price": "",
       "unit": "م"
-    },
-    {
-      "id": "prod_1786137977496_71bw9",
-      "code": "سجاد حفر نقشة",
-      "desc": "سجاد تركي مع حفر يدوي نقشة",
-      "img": "https://salfordkw.shop/products/product_1786137969880_7o88c.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786137969880_7o88c.webp",
-        "https://salfordkw.shop/products/product_1786137971674_11s02.webp",
-        "https://salfordkw.shop/products/product_1786137973452_r34dc.webp",
-        "https://salfordkw.shop/products/product_1786137975044_ysgp0.webp"
-      ],
-      "video": "",
-      "price": "13",
-      "unit": "م"
     }
   ],
   "majalis": [
@@ -142,37 +127,65 @@
       "img": "https://salfordkw.shop/products/اثاث-ديوانية-تكايات-سالفورد.webp",
       "price": "",
       "unit": "م"
+    }
+  ],
+  "athath": [
+    {
+      "code": "ديكور داخلي كود 01",
+      "desc": "تصميم ديكور داخلي راقٍ ينقل بيتك وديوانيتك لمستوى آخر من الأناقة",
+      "img": "https://salfordkw.shop/products/ديكور-داخلي-سالفورد.webp",
+      "price": "",
+      "unit": "م"
     },
     {
-      "id": "prod_1786135932689_7nu53",
-      "code": "مساند اسفنج كويتي",
-      "desc": "مساند ديوانية و مقلط \nالاسفنج كويتي \nالخام شانيل تركي",
-      "img": "https://salfordkw.shop/products/product_1786135930343_x3tfo.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786135930343_x3tfo.webp"
-      ],
-      "video": "",
-      "price": "9",
+      "code": "كنب مودرن كود 01",
+      "desc": "كنب مودرن بأشكال أنيقة وعصرية مناسب لغرف الجلوس الكويتية",
+      "img": "https://salfordkw.shop/products/كنب-مودرن-سالفورد.webp",
+      "price": "",
+      "unit": "م"
+    },
+    {
+      "code": "أثاث فاخر كود 01",
+      "desc": "أثاث منزلي فاخر بجودة عالية من أرقى الخامات والأقمشة الراقية",
+      "img": "https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد.webp",
+      "price": "",
+      "unit": "م"
+    },
+    {
+      "code": "كنب مودرن كود 02",
+      "desc": "كنب عصري أنيق بألوان هادئة مناسب لغرف الاستقبال والجلوس",
+      "img": "https://salfordkw.shop/products/كنب-مودرن-سالفورد-02.webp",
+      "price": "",
+      "unit": "م"
+    },
+    {
+      "code": "كنب تفصيل كود 01",
+      "desc": "كنب مفصّل حسب الطلب بأجود الأقمشة والخامات الراقية مع ضمان الجودة",
+      "img": "https://salfordkw.shop/products/كنب-تفصيل-سالفورد.webp",
+      "price": "",
+      "unit": "م"
+    },
+    {
+      "code": "ديكور مجالس كود 01",
+      "desc": "ديكور مجالس يجمع الأصالة والعصرية بلمسة كويتية مميزة",
+      "img": "https://salfordkw.shop/products/ديكور-مجالس-سالفورد.webp",
+      "price": "",
+      "unit": "م"
+    },
+    {
+      "code": "أثاث ديوانية كود 01",
+      "desc": "أثاث وديكور ديوانية كويتية مفصّل بأعلى مستوى من الدقة والإتقان",
+      "img": "https://salfordkw.shop/products/اثاث-ديوانية-تكايات-سالفورد.webp",
+      "price": "",
+      "unit": "م"
+    },
+    {
+      "code": "تنجيد أثاث كود 01",
+      "desc": "تفصيل وتنجيد أثاث منزلي وديوانيات حسب الطلب بضمان الجودة الكاملة",
+      "img": "https://salfordkw.shop/products/تنجيد-اثاث-ديوانية-سالفورد.webp",
+      "price": "",
       "unit": "م"
     }
   ],
-  "athath": [],
-  "sataer": [
-    {
-      "id": "prod_1786140568904_xlwn0",
-      "code": "ستائر خام ويفي",
-      "desc": "ستائر خام ويفي مميزة \nالخام تركي ملمس حريري",
-      "img": "https://salfordkw.shop/products/product_1786140561206_9ojky.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786140561206_9ojky.webp",
-        "https://salfordkw.shop/products/product_1786140563125_iuomt.webp",
-        "https://salfordkw.shop/products/product_1786140564645_vn0ml.webp",
-        "https://salfordkw.shop/products/product_1786140565779_8w9yq.webp",
-        "https://salfordkw.shop/products/product_1786140566978_1tgir.webp"
-      ],
-      "video": "",
-      "price": "9",
-      "unit": "م"
-    }
-  ]
+  "sataer": []
 }
