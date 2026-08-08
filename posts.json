@@ -406,5 +406,23 @@
     "date": "2026-08-08",
     "price": "55",
     "unit": "م"
+  },
+  {
+    "id": "post_1786196416609",
+    "title": "كنب عصري مميز",
+    "desc": "كنب عصري ومميز \nتنفيذ مشغل سالفورد للاثاث والمفروشات",
+    "img": "https://salfordkw.shop/products/product_1786196403904_3aq2d.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1786196403904_3aq2d.webp",
+      "https://salfordkw.shop/products/product_1786196405327_5fp3n.webp",
+      "https://salfordkw.shop/products/product_1786196407287_so24n.webp",
+      "https://salfordkw.shop/products/product_1786196408894_o0qi0.webp",
+      "https://salfordkw.shop/products/product_1786196409898_6w72y.webp",
+      "https://salfordkw.shop/products/product_1786196411258_hpyn3.webp"
+    ],
+    "video": "https://salfordkw.shop/products/video_1786196412510_frqkn.mp4",
+    "date": "2026-08-08",
+    "price": "65",
+    "unit": "م"
   }
 ]
