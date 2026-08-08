@@ -365,5 +365,20 @@
     "date": "2026-08-07",
     "price": "9",
     "unit": "م"
+  },
+  {
+    "id": "post_1786196113190",
+    "title": "كنب مودرن مميز",
+    "desc": "كنب مودرن مميز \nالاسفنج البغلي \nخام شانيل تركي \nخشب جوز",
+    "img": "https://salfordkw.shop/products/product_1786196106227_tntws.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1786196106227_tntws.webp",
+      "https://salfordkw.shop/products/product_1786196108211_ix144.webp",
+      "https://salfordkw.shop/products/product_1786196109839_z5cp3.webp"
+    ],
+    "video": "",
+    "date": "2026-08-08",
+    "price": "55",
+    "unit": "م"
   }
 ]
