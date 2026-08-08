@@ -526,6 +526,18 @@
       "video": "",
       "price": "14",
       "unit": "م"
+    },
+    {
+      "id": "prod_1786220503064_af07i",
+      "code": "ستارة خام ويفي",
+      "desc": "ستارة خام ويفي مميزة \nخام تركي \nتصميم ملكي \nتركيب محترفين \nتنفيذ سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786220498508_suibg.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786220498508_suibg.webp"
+      ],
+      "video": "https://salfordkw.shop/products/video_1786220500423_ria7j.mp4",
+      "price": "17",
+      "unit": "م"
     }
   ]
 }
