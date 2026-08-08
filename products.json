@@ -401,6 +401,18 @@
       "video": "https://salfordkw.shop/products/video_1786198444099_l4zkq.mp4",
       "price": "17",
       "unit": "متر مربع"
+    },
+    {
+      "id": "prod_1786198849687_jp6gk",
+      "code": "ستاره خام ملكية",
+      "desc": "ستارة خام ملكية\nتنفيذ سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786198845817_gggi6.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786198845817_gggi6.webp"
+      ],
+      "video": "https://salfordkw.shop/products/video_1786198846925_4faj3.mp4",
+      "price": "17",
+      "unit": "م"
     }
   ]
 }
