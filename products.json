@@ -352,6 +352,18 @@
       "video": "",
       "price": "8",
       "unit": "متر مربع"
+    },
+    {
+      "id": "prod_1786198232307_sfamn",
+      "code": "ستاير رول الرميثية",
+      "desc": "ستاير رول مميزة \nمنطقة الرميثية \nتنفيذ سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786198230102_2d8yi.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786198230102_2d8yi.webp"
+      ],
+      "video": "",
+      "price": "8",
+      "unit": "متر مربع"
     }
   ]
 }
