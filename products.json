@@ -413,6 +413,25 @@
       "video": "https://salfordkw.shop/products/video_1786198846925_4faj3.mp4",
       "price": "17",
       "unit": "م"
+    },
+    {
+      "id": "prod_1786198948492_lheg7",
+      "code": "ستاره ويفي خام المنقف",
+      "desc": "ستاره خام المنقف\nتنفيذ سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786198933149_374vc.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786198933149_374vc.webp",
+        "https://salfordkw.shop/products/product_1786198935143_s532h.webp",
+        "https://salfordkw.shop/products/product_1786198936551_x445t.webp",
+        "https://salfordkw.shop/products/product_1786198938619_0mgkh.webp",
+        "https://salfordkw.shop/products/product_1786198940333_rqxyh.webp",
+        "https://salfordkw.shop/products/product_1786198942511_0m47f.webp",
+        "https://salfordkw.shop/products/product_1786198944702_tn6pb.webp",
+        "https://salfordkw.shop/products/product_1786198946797_9np4q.webp"
+      ],
+      "video": "",
+      "price": "17",
+      "unit": "م"
     }
   ]
 }
