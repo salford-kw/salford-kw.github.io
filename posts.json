@@ -500,5 +500,18 @@
     "date": "2026-08-08",
     "price": "8",
     "unit": "متر مربع"
+  },
+  {
+    "id": "post_1786198851355",
+    "title": "ستاره خام ملكية",
+    "desc": "ستارة خام ملكية\nتنفيذ سالفورد للأثاث والمفروشات",
+    "img": "https://salfordkw.shop/products/product_1786198845817_gggi6.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1786198845817_gggi6.webp"
+    ],
+    "video": "https://salfordkw.shop/products/video_1786198846925_4faj3.mp4",
+    "date": "2026-08-08",
+    "price": "17",
+    "unit": "م"
   }
 ]
