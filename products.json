@@ -263,6 +263,19 @@
       "video": "",
       "price": "45",
       "unit": "م"
+    },
+    {
+      "id": "prod_1786197656102_ae8bj",
+      "code": "ستارة ويفي",
+      "desc": "ستارة ويفي منطقة الرابية \nصالة \nتنفيذ سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786197651322_1zw0r.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786197651322_1zw0r.webp",
+        "https://salfordkw.shop/products/product_1786197653630_ffttl.webp"
+      ],
+      "video": "",
+      "price": "17",
+      "unit": "م"
     }
   ]
 }
