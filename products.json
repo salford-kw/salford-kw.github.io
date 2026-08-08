@@ -211,6 +211,18 @@
       "video": "",
       "price": "130",
       "unit": "م"
+    },
+    {
+      "id": "prod_1786196268709_asqr0",
+      "code": "كنب زاوية مودرن",
+      "desc": "تصميم عصري ومريح جدا \nالاسفنج الوردي من البغلي \nخام شانيل تركي \nخشب جوز",
+      "img": "https://salfordkw.shop/products/product_1786196266520_sd8ih.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786196266520_sd8ih.webp"
+      ],
+      "video": "",
+      "price": "55",
+      "unit": "م"
     }
   ],
   "sataer": []
