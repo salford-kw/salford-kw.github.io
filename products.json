@@ -376,6 +376,19 @@
       "video": "",
       "price": "8",
       "unit": "متر مربع"
+    },
+    {
+      "id": "prod_1786198369013_9r8zq",
+      "code": "ستاير رول",
+      "desc": "ستائر رول منطقة الكويت \nمكتب \nتنفيذ سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786198365428_vaf21.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786198365428_vaf21.webp",
+        "https://salfordkw.shop/products/product_1786198367027_9fs3r.webp"
+      ],
+      "video": "",
+      "price": "8",
+      "unit": "متر مربع"
     }
   ]
 }
