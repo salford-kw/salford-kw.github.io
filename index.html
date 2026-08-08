@@ -342,7 +342,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <span class="cat-preview-title">🧶 السجاد والموكيت والعينات</span>
       <a href="/sajjad.html" class="cat-preview-more">عرض الكل ←</a>
     </div>
-    <div class="cat-preview-grid">
+    <div class="cat-preview-grid" id="preview-sajjad">
       <a href="/sajjad.html" class="thumb-card">
         <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/نقشة-حفر-يدوي-سالفورد.webp" alt="سجاد تركي فاخر - سالفورد" loading="lazy"></div>
         <div class="thumb-title">سجاد تركي حفر يدوي</div>
@@ -359,7 +359,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <span class="cat-preview-title">🏠 مجالس ديكور ومساند ديكور</span>
       <a href="/majalis.html" class="cat-preview-more">عرض الكل ←</a>
     </div>
-    <div class="cat-preview-grid">
+    <div class="cat-preview-grid" id="preview-majalis">
       <a href="/majalis.html" class="thumb-card">
         <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد-2.webp" alt="مجلس خشب ديكور - سالفورد" loading="lazy"></div>
         <div class="thumb-title">مجلس خشب ديكور</div>
@@ -376,14 +376,14 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <span class="cat-preview-title">🛋️ الأثاث والديكور الداخلي</span>
       <a href="/athath.html" class="cat-preview-more">عرض الكل ←</a>
     </div>
-    <div class="cat-preview-grid">
+    <div class="cat-preview-grid" id="preview-athath">
       <a href="/athath.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-ديوانية-كنب-سالفورد.webp" alt="كنب ديوانية مودرن - سالفورد" loading="lazy"></div>
-        <div class="thumb-title">كنب ديوانيات فاخر</div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786196403904_3aq2d.webp" alt="كنب عصري مميز - سالفورد" loading="lazy"></div>
+        <div class="thumb-title">كنب عصري مميز</div>
       </a>
       <a href="/athath.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-ديكور-فخم-سالفورد-3.webp" alt="طاولات وأثاث ديكور - سالفورد" loading="lazy"></div>
-        <div class="thumb-title">أثاث وطاولات مجالس</div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786196493883_huspb.webp" alt="كنب استقبال منطقة سلوى - سالفورد" loading="lazy"></div>
+        <div class="thumb-title">كنب استقبال منطقة سلوى</div>
       </a>
     </div>
   </div>
@@ -393,7 +393,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <span class="cat-preview-title">🪟 الستائر — ويفي وبلاك اوت ورول</span>
       <a href="/sataer.html" class="cat-preview-more">عرض الكل ←</a>
     </div>
-    <div class="cat-preview-grid">
+    <div class="cat-preview-grid" id="preview-sataer">
       <a href="/sataer.html" class="thumb-card">
         <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786140561206_9ojky.webp" alt="ستائر مودرن - سالفورد" loading="lazy" onerror="this.src='https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد-2.webp'"></div>
         <div class="thumb-title">ستائر مودرن للمجالس</div>
@@ -752,6 +752,49 @@ srSubscribe('site', reviews => {
   };
   schemaEl.textContent = JSON.stringify(schema);
 });
+</script>
+
+<script>
+// ============================================================
+// تحديث معاينات الأقسام بالصفحة الرئيسية (آخر منتجين بكل قسم)
+// المحتوى الأساسي مكتوب ثابتاً بالـ HTML أعلاه (للسيو وبوتات
+// الذكاء الاصطناعي التي لا تُنفّذ JavaScript). هذا السكربت يحدّث
+// المعاينة تلقائياً من products.json عند إضافة منتجات جديدة من
+// لوحة التحكم، بدون الحاجة لتعديل هذا الملف يدوياً كل مرة.
+// ============================================================
+(async function updateHomePreviews() {
+  try {
+    const r = await fetch('/products.json?v=' + Date.now());
+    if (!r.ok) return;
+    const data = await r.json();
+
+    const sections = [
+      { key: 'sajjad', gridId: 'preview-sajjad', link: '/sajjad.html' },
+      { key: 'majalis', gridId: 'preview-majalis', link: '/majalis.html' },
+      { key: 'athath', gridId: 'preview-athath', link: '/athath.html' },
+      { key: 'sataer', gridId: 'preview-sataer', link: '/sataer.html' }
+    ];
+
+    for (const sec of sections) {
+      const items = data[sec.key];
+      if (!Array.isArray(items) || items.length === 0) continue;
+      const latest = items.slice(-2).reverse();
+      if (latest.length === 0) continue;
+
+      const grid = document.getElementById(sec.gridId);
+      if (!grid) continue;
+
+      grid.innerHTML = latest.map(p => `
+        <a href="${sec.link}" class="thumb-card">
+          <div class="thumb-img-wrap"><img src="${p.img}" alt="${(p.code||'').replace(/"/g,'')} - سالفورد" loading="lazy"></div>
+          <div class="thumb-title">${p.code || ''}</div>
+        </a>
+      `).join('');
+    }
+  } catch (e) {
+    // في حال فشل الجلب، تبقى المعاينة الثابتة بالـ HTML كما هي
+  }
+})();
 </script>
 </body>
 </html>
