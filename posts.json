@@ -380,5 +380,18 @@
     "date": "2026-08-08",
     "price": "55",
     "unit": "م"
+  },
+  {
+    "id": "post_1786196182608",
+    "title": "ديكور واجهة مميز",
+    "desc": "تصميم يدوي عصري مميز",
+    "img": "https://salfordkw.shop/products/product_1786196179170_upt1v.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1786196179170_upt1v.webp"
+    ],
+    "video": "",
+    "date": "2026-08-08",
+    "price": "130",
+    "unit": "م"
   }
 ]
