@@ -513,6 +513,19 @@
       "video": "",
       "price": "17",
       "unit": "م"
+    },
+    {
+      "id": "prod_1786199842623_52k2j",
+      "code": "ستائر خام رول",
+      "desc": "ستائر خام ويفي مميزة \nمنطقة فهد الاحمد \nتنفيذ سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786199839154_hqlc9.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786199839154_hqlc9.webp",
+        "https://salfordkw.shop/products/product_1786199840555_xi15w.webp"
+      ],
+      "video": "",
+      "price": "14",
+      "unit": "م"
     }
   ]
 }
