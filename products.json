@@ -247,5 +247,22 @@
       "unit": "م"
     }
   ],
-  "sataer": []
+  "sataer": [
+    {
+      "id": "prod_1786197578157_kyo7d",
+      "code": "ستارة ملكية منطقة خيطان",
+      "desc": "ستارة ملكية تنفيذ سالفورد للأثاث والمفروشات \nمنطقة خيطان \nصالة استقبال",
+      "img": "https://salfordkw.shop/products/product_1786197567265_jz8bl.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786197567265_jz8bl.webp",
+        "https://salfordkw.shop/products/product_1786197569515_bdev5.webp",
+        "https://salfordkw.shop/products/product_1786197571661_vt5qa.webp",
+        "https://salfordkw.shop/products/product_1786197573765_1sbnx.webp",
+        "https://salfordkw.shop/products/product_1786197575728_4jwp9.webp"
+      ],
+      "video": "",
+      "price": "45",
+      "unit": "م"
+    }
+  ]
 }
