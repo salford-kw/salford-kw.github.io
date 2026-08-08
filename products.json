@@ -538,6 +538,22 @@
       "video": "https://salfordkw.shop/products/video_1786220500423_ria7j.mp4",
       "price": "17",
       "unit": "م"
+    },
+    {
+      "id": "prod_1786220585045_x7rdc",
+      "code": "ستاره شيفون",
+      "desc": "ستاره شيفون \nخام حريري ملمس ناعم \nيعكس ضوء هادئ\nتنفيذ سالفورد للأثاث والمفروشات \nمنطقة صباح السالم",
+      "img": "https://salfordkw.shop/products/product_1786220577670_dz6ih.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786220577670_dz6ih.webp",
+        "https://salfordkw.shop/products/product_1786220579278_c0ufw.webp",
+        "https://salfordkw.shop/products/product_1786220580646_v73te.webp",
+        "https://salfordkw.shop/products/product_1786220581847_jiyzv.webp",
+        "https://salfordkw.shop/products/product_1786220583259_211l5.webp"
+      ],
+      "video": "",
+      "price": "9",
+      "unit": "م"
     }
   ]
 }
