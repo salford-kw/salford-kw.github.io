@@ -92,7 +92,9 @@ function initProductReviews(productId, mountEl) {
     <div class="sr-form-box">
       <div class="sr-form-title">✍️ شاركنا رأيك بهذا المنتج</div>
       <div class="sr-star-picker" id="sr-picker-${productId}"></div>
+      <label for="sr-name-${productId}" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">اسمك</label>
       <input type="text" class="sr-input" id="sr-name-${productId}" placeholder="اسمك" maxlength="60">
+      <label for="sr-comment-${productId}" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">تعليقك</label>
       <textarea class="sr-input sr-textarea" id="sr-comment-${productId}" placeholder="اكتب تعليقك (اختياري)" maxlength="500"></textarea>
       <input type="text" class="sr-honeypot" id="sr-hp-${productId}" tabindex="-1" autocomplete="off">
       <button class="sr-submit-btn" id="sr-submit-${productId}" onclick="srSubmitReview('${productId}')">إرسال التقييم</button>
