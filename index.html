@@ -732,51 +732,89 @@ function closeLightbox(){
 loadLatestWorks();
 </script>
 
-<!-- نظام التقييمات الحقيقي (Firebase) -->
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-<script src="/reviews-widget.js"></script>
+<!-- نظام التقييمات الحقيقي (Firebase) — تحميل مؤجَّل (Lazy Load) لحين اقتراب الزائر من قسم التقييمات، لتخفيف ضغط المعالج (main-thread) بالتحميل الأولي للصفحة -->
 <script>
-initProductReviews('site', 'site-reviews-mount');
+(function () {
+  let srLoaded = false;
 
-srSubscribe('site', reviews => {
-  // مزامنة شريط التقييم الظاهر أعلى الصفحة مع نفس بيانات Firestore المستخدمة بالـSchema (لتجنّب أي تناقض بين الرقم الظاهر والفعلي)
-  const starsEl = document.getElementById('site-rating-stars');
-  const valueEl = document.getElementById('site-rating-value');
-  const countEl = document.getElementById('site-rating-count');
-  if (reviews && reviews.length > 0) {
-    const liveAvg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
-    const rounded = Math.round(liveAvg);
-    if (starsEl) starsEl.textContent = '★★★★★'.slice(0, rounded) + '☆☆☆☆☆'.slice(0, 5 - rounded);
-    if (valueEl) valueEl.textContent = `${liveAvg.toFixed(1)} / 5`;
-    if (countEl) countEl.textContent = `+${reviews.length} تقييمات موثقة`;
+  function loadScriptTag(src) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.onload = resolve;
+      s.onerror = reject;
+      document.body.appendChild(s);
+    });
   }
-  // إذا ما فيه تقييمات بعد بـFirestore، تبقى القيم الثابتة الحالية بالـHTML كحالة احتياطية (fallback) للزوار وبوتات البحث التي لا تُنفّذ JavaScript
 
-  const schemaEl = document.getElementById('site-reviews-schema');
-  if (!reviews || reviews.length === 0) { schemaEl.textContent = ''; return; }
-  const avg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "سالفورد للأثاث والمفروشات",
-    "brand": { "@type": "Brand", "name": "سالفورد للأثاث والمفروشات" },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": avg.toFixed(1),
-      "reviewCount": String(reviews.length),
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": reviews.slice(0, 20).map(r => ({
-      "@type": "Review",
-      "author": { "@type": "Person", "name": r.name || "عميل" },
-      "reviewRating": { "@type": "Rating", "ratingValue": String(r.rating || 5), "bestRating": "5" },
-      "reviewBody": r.comment || ""
-    }))
-  };
-  schemaEl.textContent = JSON.stringify(schema);
-});
+  function loadReviewsSystem() {
+    if (srLoaded) return;
+    srLoaded = true;
+
+    loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js')
+      .then(() => loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js'))
+      .then(() => loadScriptTag('/reviews-widget.js'))
+      .then(() => {
+        initProductReviews('site', 'site-reviews-mount');
+
+        srSubscribe('site', reviews => {
+          // مزامنة شريط التقييم الظاهر أعلى الصفحة مع نفس بيانات Firestore المستخدمة بالـSchema (لتجنّب أي تناقض بين الرقم الظاهر والفعلي)
+          const starsEl = document.getElementById('site-rating-stars');
+          const valueEl = document.getElementById('site-rating-value');
+          const countEl = document.getElementById('site-rating-count');
+          if (reviews && reviews.length > 0) {
+            const liveAvg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
+            const rounded = Math.round(liveAvg);
+            if (starsEl) starsEl.textContent = '★★★★★'.slice(0, rounded) + '☆☆☆☆☆'.slice(0, 5 - rounded);
+            if (valueEl) valueEl.textContent = `${liveAvg.toFixed(1)} / 5`;
+            if (countEl) countEl.textContent = `+${reviews.length} تقييمات موثقة`;
+          }
+          // إذا ما فيه تقييمات بعد بـFirestore، تبقى القيم الثابتة الحالية بالـHTML كحالة احتياطية (fallback) للزوار وبوتات البحث التي لا تُنفّذ JavaScript
+
+          const schemaEl = document.getElementById('site-reviews-schema');
+          if (!reviews || reviews.length === 0) { schemaEl.textContent = ''; return; }
+          const avg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
+          const schema = {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "سالفورد للأثاث والمفروشات",
+            "brand": { "@type": "Brand", "name": "سالفورد للأثاث والمفروشات" },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": avg.toFixed(1),
+              "reviewCount": String(reviews.length),
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": reviews.slice(0, 20).map(r => ({
+              "@type": "Review",
+              "author": { "@type": "Person", "name": r.name || "عميل" },
+              "reviewRating": { "@type": "Rating", "ratingValue": String(r.rating || 5), "bestRating": "5" },
+              "reviewBody": r.comment || ""
+            }))
+          };
+          schemaEl.textContent = JSON.stringify(schema);
+        });
+      })
+      .catch(err => console.error('فشل تحميل نظام التقييمات', err));
+  }
+
+  const reviewsSection = document.querySelector('.reviews');
+  if ('IntersectionObserver' in window && reviewsSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadReviewsSystem();
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: '300px 0px' });
+    observer.observe(reviewsSection);
+  } else {
+    // دعم احتياطي للمتصفحات القديمة بلا IntersectionObserver، أو إذا لم يوجد قسم تقييمات بالصفحة
+    loadReviewsSystem();
+  }
+})();
 </script>
 
 <script>
