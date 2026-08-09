@@ -428,6 +428,20 @@
       "video": "",
       "price": "9",
       "unit": "م"
+    },
+    {
+      "id": "prod_1786221102138_8s7w7",
+      "code": "مساند مجلس حريم نساء",
+      "desc": "تفصيل مساند \nاستقبال نساء حريم \nخام تركي \nاسفنج كويتي البغلي",
+      "img": "https://salfordkw.shop/products/product_1786221096632_zx58q.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786221096632_zx58q.webp",
+        "https://salfordkw.shop/products/product_1786221098404_ziycn.webp",
+        "https://salfordkw.shop/products/product_1786221099904_fj6w2.webp"
+      ],
+      "video": "",
+      "price": "19",
+      "unit": "م"
     }
   ],
   "athath": [
@@ -892,20 +906,6 @@
       ],
       "video": "",
       "price": "14",
-      "unit": "م"
-    },
-    {
-      "id": "prod_1786221102138_8s7w7",
-      "code": "مساند مجلس حريم نساء",
-      "desc": "تفصيل مساند \nاستقبال نساء حريم \nخام تركي \nاسفنج كويتي البغلي",
-      "img": "https://salfordkw.shop/products/product_1786221096632_zx58q.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786221096632_zx58q.webp",
-        "https://salfordkw.shop/products/product_1786221098404_ziycn.webp",
-        "https://salfordkw.shop/products/product_1786221099904_fj6w2.webp"
-      ],
-      "video": "",
-      "price": "19",
       "unit": "م"
     }
   ]
