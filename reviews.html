@@ -197,39 +197,78 @@ footer a{color:var(--gold-light);text-decoration:none;}
   <a class="s-btn s-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener" onclick="gtag('event','whatsapp_click');">💬 واتساب</a>
   <a class="s-btn s-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});gtag('event','phone_click');">📞 اتصال</a>
 </div>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-<script src="/reviews-widget.js"></script>
+<!-- نظام التقييمات الحقيقي (Firebase) + أداة التحليلات (analytics.js) — تحميل مؤجَّل (Lazy Load) لحين اقتراب الزائر من قسم التقييمات (#site-reviews-mount)، لتخفيف ضغط المعالج (main-thread) بالتحميل الأولي للصفحة. analytics.js يُحمَّل بعد Firebase مباشرة لأنه يعتمد عليه لتسجيل الزيارة بنفس مستند Firestore. -->
 <script>
-initProductReviews('site', 'site-reviews-mount');
+(function () {
+  let srLoaded = false;
 
-// بناء Schema حقيقي من التقييمات الفعلية فقط (بدون تقييمات وهمية)
-srSubscribe('site', reviews => {
-  const schemaEl = document.getElementById('reviews-schema');
-  if (!reviews || reviews.length === 0) { schemaEl.textContent = ''; return; }
-  const avg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "سالفورد للأثاث والمفروشات",
-    "brand": { "@type": "Brand", "name": "سالفورد للأثاث والمفروشات" },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": avg.toFixed(1),
-      "reviewCount": String(reviews.length),
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": reviews.slice(0, 20).map(r => ({
-      "@type": "Review",
-      "author": { "@type": "Person", "name": r.name || "عميل" },
-      "reviewRating": { "@type": "Rating", "ratingValue": String(r.rating || 5), "bestRating": "5" },
-      "reviewBody": r.comment || ""
-    }))
-  };
-  schemaEl.textContent = JSON.stringify(schema);
-});
+  function loadScriptTag(src) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.onload = resolve;
+      s.onerror = reject;
+      document.body.appendChild(s);
+    });
+  }
+
+  function loadReviewsAndAnalytics() {
+    if (srLoaded) return;
+    srLoaded = true;
+
+    loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js')
+      .then(() => loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js'))
+      .then(() => loadScriptTag('/reviews-widget.js'))
+      .then(() => {
+        initProductReviews('site', 'site-reviews-mount');
+
+        // بناء Schema حقيقي من التقييمات الفعلية فقط (بدون تقييمات وهمية)
+        srSubscribe('site', reviews => {
+          const schemaEl = document.getElementById('reviews-schema');
+          if (!reviews || reviews.length === 0) { schemaEl.textContent = ''; return; }
+          const avg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
+          const schema = {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "سالفورد للأثاث والمفروشات",
+            "brand": { "@type": "Brand", "name": "سالفورد للأثاث والمفروشات" },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": avg.toFixed(1),
+              "reviewCount": String(reviews.length),
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": reviews.slice(0, 20).map(r => ({
+              "@type": "Review",
+              "author": { "@type": "Person", "name": r.name || "عميل" },
+              "reviewRating": { "@type": "Rating", "ratingValue": String(r.rating || 5), "bestRating": "5" },
+              "reviewBody": r.comment || ""
+            }))
+          };
+          schemaEl.textContent = JSON.stringify(schema);
+        });
+        return loadScriptTag('/analytics.js');
+      })
+      .catch(err => console.error('فشل تحميل نظام التقييمات أو التحليلات', err));
+  }
+
+  const reviewsMount = document.getElementById('site-reviews-mount');
+  if ('IntersectionObserver' in window && reviewsMount) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadReviewsAndAnalytics();
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: '300px 0px' });
+    observer.observe(reviewsMount);
+  } else {
+    // دعم احتياطي للمتصفحات القديمة بلا IntersectionObserver، أو إذا لم يوجد قسم التقييمات بالصفحة
+    loadReviewsAndAnalytics();
+  }
+})();
 </script>
-<script src="/analytics.js"></script>
 </body>
 </html>

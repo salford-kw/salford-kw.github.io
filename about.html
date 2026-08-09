@@ -196,8 +196,32 @@ footer a{color:var(--gold-light);text-decoration:none;}
   <a class="s-btn s-wa" href="https://wa.me/96555943343?text=مرحبا،%20شفت%20صفحة%20عن%20سالفورد%20وأريد%20الاستفسار" target="_blank" rel="noopener" onclick="gtag('event','whatsapp_click');">💬 واتساب</a>
   <a class="s-btn s-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});gtag('event','phone_click');">📞 اتصال</a>
 </div>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-<script src="/analytics.js"></script>
+<!-- تحميل مؤجَّل لـFirebase وأداة التحليلات (analytics.js) — لا يوجد قسم تقييمات بهذي الصفحة، فالتأجيل هنا مربوط بحدث اكتمال تحميل الصفحة (load) بدل التمرير: يضمن أن هذي الملفات لا تنافس المحتوى الأساسي والصور على المعالج والشبكة أثناء العرض الأولي، مع بقاء تتبّع الزيارة يسجَّل فوراً تقريباً بعد اكتمال التحميل (لا تأخير حقيقي يؤثر على دقة العداد) -->
+<script>
+(function () {
+  function loadScriptTag(src) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.onload = resolve;
+      s.onerror = reject;
+      document.body.appendChild(s);
+    });
+  }
+
+  function loadAnalyticsSystem() {
+    loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js')
+      .then(() => loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js'))
+      .then(() => loadScriptTag('/analytics.js'))
+      .catch(err => console.error('فشل تحميل نظام التحليلات', err));
+  }
+
+  if (document.readyState === 'complete') {
+    loadAnalyticsSystem();
+  } else {
+    window.addEventListener('load', loadAnalyticsSystem);
+  }
+})();
+</script>
 </body>
 </html>

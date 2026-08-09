@@ -94,8 +94,32 @@ p{font-size:14px;color:var(--text-muted);margin-bottom:22px;}
   <div class="note">اضغط الزر أعلاه للتواصل المباشر</div>
 </div>
 
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-<script src="/analytics.js"></script>
+<!-- تحميل مؤجَّل لـFirebase وأداة التحليلات (analytics.js) — لا يوجد قسم تقييمات بهذي الصفحة، فالتأجيل هنا مربوط بحدث اكتمال تحميل الصفحة (load) بدل التمرير: يضمن أن هذي الملفات لا تنافس المحتوى الأساسي والصور على المعالج والشبكة أثناء العرض الأولي، مع بقاء تتبّع الزيارة يسجَّل فوراً تقريباً بعد اكتمال التحميل (لا تأخير حقيقي يؤثر على دقة العداد) -->
+<script>
+(function () {
+  function loadScriptTag(src) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.onload = resolve;
+      s.onerror = reject;
+      document.body.appendChild(s);
+    });
+  }
+
+  function loadAnalyticsSystem() {
+    loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js')
+      .then(() => loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js'))
+      .then(() => loadScriptTag('/analytics.js'))
+      .catch(err => console.error('فشل تحميل نظام التحليلات', err));
+  }
+
+  if (document.readyState === 'complete') {
+    loadAnalyticsSystem();
+  } else {
+    window.addEventListener('load', loadAnalyticsSystem);
+  }
+})();
+</script>
 </body>
 </html>
