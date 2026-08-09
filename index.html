@@ -255,10 +255,10 @@ footer a { color: var(--gold-light); text-decoration: none; }
 </section>
 
 <div class="rating-bar">
-  <span class="rating-stars">★★★★★</span>
-  <span class="rating-text">5.0 / 5</span>
+  <span class="rating-stars" id="site-rating-stars">★★★★★</span>
+  <span class="rating-text" id="site-rating-value">5.0 / 5</span>
   <span class="rating-sep">|</span>
-  <span class="rating-text">+5 تقييمات موثقة</span>
+  <span class="rating-text" id="site-rating-count">+5 تقييمات موثقة</span>
   <span class="rating-sep">|</span>
   <span class="rating-text">✅ توصيل لجميع الكويت</span>
 </div>
@@ -740,6 +740,19 @@ loadLatestWorks();
 initProductReviews('site', 'site-reviews-mount');
 
 srSubscribe('site', reviews => {
+  // مزامنة شريط التقييم الظاهر أعلى الصفحة مع نفس بيانات Firestore المستخدمة بالـSchema (لتجنّب أي تناقض بين الرقم الظاهر والفعلي)
+  const starsEl = document.getElementById('site-rating-stars');
+  const valueEl = document.getElementById('site-rating-value');
+  const countEl = document.getElementById('site-rating-count');
+  if (reviews && reviews.length > 0) {
+    const liveAvg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
+    const rounded = Math.round(liveAvg);
+    if (starsEl) starsEl.textContent = '★★★★★'.slice(0, rounded) + '☆☆☆☆☆'.slice(0, 5 - rounded);
+    if (valueEl) valueEl.textContent = `${liveAvg.toFixed(1)} / 5`;
+    if (countEl) countEl.textContent = `+${reviews.length} تقييمات موثقة`;
+  }
+  // إذا ما فيه تقييمات بعد بـFirestore، تبقى القيم الثابتة الحالية بالـHTML كحالة احتياطية (fallback) للزوار وبوتات البحث التي لا تُنفّذ JavaScript
+
   const schemaEl = document.getElementById('site-reviews-schema');
   if (!reviews || reviews.length === 0) { schemaEl.textContent = ''; return; }
   const avg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
