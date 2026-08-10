@@ -1868,6 +1868,25 @@
       "price": "15",
       "unit": "م",
       "installDate": "2026-08-08"
+    },
+    {
+      "id": "prod_1786399529614_4z3fu",
+      "code": "ستارة خام ملكي",
+      "sub": "blackout",
+      "area": "الشهداء",
+      "desc": "القماش تركي نخب اول",
+      "img": "https://salfordkw.shop/products/product_1786399525514_2vu2b-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786399525514_2vu2b-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786399525514_2vu2b-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786399525514_2vu2b-large.webp"
+      ],
+      "video": "",
+      "price": "15",
+      "unit": "م",
+      "installDate": "2026-03-05"
     }
   ]
 }
