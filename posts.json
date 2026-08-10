@@ -662,5 +662,23 @@
     "price": "30",
     "unit": "م",
     "area": "كيفان"
+  },
+  {
+    "id": "post_1786386101278_mmmcq",
+    "title": "نقشة حفر وقص يدوي",
+    "desc": "نقشة قص وحفر يدوي \nسجاد تركي سماكة 30 مم",
+    "img": "https://salfordkw.shop/products/product_1786386094709_lr2zp-small.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1786386094709_lr2zp-small.webp"
+    ],
+    "imgLarge": "https://salfordkw.shop/products/product_1786386094709_lr2zp-large.webp",
+    "imagesLarge": [
+      "https://salfordkw.shop/products/product_1786386094709_lr2zp-large.webp"
+    ],
+    "video": "",
+    "date": "2026-06-03",
+    "price": "195",
+    "unit": "قطعة",
+    "area": "الفحيحيل"
   }
 ]
