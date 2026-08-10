@@ -1046,6 +1046,33 @@
       "price": "30",
       "unit": "م",
       "installDate": "2026-08-05"
+    },
+    {
+      "id": "prod_1786385462275_okvzb",
+      "code": "طاولات ديوانية",
+      "sub": "",
+      "area": "البدع",
+      "desc": "طاولات خشب زان للديوانية \nتفصيل يدوي \nحفر على الخشب",
+      "img": "https://salfordkw.shop/products/product_1786385445857_eo88c-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786385445857_eo88c-small.webp",
+        "https://salfordkw.shop/products/product_1786385449516_d86de-small.webp",
+        "https://salfordkw.shop/products/product_1786385452715_4dx1c-small.webp",
+        "https://salfordkw.shop/products/product_1786385455663_6be3x-small.webp",
+        "https://salfordkw.shop/products/product_1786385459118_m53ix-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786385445857_eo88c-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786385445857_eo88c-large.webp",
+        "https://salfordkw.shop/products/product_1786385449516_d86de-large.webp",
+        "https://salfordkw.shop/products/product_1786385452715_4dx1c-large.webp",
+        "https://salfordkw.shop/products/product_1786385455663_6be3x-large.webp",
+        "https://salfordkw.shop/products/product_1786385459118_m53ix-large.webp"
+      ],
+      "video": "",
+      "price": "28",
+      "unit": "قطعة",
+      "installDate": "2026-08-07"
     }
   ],
   "sataer": [
