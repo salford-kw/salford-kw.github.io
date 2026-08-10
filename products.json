@@ -927,6 +927,25 @@
       "price": "18",
       "unit": "م",
       "installDate": "2026-05-16"
+    },
+    {
+      "id": "prod_1786401523100_0d87q",
+      "code": "مساند ظهر و طاولات قهوة",
+      "sub": "",
+      "area": "المنقف",
+      "desc": "مساند ظهر \nاسفنج كويتي البغلي\nالخام تركي شانيل",
+      "img": "https://salfordkw.shop/products/product_1786401519328_hrh9i-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786401519328_hrh9i-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786401519328_hrh9i-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786401519328_hrh9i-large.webp"
+      ],
+      "video": "",
+      "price": "11",
+      "unit": "م",
+      "installDate": "2026-08-10"
     }
   ],
   "athath": [
