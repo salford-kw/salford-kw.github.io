@@ -1830,6 +1830,25 @@
       "price": "15",
       "unit": "م",
       "installDate": "2026-08-05"
+    },
+    {
+      "id": "prod_1786399406266_diy3l",
+      "code": "ستارة بلاك اوت وشيفون",
+      "sub": "blackout",
+      "area": "الفحيحيل",
+      "desc": "خام تركي نوع slide",
+      "img": "https://salfordkw.shop/products/product_1786399402007_1828l-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786399402007_1828l-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786399402007_1828l-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786399402007_1828l-large.webp"
+      ],
+      "video": "",
+      "price": "15",
+      "unit": "م",
+      "installDate": "2026-08-04"
     }
   ]
 }
