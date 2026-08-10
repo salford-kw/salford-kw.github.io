@@ -1096,6 +1096,33 @@
       "price": "30",
       "unit": "قطعة",
       "installDate": "2026-08-01"
+    },
+    {
+      "id": "prod_1786385711576_cnti9",
+      "code": "تفصيل طاولة مودرن لصالة استقبال",
+      "sub": "",
+      "area": "حطين",
+      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786385692707_fwm3t-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786385692707_fwm3t-small.webp",
+        "https://salfordkw.shop/products/product_1786385697193_q0unj-small.webp",
+        "https://salfordkw.shop/products/product_1786385700628_asdvl-small.webp",
+        "https://salfordkw.shop/products/product_1786385704290_y5vfr-small.webp",
+        "https://salfordkw.shop/products/product_1786385707754_4a49f-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786385692707_fwm3t-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786385692707_fwm3t-large.webp",
+        "https://salfordkw.shop/products/product_1786385697193_q0unj-large.webp",
+        "https://salfordkw.shop/products/product_1786385700628_asdvl-large.webp",
+        "https://salfordkw.shop/products/product_1786385704290_y5vfr-large.webp",
+        "https://salfordkw.shop/products/product_1786385707754_4a49f-large.webp"
+      ],
+      "video": "",
+      "price": "85",
+      "unit": "قطعة",
+      "installDate": "2026-08-05"
     }
   ],
   "sataer": [
