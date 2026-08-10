@@ -1361,6 +1361,25 @@
         "https://salfordkw.shop/products/product_1786220980310_em3a5-large.webp",
         "https://salfordkw.shop/products/product_1786220981632_rnjec-large.webp"
       ]
+    },
+    {
+      "id": "prod_1786382442015_m4j73",
+      "code": "ستارة خام شيفون تفصيل",
+      "sub": "shifon",
+      "desc": "الخام تركي \nالمقاس 3.90م \nالمنطقة الصليبخات",
+      "img": "https://salfordkw.shop/products/product_1786382432376_ijsgz-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786382432376_ijsgz-small.webp",
+        "https://salfordkw.shop/products/product_1786382436388_fdqr4-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786382432376_ijsgz-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786382432376_ijsgz-large.webp",
+        "https://salfordkw.shop/products/product_1786382436388_fdqr4-large.webp"
+      ],
+      "video": "",
+      "price": "16",
+      "unit": "م"
     }
   ]
 }
