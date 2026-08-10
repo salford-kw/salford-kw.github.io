@@ -825,6 +825,33 @@
       "price": "13",
       "unit": "م",
       "installDate": "2026-05-09"
+    },
+    {
+      "id": "prod_1786398275465_icuri",
+      "code": "مجلس كنب",
+      "sub": "diwaniyat-modern",
+      "area": "حطين",
+      "desc": "الخشب زان \nالقماش تركي \nالاسفنج البغلي",
+      "img": "https://salfordkw.shop/products/product_1786398259360_ontx5-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786398259360_ontx5-small.webp",
+        "https://salfordkw.shop/products/product_1786398263233_q96ow-small.webp",
+        "https://salfordkw.shop/products/product_1786398266115_5vqn7-small.webp",
+        "https://salfordkw.shop/products/product_1786398269194_scq1u-small.webp",
+        "https://salfordkw.shop/products/product_1786398272196_23kyi-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786398259360_ontx5-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786398259360_ontx5-large.webp",
+        "https://salfordkw.shop/products/product_1786398263233_q96ow-large.webp",
+        "https://salfordkw.shop/products/product_1786398266115_5vqn7-large.webp",
+        "https://salfordkw.shop/products/product_1786398269194_scq1u-large.webp",
+        "https://salfordkw.shop/products/product_1786398272196_23kyi-large.webp"
+      ],
+      "video": "",
+      "price": "65",
+      "unit": "م",
+      "installDate": "2026-04-02"
     }
   ],
   "athath": [
