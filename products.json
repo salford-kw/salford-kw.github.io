@@ -984,6 +984,25 @@
       "price": "13",
       "unit": "م",
       "installDate": "2026-04-24"
+    },
+    {
+      "id": "prod_1786401998821_0cdae",
+      "code": "مجلس ديكور ظهر ارضي",
+      "sub": "masanid-khashab",
+      "area": "الأحمدي",
+      "desc": "الخشب زان \nالاسفنج البغلي \nالخام شانيل تركي",
+      "img": "https://salfordkw.shop/products/product_1786401994770_rtzs5-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786401994770_rtzs5-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786401994770_rtzs5-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786401994770_rtzs5-large.webp"
+      ],
+      "video": "",
+      "price": "18",
+      "unit": "م",
+      "installDate": "2026-04-18"
     }
   ],
   "athath": [
