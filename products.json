@@ -885,6 +885,25 @@
       "price": "60",
       "unit": "م",
       "installDate": "2026-07-04"
+    },
+    {
+      "id": "prod_1786400777370_0nivh",
+      "code": "مساند ظهر ديكور",
+      "sub": "",
+      "area": "مبارك الكبير",
+      "desc": "مساند ظهر \nالخشب جوز \nالقماش : شانيل تركي \nاسفنج البغلي مكفول سنتين من المصنع",
+      "img": "https://salfordkw.shop/products/product_1786400772526_w4p1q-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786400772526_w4p1q-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786400772526_w4p1q-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786400772526_w4p1q-large.webp"
+      ],
+      "video": "",
+      "price": "18",
+      "unit": "م",
+      "installDate": "2026-05-19"
     }
   ],
   "athath": [
