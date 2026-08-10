@@ -1003,6 +1003,25 @@
       "price": "18",
       "unit": "م",
       "installDate": "2026-04-18"
+    },
+    {
+      "id": "prod_1786405943333_lk77x",
+      "code": "مساند ظهر ديكور مجلس خشب",
+      "sub": "masanid-khashab",
+      "area": "العدان",
+      "desc": "مجلس ديكور ظهر \nالاسفنج البغلي \nالخشب جوز \nالخام شانيل تركي",
+      "img": "https://salfordkw.shop/products/product_1786405939321_yuzpe-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786405939321_yuzpe-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786405939321_yuzpe-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786405939321_yuzpe-large.webp"
+      ],
+      "video": "",
+      "price": "18",
+      "unit": "م",
+      "installDate": "2026-03-12"
     }
   ],
   "athath": [
