@@ -1022,6 +1022,25 @@
       "price": "18",
       "unit": "م",
       "installDate": "2026-03-12"
+    },
+    {
+      "id": "prod_1786406038148_tfyq2",
+      "code": "مجلس ظهر ديكور خشب",
+      "sub": "masanid-khashab",
+      "area": "أبو فطيرة",
+      "desc": "اسفنج البغلي \nخام شانيل تركي \nخشب جوز \nمدة الانجاز 12 يوم",
+      "img": "https://salfordkw.shop/products/product_1786406033555_0uc6h-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786406033555_0uc6h-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786406033555_0uc6h-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786406033555_0uc6h-large.webp"
+      ],
+      "video": "",
+      "price": "18",
+      "unit": "م",
+      "installDate": "2026-06-25"
     }
   ],
   "athath": [
