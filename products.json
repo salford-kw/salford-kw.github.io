@@ -1906,6 +1906,25 @@
       "price": "14",
       "unit": "م",
       "installDate": "2026-07-30"
+    },
+    {
+      "id": "prod_1786400391748_anccq",
+      "code": "ستاره ويفي",
+      "sub": "wafi",
+      "area": "الوفرة",
+      "desc": "خام بورصه تركي",
+      "img": "https://salfordkw.shop/products/product_1786400387220_1wssr-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786400387220_1wssr-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786400387220_1wssr-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786400387220_1wssr-large.webp"
+      ],
+      "video": "",
+      "price": "14",
+      "unit": "م",
+      "installDate": "2026-05-08"
     }
   ]
 }
