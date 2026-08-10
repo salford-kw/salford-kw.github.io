@@ -889,6 +889,44 @@
       "price": "60",
       "unit": "م",
       "installDate": "2026-07-04"
+    },
+    {
+      "id": "prod_1786400777370_0nivh",
+      "code": "مساند ظهر ديكور",
+      "sub": "",
+      "area": "مبارك الكبير",
+      "desc": "مساند ظهر \nالخشب جوز \nالقماش : شانيل تركي \nاسفنج البغلي مكفول سنتين من المصنع",
+      "img": "https://salfordkw.shop/products/product_1786400772526_w4p1q-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786400772526_w4p1q-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786400772526_w4p1q-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786400772526_w4p1q-large.webp"
+      ],
+      "video": "",
+      "price": "18",
+      "unit": "م",
+      "installDate": "2026-05-19"
+    },
+    {
+      "id": "prod_1786400974460_hhw4m",
+      "code": "مساند ظهر خشب",
+      "sub": "",
+      "area": "العمرية",
+      "desc": "الخشب زان \nالخام تركي شانيل \nالاسفنج كويتي البغلي",
+      "img": "https://salfordkw.shop/products/product_1786400970974_y5onc-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786400970974_y5onc-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786400970974_y5onc-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786400970974_y5onc-large.webp"
+      ],
+      "video": "",
+      "price": "18",
+      "unit": "م",
+      "installDate": "2026-05-16"
     }
   ],
   "athath": [
@@ -1891,6 +1929,63 @@
       "price": "15",
       "unit": "م",
       "installDate": "2026-03-05"
+    },
+    {
+      "id": "prod_1786400280809_3lmqc",
+      "code": "ستاره ويفي",
+      "sub": "wafi",
+      "area": "الشعب",
+      "desc": "ستاره ويفي \nخام تركي \nترميب محترف",
+      "img": "https://salfordkw.shop/products/product_1786400276919_pmxbl-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786400276919_pmxbl-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786400276919_pmxbl-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786400276919_pmxbl-large.webp"
+      ],
+      "video": "",
+      "price": "14",
+      "unit": "م",
+      "installDate": "2026-07-30"
+    },
+    {
+      "id": "prod_1786400391748_anccq",
+      "code": "ستاره ويفي",
+      "sub": "wafi",
+      "area": "الوفرة",
+      "desc": "خام بورصه تركي",
+      "img": "https://salfordkw.shop/products/product_1786400387220_1wssr-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786400387220_1wssr-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786400387220_1wssr-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786400387220_1wssr-large.webp"
+      ],
+      "video": "",
+      "price": "14",
+      "unit": "م",
+      "installDate": "2026-05-08"
+    },
+    {
+      "id": "prod_1786400492263_lwg1j",
+      "code": "ستارة ويفي كتان",
+      "sub": "wafi",
+      "area": "السرة",
+      "desc": "خام كتان تركي \nستاره ويفي",
+      "img": "https://salfordkw.shop/products/product_1786400488164_4y442-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786400488164_4y442-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786400488164_4y442-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786400488164_4y442-large.webp"
+      ],
+      "video": "",
+      "price": "14",
+      "unit": "م",
+      "installDate": "2026-02-04"
     }
   ]
 }
