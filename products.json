@@ -1887,6 +1887,25 @@
       "price": "15",
       "unit": "م",
       "installDate": "2026-03-05"
+    },
+    {
+      "id": "prod_1786400280809_3lmqc",
+      "code": "ستاره ويفي",
+      "sub": "wafi",
+      "area": "الشعب",
+      "desc": "ستاره ويفي \nخام تركي \nترميب محترف",
+      "img": "https://salfordkw.shop/products/product_1786400276919_pmxbl-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786400276919_pmxbl-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786400276919_pmxbl-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786400276919_pmxbl-large.webp"
+      ],
+      "video": "",
+      "price": "14",
+      "unit": "م",
+      "installDate": "2026-07-30"
     }
   ]
 }
