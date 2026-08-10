@@ -852,6 +852,39 @@
       "price": "65",
       "unit": "م",
       "installDate": "2026-04-02"
+    },
+    {
+      "id": "prod_1786398404616_zdoq9",
+      "code": "مجلس كنب مع طاولات قهوة",
+      "sub": "",
+      "area": "كيفان",
+      "desc": "الخشب جوز \nالاسفنج البغلي نوع الوردي مختوم \nالخام تركي بوصه",
+      "img": "https://salfordkw.shop/products/product_1786398382123_vh044-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786398382123_vh044-small.webp",
+        "https://salfordkw.shop/products/product_1786398384832_l671g-small.webp",
+        "https://salfordkw.shop/products/product_1786398387942_4yrkm-small.webp",
+        "https://salfordkw.shop/products/product_1786398390574_45pxy-small.webp",
+        "https://salfordkw.shop/products/product_1786398392926_in5ar-small.webp",
+        "https://salfordkw.shop/products/product_1786398395522_ugfqp-small.webp",
+        "https://salfordkw.shop/products/product_1786398398387_wvkp4-small.webp",
+        "https://salfordkw.shop/products/product_1786398401529_4xfbc-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786398382123_vh044-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786398382123_vh044-large.webp",
+        "https://salfordkw.shop/products/product_1786398384832_l671g-large.webp",
+        "https://salfordkw.shop/products/product_1786398387942_4yrkm-large.webp",
+        "https://salfordkw.shop/products/product_1786398390574_45pxy-large.webp",
+        "https://salfordkw.shop/products/product_1786398392926_in5ar-large.webp",
+        "https://salfordkw.shop/products/product_1786398395522_ugfqp-large.webp",
+        "https://salfordkw.shop/products/product_1786398398387_wvkp4-large.webp",
+        "https://salfordkw.shop/products/product_1786398401529_4xfbc-large.webp"
+      ],
+      "video": "",
+      "price": "60",
+      "unit": "م",
+      "installDate": "2026-07-04"
     }
   ],
   "athath": [
