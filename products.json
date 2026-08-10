@@ -946,6 +946,25 @@
       "price": "11",
       "unit": "م",
       "installDate": "2026-08-10"
+    },
+    {
+      "id": "prod_1786401712619_ovrkn",
+      "code": "مساند ظهر",
+      "sub": "jalsat-ardiya",
+      "area": "الدعية",
+      "desc": "اسفنج الوطنية كويتي\nخام شانيل تركي",
+      "img": "https://salfordkw.shop/products/product_1786401708092_nd728-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786401708092_nd728-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786401708092_nd728-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786401708092_nd728-large.webp"
+      ],
+      "video": "",
+      "price": "9",
+      "unit": "م",
+      "installDate": "2026-06-17"
     }
   ],
   "athath": [
