@@ -440,6 +440,25 @@
       "price": "195",
       "unit": "قطعة",
       "installDate": "2026-06-03"
+    },
+    {
+      "id": "prod_1786386196285_wlz6t",
+      "code": "سجاد قص وحفر يدوي",
+      "sub": "",
+      "area": "أبو فطيرة",
+      "desc": "سجاد تركي \nنخب اول \nسماكة 28 مم",
+      "img": "https://salfordkw.shop/products/product_1786386191598_l2v5p-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786386191598_l2v5p-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786386191598_l2v5p-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786386191598_l2v5p-large.webp"
+      ],
+      "video": "",
+      "price": "15",
+      "unit": "م",
+      "installDate": "2026-06-04"
     }
   ],
   "majalis": [
