@@ -1887,6 +1887,25 @@
       "price": "15",
       "unit": "م",
       "installDate": "2026-03-05"
+    },
+    {
+      "id": "prod_1786399596176_opwh5",
+      "code": "ستاره خام ملكي ويفي",
+      "sub": "",
+      "area": "الفنطاس",
+      "desc": "الخام تركي نخب اول",
+      "img": "https://salfordkw.shop/products/product_1786399591361_m7k1t-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786399591361_m7k1t-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786399591361_m7k1t-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786399591361_m7k1t-large.webp"
+      ],
+      "video": "",
+      "price": "15",
+      "unit": "م",
+      "installDate": "2026-03-22"
     }
   ]
 }
