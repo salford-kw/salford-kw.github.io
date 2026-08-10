@@ -129,6 +129,40 @@ footer a{color:var(--gold-light);text-decoration:none;}
 .lightbox img{max-width:95vw;max-height:90vh;border-radius:10px;object-fit:contain;}
 .lightbox-close{position:absolute;top:16px;left:16px;color:#fff;font-size:24px;cursor:pointer;background:rgba(200,169,110,.35);border:none;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;}
 @media(max-width:400px){.products-grid{grid-template-columns:1fr 1fr;}}
+
+/* Subsection headers */
+.subsection-header {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: linear-gradient(90deg, rgba(200,169,110,.12), transparent);
+  border-right: 3px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  margin-top: 8px;
+}
+.subsection-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--gold);
+  margin: 0;
+}
+.subsection-link {
+  font-size: 12px;
+  color: var(--gold-light);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 4px 10px;
+  border: 1px solid rgba(200,169,110,.25);
+  border-radius: 6px;
+  transition: all .2s;
+}
+.subsection-link:hover {
+  background: rgba(200,169,110,.15);
+  color: var(--gold);
+}
 </style>
 </head>
 <body>
@@ -423,7 +457,41 @@ function renderProducts(data) {
   const items = data[SECTION] || [];
   if (!items.length) { grid.innerHTML = '<div class="loading" style="grid-column:1/-1">لا توجد منتجات حالياً</div>'; return; }
 
-  grid.innerHTML = items.map((p,i) => `
+  // Subsection config for athath
+  const SUBSECTIONS = {
+    'tanjeed-ganafat': { label: '🧵 تنجيد قنفات', page: '/tanjeed-ganafat-kuwait.html' },
+    'talbees-kanab':   { label: '✂️ تلبيس كنب', page: '/talbees-kanab-kuwait.html' }
+  };
+
+  // Group products
+  const grouped = {};
+  const general = [];
+  items.forEach(p => {
+    if (p.sub && SUBSECTIONS[p.sub]) {
+      if (!grouped[p.sub]) grouped[p.sub] = [];
+      grouped[p.sub].push(p);
+    } else {
+      general.push(p);
+    }
+  });
+
+  let html = '';
+  let schemaItems = [];
+  let position = 1;
+
+  // Helper to render a product card
+  function cardHTML(p, idx) {
+    const url = `/catalog/athath-${String(idx+1).padStart(2,'0')}.html`;
+    schemaItems.push({
+      "@type":"ListItem","position":position++,
+      "item":{
+        "@type":"Product","name":p.code,"description":p.desc,"image":p.imgLarge||p.img,"url":"https://salfordkw.shop"+url,
+        "brand":{"@type":"Brand","name":"سالفورد للأثاث والمفروشات"},
+        "offers":{"@type":"Offer","availability":"https://schema.org/InStock",
+          "seller":{"@type":"Organization","name":"سالفورد للأثاث والمفروشات","telephone":"+96555943343"}}
+      }
+    });
+    return `
     <article class="product-card" itemscope itemtype="https://schema.org/Product" onclick="openLightbox('${p.imgLarge||p.img}')">
       <img src="${p.img}" alt="${p.code} - سالفورد الكويت" loading="lazy" itemprop="image"
            onerror="this.src='https://placehold.co/200x200/1c1805/C8A96E?text=سالفورد'">
@@ -432,24 +500,41 @@ function renderProducts(data) {
         <h3 itemprop="name">${p.code}</h3>
         <p itemprop="description">${p.desc}</p>
         <meta itemprop="brand" content="سالفورد للأثاث والمفروشات">
-        <a class="p-link" href="/catalog/athath-${String(i+1).padStart(2,'0')}.html" itemprop="url" onclick="event.stopPropagation()">التفاصيل والسعر ←</a>
+        <a class="p-link" href="${url}" itemprop="url" onclick="event.stopPropagation()">التفاصيل والسعر ←</a>
       </div>
-    </article>`).join('');
+    </article>`;
+  }
+
+  // Render subsections first
+  for (const [subKey, subInfo] of Object.entries(SUBSECTIONS)) {
+    const subProducts = grouped[subKey] || [];
+    if (subProducts.length > 0) {
+      html += `
+        <div class="subsection-header">
+          <h3 class="subsection-title">${subInfo.label}</h3>
+          <a href="${subInfo.page}" class="subsection-link">عرض الكل ←</a>
+        </div>`;
+      html += subProducts.map((p, i) => cardHTML(p, items.indexOf(p))).join('');
+    }
+  }
+
+  // Render general products
+  if (general.length > 0) {
+    html += `
+      <div class="subsection-header">
+        <h3 class="subsection-title">🛋️ منتجات عامة</h3>
+      </div>`;
+    html += general.map((p, i) => cardHTML(p, items.indexOf(p))).join('');
+  }
+
+  grid.innerHTML = html;
 
   // Inject ItemList Schema
   const schema = {
     "@context":"https://schema.org","@type":"ItemList",
     "name":"أثاث وديكور سالفورد الكويت","url":"https://salfordkw.shop/athath.html",
     "numberOfItems":items.length,
-    "itemListElement":items.map((p,i) => ({
-      "@type":"ListItem","position":i+1,
-      "item":{
-        "@type":"Product","name":p.code,"description":p.desc,"image":p.imgLarge||p.img,"url":"https://salfordkw.shop/catalog/athath-"+String(i+1).padStart(2,'0')+".html",
-        "brand":{"@type":"Brand","name":"سالفورد للأثاث والمفروشات"},
-        "offers":{"@type":"Offer","availability":"https://schema.org/InStock",
-          "seller":{"@type":"Organization","name":"سالفورد للأثاث والمفروشات","telephone":"+96555943343"}}
-      }
-    }))
+    "itemListElement":schemaItems
   };
   const s = document.createElement('script');
   s.type = 'application/ld+json';
@@ -518,3 +603,4 @@ function toggleFaq(btn){const item=btn.parentElement;const isOpen=item.classList
 </script>
 </body>
 </html>
+
