@@ -1849,6 +1849,25 @@
       "price": "15",
       "unit": "م",
       "installDate": "2026-08-04"
+    },
+    {
+      "id": "prod_1786399469508_k6yjy",
+      "code": "ستارة بلاك اوت",
+      "sub": "blackout",
+      "area": "الصديق",
+      "desc": "قماش تركي نوع اول \nويفي",
+      "img": "https://salfordkw.shop/products/product_1786399464925_br45m-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786399464925_br45m-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786399464925_br45m-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786399464925_br45m-large.webp"
+      ],
+      "video": "",
+      "price": "15",
+      "unit": "م",
+      "installDate": "2026-08-08"
     }
   ]
 }
