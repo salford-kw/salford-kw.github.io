@@ -1123,6 +1123,37 @@
       "price": "85",
       "unit": "قطعة",
       "installDate": "2026-08-05"
+    },
+    {
+      "id": "prod_1786385913292_usgsi",
+      "code": "تفصيل ديكور كامل منزل كونسول و ديكور شاشة و استقبال",
+      "sub": "",
+      "area": "كيفان",
+      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786385890158_hi697-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786385890158_hi697-small.webp",
+        "https://salfordkw.shop/products/product_1786385893993_3dk46-small.webp",
+        "https://salfordkw.shop/products/product_1786385897279_yjig0-small.webp",
+        "https://salfordkw.shop/products/product_1786385900391_dc8wa-small.webp",
+        "https://salfordkw.shop/products/product_1786385903593_pxk7j-small.webp",
+        "https://salfordkw.shop/products/product_1786385906794_tdg7n-small.webp",
+        "https://salfordkw.shop/products/product_1786385909678_vwkc7-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786385890158_hi697-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786385890158_hi697-large.webp",
+        "https://salfordkw.shop/products/product_1786385893993_3dk46-large.webp",
+        "https://salfordkw.shop/products/product_1786385897279_yjig0-large.webp",
+        "https://salfordkw.shop/products/product_1786385900391_dc8wa-large.webp",
+        "https://salfordkw.shop/products/product_1786385903593_pxk7j-large.webp",
+        "https://salfordkw.shop/products/product_1786385906794_tdg7n-large.webp",
+        "https://salfordkw.shop/products/product_1786385909678_vwkc7-large.webp"
+      ],
+      "video": "",
+      "price": "غير محدد",
+      "unit": "قطعة",
+      "installDate": "2026-08-02"
     }
   ],
   "sataer": [
