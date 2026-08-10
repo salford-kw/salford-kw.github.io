@@ -1288,6 +1288,29 @@
       "price": "غير محدد",
       "unit": "قطعة",
       "installDate": "2026-08-02"
+    },
+    {
+      "id": "prod_1786388855402_h3i7l",
+      "code": "كونسول مودرن مع قنفه",
+      "sub": "",
+      "area": "السلام",
+      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786388845286_ujxsu-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786388845286_ujxsu-small.webp",
+        "https://salfordkw.shop/products/product_1786388848579_uut5v-small.webp",
+        "https://salfordkw.shop/products/product_1786388851703_26s7n-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786388845286_ujxsu-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786388845286_ujxsu-large.webp",
+        "https://salfordkw.shop/products/product_1786388848579_uut5v-large.webp",
+        "https://salfordkw.shop/products/product_1786388851703_26s7n-large.webp"
+      ],
+      "video": "",
+      "price": "65",
+      "unit": "متر مربع",
+      "installDate": "2026-08-05"
     }
   ],
   "sataer": [
