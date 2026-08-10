@@ -459,6 +459,25 @@
       "price": "15",
       "unit": "م",
       "installDate": "2026-06-04"
+    },
+    {
+      "id": "prod_1786386266637_5g85a",
+      "code": "سجاد صالة استقبال قص حفر يدوي",
+      "sub": "",
+      "area": "الشعب",
+      "desc": "سجاد تركي \nحفر يدوي \nسماكة 28",
+      "img": "https://salfordkw.shop/products/product_1786386262185_ncmc0-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786386262185_ncmc0-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786386262185_ncmc0-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786386262185_ncmc0-large.webp"
+      ],
+      "video": "",
+      "price": "16",
+      "unit": "م",
+      "installDate": "2026-08-03"
     }
   ],
   "majalis": [
