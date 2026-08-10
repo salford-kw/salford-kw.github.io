@@ -1371,6 +1371,39 @@
       "price": "65",
       "unit": "متر مربع",
       "installDate": "2026-08-05"
+    },
+    {
+      "id": "prod_1786399144524_1bxr3",
+      "code": "جلسة كنب مودرن",
+      "sub": "",
+      "area": "الرميثية",
+      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786399121184_vetuw-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786399121184_vetuw-small.webp",
+        "https://salfordkw.shop/products/product_1786399124228_jg8ao-small.webp",
+        "https://salfordkw.shop/products/product_1786399127245_zc7za-small.webp",
+        "https://salfordkw.shop/products/product_1786399130128_r483f-small.webp",
+        "https://salfordkw.shop/products/product_1786399132878_21ghe-small.webp",
+        "https://salfordkw.shop/products/product_1786399135752_0bayf-small.webp",
+        "https://salfordkw.shop/products/product_1786399138771_sqw5u-small.webp",
+        "https://salfordkw.shop/products/product_1786399141048_cyf6b-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786399121184_vetuw-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786399121184_vetuw-large.webp",
+        "https://salfordkw.shop/products/product_1786399124228_jg8ao-large.webp",
+        "https://salfordkw.shop/products/product_1786399127245_zc7za-large.webp",
+        "https://salfordkw.shop/products/product_1786399130128_r483f-large.webp",
+        "https://salfordkw.shop/products/product_1786399132878_21ghe-large.webp",
+        "https://salfordkw.shop/products/product_1786399135752_0bayf-large.webp",
+        "https://salfordkw.shop/products/product_1786399138771_sqw5u-large.webp",
+        "https://salfordkw.shop/products/product_1786399141048_cyf6b-large.webp"
+      ],
+      "video": "",
+      "price": "95",
+      "unit": "قطعة",
+      "installDate": "2026-07-11"
     }
   ],
   "sataer": [
