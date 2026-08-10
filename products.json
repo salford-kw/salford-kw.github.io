@@ -478,6 +478,25 @@
       "price": "16",
       "unit": "م",
       "installDate": "2026-08-03"
+    },
+    {
+      "id": "prod_1786386342083_ryzob",
+      "code": "سجاد حفر يدوي",
+      "sub": "",
+      "area": "أبو حليفة",
+      "desc": "سماكة 28 مم \nمبطنة \nالسجاد تركي ضغط",
+      "img": "https://salfordkw.shop/products/product_1786386337301_90uny-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786386337301_90uny-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786386337301_90uny-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786386337301_90uny-large.webp"
+      ],
+      "video": "",
+      "price": "13",
+      "unit": "م",
+      "installDate": "2026-04-09"
     }
   ],
   "majalis": [
