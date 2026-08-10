@@ -786,6 +786,25 @@
       "price": "11",
       "unit": "م",
       "installDate": "2026-07-23"
+    },
+    {
+      "id": "prod_1786386561884_p6m3b",
+      "code": "سجاد حفر يدوي و قص",
+      "sub": "",
+      "area": "العقيلة",
+      "desc": "السعر المعروض للسجاد لايشمل الحفر",
+      "img": "https://salfordkw.shop/products/product_1786386557601_iv9jf-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786386557601_iv9jf-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786386557601_iv9jf-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786386557601_iv9jf-large.webp"
+      ],
+      "video": "",
+      "price": "13",
+      "unit": "م",
+      "installDate": "2026-05-09"
     }
   ],
   "athath": [
