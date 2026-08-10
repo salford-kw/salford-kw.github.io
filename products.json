@@ -1404,6 +1404,31 @@
       "price": "95",
       "unit": "قطعة",
       "installDate": "2026-07-11"
+    },
+    {
+      "id": "prod_1786399279557_e1h4b",
+      "code": "لوحات كانفس",
+      "sub": "",
+      "area": "الجابرية",
+      "desc": "لوحات كانغس مودرن \nشامل التركيب",
+      "img": "https://salfordkw.shop/products/product_1786399267205_0zjrm-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786399267205_0zjrm-small.webp",
+        "https://salfordkw.shop/products/product_1786399270612_25cnj-small.webp",
+        "https://salfordkw.shop/products/product_1786399273266_uxoq2-small.webp",
+        "https://salfordkw.shop/products/product_1786399276087_fivsj-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786399267205_0zjrm-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786399267205_0zjrm-large.webp",
+        "https://salfordkw.shop/products/product_1786399270612_25cnj-large.webp",
+        "https://salfordkw.shop/products/product_1786399273266_uxoq2-large.webp",
+        "https://salfordkw.shop/products/product_1786399276087_fivsj-large.webp"
+      ],
+      "video": "",
+      "price": "60",
+      "unit": "قطعة",
+      "installDate": "2026-07-27"
     }
   ],
   "sataer": [
