@@ -634,5 +634,33 @@
     "date": "2026-08-08",
     "price": "14",
     "unit": "م"
+  },
+  {
+    "id": "post_1786385342710_mp8go",
+    "title": "تلبيس كنب قنفات واصلاح",
+    "desc": "خام التلبيس تركي نوع اول ماركة lion \nمقاسات المنفذة 17 متر",
+    "img": "https://salfordkw.shop/products/product_1786385319435_f58y0-small.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1786385319435_f58y0-small.webp",
+      "https://salfordkw.shop/products/product_1786385323116_8icag-small.webp",
+      "https://salfordkw.shop/products/product_1786385326963_69kl3-small.webp",
+      "https://salfordkw.shop/products/product_1786385330326_cjy8a-small.webp",
+      "https://salfordkw.shop/products/product_1786385333994_1zmbk-small.webp",
+      "https://salfordkw.shop/products/product_1786385336881_jdqgv-small.webp"
+    ],
+    "imgLarge": "https://salfordkw.shop/products/product_1786385319435_f58y0-large.webp",
+    "imagesLarge": [
+      "https://salfordkw.shop/products/product_1786385319435_f58y0-large.webp",
+      "https://salfordkw.shop/products/product_1786385323116_8icag-large.webp",
+      "https://salfordkw.shop/products/product_1786385326963_69kl3-large.webp",
+      "https://salfordkw.shop/products/product_1786385330326_cjy8a-large.webp",
+      "https://salfordkw.shop/products/product_1786385333994_1zmbk-large.webp",
+      "https://salfordkw.shop/products/product_1786385336881_jdqgv-large.webp"
+    ],
+    "video": "",
+    "date": "2026-08-05",
+    "price": "30",
+    "unit": "م",
+    "area": "كيفان"
   }
 ]
