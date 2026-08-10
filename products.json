@@ -497,6 +497,26 @@
       "price": "13",
       "unit": "م",
       "installDate": "2026-04-09"
+    },
+    {
+      "id": "prod_1786388609000_zxkc8",
+      "code": "سجاد ساده بالمتر للديوانية و المقلط",
+      "sub": "saada",
+      "desc": "وصل حديثا \nضغط خيط عالي \nسماكة 30 مم",
+      "img": "https://salfordkw.shop/products/product_1786388596549_20be2-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786388596549_20be2-small.webp",
+        "https://salfordkw.shop/products/product_1786388604094_w9opp-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786388596549_20be2-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786388596549_20be2-large.webp",
+        "https://salfordkw.shop/products/product_1786388604094_w9opp-large.webp"
+      ],
+      "video": "",
+      "price": "13",
+      "unit": "م",
+      "installDate": "2026-08-10"
     }
   ],
   "majalis": [
