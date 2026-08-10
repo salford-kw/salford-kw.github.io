@@ -1073,6 +1073,29 @@
       "price": "28",
       "unit": "قطعة",
       "installDate": "2026-08-07"
+    },
+    {
+      "id": "prod_1786385581456_8nhm1",
+      "code": "تنجيد قنفات كنب",
+      "sub": "tanjeed-ganafat",
+      "area": "اشبيلية",
+      "desc": "تنجيد قنفات \nالقماش تركي شانيل",
+      "img": "https://salfordkw.shop/products/product_1786385569990_9kmmx-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786385569990_9kmmx-small.webp",
+        "https://salfordkw.shop/products/product_1786385573675_61vly-small.webp",
+        "https://salfordkw.shop/products/product_1786385577195_rkg7w-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786385569990_9kmmx-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786385569990_9kmmx-large.webp",
+        "https://salfordkw.shop/products/product_1786385573675_61vly-large.webp",
+        "https://salfordkw.shop/products/product_1786385577195_rkg7w-large.webp"
+      ],
+      "video": "",
+      "price": "30",
+      "unit": "قطعة",
+      "installDate": "2026-08-01"
     }
   ],
   "sataer": [
