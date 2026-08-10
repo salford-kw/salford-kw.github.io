@@ -965,6 +965,25 @@
       "price": "9",
       "unit": "م",
       "installDate": "2026-06-17"
+    },
+    {
+      "id": "prod_1786401916588_wf3mg",
+      "code": "مساند ظهر وسجادة حفر",
+      "sub": "",
+      "area": "مبارك الكبير",
+      "desc": "خام شانيل تركي \nاسفنج البغلي \nالسجاد تركي سماكة 28 مم",
+      "img": "https://salfordkw.shop/products/product_1786401912759_52kqa-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786401912759_52kqa-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786401912759_52kqa-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786401912759_52kqa-large.webp"
+      ],
+      "video": "",
+      "price": "13",
+      "unit": "م",
+      "installDate": "2026-04-24"
     }
   ],
   "athath": [
