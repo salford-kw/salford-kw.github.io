@@ -1380,6 +1380,25 @@
       "video": "",
       "price": "16",
       "unit": "م"
+    },
+    {
+      "id": "prod_1786383005823_kpvu6",
+      "code": "ستاره ويفي تفصيل",
+      "sub": "blackout",
+      "desc": "ستارة ويفي \nخام تركي \nالمتر الطولي 14 \nتركيبنا في منطقة المنقف",
+      "img": "https://salfordkw.shop/products/product_1786382998443_poad0-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786382998443_poad0-small.webp",
+        "https://salfordkw.shop/products/product_1786383001645_qxqp1-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786382998443_poad0-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786382998443_poad0-large.webp",
+        "https://salfordkw.shop/products/product_1786383001645_qxqp1-large.webp"
+      ],
+      "video": "",
+      "price": "14",
+      "unit": "م"
     }
   ]
 }
