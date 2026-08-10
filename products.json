@@ -1399,6 +1399,25 @@
       "video": "",
       "price": "14",
       "unit": "م"
+    },
+    {
+      "id": "prod_1786383986214_9twir",
+      "code": "ستارة بلاك اوت تفصيل",
+      "sub": "blackout",
+      "area": "قرطبة",
+      "desc": "القماش : تركي \nالمقاس : 3.7",
+      "img": "https://salfordkw.shop/products/product_1786383981665_32ura-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786383981665_32ura-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786383981665_32ura-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786383981665_32ura-large.webp"
+      ],
+      "video": "",
+      "price": "15",
+      "unit": "م",
+      "installDate": "2026-08-05"
     }
   ]
 }
