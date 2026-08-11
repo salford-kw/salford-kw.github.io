@@ -1600,25 +1600,6 @@
       "price": "60",
       "unit": "قطعة",
       "installDate": "2026-07-27"
-    },
-    {
-      "id": "prod_1786419678747_0clm3",
-      "code": "كنب مودرن",
-      "sub": "",
-      "area": "السلام",
-      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
-      "img": "https://salfordkw.shop/products/product_1786419674722_r5z1k-small.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786419674722_r5z1k-small.webp"
-      ],
-      "imgLarge": "https://salfordkw.shop/products/product_1786419674722_r5z1k-large.webp",
-      "imagesLarge": [
-        "https://salfordkw.shop/products/product_1786419674722_r5z1k-large.webp"
-      ],
-      "video": "",
-      "price": "",
-      "unit": "م",
-      "installDate": "2026-08-11"
     }
   ],
   "sataer": [
