@@ -12,7 +12,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/سجاد-تركي-اكادير-سالفورد-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "سجاد تركي كود 02",
@@ -26,7 +27,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/سجاد-تركي-مراكش-سالفورد-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "سجاد تركي كود 03",
@@ -40,7 +42,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/سجاد-تركي-نابل-سالفورد-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "سجاد تركي كود 04",
@@ -54,7 +57,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/سجاد-تركي-فندقي-سالفورد-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "سجاد تركي كود 05",
@@ -68,7 +72,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/سجاد-تركي-سالفورد-05-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "سجاد تركي كود 06",
@@ -82,7 +87,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/سجاد-تركي-سالفورد-06-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "سجاد تركي كود 07",
@@ -96,7 +102,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/سجاد-تركي-سالفورد-07-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "موكيت تركي كود 01",
@@ -110,7 +117,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/مساند-ظهر-سالفورد-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "موكيت تركي كود 02",
@@ -124,7 +132,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/نقشة-سجاد-حفر-سالفورد-02-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "موكيت تركي كود 03",
@@ -138,7 +147,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "موكيت تركي كود 04",
@@ -152,7 +162,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/نقشة-حفر-سجاد-سالفورد-04-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "موكيت تركي كود 05",
@@ -166,7 +177,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/مجلس-ديكور-سالفورد-05-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "id": "prod_1786197425428_22sfv",
@@ -532,7 +544,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/مجلس-ديكور-سالفورد-02-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "مساند ديكور كود 01",
@@ -546,7 +559,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/مساند-ديكور-سالفورد-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "code": "مجلس ديكور كود 03",
@@ -560,7 +574,8 @@
       ],
       "imagesLarge": [
         "https://salfordkw.shop/products/مجلس-ديكور-سالفورد-03-large.webp"
-      ]
+      ],
+      "hidden": true
     },
     {
       "id": "prod_1786197143625_zls1k",
@@ -1329,7 +1344,7 @@
         "https://salfordkw.shop/products/product_1786222777917_uypdw.webp"
       ],
       "video": "",
-      "price": "يتم التفاوض عليه",
+      "price": "175",
       "unit": "قطعة",
       "imgLarge": "https://salfordkw.shop/products/product_1786222772230_vt4xk-large.webp",
       "imagesLarge": [

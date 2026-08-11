@@ -477,6 +477,23 @@ footer a{color:var(--gold-light);text-decoration:none;}
 const SECTION = 'sataer';
 const STORAGE_KEY = 'salford_products';
 
+function buildSalfordOffers(p){
+  const o = {"@type":"Offer","availability":"https://schema.org/InStock",
+    "seller":{"@type":"Organization","name":"سالفورد للأثاث والمفروشات","telephone":"+96555943343"}};
+  const priceNum = parseFloat(p.price);
+  if (p.price && !isNaN(priceNum)) {
+    o.price = String(priceNum);
+    o.priceCurrency = "KWD";
+    o.priceValidUntil = "2026-12-31";
+    o.hasMerchantReturnPolicy = {"@type":"MerchantReturnPolicy","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted","merchantReturnDays":90,"applicableCountry":"KW","returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/FreeReturn","note":"لا يوجد استرجاع نقدي للمنتجات المخصصة حسب الطلب — يشمل الضمان (3 أشهر) إصلاح أو استبدال أي جزء فيه عيب تصنيع فقط."};
+    o.shippingDetails = [
+      {"@type":"OfferShippingDetails","name":"توصيل وتركيب","shippingRate":{"@type":"MonetaryAmount","value":"15","currency":"KWD"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"KW"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"}}},
+      {"@type":"OfferShippingDetails","name":"توصيل فقط بدون تركيب","shippingRate":{"@type":"MonetaryAmount","value":"7","currency":"KWD"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"KW"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"}}}
+    ];
+  }
+  return o;
+}
+
 // خريطة الأقسام الفرعية لهذي الصفحة فقط (مطابقة لخريطة add.html — القيمة المخزَّنة بحقل sub)
 const SUBSECTIONS = {
   blackout: { label: 'ستائر بلاك اوت', page: '/sataer-blackout-kuwait.html' },
@@ -509,6 +526,7 @@ function renderProducts(data) {
   const generalItems = [];
   const subGroups = {};
   items.forEach((p, idx) => {
+    if (p.hidden) return;
     const sub = p.sub || '';
     if (sub && SUBSECTIONS[sub]) {
       (subGroups[sub] = subGroups[sub] || []).push({ p, idx });
@@ -534,18 +552,18 @@ function renderProducts(data) {
   });
   subContainer.innerHTML = subHTML;
 
-  // Inject ItemList Schema
+  // Inject ItemList Schema — يُستثنى أي منتج hidden:true من العد والروابط
+  const visibleForSchema = items.map((p, idx) => ({p, idx})).filter(o => !o.p.hidden);
   const schema = {
     "@context":"https://schema.org","@type":"ItemList",
     "name":"ستائر سالفورد الكويت","url":"https://salfordkw.shop/sataer.html",
-    "numberOfItems":items.length,
-    "itemListElement":items.map((p,i) => ({
+    "numberOfItems":visibleForSchema.length,
+    "itemListElement":visibleForSchema.map(({p, idx}, i) => ({
       "@type":"ListItem","position":i+1,
       "item":{
-        "@type":"Product","name":p.code,"description":p.desc,"image":p.imgLarge||p.img,"url":"https://salfordkw.shop/catalog/sataer-"+String(i+1).padStart(2,'0')+".html",
+        "@type":"Product","name":p.code,"description":p.desc,"image":p.imgLarge||p.img,"url":"https://salfordkw.shop/catalog/sataer-"+String(idx+1).padStart(2,'0')+".html",
         "brand":{"@type":"Brand","name":"سالفورد للأثاث والمفروشات"},
-        "offers":{"@type":"Offer","availability":"https://schema.org/InStock",
-          "seller":{"@type":"Organization","name":"سالفورد للأثاث والمفروشات","telephone":"+96555943343"}}
+        "offers": buildSalfordOffers(p)
       }
     }))
   };

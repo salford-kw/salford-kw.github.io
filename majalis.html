@@ -452,6 +452,23 @@ footer a{color:var(--gold-light);text-decoration:none;}
 const SECTION = 'majalis';
 const STORAGE_KEY = 'salford_products';
 
+function buildSalfordOffers(p){
+  const o = {"@type":"Offer","availability":"https://schema.org/InStock",
+    "seller":{"@type":"Organization","name":"سالفورد للأثاث والمفروشات","telephone":"+96555943343"}};
+  const priceNum = parseFloat(p.price);
+  if (p.price && !isNaN(priceNum)) {
+    o.price = String(priceNum);
+    o.priceCurrency = "KWD";
+    o.priceValidUntil = "2026-12-31";
+    o.hasMerchantReturnPolicy = {"@type":"MerchantReturnPolicy","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted","merchantReturnDays":90,"applicableCountry":"KW","returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/FreeReturn","note":"لا يوجد استرجاع نقدي للمنتجات المخصصة حسب الطلب — يشمل الضمان (3 أشهر) إصلاح أو استبدال أي جزء فيه عيب تصنيع فقط."};
+    o.shippingDetails = [
+      {"@type":"OfferShippingDetails","name":"توصيل وتركيب","shippingRate":{"@type":"MonetaryAmount","value":"15","currency":"KWD"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"KW"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"}}},
+      {"@type":"OfferShippingDetails","name":"توصيل فقط بدون تركيب","shippingRate":{"@type":"MonetaryAmount","value":"7","currency":"KWD"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"KW"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"}}}
+    ];
+  }
+  return o;
+}
+
 // خريطة الأقسام الفرعية لهذي الصفحة فقط (مطابقة لخريطة add.html — القيمة المخزَّنة بحقل sub)
 const SUBSECTIONS = {
   'diwaniyat-modern':   { label: 'ديوانيات مودرن',        page: '/diwaniyat-modern-kuwait.html' },
@@ -482,9 +499,11 @@ function renderProducts(data) {
   if (!items.length) { grid.innerHTML = '<div class="loading" style="grid-column:1/-1">لا توجد منتجات حالياً</div>'; subContainer.innerHTML = ''; return; }
 
   // تصنيف المنتجات: عام (sub فارغ أو غير معروف) مقابل كل قسم فرعي معرَّف — مع الحفاظ على الفهرس الأصلي بالمصفوفة (يحدد رابط /catalog/majalis-NN.html)
+  // ملاحظة: المنتجات المعلَّمة hidden:true (بلا سعر مؤكَّد) تُستثنى من العرض والـSchema، لكن تبقى بمكانها بالمصفوفة حتى لا تتزحزح روابط باقي المنتجات
   const generalItems = [];
   const subGroups = {};
   items.forEach((p, idx) => {
+    if (p.hidden) return;
     const sub = p.sub || '';
     if (sub && SUBSECTIONS[sub]) {
       (subGroups[sub] = subGroups[sub] || []).push({ p, idx });
@@ -510,18 +529,18 @@ function renderProducts(data) {
   });
   subContainer.innerHTML = subHTML;
 
-  // Inject ItemList Schema
+  // Inject ItemList Schema — يُستثنى المنتج المخفي (hidden:true) لكن يبقى رابط catalog/majalis-NN.html مبنياً على موقعه الأصلي بالمصفوفة (idx) لا على ترتيبه الظاهر
+  const visibleForSchema = items.map((p, idx) => ({p, idx})).filter(o => !o.p.hidden);
   const schema = {
     "@context":"https://schema.org","@type":"ItemList",
     "name":"مجالس ومساند سالفورد الكويت","url":"https://salfordkw.shop/majalis.html",
-    "numberOfItems":items.length,
-    "itemListElement":items.map((p,i) => ({
+    "numberOfItems":visibleForSchema.length,
+    "itemListElement":visibleForSchema.map(({p, idx}, i) => ({
       "@type":"ListItem","position":i+1,
       "item":{
-        "@type":"Product","name":p.code,"description":p.desc,"image":p.imgLarge||p.img,"url":"https://salfordkw.shop/catalog/majalis-"+String(i+1).padStart(2,'0')+".html",
+        "@type":"Product","name":p.code,"description":p.desc,"image":p.imgLarge||p.img,"url":"https://salfordkw.shop/catalog/majalis-"+String(idx+1).padStart(2,'0')+".html",
         "brand":{"@type":"Brand","name":"سالفورد للأثاث والمفروشات"},
-        "offers":{"@type":"Offer","availability":"https://schema.org/InStock",
-          "seller":{"@type":"Organization","name":"سالفورد للأثاث والمفروشات","telephone":"+96555943343"}}
+        "offers": buildSalfordOffers(p)
       }
     }))
   };
