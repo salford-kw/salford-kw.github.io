@@ -1673,4 +1673,13 @@
       <image:loc>https://salfordkw.shop/products/product_1786502323974_armz5-small.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/sajjad-30.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786503176293_3bj77-small.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
