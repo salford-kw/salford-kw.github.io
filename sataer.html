@@ -466,7 +466,6 @@ function buildSalfordOffers(p){
   if (p.price && !isNaN(priceNum)) {
     o.price = String(priceNum);
     o.priceCurrency = "KWD";
-    o.priceValidUntil = "2026-12-31";
     o.hasMerchantReturnPolicy = {"@type":"MerchantReturnPolicy","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted","applicableCountry":"KW","note":"منتجات مخصصة حسب الطلب لا يشملها الاسترجاع النقدي — يشمل الضمان (3 أشهر) إصلاح أو استبدال أي جزء فيه عيب تصنيع فقط."};
     o.shippingDetails = [
       {"@type":"OfferShippingDetails","name":"توصيل وتركيب","shippingRate":{"@type":"MonetaryAmount","value":"15","currency":"KWD"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"KW"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"}}},
