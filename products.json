@@ -1605,6 +1605,28 @@
       "price": "60",
       "unit": "قطعة",
       "installDate": "2026-07-27"
+    },
+    {
+      "id": "prod_1786577224763_6x4ei",
+      "code": "تنجيد قنفات كنب",
+      "slug": "تنجيد-قنفات-كنب",
+      "sub": "tanjeed-ganafat",
+      "area": "الخالدية",
+      "desc": "الخام شانيل تركي \nاصلاحات خشب واسفنج",
+      "img": "https://salfordkw.shop/products/product_1786577216126_i8wsx-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786577216126_i8wsx-small.webp",
+        "https://salfordkw.shop/products/product_1786577220572_rv2w5-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786577216126_i8wsx-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786577216126_i8wsx-large.webp",
+        "https://salfordkw.shop/products/product_1786577220572_rv2w5-large.webp"
+      ],
+      "video": "",
+      "price": "25",
+      "unit": "م",
+      "installDate": "2026-08-13"
     }
   ],
   "sataer": [
