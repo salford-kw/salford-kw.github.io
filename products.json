@@ -2115,25 +2115,6 @@
       "price": "14",
       "unit": "م",
       "installDate": "2026-02-04"
-    },
-    {
-      "id": "prod_1786488469797_vknpu",
-      "code": "ستارة ويفي خام",
-      "sub": "wafi",
-      "area": "السالمية",
-      "desc": "جودة الخام عالية خام تركي نخب اول \nنوع الخام : شانيل",
-      "img": "https://salfordkw.shop/products/product_1786488465140_plwco-small.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786488465140_plwco-small.webp"
-      ],
-      "imgLarge": "https://salfordkw.shop/products/product_1786488465140_plwco-large.webp",
-      "imagesLarge": [
-        "https://salfordkw.shop/products/product_1786488465140_plwco-large.webp"
-      ],
-      "video": "",
-      "price": "14",
-      "unit": "م",
-      "installDate": "2026-08-12"
     }
   ]
 }
