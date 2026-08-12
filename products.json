@@ -2115,6 +2115,25 @@
       "price": "14",
       "unit": "م",
       "installDate": "2026-02-04"
+    },
+    {
+      "id": "prod_1786494983581_uc23q",
+      "code": "تجربة اختبار - احذفني",
+      "sub": "blackout",
+      "area": "الفحيحيل",
+      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786494979956_khrrq-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786494979956_khrrq-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786494979956_khrrq-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786494979956_khrrq-large.webp"
+      ],
+      "video": "",
+      "price": "14",
+      "unit": "م",
+      "installDate": "2026-08-12"
     }
   ]
 }
