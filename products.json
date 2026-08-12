@@ -529,6 +529,25 @@
       "price": "13",
       "unit": "م",
       "installDate": "2026-08-10"
+    },
+    {
+      "id": "prod_1786502328463_1b2zw",
+      "code": "تجربة4",
+      "sub": "saada",
+      "area": "الجهراء",
+      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786502323974_armz5-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786502323974_armz5-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786502323974_armz5-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786502323974_armz5-large.webp"
+      ],
+      "video": "",
+      "price": "13",
+      "unit": "م",
+      "installDate": "2026-08-12"
     }
   ],
   "majalis": [
