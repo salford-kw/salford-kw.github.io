@@ -529,26 +529,6 @@
       "price": "13",
       "unit": "م",
       "installDate": "2026-08-10"
-    },
-    {
-      "id": "prod_1786506754808_11m4z",
-      "code": "تجربة8",
-      "sub": "",
-      "area": "الجهراء",
-      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
-      "img": "https://salfordkw.shop/products/product_1786506746256_hzv1m-small.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786506746256_hzv1m-small.webp"
-      ],
-      "imgLarge": "https://salfordkw.shop/products/product_1786506746256_hzv1m-large.webp",
-      "imagesLarge": [
-        "https://salfordkw.shop/products/product_1786506746256_hzv1m-large.webp"
-      ],
-      "video": "",
-      "price": "13",
-      "unit": "م",
-      "installDate": "2026-08-12",
-      "hidden": true
     }
   ],
   "majalis": [
