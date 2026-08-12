@@ -760,5 +760,25 @@
     "price": "15",
     "unit": "م",
     "area": "حولي"
+  },
+  {
+    "id": "post_1786577231292_k1r0c",
+    "title": "تنجيد قنفات كنب",
+    "desc": "الخام شانيل تركي \nاصلاحات خشب واسفنج",
+    "img": "https://salfordkw.shop/products/product_1786577216126_i8wsx-small.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1786577216126_i8wsx-small.webp",
+      "https://salfordkw.shop/products/product_1786577220572_rv2w5-small.webp"
+    ],
+    "imgLarge": "https://salfordkw.shop/products/product_1786577216126_i8wsx-large.webp",
+    "imagesLarge": [
+      "https://salfordkw.shop/products/product_1786577216126_i8wsx-large.webp",
+      "https://salfordkw.shop/products/product_1786577220572_rv2w5-large.webp"
+    ],
+    "video": "",
+    "date": "2026-08-13",
+    "price": "25",
+    "unit": "م",
+    "area": "الخالدية"
   }
 ]
