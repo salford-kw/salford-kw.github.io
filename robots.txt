@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /admin.html
+Disallow: /add.html
+Disallow: /add-work.html
 
 User-agent: GPTBot
 Allow: /
