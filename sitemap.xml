@@ -1773,4 +1773,13 @@
       <image:loc>https://salfordkw.shop/products/product_1786406033555_0uc6h-small.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/athath-23.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786577216126_i8wsx-small.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
