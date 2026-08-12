@@ -529,6 +529,25 @@
       "price": "13",
       "unit": "م",
       "installDate": "2026-08-10"
+    },
+    {
+      "id": "prod_1786503181034_qudqv",
+      "code": "تجربة5",
+      "sub": "saada",
+      "area": "السالمية",
+      "desc": "تجربة5",
+      "img": "https://salfordkw.shop/products/product_1786503176293_3bj77-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786503176293_3bj77-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786503176293_3bj77-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786503176293_3bj77-large.webp"
+      ],
+      "video": "",
+      "price": "13",
+      "unit": "م",
+      "installDate": "2026-08-12"
     }
   ],
   "majalis": [
