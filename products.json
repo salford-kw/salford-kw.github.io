@@ -2134,6 +2134,25 @@
       "price": "14",
       "unit": "م",
       "installDate": "2026-08-12"
+    },
+    {
+      "id": "prod_1786496403429_9149x",
+      "code": "ستاره ويفي",
+      "sub": "wafi",
+      "area": "الدعية",
+      "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
+      "img": "https://salfordkw.shop/products/product_1786496398726_o1vrr-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786496398726_o1vrr-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786496398726_o1vrr-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786496398726_o1vrr-large.webp"
+      ],
+      "video": "",
+      "price": "14",
+      "unit": "م",
+      "installDate": "2026-08-12"
     }
   ]
 }
