@@ -197,6 +197,33 @@ function rateLimited(ip) {
   return rec.count > 10; // أكثر من 10 محاولات بالدقيقة = حظر مؤقت
 }
 
+// ============================================================
+// 🔎 إضافة تشخيصية فقط — لا تغيّر أي منطق موجود
+// تتحقق أن كل متغيرات البيئة المطلوبة موجودة فعلياً وقت التنفيذ،
+// وترجع خطأ واضح يسمي بالضبط أي متغير ناقص (بدون طباعة GH_TOKEN نفسه).
+// هذا يحل مباشرة السؤال: "هل env.GH_OWNER / env.GH_REPO تصل فعلياً للـ Worker؟"
+// ============================================================
+function checkRequiredEnv(env) {
+  const required = ['GH_OWNER', 'GH_REPO', 'GH_BRANCH', 'GH_TOKEN', 'ADMIN_PASSWORD'];
+  const missing = required.filter(k => {
+    const v = env[k];
+    return v === undefined || v === null || String(v).trim() === '';
+  });
+  return missing;
+}
+
+// معلومات تشخيصية آمنة تُرفق مع أي خطأ 500 — القيم الفعلية لـ owner/repo/branch
+// (بدون التوكن نفسه، فقط طوله كتأكيد وجوده) عشان تُرى مباشرة برد diagnose-write.html
+function safeDebugInfo(env) {
+  return {
+    GH_OWNER: env.GH_OWNER || null,
+    GH_REPO: env.GH_REPO || null,
+    GH_BRANCH: env.GH_BRANCH || null,
+    GH_TOKEN_present: !!env.GH_TOKEN,
+    GH_TOKEN_length: env.GH_TOKEN ? String(env.GH_TOKEN).length : 0
+  };
+}
+
 export default {
   async fetch(request, env) {
     const origin = request.headers.get('Origin') || '';
@@ -207,6 +234,18 @@ export default {
 
     if (request.method !== 'POST') {
       return json({ error: 'Method not allowed' }, 405, origin);
+    }
+
+    // 🔎 فحص تشخيصي أولاً: لو أي متغير بيئة أساسي ناقص، نوقف فوراً برسالة
+    // واضحة تسمي المتغير الناقص بدل ما نكمل ونحصل على "Not Found" غامضة
+    // من GitHub بسبب رابط فيه "undefined".
+    const missingEnv = checkRequiredEnv(env);
+    if (missingEnv.length) {
+      console.log('⚙️ متغيرات بيئة ناقصة أو فارغة في Cloudflare:', missingEnv.join(', '));
+      return json({
+        error: '⚙️ إعداد الـ Worker ناقص — المتغيرات التالية غير موجودة أو فارغة في Cloudflare Variables: ' + missingEnv.join(', '),
+        debug: safeDebugInfo(env)
+      }, 500, origin);
     }
 
     const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
@@ -500,7 +539,12 @@ export default {
 
       return json({ error: 'مسار غير معروف' }, 404, origin);
     } catch (e) {
-      return json({ error: e.message || 'خطأ بالسيرفر' }, 500, origin);
+      // 🔎 نرفق هنا معلومات owner/repo/branch الفعلية (بدون التوكن) مع كل
+      // خطأ 500 — عشان تشوف مباشرة برد diagnose-write.html هل القيم صحيحة
+      return json({
+        error: e.message || 'خطأ بالسيرفر',
+        debug: safeDebugInfo(env)
+      }, 500, origin);
     }
   }
 };
