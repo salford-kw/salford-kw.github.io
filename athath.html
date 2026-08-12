@@ -460,7 +460,7 @@ function buildSalfordOffers(p){
     o.price = String(priceNum);
     o.priceCurrency = "KWD";
     o.priceValidUntil = "2026-12-31";
-    o.hasMerchantReturnPolicy = {"@type":"MerchantReturnPolicy","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted","merchantReturnDays":90,"applicableCountry":"KW","returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/FreeReturn","note":"لا يوجد استرجاع نقدي للمنتجات المخصصة حسب الطلب — يشمل الضمان (3 أشهر) إصلاح أو استبدال أي جزء فيه عيب تصنيع فقط."};
+    o.hasMerchantReturnPolicy = {"@type":"MerchantReturnPolicy","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted","applicableCountry":"KW","note":"منتجات مخصصة حسب الطلب لا يشملها الاسترجاع النقدي — يشمل الضمان (3 أشهر) إصلاح أو استبدال أي جزء فيه عيب تصنيع فقط."};
     o.shippingDetails = [
       {"@type":"OfferShippingDetails","name":"توصيل وتركيب","shippingRate":{"@type":"MonetaryAmount","value":"15","currency":"KWD"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"KW"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"}}},
       {"@type":"OfferShippingDetails","name":"توصيل فقط بدون تركيب","shippingRate":{"@type":"MonetaryAmount","value":"7","currency":"KWD"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"KW"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"}}}
@@ -500,14 +500,18 @@ function renderProducts(data) {
   // Helper to render a product card
   function cardHTML(p, idx) {
     const url = `/catalog/athath-${String(idx+1).padStart(2,'0')}.html`;
-    schemaItems.push({
-      "@type":"ListItem","position":position++,
-      "item":{
-        "@type":"Product","name":p.code,"description":p.desc,"image":p.imgLarge||p.img,"url":"https://salfordkw.shop"+url,
-        "brand":{"@type":"Brand","name":"سالفورد للأثاث والمفروشات"},
-        "offers": buildSalfordOffers(p)
-      }
-    });
+    // ✅ لا يُدرَج المنتج في مخطط Product إلا إذا كان له سعر صحيح (شرط Google لصحّة offers)
+    const priceNum = parseFloat(p.price);
+    if (p.price && !isNaN(priceNum) && priceNum > 0) {
+      schemaItems.push({
+        "@type":"ListItem","position":position++,
+        "item":{
+          "@type":"Product","name":p.code,"description":p.desc,"image":p.imgLarge||p.img,"url":"https://salfordkw.shop"+url,
+          "brand":{"@type":"Brand","name":"سالفورد للأثاث والمفروشات"},
+          "offers": buildSalfordOffers(p)
+        }
+      });
+    }
     return `
     <article class="product-card" itemscope itemtype="https://schema.org/Product" onclick="openLightbox('${p.imgLarge||p.img}')">
       <img src="${p.img}" alt="${p.code} - سالفورد الكويت" loading="lazy" itemprop="image"
@@ -550,7 +554,7 @@ function renderProducts(data) {
   const schema = {
     "@context":"https://schema.org","@type":"ItemList",
     "name":"أثاث وديكور سالفورد الكويت","url":"https://salfordkw.shop/athath.html",
-    "numberOfItems":items.length,
+    "numberOfItems":schemaItems.length,
     "itemListElement":schemaItems
   };
   const s = document.createElement('script');
