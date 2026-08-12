@@ -1664,13 +1664,4 @@
       <image:loc>https://salfordkw.shop/products/product_1786385890158_hi697-small.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://salfordkw.shop/catalog/sataer-28.html</loc>
-    <lastmod>2026-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <image:image>
-      <image:loc>https://salfordkw.shop/products/product_1786504646660_264o3-small.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
