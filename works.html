@@ -693,7 +693,7 @@ function renderPosts(posts) {
   document.getElementById('schema-container').replaceChildren(s);
 
   grid.innerHTML = sorted.map(p => `
-    <article class="post-card" onclick="openLightbox('${p.img}','${escHtml(p.title)}','${escHtml(p.desc||'')}')">
+    <article class="post-card" onclick="${p.productUrl ? `location.href='${p.productUrl}'` : `openLightbox('${p.img}','${escHtml(p.title)}','${escHtml(p.desc||'')}')`}">
       <div class="post-img-wrap">
         <img src="${p.img}" alt="${escHtml(p.title)} - سالفورد للأثاث الكويت" loading="lazy" onerror="this.style.opacity='.3'">
       </div>

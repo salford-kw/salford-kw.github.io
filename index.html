@@ -570,7 +570,7 @@ async function loadLatestWorks() {
 
   track.innerHTML = latest.map((p, i) => `
     <div class="slide-item">
-      <div class="work-card" onclick="openLightbox(${i})">
+      <div class="work-card" onclick="${p.productUrl ? `location.href='${p.productUrl}'` : `openLightbox(${i})`}">
         <div class="work-card-img">
           <img src="${p.img}" alt="${esc(p.title)} - سالفورد للأثاث والمفروشات الكويت" loading="${i === 0 ? 'eager' : 'lazy'}" onerror="this.style.opacity='.2'">
           ${(p.images && p.images.length > 1) ? `<span class="work-card-badge imgs">📷 ${p.images.length}</span>` : ''}
