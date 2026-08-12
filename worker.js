@@ -10,6 +10,8 @@ const ALLOWED_ORIGINS = [
   'https://salford-kw.github.io'
 ];
 
+const ALLOWED_CATALOG_SECTIONS = ['sajjad', 'majalis', 'athath', 'sataer'];
+
 function corsHeaders(origin) {
   const allow = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
   return {
@@ -24,6 +26,16 @@ function json(data, status, origin) {
     status,
     headers: { 'Content-Type': 'application/json', ...corsHeaders(origin) }
   });
+}
+
+// ترميز UTF-8 آمن إلى Base64 — بديل عن unescape() غير المتوفر في Cloudflare Workers
+function utf8ToBase64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let binary = '';
+  for (let i = 0; i < bytes.length; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return btoa(binary);
 }
 
 async function ghRequest(env, path, options = {}) {
@@ -49,7 +61,7 @@ async function getSha(env, path) {
 
 async function putJSONFile(env, path, dataObj, commitMessage) {
   const sha = await getSha(env, path);
-  const content = btoa(unescape(encodeURIComponent(JSON.stringify(dataObj, null, 2))));
+  const content = utf8ToBase64(JSON.stringify(dataObj, null, 2));
   const body = { message: commitMessage, content, branch: env.GH_BRANCH };
   if (sha) body.sha = sha;
   const res = await ghRequest(env, path, {
@@ -60,6 +72,38 @@ async function putJSONFile(env, path, dataObj, commitMessage) {
   const data = await res.json();
   if (!res.ok) throw new Error(data.message || 'فشل الكتابة على GitHub');
   return data;
+}
+
+// كتابة ملف نصي عام (HTML / XML) — تُستخدم لصفحات الكتالوج و sitemap.xml
+async function putTextFile(env, path, textContent, commitMessage) {
+  const sha = await getSha(env, path);
+  const content = utf8ToBase64(textContent);
+  const body = { message: commitMessage, content, branch: env.GH_BRANCH };
+  if (sha) body.sha = sha;
+  const res = await ghRequest(env, path, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.message || 'فشل الكتابة على GitHub');
+  return data;
+}
+
+// حذف ملف من GitHub (يتطلب SHA الملف الحالي). لو الملف غير موجود أصلاً،
+// يرجع { skipped: true } بدل ما يفشل — عشان الحذف يبقى آمن حتى لو الصفحة
+// ما انبنت من الأساس (مثلاً بسبب فشل سابق بإنشاء صفحة الكتالوج).
+async function deleteFile(env, path, commitMessage) {
+  const sha = await getSha(env, path);
+  if (!sha) return { skipped: true };
+  const res = await ghRequest(env, path, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: commitMessage, sha, branch: env.GH_BRANCH })
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.message || 'فشل حذف الملف');
+  return { skipped: false };
 }
 
 // حد بسيط لمنع محاولات تخمين كلمة المرور المتكررة (في الذاكرة، لكل نسخة worker)
@@ -109,7 +153,9 @@ export default {
 
     try {
       if (url.pathname === '/api/publish-products') {
-        if (!Array.isArray(payload.products)) return json({ error: 'بيانات المنتجات غير صالحة' }, 400, origin);
+        // products.json هو Object (قاموس أقسام) وليس Array
+        const isValidObject = payload.products && typeof payload.products === 'object' && !Array.isArray(payload.products);
+        if (!isValidObject) return json({ error: 'بيانات المنتجات غير صالحة' }, 400, origin);
         await putJSONFile(env, 'products.json', payload.products, 'تحديث المنتجات من لوحة التحكم');
         return json({ ok: true }, 200, origin);
       }
@@ -182,19 +228,54 @@ export default {
         if (!xml || typeof xml !== 'string' || !xml.includes('<urlset')) {
           return json({ error: 'محتوى sitemap غير صالح' }, 400, origin);
         }
-        const path = 'sitemap.xml';
-        const sha = await getSha(env, path);
-        const content = btoa(unescape(encodeURIComponent(xml)));
-        const body = { message: 'تحديث sitemap.xml', content, branch: env.GH_BRANCH };
-        if (sha) body.sha = sha;
-        const res3 = await ghRequest(env, path, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(body)
-        });
-        const data3 = await res3.json();
-        if (!res3.ok) throw new Error(data3.message || 'فشل تحديث sitemap.xml');
+        await putTextFile(env, 'sitemap.xml', xml, 'تحديث sitemap.xml');
         return json({ ok: true }, 200, origin);
+      }
+
+      // إنشاء/تحديث صفحة كتالوج ثابتة لمنتج (catalog/{section}-{index}.html)
+      if (url.pathname === '/api/publish-catalog-page') {
+        const { section, index, html } = payload;
+
+        if (typeof section !== 'string' || !ALLOWED_CATALOG_SECTIONS.includes(section)) {
+          return json({ error: 'قسم غير مسموح' }, 400, origin);
+        }
+
+        const idxNum = Number(index);
+        if (!Number.isInteger(idxNum) || idxNum < 1) {
+          return json({ error: 'رقم الصفحة غير صالح' }, 400, origin);
+        }
+
+        if (typeof html !== 'string' || html.trim().length === 0) {
+          return json({ error: 'محتوى الصفحة فارغ' }, 400, origin);
+        }
+
+        const idxStr = String(idxNum).padStart(2, '0');
+        const path = `catalog/${section}-${idxStr}.html`;
+
+        await putTextFile(env, path, html, `نشر صفحة كتالوج: ${section}-${idxStr}`);
+        return json({ ok: true, path, url: `https://salfordkw.shop/${path}` }, 200, origin);
+      }
+
+      // حذف صفحة كتالوج ثابتة (catalog/{section}-{index}.html) — تُستخدم عند
+      // حذف منتج من لوحة admin.html. آمن حتى لو الصفحة غير موجودة أصلاً
+      // (يرجع ok:true مع skipped:true بدل ما يفشل).
+      if (url.pathname === '/api/delete-catalog-page') {
+        const { section, index } = payload;
+
+        if (typeof section !== 'string' || !ALLOWED_CATALOG_SECTIONS.includes(section)) {
+          return json({ error: 'قسم غير مسموح' }, 400, origin);
+        }
+
+        const idxNum = Number(index);
+        if (!Number.isInteger(idxNum) || idxNum < 1) {
+          return json({ error: 'رقم الصفحة غير صالح' }, 400, origin);
+        }
+
+        const idxStr = String(idxNum).padStart(2, '0');
+        const path = `catalog/${section}-${idxStr}.html`;
+
+        const result = await deleteFile(env, path, `حذف صفحة كتالوج: ${section}-${idxStr}`);
+        return json({ ok: true, path, skipped: result.skipped }, 200, origin);
       }
 
       return json({ error: 'مسار غير معروف' }, 404, origin);
