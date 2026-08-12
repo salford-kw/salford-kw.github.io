@@ -1670,15 +1670,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <image:image>
-      <image:loc>https://salfordkw.shop/products/product_1786505646861_w052f-small.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://salfordkw.shop/catalog/sajjad-31.html</loc>
-    <lastmod>2026-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <image:image>
       <image:loc>https://salfordkw.shop/products/product_1786506746256_hzv1m-small.webp</image:loc>
     </image:image>
   </url>
