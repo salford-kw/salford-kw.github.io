@@ -2115,25 +2115,6 @@
       "price": "14",
       "unit": "م",
       "installDate": "2026-02-04"
-    },
-    {
-      "id": "prod_1786504651031_rmxsq",
-      "code": "تجربة6",
-      "sub": "wafi",
-      "area": "الجهراء",
-      "desc": "تجربة5",
-      "img": "https://salfordkw.shop/products/product_1786504646660_264o3-small.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786504646660_264o3-small.webp"
-      ],
-      "imgLarge": "https://salfordkw.shop/products/product_1786504646660_264o3-large.webp",
-      "imagesLarge": [
-        "https://salfordkw.shop/products/product_1786504646660_264o3-large.webp"
-      ],
-      "video": "",
-      "price": "15",
-      "unit": "م",
-      "installDate": "2026-08-12"
     }
   ]
 }
