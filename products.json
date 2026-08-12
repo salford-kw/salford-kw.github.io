@@ -2153,25 +2153,6 @@
       "price": "14",
       "unit": "م",
       "installDate": "2026-08-12"
-    },
-    {
-      "id": "prod_1786497159386_vdpjv",
-      "code": "تجريبي",
-      "sub": "wafi",
-      "area": "حولي",
-      "desc": "تجربة",
-      "img": "https://salfordkw.shop/products/product_1786497153144_a5037-small.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786497153144_a5037-small.webp"
-      ],
-      "imgLarge": "https://salfordkw.shop/products/product_1786497153144_a5037-large.webp",
-      "imagesLarge": [
-        "https://salfordkw.shop/products/product_1786497153144_a5037-large.webp"
-      ],
-      "video": "",
-      "price": "15",
-      "unit": "م",
-      "installDate": "2026-08-12"
     }
   ]
 }
