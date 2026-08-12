@@ -278,6 +278,67 @@ export default {
         return json({ ok: true, path, skipped: result.skipped }, 200, origin);
       }
 
+      // مزامنة دفعة من صفحات كتالوج قسم واحد بعد حذف/إعادة ترتيب/نقل منتج
+      // من admin.html — يكتب صفحات (writes) ويحذف صفحات (deletes) بنفس
+      // الطلب، عشان يصير طلب واحد من المتصفح بدل طلب لكل صفحة (يفادي حد
+      // المحاولات بالدقيقة ويسرّع النشر). فشل صفحة واحدة لا يوقف الباقي —
+      // النتيجة ترجع تفاصيل كل عملية على حدة.
+      if (url.pathname === '/api/sync-catalog-pages') {
+        const { section, writes, deletes } = payload;
+
+        if (typeof section !== 'string' || !ALLOWED_CATALOG_SECTIONS.includes(section)) {
+          return json({ error: 'قسم غير مسموح' }, 400, origin);
+        }
+
+        const writeList = Array.isArray(writes) ? writes : [];
+        const deleteList = Array.isArray(deletes) ? deletes : [];
+
+        if (writeList.length + deleteList.length === 0) {
+          return json({ error: 'لا يوجد شيء لمزامنته' }, 400, origin);
+        }
+        if (writeList.length + deleteList.length > 60) {
+          return json({ error: 'عدد الصفحات بالدفعة كبير جداً (الحد الأقصى 60 دفعة واحدة)' }, 400, origin);
+        }
+
+        const results = { written: [], writeErrors: [], deleted: [], deleteErrors: [] };
+
+        for (const w of writeList) {
+          const idxNum = Number(w && w.index);
+          const html = w && w.html;
+          if (!Number.isInteger(idxNum) || idxNum < 1 || typeof html !== 'string' || html.trim().length === 0) {
+            results.writeErrors.push({ index: w && w.index, error: 'بيانات صفحة غير صالحة' });
+            continue;
+          }
+          const idxStr = String(idxNum).padStart(2, '0');
+          const path = `catalog/${section}-${idxStr}.html`;
+          try {
+            await putTextFile(env, path, html, `إعادة بناء صفحة كتالوج: ${section}-${idxStr}`);
+            results.written.push(idxNum);
+          } catch (e) {
+            results.writeErrors.push({ index: idxNum, error: e.message || 'فشل الكتابة' });
+          }
+        }
+
+        for (const d of deleteList) {
+          const idxNum = Number(d);
+          if (!Number.isInteger(idxNum) || idxNum < 1) {
+            results.deleteErrors.push({ index: d, error: 'رقم غير صالح' });
+            continue;
+          }
+          const idxStr = String(idxNum).padStart(2, '0');
+          const path = `catalog/${section}-${idxStr}.html`;
+          try {
+            const r = await deleteFile(env, path, `حذف صفحة كتالوج: ${section}-${idxStr}`);
+            results.deleted.push({ index: idxNum, skipped: r.skipped });
+          } catch (e) {
+            results.deleteErrors.push({ index: idxNum, error: e.message || 'فشل الحذف' });
+          }
+        }
+
+        const ok = results.writeErrors.length === 0 && results.deleteErrors.length === 0;
+        return json({ ok, ...results }, 200, origin);
+      }
+
       return json({ error: 'مسار غير معروف' }, 404, origin);
     } catch (e) {
       return json({ error: e.message || 'خطأ بالسيرفر' }, 500, origin);
