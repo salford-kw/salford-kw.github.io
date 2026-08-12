@@ -296,11 +296,33 @@ export default {
         if (writeList.length + deleteList.length === 0) {
           return json({ error: 'لا يوجد شيء لمزامنته' }, 400, origin);
         }
-        if (writeList.length + deleteList.length > 60) {
-          return json({ error: 'عدد الصفحات بالدفعة كبير جداً (الحد الأقصى 60 دفعة واحدة)' }, 400, origin);
+        // كل عنصر (كتابة أو حذف) يستهلك طلبين فرعيين (GET SHA + PUT/DELETE)
+        // من واجهة GitHub. خطة Cloudflare Workers المجانية تسمح بحد أقصى 50
+        // طلب فرعي بالتنفيذ الواحد، فنحدّ الدفعة بـ 20 عنصر (٤٠ طلب) كهامش أمان.
+        if (writeList.length + deleteList.length > 20) {
+          return json({ error: 'عدد الصفحات بالدفعة كبير جداً (الحد الأقصى 20 صفحة بالدفعة الواحدة بسبب حد الطلبات الفرعية لخطة Cloudflare المجانية)' }, 400, origin);
         }
 
         const results = { written: [], writeErrors: [], deleted: [], deleteErrors: [] };
+
+        // الحذف أولاً: لو توقف التنفيذ بالمنتصف (تجاوز حد الطلبات الفرعية،
+        // بطء الشبكة، إلخ) نضمن ما تبقى صفحات يتيمة على الأقل — أهم من
+        // إعادة كتابة صفحات موجودة وشغّالة أصلاً.
+        for (const d of deleteList) {
+          const idxNum = Number(d);
+          if (!Number.isInteger(idxNum) || idxNum < 1) {
+            results.deleteErrors.push({ index: d, error: 'رقم غير صالح' });
+            continue;
+          }
+          const idxStr = String(idxNum).padStart(2, '0');
+          const path = `catalog/${section}-${idxStr}.html`;
+          try {
+            const r = await deleteFile(env, path, `حذف صفحة كتالوج: ${section}-${idxStr}`);
+            results.deleted.push({ index: idxNum, skipped: r.skipped });
+          } catch (e) {
+            results.deleteErrors.push({ index: idxNum, error: e.message || 'فشل الحذف' });
+          }
+        }
 
         for (const w of writeList) {
           const idxNum = Number(w && w.index);
@@ -316,22 +338,6 @@ export default {
             results.written.push(idxNum);
           } catch (e) {
             results.writeErrors.push({ index: idxNum, error: e.message || 'فشل الكتابة' });
-          }
-        }
-
-        for (const d of deleteList) {
-          const idxNum = Number(d);
-          if (!Number.isInteger(idxNum) || idxNum < 1) {
-            results.deleteErrors.push({ index: d, error: 'رقم غير صالح' });
-            continue;
-          }
-          const idxStr = String(idxNum).padStart(2, '0');
-          const path = `catalog/${section}-${idxStr}.html`;
-          try {
-            const r = await deleteFile(env, path, `حذف صفحة كتالوج: ${section}-${idxStr}`);
-            results.deleted.push({ index: idxNum, skipped: r.skipped });
-          } catch (e) {
-            results.deleteErrors.push({ index: idxNum, error: e.message || 'فشل الحذف' });
           }
         }
 
