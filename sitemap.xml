@@ -1666,4 +1666,13 @@
   </url>
   
 
+  <url>
+    <loc>https://salfordkw.shop/catalog/sataer-30.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786497153144_a5037-small.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
