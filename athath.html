@@ -438,13 +438,18 @@ footer a{color:var(--gold-light);text-decoration:none;}
 const SECTION = 'athath';
 const STORAGE_KEY = 'salford_products';
 
-function buildSalfordOffers(p){
+function buildSalfordOffers(p, offerUrl){
   const o = {"@type":"Offer","availability":"https://schema.org/InStock",
     "seller":{"@type":"Organization","name":"سالفورد للأثاث والمفروشات","telephone":"+96555943343"}};
   const priceNum = parseFloat(p.price);
   if (p.price && !isNaN(priceNum)) {
     o.price = String(priceNum);
     o.priceCurrency = "KWD";
+    // 🆕 صلاحية السعر 5 سنوات تُحسب وقت العرض — لا تنتهي أبداً ولا تحذير نقص حقل
+    const _pv = new Date(); _pv.setFullYear(_pv.getFullYear() + 5);
+    o.priceValidUntil = _pv.toISOString().slice(0, 10);
+    o.itemCondition = "https://schema.org/NewCondition";
+    if (offerUrl) o.url = offerUrl;
     o.hasMerchantReturnPolicy = {"@type":"MerchantReturnPolicy","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted","applicableCountry":"KW","note":"منتجات مخصصة حسب الطلب لا يشملها الاسترجاع النقدي — يشمل الضمان (3 أشهر) إصلاح أو استبدال أي جزء فيه عيب تصنيع فقط."};
     o.shippingDetails = [
       {"@type":"OfferShippingDetails","name":"توصيل وتركيب","shippingRate":{"@type":"MonetaryAmount","value":"15","currency":"KWD"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"KW"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"}}},
@@ -491,9 +496,9 @@ function renderProducts(data) {
       schemaItems.push({
         "@type":"ListItem","position":position++,
         "item":{
-          "@type":"Product","name":p.code,"description":p.desc,"image":p.imgLarge||p.img,"url":"https://salfordkw.shop"+url,
+          "@type":"Product","sku":p.id||undefined,"name":p.code,"description":p.desc,"image":p.imgLarge||p.img,"url":"https://salfordkw.shop"+url,
           "brand":{"@type":"Brand","name":"سالفورد للأثاث والمفروشات"},
-          "offers": buildSalfordOffers(p)
+          "offers": buildSalfordOffers(p, "https://salfordkw.shop"+url)
         }
       });
     }
