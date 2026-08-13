@@ -423,5 +423,25 @@
     "price": "9",
     "unit": "م",
     "area": "الوفرة"
+  },
+  {
+    "id": "post_1786637747142_wrm9r",
+    "title": "سجاد قص ساده",
+    "desc": "سجاد قص ساده \nنهاية سجاد ذهبي \nاعمالنا في منطقة الدعيه",
+    "img": "https://salfordkw.shop/products/product_1786637721364_ykawk-small.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1786637721364_ykawk-small.webp",
+      "https://salfordkw.shop/products/product_1786637729333_ddnqn-small.webp"
+    ],
+    "imgLarge": "https://salfordkw.shop/products/product_1786637721364_ykawk-large.webp",
+    "imagesLarge": [
+      "https://salfordkw.shop/products/product_1786637721364_ykawk-large.webp",
+      "https://salfordkw.shop/products/product_1786637729333_ddnqn-large.webp"
+    ],
+    "video": "",
+    "date": "2026-08-13",
+    "price": "13",
+    "unit": "م",
+    "area": "الدعية"
   }
 ]
