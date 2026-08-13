@@ -1131,7 +1131,8 @@
         "https://salfordkw.shop/products/product_1786196109839_z5cp3-large.webp"
       ],
       "installDate": "2026-08-09",
-      "slug": "كنب-مودرن-مميز"
+      "slug": "كنب-مودرن-مميز",
+      "sub": "tafseel-kanab"
     },
     {
       "id": "prod_1786196181381_zzvpx",
@@ -1167,7 +1168,8 @@
         "https://salfordkw.shop/products/product_1786196266520_sd8ih-large.webp"
       ],
       "installDate": "2026-08-09",
-      "slug": "كنب-زاوية-مودرن"
+      "slug": "كنب-زاوية-مودرن",
+      "sub": "tafseel-kanab"
     },
     {
       "id": "prod_1786196415341_68kvx",
@@ -1195,7 +1197,8 @@
         "https://salfordkw.shop/products/product_1786196411258_hpyn3-large.webp"
       ],
       "installDate": "2026-08-09",
-      "slug": "كنب-عصري-مميز"
+      "slug": "كنب-عصري-مميز",
+      "sub": "tafseel-kanab"
     },
     {
       "id": "prod_1786196508779_6ghx0",
@@ -1227,7 +1230,8 @@
         "https://salfordkw.shop/products/product_1786196506808_0eyek-large.webp"
       ],
       "installDate": "2026-08-09",
-      "slug": "كنب-استقبال-منطقة-سلوى"
+      "slug": "كنب-استقبال-منطقة-سلوى",
+      "sub": "tafseel-kanab"
     },
     {
       "id": "prod_1786199688130_niisd",
@@ -1255,7 +1259,8 @@
         "https://salfordkw.shop/products/product_1786199685958_9knaa-large.webp"
       ],
       "installDate": "2026-08-09",
-      "slug": "كنب-وطاولات"
+      "slug": "كنب-وطاولات",
+      "sub": "tafseel-kanab"
     },
     {
       "id": "prod_1786220782467_17vx2",
@@ -1317,7 +1322,8 @@
         "https://salfordkw.shop/products/product_1786220886966_jurdc-large.webp"
       ],
       "installDate": "2026-08-09",
-      "slug": "كنب-قنفات-تفصيل"
+      "slug": "كنب-قنفات-تفصيل",
+      "sub": "tafseel-kanab"
     },
     {
       "id": "prod_1786222401936_pwqf5",
@@ -1461,7 +1467,8 @@
         "https://salfordkw.shop/products/product_1786222887251_3dq7x-large.webp"
       ],
       "installDate": "2026-08-09",
-      "slug": "كنب-قنفات-مودرن-عصريه-الكويت"
+      "slug": "كنب-قنفات-مودرن-عصريه-الكويت",
+      "sub": "tafseel-kanab"
     },
     {
       "id": "prod_1786385340668_1df62",
@@ -1632,7 +1639,7 @@
     {
       "id": "prod_1786399144524_1bxr3",
       "code": "جلسة كنب مودرن",
-      "sub": "",
+      "sub": "tafseel-kanab",
       "area": "الرميثية",
       "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
       "img": "https://salfordkw.shop/products/product_1786399121184_vetuw-small.webp",

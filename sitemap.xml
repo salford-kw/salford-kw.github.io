@@ -146,7 +146,7 @@
   
   <url>
     <loc>https://salfordkw.shop/tanjeed-kanab.html</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -159,11 +159,20 @@
       <image:loc>https://salfordkw.shop/products/product_1786196403904_3aq2d.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://salfordkw.shop/tafseel-kanab-kuwait.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786196106227_tntws.webp</image:loc>
+    </image:image>
+  </url>
   
   
   <url>
     <loc>https://salfordkw.shop/athath.html</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -992,7 +1001,7 @@
   
   <url>
     <loc>https://salfordkw.shop/talbees-kanab-kuwait.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
