@@ -582,6 +582,32 @@
       "unit": "م",
       "installDate": "2026-08-10",
       "slug": "سجاد-ساده-بالمتر-للديوانية-و-المقلط"
+    },
+    {
+      "id": "prod_1786637156534_4rs2i",
+      "code": "سجاد قص ساده",
+      "slug": "سجاد-قص-ساده",
+      "sub": "saada",
+      "area": "الدسمة",
+      "desc": "سجاد قص ساده بالمتر \nنهاية سجاد ذهبي",
+      "img": "https://salfordkw.shop/products/product_1786637142190_fmltx-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786637142190_fmltx-small.webp",
+        "https://salfordkw.shop/products/product_1786637146642_8ftz9-small.webp",
+        "https://salfordkw.shop/products/product_1786637149778_joorn-small.webp",
+        "https://salfordkw.shop/products/product_1786637152656_145am-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786637142190_fmltx-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786637142190_fmltx-large.webp",
+        "https://salfordkw.shop/products/product_1786637146642_8ftz9-large.webp",
+        "https://salfordkw.shop/products/product_1786637149778_joorn-large.webp",
+        "https://salfordkw.shop/products/product_1786637152656_145am-large.webp"
+      ],
+      "video": "",
+      "price": "13",
+      "unit": "م",
+      "installDate": "2026-08-13"
     }
   ],
   "majalis": [
