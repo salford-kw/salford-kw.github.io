@@ -12,7 +12,7 @@
   
   <url>
     <loc>https://salfordkw.shop/sajjad.html</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -289,7 +289,7 @@
   
   <url>
     <loc>https://salfordkw.shop/sajjad-bel-meter-kuwait.html</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -300,6 +300,15 @@
     </image:image>
     <image:image>
       <image:loc>https://salfordkw.shop/products/سجاد-تركي-نابل-سالفورد.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/sajjad-al-dajeej-kuwait.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786199578906_qwb31.webp</image:loc>
     </image:image>
   </url>
   
@@ -437,7 +446,7 @@
   
   <url>
     <loc>https://salfordkw.shop/about.html</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
