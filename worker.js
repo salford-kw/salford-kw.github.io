@@ -144,8 +144,16 @@ function utf8ToBase64(str) {
   return btoa(binary);
 }
 
+// 🔧 FIX: يرمّز كل جزء من المسار (URL encode) قبل إرساله لـ GitHub API —
+// مطلوب لأن slugs صفحات الكتالوج ممكن تحتوي أحرف عربية (راجع SLUG_RE)،
+// وGitHub API يرجّع 400 لأي URL فيه أحرف غير ASCII بدون ترميز.
+function encodePath(path) {
+  return path.split('/').map(seg => encodeURIComponent(seg)).join('/');
+}
+
 async function ghRequest(env, path, options = {}) {
-  const url = `https://api.github.com/repos/${env.GH_OWNER}/${env.GH_REPO}/contents/${path}`;
+  const encodedPath = encodePath(path);
+  const url = `https://api.github.com/repos/${env.GH_OWNER}/${env.GH_REPO}/contents/${encodedPath}`;
   return fetch(url, {
     ...options,
     headers: {
