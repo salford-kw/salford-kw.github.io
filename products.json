@@ -14,7 +14,8 @@
         "https://salfordkw.shop/products/سجاد-تركي-اكادير-سالفورد-large.webp"
       ],
       "installDate": "2026-08-12",
-      "id": "prod_1786575592499_lqqsm"
+      "id": "prod_1786575592499_lqqsm",
+      "slug": "سجاد-تركي-كود-01"
     },
     {
       "code": "سجاد تركي كود 02",
@@ -30,7 +31,8 @@
         "https://salfordkw.shop/products/سجاد-تركي-مراكش-سالفورد-large.webp"
       ],
       "installDate": "2026-08-12",
-      "id": "prod_1786575592500_waa5z"
+      "id": "prod_1786575592500_waa5z",
+      "slug": "سجاد-تركي-كود-02"
     },
     {
       "code": "سجاد تركي كود 03",
@@ -46,7 +48,8 @@
         "https://salfordkw.shop/products/سجاد-تركي-نابل-سالفورد-large.webp"
       ],
       "installDate": "2026-08-12",
-      "id": "prod_1786575592501_68c24"
+      "id": "prod_1786575592501_68c24",
+      "slug": "سجاد-تركي-كود-03"
     },
     {
       "code": "سجاد تركي كود 04",
@@ -62,7 +65,8 @@
         "https://salfordkw.shop/products/سجاد-تركي-فندقي-سالفورد-large.webp"
       ],
       "installDate": "2026-08-12",
-      "id": "prod_1786575592502_eos3k"
+      "id": "prod_1786575592502_eos3k",
+      "slug": "سجاد-تركي-كود-04"
     },
     {
       "code": "سجاد تركي كود 05",
@@ -78,7 +82,8 @@
         "https://salfordkw.shop/products/سجاد-تركي-سالفورد-05-large.webp"
       ],
       "installDate": "2026-08-12",
-      "id": "prod_1786575592503_pawld"
+      "id": "prod_1786575592503_pawld",
+      "slug": "سجاد-تركي-كود-05"
     },
     {
       "code": "سجاد تركي كود 06",
@@ -94,7 +99,8 @@
         "https://salfordkw.shop/products/سجاد-تركي-سالفورد-06-large.webp"
       ],
       "installDate": "2026-08-12",
-      "id": "prod_1786575592504_054m0"
+      "id": "prod_1786575592504_054m0",
+      "slug": "سجاد-تركي-كود-06"
     },
     {
       "code": "سجاد تركي كود 07",
@@ -110,7 +116,8 @@
         "https://salfordkw.shop/products/سجاد-تركي-سالفورد-07-large.webp"
       ],
       "installDate": "2026-08-12",
-      "id": "prod_1786575592505_osu96"
+      "id": "prod_1786575592505_osu96",
+      "slug": "سجاد-تركي-كود-07"
     },
     {
       "code": "موكيت تركي كود 01",
@@ -126,7 +133,8 @@
         "https://salfordkw.shop/products/مساند-ظهر-سالفورد-large.webp"
       ],
       "installDate": "2026-08-12",
-      "id": "prod_1786575592506_iaiaj"
+      "id": "prod_1786575592506_iaiaj",
+      "slug": "موكيت-تركي-كود-01"
     },
     {
       "code": "موكيت تركي كود 02",
@@ -142,7 +150,8 @@
         "https://salfordkw.shop/products/نقشة-سجاد-حفر-سالفورد-02-large.webp"
       ],
       "installDate": "2026-08-12",
-      "id": "prod_1786575592507_0sn2b"
+      "id": "prod_1786575592507_0sn2b",
+      "slug": "موكيت-تركي-كود-02"
     },
     {
       "code": "موكيت تركي كود 03",
@@ -158,7 +167,8 @@
         "https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد-large.webp"
       ],
       "installDate": "2026-08-12",
-      "id": "prod_1786575592508_gt0jo"
+      "id": "prod_1786575592508_gt0jo",
+      "slug": "موكيت-تركي-كود-03"
     },
     {
       "code": "موكيت تركي كود 04",
@@ -174,7 +184,8 @@
         "https://salfordkw.shop/products/نقشة-حفر-سجاد-سالفورد-04-large.webp"
       ],
       "installDate": "2026-08-12",
-      "id": "prod_1786575592509_mq8bz"
+      "id": "prod_1786575592509_mq8bz",
+      "slug": "موكيت-تركي-كود-04"
     },
     {
       "code": "موكيت تركي كود 05",
@@ -190,7 +201,8 @@
         "https://salfordkw.shop/products/مجلس-ديكور-سالفورد-05-large.webp"
       ],
       "installDate": "2026-08-12",
-      "id": "prod_1786575592510_sih0c"
+      "id": "prod_1786575592510_sih0c",
+      "slug": "موكيت-تركي-كود-05"
     },
     {
       "id": "prod_1786197425428_22sfv",
@@ -207,7 +219,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786197423291_fvwuq-large.webp"
       ],
-      "installDate": "2026-08-12"
+      "installDate": "2026-08-12",
+      "slug": "سجاد-حفر-نقشة-الرابية"
     },
     {
       "id": "prod_1786197502343_h34wi",
@@ -224,7 +237,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786197500181_ttjzo-large.webp"
       ],
-      "installDate": "2026-08-12"
+      "installDate": "2026-08-12",
+      "slug": "نقشة-حفر-يدوي"
     },
     {
       "id": "prod_1786199582356_tpnin",
@@ -243,7 +257,8 @@
         "https://salfordkw.shop/products/product_1786199578906_qwb31-large.webp",
         "https://salfordkw.shop/products/product_1786199580350_x5565-large.webp"
       ],
-      "installDate": "2026-08-12"
+      "installDate": "2026-08-12",
+      "slug": "سجاد-حفر-يدوي-الكويت"
     },
     {
       "id": "prod_1786220673226_g7xeh",
@@ -260,7 +275,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786220671111_xq2vu-large.webp"
       ],
-      "installDate": "2026-08-12"
+      "installDate": "2026-08-12",
+      "slug": "سجاد-تفصيل-وحفر"
     },
     {
       "id": "prod_1786221604897_80o0m",
@@ -285,7 +301,8 @@
         "https://salfordkw.shop/products/product_1786221601018_kev42-large.webp",
         "https://salfordkw.shop/products/product_1786221602695_g326e-large.webp"
       ],
-      "installDate": "2026-08-12"
+      "installDate": "2026-08-12",
+      "slug": "سجاد-حفر-يدوي-اطار"
     },
     {
       "id": "prod_1786221710359_u1f7l",
@@ -308,7 +325,8 @@
         "https://salfordkw.shop/products/product_1786221706812_tm67f-large.webp",
         "https://salfordkw.shop/products/product_1786221708197_idbfm-large.webp"
       ],
-      "installDate": "2026-08-12"
+      "installDate": "2026-08-12",
+      "slug": "سجاد-حفر-يدوي-اطار-u1f7l"
     },
     {
       "id": "prod_1786221811641_7jzrf",
@@ -337,7 +355,8 @@
         "https://salfordkw.shop/products/product_1786221807921_x4fx7-large.webp",
         "https://salfordkw.shop/products/product_1786221809595_s9uva-large.webp"
       ],
-      "installDate": "2026-08-12"
+      "installDate": "2026-08-12",
+      "slug": "سجاد-مسجد-الكويت"
     },
     {
       "id": "prod_1786221897283_xy2xp",
@@ -366,7 +385,8 @@
         "https://salfordkw.shop/products/product_1786221893243_njdwb-large.webp",
         "https://salfordkw.shop/products/product_1786221894998_3ydud-large.webp"
       ],
-      "installDate": "2026-08-12"
+      "installDate": "2026-08-12",
+      "slug": "موكيت-فندقي-مودرين"
     },
     {
       "id": "prod_1786221971625_x7f5b",
@@ -387,7 +407,8 @@
         "https://salfordkw.shop/products/product_1786221968096_ymkod-large.webp",
         "https://salfordkw.shop/products/product_1786221969531_1kv79-large.webp"
       ],
-      "installDate": "2026-08-12"
+      "installDate": "2026-08-12",
+      "slug": "سجاد-شقة-كاملة-المطلاع"
     },
     {
       "id": "prod_1786222049117_neyc0",
@@ -410,7 +431,8 @@
         "https://salfordkw.shop/products/product_1786222045492_xubq7-large.webp",
         "https://salfordkw.shop/products/product_1786222047005_w5qjx-large.webp"
       ],
-      "installDate": "2026-08-12"
+      "installDate": "2026-08-12",
+      "slug": "تفصيل-خاص-تحت-طاولة"
     },
     {
       "id": "prod_1786222132213_mfcqd",
@@ -435,7 +457,8 @@
         "https://salfordkw.shop/products/product_1786222128090_hz4k0-large.webp",
         "https://salfordkw.shop/products/product_1786222130104_nw3p0-large.webp"
       ],
-      "installDate": "2026-08-12"
+      "installDate": "2026-08-12",
+      "slug": "باركيه-تركي"
     },
     {
       "id": "prod_1786222314226_ow1z7",
@@ -456,7 +479,8 @@
         "https://salfordkw.shop/products/product_1786222309936_396zo-large.webp",
         "https://salfordkw.shop/products/product_1786222311573_jkz0w-large.webp"
       ],
-      "installDate": "2026-08-12"
+      "installDate": "2026-08-12",
+      "slug": "سجاد-مشجر-جملة"
     },
     {
       "id": "prod_1786386099336_gi1oe",
@@ -475,7 +499,8 @@
       "video": "",
       "price": "195",
       "unit": "قطعة",
-      "installDate": "2026-06-03"
+      "installDate": "2026-06-03",
+      "slug": "نقشة-حفر-وقص-يدوي"
     },
     {
       "id": "prod_1786386196285_wlz6t",
@@ -494,7 +519,8 @@
       "video": "",
       "price": "15",
       "unit": "م",
-      "installDate": "2026-06-04"
+      "installDate": "2026-06-04",
+      "slug": "سجاد-قص-وحفر-يدوي"
     },
     {
       "id": "prod_1786386266637_5g85a",
@@ -513,7 +539,8 @@
       "video": "",
       "price": "16",
       "unit": "م",
-      "installDate": "2026-08-03"
+      "installDate": "2026-08-03",
+      "slug": "سجاد-صالة-استقبال-قص-حفر-يدوي"
     },
     {
       "id": "prod_1786386342083_ryzob",
@@ -532,7 +559,8 @@
       "video": "",
       "price": "13",
       "unit": "م",
-      "installDate": "2026-04-09"
+      "installDate": "2026-04-09",
+      "slug": "سجاد-حفر-يدوي"
     },
     {
       "id": "prod_1786388609000_zxkc8",
@@ -552,7 +580,8 @@
       "video": "",
       "price": "13",
       "unit": "م",
-      "installDate": "2026-08-10"
+      "installDate": "2026-08-10",
+      "slug": "سجاد-ساده-بالمتر-للديوانية-و-المقلط"
     }
   ],
   "majalis": [
@@ -578,7 +607,8 @@
         "https://salfordkw.shop/products/product_1786197141312_a3aph-large.webp"
       ],
       "sub": "masanid-khashab",
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "مجلس-ديكور-مساند-منطقة-صباح-الناصر"
     },
     {
       "id": "prod_1786197244904_rhmsf",
@@ -595,7 +625,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786197241858_htow3-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "مساند-اسفنج-منطقة-الرميثية"
     },
     {
       "id": "prod_1786197324736_t197u",
@@ -612,7 +643,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786197321662_86vbd-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "مساند-اسفنج-منطقة-الجهراء"
     },
     {
       "id": "prod_1786199155188_t1bmy",
@@ -629,7 +661,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786199152811_tdgp5-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "مساند-ديوانية-اسفنج-الكويت"
     },
     {
       "id": "prod_1786199230676_g9stn",
@@ -646,7 +679,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786199228713_43tsh-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "مساند-ديوانية-الكويت-المنقف"
     },
     {
       "id": "prod_1786199324908_a3c7f",
@@ -664,7 +698,8 @@
         "https://salfordkw.shop/products/product_1786199322367_bigmt-large.webp"
       ],
       "sub": "masanid-khashab",
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "مساند-مجلس-خشب-ديكور"
     },
     {
       "id": "prod_1786199443865_oug4o",
@@ -687,7 +722,8 @@
         "https://salfordkw.shop/products/product_1786199439925_9ycl7-large.webp",
         "https://salfordkw.shop/products/product_1786199441526_zf8ag-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "مساند-ديوانية-اسفنج"
     },
     {
       "id": "prod_1786221194100_yg3ir",
@@ -715,7 +751,8 @@
         "https://salfordkw.shop/products/product_1786221192226_uiq9l-large.webp"
       ],
       "sub": "masanid-khashab",
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ديوانية-خشب-ديكور-ملكية"
     },
     {
       "id": "prod_1786221361208_bla1k",
@@ -738,7 +775,8 @@
         "https://salfordkw.shop/products/product_1786221357361_l7hwd-large.webp",
         "https://salfordkw.shop/products/product_1786221359342_a3wg1-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "مساند-سدو-ديوانية-خارجية-خيمة"
     },
     {
       "id": "prod_1786223138811_4ojkv",
@@ -756,7 +794,8 @@
         "https://salfordkw.shop/products/product_1786223136273_wo1qm-large.webp"
       ],
       "sub": "masanid-khashab",
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "مجلس-ظهر-مساند-ديكور"
     },
     {
       "id": "prod_1786223501461_iz7qc",
@@ -775,7 +814,8 @@
         "https://salfordkw.shop/products/product_1786223497806_h4yov-large.webp",
         "https://salfordkw.shop/products/product_1786223499630_sk8k3-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "مساند-ظهر"
     },
     {
       "id": "prod_1786221102138_8s7w7",
@@ -796,7 +836,8 @@
         "https://salfordkw.shop/products/product_1786221098404_ziycn-large.webp",
         "https://salfordkw.shop/products/product_1786221099904_fj6w2-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "مساند-مجلس-حريم-نساء"
     },
     {
       "id": "prod_1786386499745_e5dwq",
@@ -815,7 +856,8 @@
       "video": "",
       "price": "11",
       "unit": "م",
-      "installDate": "2026-07-23"
+      "installDate": "2026-07-23",
+      "slug": "مساند-ظهر-اسفنج-البغلي"
     },
     {
       "id": "prod_1786386561884_p6m3b",
@@ -834,7 +876,8 @@
       "video": "",
       "price": "13",
       "unit": "م",
-      "installDate": "2026-05-09"
+      "installDate": "2026-05-09",
+      "slug": "سجاد-حفر-يدوي-و-قص"
     },
     {
       "id": "prod_1786398275465_icuri",
@@ -861,7 +904,8 @@
       "video": "",
       "price": "65",
       "unit": "م",
-      "installDate": "2026-04-02"
+      "installDate": "2026-04-02",
+      "slug": "مجلس-كنب"
     },
     {
       "id": "prod_1786398404616_zdoq9",
@@ -894,7 +938,8 @@
       "video": "",
       "price": "60",
       "unit": "م",
-      "installDate": "2026-07-04"
+      "installDate": "2026-07-04",
+      "slug": "مجلس-كنب-مع-طاولات-قهوة"
     },
     {
       "id": "prod_1786400777370_0nivh",
@@ -913,7 +958,8 @@
       "video": "",
       "price": "18",
       "unit": "م",
-      "installDate": "2026-05-19"
+      "installDate": "2026-05-19",
+      "slug": "مساند-ظهر-ديكور"
     },
     {
       "id": "prod_1786400974460_hhw4m",
@@ -932,7 +978,8 @@
       "video": "",
       "price": "18",
       "unit": "م",
-      "installDate": "2026-05-16"
+      "installDate": "2026-05-16",
+      "slug": "مساند-ظهر-خشب"
     },
     {
       "id": "prod_1786401523100_0d87q",
@@ -951,7 +998,8 @@
       "video": "",
       "price": "11",
       "unit": "م",
-      "installDate": "2026-08-10"
+      "installDate": "2026-08-10",
+      "slug": "مساند-ظهر-و-طاولات-قهوة"
     },
     {
       "id": "prod_1786401712619_ovrkn",
@@ -970,7 +1018,8 @@
       "video": "",
       "price": "9",
       "unit": "م",
-      "installDate": "2026-06-17"
+      "installDate": "2026-06-17",
+      "slug": "مساند-ظهر-ovrkn"
     },
     {
       "id": "prod_1786401916588_wf3mg",
@@ -989,7 +1038,8 @@
       "video": "",
       "price": "13",
       "unit": "م",
-      "installDate": "2026-04-24"
+      "installDate": "2026-04-24",
+      "slug": "مساند-ظهر-وسجادة-حفر"
     },
     {
       "id": "prod_1786401998821_0cdae",
@@ -1008,7 +1058,8 @@
       "video": "",
       "price": "18",
       "unit": "م",
-      "installDate": "2026-04-18"
+      "installDate": "2026-04-18",
+      "slug": "مجلس-ديكور-ظهر-ارضي"
     },
     {
       "id": "prod_1786405943333_lk77x",
@@ -1027,7 +1078,8 @@
       "video": "",
       "price": "18",
       "unit": "م",
-      "installDate": "2026-03-12"
+      "installDate": "2026-03-12",
+      "slug": "مساند-ظهر-ديكور-مجلس-خشب"
     },
     {
       "id": "prod_1786406038148_tfyq2",
@@ -1046,7 +1098,8 @@
       "video": "",
       "price": "18",
       "unit": "م",
-      "installDate": "2026-06-25"
+      "installDate": "2026-06-25",
+      "slug": "مجلس-ظهر-ديكور-خشب"
     }
   ],
   "athath": [
@@ -1069,7 +1122,8 @@
         "https://salfordkw.shop/products/product_1786196108211_ix144-large.webp",
         "https://salfordkw.shop/products/product_1786196109839_z5cp3-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "كنب-مودرن-مميز"
     },
     {
       "id": "prod_1786196181381_zzvpx",
@@ -1086,7 +1140,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786196179170_upt1v-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ديكور-واجهة-مميز"
     },
     {
       "id": "prod_1786196268709_asqr0",
@@ -1103,7 +1158,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786196266520_sd8ih-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "كنب-زاوية-مودرن"
     },
     {
       "id": "prod_1786196415341_68kvx",
@@ -1130,7 +1186,8 @@
         "https://salfordkw.shop/products/product_1786196409898_6w72y-large.webp",
         "https://salfordkw.shop/products/product_1786196411258_hpyn3-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "كنب-عصري-مميز"
     },
     {
       "id": "prod_1786196508779_6ghx0",
@@ -1161,7 +1218,8 @@
         "https://salfordkw.shop/products/product_1786196504886_75zon-large.webp",
         "https://salfordkw.shop/products/product_1786196506808_0eyek-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "كنب-استقبال-منطقة-سلوى"
     },
     {
       "id": "prod_1786199688130_niisd",
@@ -1188,7 +1246,8 @@
         "https://salfordkw.shop/products/product_1786199684207_33w9o-large.webp",
         "https://salfordkw.shop/products/product_1786199685958_9knaa-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "كنب-وطاولات"
     },
     {
       "id": "prod_1786220782467_17vx2",
@@ -1217,7 +1276,8 @@
         "https://salfordkw.shop/products/product_1786220779026_e5ow6-large.webp",
         "https://salfordkw.shop/products/product_1786220780221_sdb2z-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "تنجيد-كنب-قنفات"
     },
     {
       "id": "prod_1786220889201_u43ud",
@@ -1248,7 +1308,8 @@
         "https://salfordkw.shop/products/product_1786220885509_k0bpz-large.webp",
         "https://salfordkw.shop/products/product_1786220886966_jurdc-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "كنب-قنفات-تفصيل"
     },
     {
       "id": "prod_1786222401936_pwqf5",
@@ -1275,7 +1336,8 @@
         "https://salfordkw.shop/products/product_1786222398984_m35sa-large.webp",
         "https://salfordkw.shop/products/product_1786222400219_p6k27-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "تفصيل-ديكور-وطاولات-واستقبال"
     },
     {
       "id": "prod_1786222504030_33lg3",
@@ -1294,7 +1356,8 @@
         "https://salfordkw.shop/products/product_1786222499981_3jcvl-large.webp",
         "https://salfordkw.shop/products/product_1786222501648_48pic-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "كونسول-مودرن-وعصري-الكويت"
     },
     {
       "id": "prod_1786222598491_ggp9e",
@@ -1311,7 +1374,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786222596039_lanw8-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "كونسول-مودرن-حديث"
     },
     {
       "id": "prod_1786222682608_yzs44",
@@ -1332,7 +1396,8 @@
         "https://salfordkw.shop/products/product_1786222679214_f7bx6-large.webp",
         "https://salfordkw.shop/products/product_1786222680681_1xw36-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "كونسول-استقبال"
     },
     {
       "id": "prod_1786222780033_ptl2h",
@@ -1357,7 +1422,8 @@
         "https://salfordkw.shop/products/product_1786222776668_h4otx-large.webp",
         "https://salfordkw.shop/products/product_1786222777917_uypdw-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "كونسول-استقبال-سلوى"
     },
     {
       "id": "prod_1786222889595_0c99y",
@@ -1386,7 +1452,8 @@
         "https://salfordkw.shop/products/product_1786222885617_s2n0f-large.webp",
         "https://salfordkw.shop/products/product_1786222887251_3dq7x-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "كنب-قنفات-مودرن-عصريه-الكويت"
     },
     {
       "id": "prod_1786385340668_1df62",
@@ -1415,7 +1482,8 @@
       "video": "",
       "price": "30",
       "unit": "م",
-      "installDate": "2026-08-05"
+      "installDate": "2026-08-05",
+      "slug": "تلبيس-كنب-قنفات-واصلاح"
     },
     {
       "id": "prod_1786385462275_okvzb",
@@ -1442,7 +1510,8 @@
       "video": "",
       "price": "28",
       "unit": "قطعة",
-      "installDate": "2026-08-07"
+      "installDate": "2026-08-07",
+      "slug": "طاولات-ديوانية"
     },
     {
       "id": "prod_1786385581456_8nhm1",
@@ -1465,7 +1534,8 @@
       "video": "",
       "price": "30",
       "unit": "قطعة",
-      "installDate": "2026-08-01"
+      "installDate": "2026-08-01",
+      "slug": "تنجيد-قنفات-كنب-8nhm1"
     },
     {
       "id": "prod_1786385711576_cnti9",
@@ -1492,7 +1562,8 @@
       "video": "",
       "price": "85",
       "unit": "قطعة",
-      "installDate": "2026-08-05"
+      "installDate": "2026-08-05",
+      "slug": "تفصيل-طاولة-مودرن-لصالة-استقبال"
     },
     {
       "id": "prod_1786385913292_usgsi",
@@ -1523,7 +1594,8 @@
       "video": "",
       "price": "850",
       "unit": "قطعة",
-      "installDate": "2026-08-02"
+      "installDate": "2026-08-02",
+      "slug": "تفصيل-ديكور-كامل-منزل-كونسول-و-ديكور-شاشة-و-استقبال"
     },
     {
       "id": "prod_1786388855402_h3i7l",
@@ -1546,7 +1618,8 @@
       "video": "",
       "price": "65",
       "unit": "متر مربع",
-      "installDate": "2026-08-05"
+      "installDate": "2026-08-05",
+      "slug": "كونسول-مودرن-مع-قنفه"
     },
     {
       "id": "prod_1786399144524_1bxr3",
@@ -1579,7 +1652,8 @@
       "video": "",
       "price": "95",
       "unit": "قطعة",
-      "installDate": "2026-07-11"
+      "installDate": "2026-07-11",
+      "slug": "جلسة-كنب-مودرن"
     },
     {
       "id": "prod_1786399279557_e1h4b",
@@ -1604,7 +1678,8 @@
       "video": "",
       "price": "60",
       "unit": "قطعة",
-      "installDate": "2026-07-27"
+      "installDate": "2026-07-27",
+      "slug": "لوحات-كانفس"
     },
     {
       "id": "prod_1786577224763_6x4ei",
@@ -1653,7 +1728,8 @@
         "https://salfordkw.shop/products/product_1786197573765_1sbnx-large.webp",
         "https://salfordkw.shop/products/product_1786197575728_4jwp9-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستارة-ملكية-منطقة-خيطان"
     },
     {
       "id": "prod_1786197656102_ae8bj",
@@ -1672,7 +1748,8 @@
         "https://salfordkw.shop/products/product_1786197651322_1zw0r-large.webp",
         "https://salfordkw.shop/products/product_1786197653630_ffttl-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستارة-ويفي"
     },
     {
       "id": "prod_1786197821119_1ry4j",
@@ -1691,7 +1768,8 @@
         "https://salfordkw.shop/products/product_1786197817583_avoyf-large.webp",
         "https://salfordkw.shop/products/product_1786197819414_kerik-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستارة-خام-ويفي-حولي"
     },
     {
       "id": "prod_1786197901533_1crnm",
@@ -1714,7 +1792,8 @@
         "https://salfordkw.shop/products/product_1786197898881_s8k1g-large.webp",
         "https://salfordkw.shop/products/product_1786197899917_ggay0-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستارة-ويفي-منطقة-الصليبيخات"
     },
     {
       "id": "prod_1786197984670_4g1ss",
@@ -1731,7 +1810,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786197982498_ekn0c-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستارة-رول-حولي"
     },
     {
       "id": "prod_1786198041286_j3tmt",
@@ -1748,7 +1828,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786198038983_l25ke-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستاره-رول-منطقة-سلوى"
     },
     {
       "id": "prod_1786198084747_rbeiq",
@@ -1765,7 +1846,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786198082795_c7oqu-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستاره-رول-سيلفر"
     },
     {
       "id": "prod_1786198173106_pyo7q",
@@ -1782,7 +1864,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786198170852_7o0ir-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستاره-رول-كاتم-للشمس"
     },
     {
       "id": "prod_1786198232307_sfamn",
@@ -1799,7 +1882,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786198230102_2d8yi-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستاير-رول-الرميثية"
     },
     {
       "id": "prod_1786198317430_qt7t3",
@@ -1816,7 +1900,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786198315153_52wc7-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستائر-رول-مكتب-محافظة-العاصمة"
     },
     {
       "id": "prod_1786198369013_9r8zq",
@@ -1835,7 +1920,8 @@
         "https://salfordkw.shop/products/product_1786198365428_vaf21-large.webp",
         "https://salfordkw.shop/products/product_1786198367027_9fs3r-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستاير-رول"
     },
     {
       "id": "prod_1786198447978_pv5oj",
@@ -1852,7 +1938,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786198442243_katpd-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستارة-ملكية-الكويت"
     },
     {
       "id": "prod_1786198948492_lheg7",
@@ -1883,7 +1970,8 @@
         "https://salfordkw.shop/products/product_1786198944702_tn6pb-large.webp",
         "https://salfordkw.shop/products/product_1786198946797_9np4q-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستاره-ويفي-خام-المنقف"
     },
     {
       "id": "prod_1786199842623_52k2j",
@@ -1902,7 +1990,8 @@
         "https://salfordkw.shop/products/product_1786199839154_hqlc9-large.webp",
         "https://salfordkw.shop/products/product_1786199840555_xi15w-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستائر-خام-رول"
     },
     {
       "id": "prod_1786220503064_af07i",
@@ -1919,7 +2008,8 @@
       "imagesLarge": [
         "https://salfordkw.shop/products/product_1786220498508_suibg-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستارة-خام-ويفي"
     },
     {
       "id": "prod_1786220585045_x7rdc",
@@ -1944,7 +2034,8 @@
         "https://salfordkw.shop/products/product_1786220581847_jiyzv-large.webp",
         "https://salfordkw.shop/products/product_1786220583259_211l5-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستاره-شيفون"
     },
     {
       "id": "prod_1786220983530_jf0g9",
@@ -1971,7 +2062,8 @@
         "https://salfordkw.shop/products/product_1786220980310_em3a5-large.webp",
         "https://salfordkw.shop/products/product_1786220981632_rnjec-large.webp"
       ],
-      "installDate": "2026-08-09"
+      "installDate": "2026-08-09",
+      "slug": "ستائر-شيفون-خام"
     },
     {
       "id": "prod_1786382442015_m4j73",
@@ -1991,7 +2083,8 @@
       "video": "",
       "price": "16",
       "unit": "م",
-      "installDate": "2026-08-11"
+      "installDate": "2026-08-11",
+      "slug": "ستارة-خام-شيفون-تفصيل"
     },
     {
       "id": "prod_1786383005823_kpvu6",
@@ -2011,7 +2104,8 @@
       "video": "",
       "price": "14",
       "unit": "م",
-      "installDate": "2026-08-11"
+      "installDate": "2026-08-11",
+      "slug": "ستاره-ويفي-تفصيل"
     },
     {
       "id": "prod_1786383986214_9twir",
@@ -2030,7 +2124,8 @@
       "video": "",
       "price": "15",
       "unit": "م",
-      "installDate": "2026-08-05"
+      "installDate": "2026-08-05",
+      "slug": "ستارة-بلاك-اوت-تفصيل"
     },
     {
       "id": "prod_1786399406266_diy3l",
@@ -2049,7 +2144,8 @@
       "video": "",
       "price": "15",
       "unit": "م",
-      "installDate": "2026-08-04"
+      "installDate": "2026-08-04",
+      "slug": "ستارة-بلاك-اوت-وشيفون"
     },
     {
       "id": "prod_1786399469508_k6yjy",
@@ -2068,7 +2164,8 @@
       "video": "",
       "price": "15",
       "unit": "م",
-      "installDate": "2026-08-08"
+      "installDate": "2026-08-08",
+      "slug": "ستارة-بلاك-اوت"
     },
     {
       "id": "prod_1786399529614_4z3fu",
@@ -2087,7 +2184,8 @@
       "video": "",
       "price": "15",
       "unit": "م",
-      "installDate": "2026-03-05"
+      "installDate": "2026-03-05",
+      "slug": "ستارة-خام-ملكي"
     },
     {
       "id": "prod_1786400280809_3lmqc",
@@ -2106,7 +2204,8 @@
       "video": "",
       "price": "14",
       "unit": "م",
-      "installDate": "2026-07-30"
+      "installDate": "2026-07-30",
+      "slug": "ستاره-ويفي"
     },
     {
       "id": "prod_1786400391748_anccq",
@@ -2125,7 +2224,8 @@
       "video": "",
       "price": "14",
       "unit": "م",
-      "installDate": "2026-05-08"
+      "installDate": "2026-05-08",
+      "slug": "ستاره-ويفي-anccq"
     },
     {
       "id": "prod_1786400492263_lwg1j",
@@ -2144,7 +2244,8 @@
       "video": "",
       "price": "14",
       "unit": "م",
-      "installDate": "2026-02-04"
+      "installDate": "2026-02-04",
+      "slug": "ستارة-ويفي-كتان"
     }
   ]
 }
