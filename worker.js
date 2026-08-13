@@ -157,10 +157,48 @@ async function ghRequest(env, path, options = {}) {
   });
 }
 
+// 🆕 قراءة آمنة لجسم استجابة GitHub. GitHub أحياناً (تعطّل مؤقت/أعطال
+// 502-504 على طلبات كبيرة) يرجّع جسم فارغ أو غير قابل للتحليل — res.json()
+// المباشر يرمي SyntaxError: Unexpected end of JSON input في هذه الحالة.
+// هنا نقرأ كنص أولاً، وإذا كان فارغاً أو غير صالح نرمي خطأ واضح يُمسك
+// بواسطة ghRequestJson لإعادة المحاولة، بدل ما ينهار الطلب كامل مباشرة.
+async function safeGhJson(res) {
+  const text = await res.text();
+  if (!text || !text.trim()) {
+    throw new Error('استجابة فارغة من GitHub API (status: ' + res.status + ')');
+  }
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    throw new Error('استجابة غير صالحة من GitHub API (status: ' + res.status + ')');
+  }
+}
+
+// 🆕 يجمع بين ghRequest و safeGhJson مع إعادة محاولة تلقائية (تأخير تصاعدي)
+// عند أي فشل شبكة أو جسم استجابة فارغ/غير صالح من GitHub. هذا هو الإصلاح
+// الفعلي لمشكلة "Unexpected end of JSON input" — لأن المشكلة كانت تحصل
+// هنا بالضبط (تواصل الـWorker مع GitHub)، وليس بين المتصفح والـWorker.
+async function ghRequestJson(env, path, options = {}, retries = 3) {
+  let lastErr;
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const res = await ghRequest(env, path, options);
+      const data = await safeGhJson(res);
+      return { res, data };
+    } catch (e) {
+      lastErr = e;
+      if (attempt < retries) {
+        await new Promise(r => setTimeout(r, attempt * 400)); // 400ms, 800ms...
+      }
+    }
+  }
+  throw lastErr || new Error('فشل الاتصال بـ GitHub بعد عدة محاولات');
+}
+
 async function getSha(env, path) {
   try {
-    const r = await ghRequest(env, path);
-    if (r.ok) { const d = await r.json(); return d.sha; }
+    const { res, data } = await ghRequestJson(env, path, {}, 2);
+    if (res.ok) return data.sha;
   } catch (e) {}
   return null;
 }
@@ -170,12 +208,11 @@ async function putJSONFile(env, path, dataObj, commitMessage) {
   const content = utf8ToBase64(JSON.stringify(dataObj, null, 2));
   const body = { message: commitMessage, content, branch: env.GH_BRANCH };
   if (sha) body.sha = sha;
-  const res = await ghRequest(env, path, {
+  const { res, data } = await ghRequestJson(env, path, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
-  });
-  const data = await res.json();
+  }, 3);
   if (!res.ok) throw new Error(data.message || 'فشل الكتابة على GitHub');
   return data;
 }
@@ -186,12 +223,11 @@ async function putTextFile(env, path, textContent, commitMessage) {
   const content = utf8ToBase64(textContent);
   const body = { message: commitMessage, content, branch: env.GH_BRANCH };
   if (sha) body.sha = sha;
-  const res = await ghRequest(env, path, {
+  const { res, data } = await ghRequestJson(env, path, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
-  });
-  const data = await res.json();
+  }, 3);
   if (!res.ok) throw new Error(data.message || 'فشل الكتابة على GitHub');
   return data;
 }
@@ -202,12 +238,11 @@ async function putTextFile(env, path, textContent, commitMessage) {
 async function deleteFile(env, path, commitMessage) {
   const sha = await getSha(env, path);
   if (!sha) return { skipped: true };
-  const res = await ghRequest(env, path, {
+  const { res, data } = await ghRequestJson(env, path, {
     method: 'DELETE',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ message: commitMessage, sha, branch: env.GH_BRANCH })
-  });
-  const data = await res.json();
+  }, 3);
   if (!res.ok) throw new Error(data.message || 'فشل حذف الملف');
   return { skipped: false };
 }
@@ -325,7 +360,7 @@ export default {
         const finalName = `work_${ts}.${ext}`;
         const path = `works/${finalName}`;
 
-        const res = await ghRequest(env, path, {
+        const { res, data } = await ghRequestJson(env, path, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -333,8 +368,7 @@ export default {
             content: base64,
             branch: env.GH_BRANCH
           })
-        });
-        const data = await res.json();
+        }, 3);
         if (!res.ok) throw new Error(data.message || 'فشل رفع الصورة');
 
         return json({ ok: true, url: `https://salfordkw.shop/${path}` }, 200, origin);
@@ -352,7 +386,7 @@ export default {
         if (!safeExt || !safeName) return json({ error: 'اسم أو نوع ملف غير مسموح' }, 400, origin);
 
         const path = `${folder}/${filename}`;
-        const res2 = await ghRequest(env, path, {
+        const { res: res2, data: data2 } = await ghRequestJson(env, path, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -360,8 +394,7 @@ export default {
             content: base64,
             branch: env.GH_BRANCH
           })
-        });
-        const data2 = await res2.json();
+        }, 3);
         if (!res2.ok) throw new Error(data2.message || 'فشل رفع الملف');
 
         return json({ ok: true, url: `https://salfordkw.shop/${path}` }, 200, origin);
@@ -523,16 +556,22 @@ export default {
           if (item.type === 'rename') {
             const newPath = `products/${item.newName}`;
             try {
-              const getRes = await ghRequest(env, oldPath);
-              if (!getRes.ok) {
-                if (getRes.status === 404) {
-                  results.renamed.push({ old: item.oldName, new: item.newName, skipped: true });
-                  continue;
+              let getData;
+              try {
+                const { res: getRes, data } = await ghRequestJson(env, oldPath, {}, 3);
+                if (!getRes.ok) {
+                  if (getRes.status === 404) {
+                    results.renamed.push({ old: item.oldName, new: item.newName, skipped: true });
+                    continue;
+                  }
+                  throw new Error('تعذر قراءة الملف القديم: ' + item.oldName);
                 }
-                throw new Error('تعذر قراءة الملف القديم: ' + item.oldName);
+                getData = data;
+              } catch (readErr) {
+                throw readErr;
               }
-              const getData = await getRes.json();
-              const putRes = await ghRequest(env, newPath, {
+
+              const { res: putRes, data: putData } = await ghRequestJson(env, newPath, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -540,8 +579,7 @@ export default {
                   content: getData.content,
                   branch: env.GH_BRANCH
                 })
-              });
-              const putData = await putRes.json();
+              }, 3);
               if (!putRes.ok) throw new Error(putData.message || 'فشل إنشاء الملف بالاسم الصحيح');
 
               await deleteFile(env, oldPath, `حذف الاسم المشوّه بعد التصحيح: ${item.oldName}`);
@@ -575,4 +613,3 @@ export default {
     }
   }
 };
-
