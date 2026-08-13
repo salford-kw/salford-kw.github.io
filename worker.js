@@ -12,6 +12,32 @@ const ALLOWED_ORIGINS = [
 
 const ALLOWED_CATALOG_SECTIONS = ['sajjad', 'majalis', 'athath', 'sataer'];
 
+// 🆕 مُعرّف صفحة كتالوج دائم (slug) بدل رقم الموضع القديم — يمنع تزحزح
+// الروابط عند حذف/إعادة ترتيب منتجات (راجع migration: catalog url slugs).
+// نسمح فقط بحروف عربية/إنجليزية وأرقام وشرطة، بلا نقطتين متتاليتين ولا
+// شرطة مائلة، لمنع أي محاولة path traversal عبر واجهة الكتابة على GitHub.
+const SLUG_RE = /^[a-zA-Z0-9\u0600-\u06FF-]{1,120}$/;
+function sanitizeSlug(slug) {
+  if (typeof slug !== 'string') return null;
+  const s = slug.trim();
+  if (!s || s.includes('..') || s.includes('/') || s.includes('\\')) return null;
+  if (!SLUG_RE.test(s)) return null;
+  return s;
+}
+
+// يبني اسم صفحة الكتالوج من slug (الطريقة الدائمة الجديدة) أو، إن ما توفر
+// slug، من رقم موضع قديم (الطريقة السابقة — للتوافق أثناء فترة الانتقال
+// فقط، يُفترض إزالتها بعد ما تكتمل الهجرة بكل ملفات admin.html/add.html).
+function resolvePageIdentifier(payload) {
+  const slug = sanitizeSlug(payload && payload.slug);
+  if (slug) return { ok: true, idStr: slug };
+  const idxNum = Number(payload && payload.index);
+  if (Number.isInteger(idxNum) && idxNum >= 1) {
+    return { ok: true, idStr: String(idxNum).padStart(2, '0') };
+  }
+  return { ok: false };
+}
+
 // 🗂️ قائمة ثابتة (one-time cleanup) لتصحيح أسماء صور قديمة اتخزنت بمجلد
 // products/ بصيغة مشوّهة "#Uxxxx" بدل الحرف العربي الفعلي (بقايا خلل قديم
 // بأداة رفع/تسمية سابقة). الروابط بكل صفحات الموقع (products.json، صفحات
@@ -351,49 +377,48 @@ export default {
         return json({ ok: true }, 200, origin);
       }
 
-      // إنشاء/تحديث صفحة كتالوج ثابتة لمنتج (catalog/{section}-{index}.html)
+      // إنشاء/تحديث صفحة كتالوج ثابتة لمنتج (catalog/{section}-{slug}.html)
       if (url.pathname === '/api/publish-catalog-page') {
-        const { section, index, html } = payload;
+        const { section, html } = payload;
 
         if (typeof section !== 'string' || !ALLOWED_CATALOG_SECTIONS.includes(section)) {
           return json({ error: 'قسم غير مسموح' }, 400, origin);
         }
 
-        const idxNum = Number(index);
-        if (!Number.isInteger(idxNum) || idxNum < 1) {
-          return json({ error: 'رقم الصفحة غير صالح' }, 400, origin);
+        const idRes = resolvePageIdentifier(payload);
+        if (!idRes.ok) {
+          return json({ error: 'مُعرّف الصفحة (slug) غير صالح' }, 400, origin);
         }
+        const idStr = idRes.idStr;
 
         if (typeof html !== 'string' || html.trim().length === 0) {
           return json({ error: 'محتوى الصفحة فارغ' }, 400, origin);
         }
 
-        const idxStr = String(idxNum).padStart(2, '0');
-        const path = `catalog/${section}-${idxStr}.html`;
+        const path = `catalog/${section}-${idStr}.html`;
 
-        await putTextFile(env, path, html, `نشر صفحة كتالوج: ${section}-${idxStr}`);
+        await putTextFile(env, path, html, `نشر صفحة كتالوج: ${section}-${idStr}`);
         return json({ ok: true, path, url: `https://salfordkw.shop/${path}` }, 200, origin);
       }
 
-      // حذف صفحة كتالوج ثابتة (catalog/{section}-{index}.html) — تُستخدم عند
+      // حذف صفحة كتالوج ثابتة (catalog/{section}-{slug}.html) — تُستخدم عند
       // حذف منتج من لوحة admin.html. آمن حتى لو الصفحة غير موجودة أصلاً
       // (يرجع ok:true مع skipped:true بدل ما يفشل).
       if (url.pathname === '/api/delete-catalog-page') {
-        const { section, index } = payload;
+        const { section } = payload;
 
         if (typeof section !== 'string' || !ALLOWED_CATALOG_SECTIONS.includes(section)) {
           return json({ error: 'قسم غير مسموح' }, 400, origin);
         }
 
-        const idxNum = Number(index);
-        if (!Number.isInteger(idxNum) || idxNum < 1) {
-          return json({ error: 'رقم الصفحة غير صالح' }, 400, origin);
+        const idRes = resolvePageIdentifier(payload);
+        if (!idRes.ok) {
+          return json({ error: 'مُعرّف الصفحة (slug) غير صالح' }, 400, origin);
         }
+        const idStr = idRes.idStr;
+        const path = `catalog/${section}-${idStr}.html`;
 
-        const idxStr = String(idxNum).padStart(2, '0');
-        const path = `catalog/${section}-${idxStr}.html`;
-
-        const result = await deleteFile(env, path, `حذف صفحة كتالوج: ${section}-${idxStr}`);
+        const result = await deleteFile(env, path, `حذف صفحة كتالوج: ${section}-${idStr}`);
         return json({ ok: true, path, skipped: result.skipped }, 200, origin);
       }
 
@@ -427,36 +452,38 @@ export default {
         // الحذف أولاً: لو توقف التنفيذ بالمنتصف (تجاوز حد الطلبات الفرعية،
         // بطء الشبكة، إلخ) نضمن ما تبقى صفحات يتيمة على الأقل — أهم من
         // إعادة كتابة صفحات موجودة وشغّالة أصلاً.
+        // 🆕 كل عنصر بـ deletes الآن إما نص slug مباشرة أو object {slug} —
+        // بديل عن رقم الموضع القديم (يبقى مدعوم كـ fallback رقمي أثناء الانتقال).
         for (const d of deleteList) {
-          const idxNum = Number(d);
-          if (!Number.isInteger(idxNum) || idxNum < 1) {
-            results.deleteErrors.push({ index: d, error: 'رقم غير صالح' });
+          const idRes = resolvePageIdentifier(typeof d === 'object' && d !== null ? d : { slug: d });
+          if (!idRes.ok) {
+            results.deleteErrors.push({ item: d, error: 'مُعرّف غير صالح' });
             continue;
           }
-          const idxStr = String(idxNum).padStart(2, '0');
-          const path = `catalog/${section}-${idxStr}.html`;
+          const idStr = idRes.idStr;
+          const path = `catalog/${section}-${idStr}.html`;
           try {
-            const r = await deleteFile(env, path, `حذف صفحة كتالوج: ${section}-${idxStr}`);
-            results.deleted.push({ index: idxNum, skipped: r.skipped });
+            const r = await deleteFile(env, path, `حذف صفحة كتالوج: ${section}-${idStr}`);
+            results.deleted.push({ id: idStr, skipped: r.skipped });
           } catch (e) {
-            results.deleteErrors.push({ index: idxNum, error: e.message || 'فشل الحذف' });
+            results.deleteErrors.push({ item: idStr, error: e.message || 'فشل الحذف' });
           }
         }
 
         for (const w of writeList) {
-          const idxNum = Number(w && w.index);
           const html = w && w.html;
-          if (!Number.isInteger(idxNum) || idxNum < 1 || typeof html !== 'string' || html.trim().length === 0) {
-            results.writeErrors.push({ index: w && w.index, error: 'بيانات صفحة غير صالحة' });
+          const idRes = resolvePageIdentifier(w || {});
+          if (!idRes.ok || typeof html !== 'string' || html.trim().length === 0) {
+            results.writeErrors.push({ item: w && (w.slug || w.index), error: 'بيانات صفحة غير صالحة' });
             continue;
           }
-          const idxStr = String(idxNum).padStart(2, '0');
-          const path = `catalog/${section}-${idxStr}.html`;
+          const idStr = idRes.idStr;
+          const path = `catalog/${section}-${idStr}.html`;
           try {
-            await putTextFile(env, path, html, `إعادة بناء صفحة كتالوج: ${section}-${idxStr}`);
-            results.written.push(idxNum);
+            await putTextFile(env, path, html, `إعادة بناء صفحة كتالوج: ${section}-${idStr}`);
+            results.written.push(idStr);
           } catch (e) {
-            results.writeErrors.push({ index: idxNum, error: e.message || 'فشل الكتابة' });
+            results.writeErrors.push({ item: idStr, error: e.message || 'فشل الكتابة' });
           }
         }
 
@@ -548,3 +575,4 @@ export default {
     }
   }
 };
+
