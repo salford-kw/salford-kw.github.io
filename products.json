@@ -1351,7 +1351,8 @@
         "https://salfordkw.shop/products/product_1786222400219_p6k27-large.webp"
       ],
       "installDate": "2026-08-09",
-      "slug": "تفصيل-ديكور-وطاولات-واستقبال"
+      "slug": "تفصيل-ديكور-وطاولات-واستقبال",
+      "sub": "console-tawlat"
     },
     {
       "id": "prod_1786222504030_33lg3",
@@ -1371,7 +1372,8 @@
         "https://salfordkw.shop/products/product_1786222501648_48pic-large.webp"
       ],
       "installDate": "2026-08-09",
-      "slug": "كونسول-مودرن-وعصري-الكويت"
+      "slug": "كونسول-مودرن-وعصري-الكويت",
+      "sub": "console-tawlat"
     },
     {
       "id": "prod_1786222598491_ggp9e",
@@ -1389,7 +1391,8 @@
         "https://salfordkw.shop/products/product_1786222596039_lanw8-large.webp"
       ],
       "installDate": "2026-08-09",
-      "slug": "كونسول-مودرن-حديث"
+      "slug": "كونسول-مودرن-حديث",
+      "sub": "console-tawlat"
     },
     {
       "id": "prod_1786222682608_yzs44",
@@ -1411,7 +1414,8 @@
         "https://salfordkw.shop/products/product_1786222680681_1xw36-large.webp"
       ],
       "installDate": "2026-08-09",
-      "slug": "كونسول-استقبال"
+      "slug": "كونسول-استقبال",
+      "sub": "console-tawlat"
     },
     {
       "id": "prod_1786222780033_ptl2h",
@@ -1437,7 +1441,8 @@
         "https://salfordkw.shop/products/product_1786222777917_uypdw-large.webp"
       ],
       "installDate": "2026-08-09",
-      "slug": "كونسول-استقبال-سلوى"
+      "slug": "كونسول-استقبال-سلوى",
+      "sub": "console-tawlat"
     },
     {
       "id": "prod_1786222889595_0c99y",
@@ -1503,7 +1508,7 @@
     {
       "id": "prod_1786385462275_okvzb",
       "code": "طاولات ديوانية",
-      "sub": "",
+      "sub": "console-tawlat",
       "area": "البدع",
       "desc": "طاولات خشب زان للديوانية \nتفصيل يدوي \nحفر على الخشب",
       "img": "https://salfordkw.shop/products/product_1786385445857_eo88c-small.webp",
@@ -1555,7 +1560,7 @@
     {
       "id": "prod_1786385711576_cnti9",
       "code": "تفصيل طاولة مودرن لصالة استقبال",
-      "sub": "",
+      "sub": "console-tawlat",
       "area": "حطين",
       "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
       "img": "https://salfordkw.shop/products/product_1786385692707_fwm3t-small.webp",
@@ -1583,7 +1588,7 @@
     {
       "id": "prod_1786385913292_usgsi",
       "code": "تفصيل ديكور كامل منزل كونسول و ديكور شاشة و استقبال",
-      "sub": "",
+      "sub": "console-tawlat",
       "area": "كيفان",
       "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
       "img": "https://salfordkw.shop/products/product_1786385890158_hi697-small.webp",
@@ -1615,7 +1620,7 @@
     {
       "id": "prod_1786388855402_h3i7l",
       "code": "كونسول مودرن مع قنفه",
-      "sub": "",
+      "sub": "console-tawlat",
       "area": "السلام",
       "desc": "منتج جديد من سالفورد للأثاث والمفروشات",
       "img": "https://salfordkw.shop/products/product_1786388845286_ujxsu-small.webp",
