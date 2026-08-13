@@ -68,7 +68,7 @@
   
   <url>
     <loc>https://salfordkw.shop/majalis.html</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -1051,7 +1051,7 @@
   
   <url>
     <loc>https://salfordkw.shop/masanid-khashab-dekor-kuwait.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1062,6 +1062,15 @@
     </image:image>
     <image:image>
       <image:loc>https://salfordkw.shop/products/product_1786223136273_wo1qm.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/tafseel-masanid-kuwait.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786197241858_htow3.webp</image:loc>
     </image:image>
   </url>
   
