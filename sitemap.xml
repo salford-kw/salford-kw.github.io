@@ -1765,7 +1765,16 @@
       <image:loc>https://salfordkw.shop/products/product_1786646580976_glybt-small.webp</image:loc>
     </image:image>
   </url>
-<url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/sajjad-سجاد-قص-ساده.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786647566359_4iurz-small.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://salfordkw.shop/catalog/majalis-مساند-ظهر-3.html</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -1774,16 +1783,7 @@
       <image:loc>https://salfordkw.shop/products/product_1786648849610_euckp-small.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://salfordkw.shop/catalog/majalis-مساند-ضهر-اسفنج-البغلي.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <image:image>
-      <image:loc>https://salfordkw.shop/products/product_1786673114474_fdotk-small.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
+<url>
     <loc>https://salfordkw.shop/catalog/majalis-مساند-سدو-ظهر.html</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -1811,12 +1811,12 @@
     </image:image>
   </url>
   <url>
-    <loc>https://salfordkw.shop/catalog/sajjad-سجاد-قص-ساده.html</loc>
+    <loc>https://salfordkw.shop/catalog/majalis-مساند-ضهر-اسفنج-البغلي.html</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <image:image>
-      <image:loc>https://salfordkw.shop/products/product_1786647566359_4iurz-small.webp</image:loc>
+      <image:loc>https://salfordkw.shop/products/product_1786673114474_fdotk-small.webp</image:loc>
     </image:image>
   </url>
 </urlset>
