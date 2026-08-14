@@ -621,6 +621,32 @@
       "price": "13",
       "unit": "م",
       "installDate": "2026-08-13"
+    },
+    {
+      "id": "prod_1786723979086_mloom",
+      "code": "سجاد ممرات صالة سعودي",
+      "slug": "سجاد-ممرات-صالة-سعودي",
+      "sub": "saada",
+      "area": "مشرف",
+      "desc": "سجاد سعودي لل ممرات الصالة الدرج \nمع نهاية سجاد ذهبي",
+      "img": "https://salfordkw.shop/products/product_1786723964224_540t1-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786723964224_540t1-small.webp",
+        "https://salfordkw.shop/products/product_1786723968190_gt24s-small.webp",
+        "https://salfordkw.shop/products/product_1786723971597_2fysy-small.webp",
+        "https://salfordkw.shop/products/product_1786723974962_hl6f3-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786723964224_540t1-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786723964224_540t1-large.webp",
+        "https://salfordkw.shop/products/product_1786723968190_gt24s-large.webp",
+        "https://salfordkw.shop/products/product_1786723971597_2fysy-large.webp",
+        "https://salfordkw.shop/products/product_1786723974962_hl6f3-large.webp"
+      ],
+      "video": "",
+      "price": "5",
+      "unit": "م",
+      "installDate": "2026-08-14"
     }
   ],
   "majalis": [
