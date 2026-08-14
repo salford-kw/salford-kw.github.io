@@ -542,8 +542,10 @@ function buildSalfordOffers(p, offerUrl){
 
 // خريطة الأقسام الفرعية لهذي الصفحة فقط (مطابقة لخريطة add.html — القيمة المخزَّنة بحقل sub)
 const SUBSECTIONS = {
-  saada:   { label: 'سجاد ساده',  page: null },
-  mashjar: { label: 'سجاد مشجر',  page: '/sajjad-mashjar-kuwait.html' }
+  saada:   { label: 'سجاد ساده',        page: null },
+  mashjar: { label: 'سجاد مشجر',        page: '/sajjad-mashjar-kuwait.html' },
+  hafr:    { label: 'سجاد حفر يدوي',    page: null },
+  mokeet:  { label: 'موكيت تركي',       page: '/afdal-mokeet-kuwait.html' }
 };
 
 function productCardHTML(p, idx) {

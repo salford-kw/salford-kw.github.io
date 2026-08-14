@@ -15,7 +15,8 @@
       ],
       "installDate": "2026-08-12",
       "id": "prod_1786575592499_lqqsm",
-      "slug": "سجاد-تركي-كود-01"
+      "slug": "سجاد-تركي-كود-01",
+      "sub": "saada"
     },
     {
       "code": "سجاد تركي كود 02",
@@ -32,7 +33,8 @@
       ],
       "installDate": "2026-08-12",
       "id": "prod_1786575592500_waa5z",
-      "slug": "سجاد-تركي-كود-02"
+      "slug": "سجاد-تركي-كود-02",
+      "sub": "saada"
     },
     {
       "code": "سجاد تركي كود 03",
@@ -49,7 +51,8 @@
       ],
       "installDate": "2026-08-12",
       "id": "prod_1786575592501_68c24",
-      "slug": "سجاد-تركي-كود-03"
+      "slug": "سجاد-تركي-كود-03",
+      "sub": "saada"
     },
     {
       "code": "سجاد تركي كود 04",
@@ -66,7 +69,8 @@
       ],
       "installDate": "2026-08-12",
       "id": "prod_1786575592502_eos3k",
-      "slug": "سجاد-تركي-كود-04"
+      "slug": "سجاد-تركي-كود-04",
+      "sub": "saada"
     },
     {
       "code": "سجاد تركي كود 05",
@@ -100,7 +104,8 @@
       ],
       "installDate": "2026-08-12",
       "id": "prod_1786575592504_054m0",
-      "slug": "سجاد-تركي-كود-06"
+      "slug": "سجاد-تركي-كود-06",
+      "sub": "saada"
     },
     {
       "code": "سجاد تركي كود 07",
@@ -117,7 +122,8 @@
       ],
       "installDate": "2026-08-12",
       "id": "prod_1786575592505_osu96",
-      "slug": "سجاد-تركي-كود-07"
+      "slug": "سجاد-تركي-كود-07",
+      "sub": "saada"
     },
     {
       "code": "موكيت تركي كود 01",
@@ -134,7 +140,8 @@
       ],
       "installDate": "2026-08-12",
       "id": "prod_1786575592506_iaiaj",
-      "slug": "موكيت-تركي-كود-01"
+      "slug": "موكيت-تركي-كود-01",
+      "sub": "mokeet"
     },
     {
       "code": "موكيت تركي كود 02",
@@ -151,7 +158,8 @@
       ],
       "installDate": "2026-08-12",
       "id": "prod_1786575592507_0sn2b",
-      "slug": "موكيت-تركي-كود-02"
+      "slug": "موكيت-تركي-كود-02",
+      "sub": "mokeet"
     },
     {
       "code": "موكيت تركي كود 03",
@@ -168,7 +176,8 @@
       ],
       "installDate": "2026-08-12",
       "id": "prod_1786575592508_gt0jo",
-      "slug": "موكيت-تركي-كود-03"
+      "slug": "موكيت-تركي-كود-03",
+      "sub": "mokeet"
     },
     {
       "code": "موكيت تركي كود 04",
@@ -185,7 +194,8 @@
       ],
       "installDate": "2026-08-12",
       "id": "prod_1786575592509_mq8bz",
-      "slug": "موكيت-تركي-كود-04"
+      "slug": "موكيت-تركي-كود-04",
+      "sub": "mokeet"
     },
     {
       "code": "موكيت تركي كود 05",
@@ -202,7 +212,8 @@
       ],
       "installDate": "2026-08-12",
       "id": "prod_1786575592510_sih0c",
-      "slug": "موكيت-تركي-كود-05"
+      "slug": "موكيت-تركي-كود-05",
+      "sub": "mokeet"
     },
     {
       "id": "prod_1786197425428_22sfv",
@@ -220,7 +231,8 @@
         "https://salfordkw.shop/products/product_1786197423291_fvwuq-large.webp"
       ],
       "installDate": "2026-08-12",
-      "slug": "سجاد-حفر-نقشة-الرابية"
+      "slug": "سجاد-حفر-نقشة-الرابية",
+      "sub": "hafr"
     },
     {
       "id": "prod_1786197502343_h34wi",
@@ -238,7 +250,8 @@
         "https://salfordkw.shop/products/product_1786197500181_ttjzo-large.webp"
       ],
       "installDate": "2026-08-12",
-      "slug": "نقشة-حفر-يدوي"
+      "slug": "نقشة-حفر-يدوي",
+      "sub": "hafr"
     },
     {
       "id": "prod_1786199582356_tpnin",
@@ -258,7 +271,8 @@
         "https://salfordkw.shop/products/product_1786199580350_x5565-large.webp"
       ],
       "installDate": "2026-08-12",
-      "slug": "سجاد-حفر-يدوي-الكويت"
+      "slug": "سجاد-حفر-يدوي-الكويت",
+      "sub": "hafr"
     },
     {
       "id": "prod_1786220673226_g7xeh",
@@ -276,7 +290,8 @@
         "https://salfordkw.shop/products/product_1786220671111_xq2vu-large.webp"
       ],
       "installDate": "2026-08-12",
-      "slug": "سجاد-تفصيل-وحفر"
+      "slug": "سجاد-تفصيل-وحفر",
+      "sub": "hafr"
     },
     {
       "id": "prod_1786221604897_80o0m",
@@ -302,7 +317,8 @@
         "https://salfordkw.shop/products/product_1786221602695_g326e-large.webp"
       ],
       "installDate": "2026-08-12",
-      "slug": "سجاد-حفر-يدوي-اطار"
+      "slug": "سجاد-حفر-يدوي-اطار",
+      "sub": "hafr"
     },
     {
       "id": "prod_1786221710359_u1f7l",
@@ -326,7 +342,8 @@
         "https://salfordkw.shop/products/product_1786221708197_idbfm-large.webp"
       ],
       "installDate": "2026-08-12",
-      "slug": "سجاد-حفر-يدوي-اطار-2"
+      "slug": "سجاد-حفر-يدوي-اطار-2",
+      "sub": "hafr"
     },
     {
       "id": "prod_1786221811641_7jzrf",
@@ -386,7 +403,8 @@
         "https://salfordkw.shop/products/product_1786221894998_3ydud-large.webp"
       ],
       "installDate": "2026-08-12",
-      "slug": "موكيت-فندقي-مودرين"
+      "slug": "موكيت-فندقي-مودرين",
+      "sub": "mashjar"
     },
     {
       "id": "prod_1786221971625_x7f5b",
@@ -480,12 +498,13 @@
         "https://salfordkw.shop/products/product_1786222311573_jkz0w-large.webp"
       ],
       "installDate": "2026-08-12",
-      "slug": "سجاد-مشجر-جملة"
+      "slug": "سجاد-مشجر-جملة",
+      "sub": "mashjar"
     },
     {
       "id": "prod_1786386099336_gi1oe",
       "code": "نقشة حفر وقص يدوي",
-      "sub": "",
+      "sub": "hafr",
       "area": "الفحيحيل",
       "desc": "نقشة قص وحفر يدوي \nسجاد تركي سماكة 30 مم",
       "img": "https://salfordkw.shop/products/product_1786386094709_lr2zp-small.webp",
@@ -505,7 +524,7 @@
     {
       "id": "prod_1786386196285_wlz6t",
       "code": "سجاد قص وحفر يدوي",
-      "sub": "",
+      "sub": "hafr",
       "area": "أبو فطيرة",
       "desc": "سجاد تركي \nنخب اول \nسماكة 28 مم",
       "img": "https://salfordkw.shop/products/product_1786386191598_l2v5p-small.webp",
@@ -525,7 +544,7 @@
     {
       "id": "prod_1786386266637_5g85a",
       "code": "سجاد صالة استقبال قص حفر يدوي",
-      "sub": "",
+      "sub": "hafr",
       "area": "الشعب",
       "desc": "سجاد تركي \nحفر يدوي \nسماكة 28",
       "img": "https://salfordkw.shop/products/product_1786386262185_ncmc0-small.webp",
@@ -545,7 +564,7 @@
     {
       "id": "prod_1786386342083_ryzob",
       "code": "سجاد حفر يدوي",
-      "sub": "",
+      "sub": "hafr",
       "area": "أبو حليفة",
       "desc": "سماكة 28 مم \nمبطنة \nالسجاد تركي ضغط",
       "img": "https://salfordkw.shop/products/product_1786386337301_90uny-small.webp",
