@@ -620,7 +620,8 @@
       "video": "",
       "price": "13",
       "unit": "م",
-      "installDate": "2026-08-13"
+      "installDate": "2026-08-13",
+      "hidden": false
     },
     {
       "id": "prod_1786723979086_mloom",
@@ -1216,7 +1217,8 @@
       "video": "",
       "price": "11",
       "unit": "م",
-      "installDate": "2026-08-14"
+      "installDate": "2026-08-14",
+      "hidden": false
     },
     {
       "id": "prod_1786723529883_9k59d",
