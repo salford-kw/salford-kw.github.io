@@ -1231,6 +1231,26 @@
       "price": "8",
       "unit": "م",
       "installDate": "2026-08-14"
+    },
+    {
+      "id": "prod_1786723738203_7uarb",
+      "code": "مساند سدو جلسة مخيم",
+      "slug": "مساند-سدو-جلسة-مخيم",
+      "sub": "jalsat-ardiya",
+      "area": "الشويخ",
+      "desc": "مساند جاهزة ضهر \nل المخيم البر الديوانيات \nالديوانية الخارجية \nاسفنج سعودي \nخام شانيل تركي",
+      "img": "https://salfordkw.shop/products/product_1786723732030_m0nv2-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786723732030_m0nv2-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786723732030_m0nv2-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786723732030_m0nv2-large.webp"
+      ],
+      "video": "",
+      "price": "8",
+      "unit": "م",
+      "installDate": "2026-08-14"
     }
   ],
   "athath": [
