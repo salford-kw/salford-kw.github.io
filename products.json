@@ -1191,6 +1191,26 @@
       "price": "11",
       "unit": "م",
       "installDate": "2026-08-14"
+    },
+    {
+      "id": "prod_1786723529883_9k59d",
+      "code": "مساند سدو ظهر",
+      "slug": "مساند-سدو-ظهر",
+      "sub": "jalsat-ardiya",
+      "area": "الرميثية",
+      "desc": "مساند سدو للبر والمخيمات \nامكانية تعديل المقاسات لتناسب مخيمك \nمساند بر \nمساند مخيم",
+      "img": "https://salfordkw.shop/products/product_1786723524737_5d130-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786723524737_5d130-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786723524737_5d130-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786723524737_5d130-large.webp"
+      ],
+      "video": "",
+      "price": "9",
+      "unit": "م",
+      "installDate": "2026-08-14"
     }
   ],
   "athath": [
