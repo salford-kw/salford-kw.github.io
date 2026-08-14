@@ -1801,4 +1801,13 @@
       <image:loc>https://salfordkw.shop/products/product_1786723524737_5d130-small.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/majalis-مساند-ضهر-سدو-للبر.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786723622292_c9vo6-small.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
