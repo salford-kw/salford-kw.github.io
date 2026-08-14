@@ -2453,6 +2453,118 @@
       "slug": "ستارة-ويفي-كتان"
     }
   ],
-  "theel": [],
-  "parquet": []
+  "theel": [
+    {
+      "id": "theel-01",
+      "code": "ثيل صناعي 6مم",
+      "price": "9",
+      "unit": "م",
+      "desc": "سماكة 6 مم — جودة عالية ومتانة ومنظر طبيعي جميل. نعومة وكثافة، مقاوم لأشعة الشمس، سهل التركيب، تصريف ممتاز للمياه. مناسب للحدائق والممرات.",
+      "img": "https://salfordkw.shop/products/theel-sinaei-01-large.webp",
+      "img_small": "https://salfordkw.shop/products/theel-sinaei-01-small.webp",
+      "featured": true,
+      "slug": "theel-sinaei-6mm"
+    },
+    {
+      "id": "theel-02",
+      "code": "ثيل صناعي — تنفيذ سطح منزل",
+      "price": "9",
+      "unit": "م",
+      "desc": "سماكة 6 مم — جودة عالية ومتانة ومنظر طبيعي جميل. نعومة وكثافة، مقاوم لأشعة الشمس، سهل التركيب، تصريف ممتاز للمياه. تنفيذ فعلي لجلسة خارجية على سطح منزل بالكويت.",
+      "img": "https://salfordkw.shop/products/theel-sinaei-02-large.webp",
+      "img_small": "https://salfordkw.shop/products/theel-sinaei-02-small.webp",
+      "featured": false,
+      "slug": "theel-sinaei-tanfeez-satih"
+    },
+    {
+      "id": "theel-03",
+      "code": "ثيل صناعي — قرب لخامة الوبرة",
+      "price": "9",
+      "unit": "م",
+      "desc": "خامة عالية الجودة بسماكة 6 مم، وبرة كثيفة ولون أخضر طبيعي يدوم مع أشعة الشمس. متانة عالية وتصريف جيد للمياه، وتركيب سهل وسريع. المتر بـ9 د.ك.",
+      "img": "https://salfordkw.shop/products/theel-sinaei-03-large.webp",
+      "img_small": "https://salfordkw.shop/products/theel-sinaei-03-small.webp",
+      "featured": false,
+      "slug": "theel-sinaei-khamah-qurb"
+    },
+    {
+      "id": "theel-04",
+      "code": "ثيل صناعي — لقطة قرب مشمسة",
+      "price": "9",
+      "unit": "م",
+      "desc": "سماكة 6مم وكثافة عالية تعطي إحساساً طبيعياً حتى تحت أشعة الشمس المباشرة. لون أخضر ثابت لا يتغيّر مع الوقت، تصريف جيد للمياه، ومتانة تتحمل الاستخدام اليومي في الحديقة أو الفناء.",
+      "img": "https://salfordkw.shop/products/theel-sinaei-04-large.webp",
+      "img_small": "https://salfordkw.shop/products/theel-sinaei-04-small.webp",
+      "featured": false,
+      "slug": "theel-sinaei-lakta-mashmisa"
+    },
+    {
+      "id": "theel-06",
+      "code": "ثيل صناعي — تفاصيل الحواف والطيّات",
+      "price": "9",
+      "unit": "م",
+      "desc": "يظهر هنا مرونة الخامة وسهولة طيّها وتركيبها دون أن تفقد وبرتها كثافتها. سماكة 6مم، خيوط متينة تدوم طويلاً، ولون أخضر طبيعي يناسب مختلف المساحات الخارجية.",
+      "img": "https://salfordkw.shop/products/theel-sinaei-06-large.webp",
+      "img_small": "https://salfordkw.shop/products/theel-sinaei-06-small.webp",
+      "featured": false,
+      "slug": "theel-sinaei-hawaf-tayyat"
+    }
+  ],
+  "parquet": [
+    {
+      "id": "parquet-01",
+      "code": "باركيه صناعي — تشكيلة ألوان متعددة",
+      "price": "9",
+      "unit": "م",
+      "desc": "باركيه صناعي بجودة عالية وسماكة قوية تتحمل الاستخدام اليومي، ومقاوم للرطوبة. تشكيلة واسعة من درجات الخشب — من الفاتح الطبيعي إلى الغامق الجوزي والرمادي المودرن — لتختار ما يناسب ديكورك.",
+      "img": "https://salfordkw.shop/products/parquet-01-large.webp",
+      "img_small": "https://salfordkw.shop/products/parquet-01-small.webp",
+      "featured": true,
+      "slug": "parquet-tashkila-alwan"
+    },
+    {
+      "id": "parquet-02",
+      "code": "باركيه صناعي — درجات خشبية متنوعة",
+      "price": "9",
+      "unit": "م",
+      "desc": "خامة باركيه صناعي عالية الجودة وسميكة تدوم طويلاً مع الاستخدام اليومي، ومقاومة للرطوبة تناسب مختلف أجواء المنزل. درجات خشبية متنوعة من الفاتح إلى الغامق ضمن الدفعة الواحدة.",
+      "img": "https://salfordkw.shop/products/parquet-02-large.webp",
+      "img_small": "https://salfordkw.shop/products/parquet-02-small.webp",
+      "featured": false,
+      "slug": "parquet-darajat-khashabiya"
+    },
+    {
+      "id": "parquet-03",
+      "code": "باركيه صناعي — تشكيلة فاخرة من الدرجات",
+      "price": "9",
+      "unit": "م",
+      "desc": "تشكيلة فاخرة من ألوان الباركيه الصناعي بجودة عالية وسماكة تتحمل الاستخدام المكثف، مقاومة للرطوبة ومناسبة للصالات وغرف النوم. اختر من عشرات الدرجات الخشبية الفاتحة والغامقة.",
+      "img": "https://salfordkw.shop/products/parquet-03-large.webp",
+      "img_small": "https://salfordkw.shop/products/parquet-03-small.webp",
+      "featured": false,
+      "slug": "parquet-tashkila-fakhira"
+    },
+    {
+      "id": "parquet-04",
+      "code": "باركيه صناعي — تنفيذ فعلي لصالة مضيئة",
+      "price": "9",
+      "unit": "م",
+      "desc": "تركيب باركيه صناعي فعلي في صالة واسعة — سماكة قوية ومقاومة للرطوبة تجعله خياراً عملياً للاستخدام اليومي، مع منظر خشبي طبيعي يبرز جمال الإضاءة الطبيعية في المكان.",
+      "img": "https://salfordkw.shop/products/parquet-04-large.webp",
+      "img_small": "https://salfordkw.shop/products/parquet-04-small.webp",
+      "featured": false,
+      "slug": "parquet-tanfeez-sala"
+    },
+    {
+      "id": "parquet-05",
+      "code": "باركيه صناعي — دقة التفصيل عند الحواف",
+      "price": "9",
+      "unit": "م",
+      "desc": "لقطة قريبة تُظهر دقة تركيب الباركيه الصناعي عند حواف الجدران، بجودة عالية وسماكة متينة ومقاومة للرطوبة. تفاصيل الخشب الطبيعية واضحة حتى في المسافات الضيقة والزوايا.",
+      "img": "https://salfordkw.shop/products/parquet-05-large.webp",
+      "img_small": "https://salfordkw.shop/products/parquet-05-small.webp",
+      "featured": false,
+      "slug": "parquet-diqqat-tafseel"
+    }
+  ]
 }
