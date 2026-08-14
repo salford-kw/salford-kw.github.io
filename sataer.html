@@ -469,6 +469,7 @@ function buildSalfordOffers(p, offerUrl){
     // 🆕 صلاحية السعر 5 سنوات تُحسب وقت العرض — لا تنتهي أبداً ولا تحذير نقص حقل
     const _pv = new Date(); _pv.setFullYear(_pv.getFullYear() + 5);
     o.priceValidUntil = _pv.toISOString().slice(0, 10);
+    o.validFrom = (p.installDate || new Date().toISOString().slice(0,10));
     o.itemCondition = "https://schema.org/NewCondition";
     if (offerUrl) o.url = offerUrl;
     o.hasMerchantReturnPolicy = {"@type":"MerchantReturnPolicy","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted","applicableCountry":"KW","note":"منتجات مخصصة حسب الطلب لا يشملها الاسترجاع النقدي — يشمل الضمان (3 أشهر) إصلاح أو استبدال أي جزء فيه عيب تصنيع فقط."};
