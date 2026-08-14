@@ -1211,6 +1211,26 @@
       "price": "9",
       "unit": "م",
       "installDate": "2026-08-14"
+    },
+    {
+      "id": "prod_1786723629081_obsfn",
+      "code": "مساند ضهر سدو للبر",
+      "slug": "مساند-ضهر-سدو-للبر",
+      "sub": "jalsat-ardiya",
+      "area": "خيطان",
+      "desc": "مساند ظهر للبر و المخيم والديوانيات \nالخام شانيل تركي \nالاسفنج سعودي",
+      "img": "https://salfordkw.shop/products/product_1786723622292_c9vo6-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786723622292_c9vo6-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786723622292_c9vo6-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786723622292_c9vo6-large.webp"
+      ],
+      "video": "",
+      "price": "8",
+      "unit": "م",
+      "installDate": "2026-08-14"
     }
   ],
   "athath": [
