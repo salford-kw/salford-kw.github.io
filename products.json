@@ -1463,6 +1463,26 @@
       "price": "11",
       "unit": "م",
       "installDate": "2026-08-15"
+    },
+    {
+      "id": "prod_1786817388045_uhlid",
+      "code": "مساند ظهر اسفنج البغلي",
+      "slug": "مساند-ظهر-اسفنج-البغلي-2",
+      "sub": "",
+      "area": "العديلية",
+      "desc": "الاسفنج البغلي \nالخام شانيل تركي \nالخام ضد السوائل",
+      "img": "https://salfordkw.shop/products/product_1786817384476_fzysc-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786817384476_fzysc-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786817384476_fzysc-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786817384476_fzysc-large.webp"
+      ],
+      "video": "",
+      "price": "11",
+      "unit": "م",
+      "installDate": "2026-08-15"
     }
   ],
   "athath": [
