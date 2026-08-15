@@ -648,6 +648,28 @@
       "price": "5",
       "unit": "م",
       "installDate": "2026-08-14"
+    },
+    {
+      "id": "prod_1786753233857_m3tic",
+      "code": "سجاد ساده بيج",
+      "slug": "سجاد-ساده-بيج",
+      "sub": "saada",
+      "area": "بيان",
+      "desc": "سجاد تركي ساده \nسماكه : 22 مم \nضغط : 20 \nكثافة عالية \nمع التركيب من قبل ورشتنا المختصة",
+      "img": "https://salfordkw.shop/products/product_1786753221191_8ewoq-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786753221191_8ewoq-small.webp",
+        "https://salfordkw.shop/products/product_1786753226801_9lbz9-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786753221191_8ewoq-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786753221191_8ewoq-large.webp",
+        "https://salfordkw.shop/products/product_1786753226801_9lbz9-large.webp"
+      ],
+      "video": "",
+      "price": "11",
+      "unit": "م",
+      "installDate": "2026-08-15"
     }
   ],
   "majalis": [
