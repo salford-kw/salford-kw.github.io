@@ -742,6 +742,30 @@
       "price": "10",
       "unit": "م",
       "installDate": "2026-08-11"
+    },
+    {
+      "id": "prod_1786754049069_6mj6w",
+      "code": "سجاد ساده",
+      "slug": "سجاد-ساده",
+      "sub": "saada",
+      "area": "سعد العبدالله",
+      "desc": "النوع : سجاد ساده \nالسماكة : 16 مم\nضغط الخيط : 18\nبلد الصنع : تركيا\nمنطقة التركيب : الكويت - سعد العبدالله \nتركيب ورشتنا \nمع نهاية سجاد حديد",
+      "img": "https://salfordkw.shop/products/product_1786754037274_v3tp4-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786754037274_v3tp4-small.webp",
+        "https://salfordkw.shop/products/product_1786754041587_69nai-small.webp",
+        "https://salfordkw.shop/products/product_1786754045265_7felb-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786754037274_v3tp4-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786754037274_v3tp4-large.webp",
+        "https://salfordkw.shop/products/product_1786754041587_69nai-large.webp",
+        "https://salfordkw.shop/products/product_1786754045265_7felb-large.webp"
+      ],
+      "video": "",
+      "price": "9",
+      "unit": "م",
+      "installDate": "2026-08-05"
     }
   ],
   "majalis": [
