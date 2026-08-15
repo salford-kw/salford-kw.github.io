@@ -1443,6 +1443,26 @@
       "price": "8",
       "unit": "م",
       "installDate": "2026-08-14"
+    },
+    {
+      "id": "prod_1786817243416_ippvr",
+      "code": "مساند ظهر",
+      "slug": "مساند-ظهر-4",
+      "sub": "",
+      "area": "الأندلس",
+      "desc": "مساند ظهر \nاسفنج البغلي \nخام شانيل تركي",
+      "img": "https://salfordkw.shop/products/product_1786817239235_9m3oz-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786817239235_9m3oz-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786817239235_9m3oz-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786817239235_9m3oz-large.webp"
+      ],
+      "video": "",
+      "price": "11",
+      "unit": "م",
+      "installDate": "2026-08-15"
     }
   ],
   "athath": [
