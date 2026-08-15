@@ -692,6 +692,30 @@
       "price": "9",
       "unit": "م",
       "installDate": "2026-08-15"
+    },
+    {
+      "id": "prod_1786753544134_j2c1i",
+      "code": "سجاد مشجر للممر",
+      "slug": "سجاد-مشجر-للممر",
+      "sub": "mashjar",
+      "area": "الدسمة",
+      "desc": "النوع : سجاد مشجر ممر\nالسماكة : 16 مم\nضغط الخيط : 15\nبلد الصنع : تركيا\nمنطقة التركيب : الدسمة \nتركيب ورشتنا المختصة",
+      "img": "https://salfordkw.shop/products/product_1786753524833_4q5so-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786753524833_4q5so-small.webp",
+        "https://salfordkw.shop/products/product_1786753531675_osy9h-small.webp",
+        "https://salfordkw.shop/products/product_1786753537126_ekafh-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786753524833_4q5so-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786753524833_4q5so-large.webp",
+        "https://salfordkw.shop/products/product_1786753531675_osy9h-large.webp",
+        "https://salfordkw.shop/products/product_1786753537126_ekafh-large.webp"
+      ],
+      "video": "",
+      "price": "10",
+      "unit": "م",
+      "installDate": "2026-08-15"
     }
   ],
   "majalis": [
