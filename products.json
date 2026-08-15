@@ -766,6 +766,30 @@
       "price": "9",
       "unit": "م",
       "installDate": "2026-08-05"
+    },
+    {
+      "id": "prod_1786754193416_tshly",
+      "code": "سجاد ساده قص",
+      "slug": "سجاد-ساده-قص",
+      "sub": "saada",
+      "area": "الرحاب",
+      "desc": "النوع : سجاد قص ساده\nالسماكة : 16 مم\nضغط الخيط : 18\nبلد الصنع : تركي \nمنطقة التركيب : الكويت - الرحاب\nالسعر المعروض لمتر السجاد لايشمل القص والحفر",
+      "img": "https://salfordkw.shop/products/product_1786754182512_8hxey-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786754182512_8hxey-small.webp",
+        "https://salfordkw.shop/products/product_1786754186720_1b6qf-small.webp",
+        "https://salfordkw.shop/products/product_1786754190241_5cco1-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786754182512_8hxey-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786754182512_8hxey-large.webp",
+        "https://salfordkw.shop/products/product_1786754186720_1b6qf-large.webp",
+        "https://salfordkw.shop/products/product_1786754190241_5cco1-large.webp"
+      ],
+      "video": "",
+      "price": "10",
+      "unit": "م",
+      "installDate": "2026-08-01"
     }
   ],
   "majalis": [
