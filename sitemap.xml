@@ -1874,4 +1874,13 @@
       <image:loc>https://salfordkw.shop/products/product_1786753343702_p7fbx-small.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/sajjad-سجاد-مشجر-للممر.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786753524833_4q5so-small.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
