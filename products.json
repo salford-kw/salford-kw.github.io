@@ -716,6 +716,32 @@
       "price": "10",
       "unit": "م",
       "installDate": "2026-08-15"
+    },
+    {
+      "id": "prod_1786753856731_khhyg",
+      "code": "سجاد ساده مع حديد نهاية سجاد",
+      "slug": "سجاد-ساده-مع-حديد-نهاية-سجاد",
+      "sub": "saada",
+      "area": "الشويخ",
+      "desc": "النوع : سجاد ساده\nالسماكة : 18 مم\nضغط الخيط : 16\nبلد الصنع : تركيا\nمنطقة التركيب : الكويت - الشويخ السكنية",
+      "img": "https://salfordkw.shop/products/product_1786753833989_8ea7a-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786753833989_8ea7a-small.webp",
+        "https://salfordkw.shop/products/product_1786753838876_s7tpj-small.webp",
+        "https://salfordkw.shop/products/product_1786753845609_xl1g3-small.webp",
+        "https://salfordkw.shop/products/product_1786753851035_i78r5-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786753833989_8ea7a-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786753833989_8ea7a-large.webp",
+        "https://salfordkw.shop/products/product_1786753838876_s7tpj-large.webp",
+        "https://salfordkw.shop/products/product_1786753845609_xl1g3-large.webp",
+        "https://salfordkw.shop/products/product_1786753851035_i78r5-large.webp"
+      ],
+      "video": "",
+      "price": "10",
+      "unit": "م",
+      "installDate": "2026-08-11"
     }
   ],
   "majalis": [
