@@ -151,8 +151,8 @@ footer a{color:var(--gold-light);text-decoration:none;}
 </div>
 <p class="breadcrumb-visible"><a href="/">الرئيسية</a> ← <a href="/athath.html">أثاث وديكور</a> ← تنجيد كنب الكويت</p>
 <div class="rating-bar">
-  <span class="rating-stars">★★★★★</span>
-  <span class="rating-text">5.0 / 5</span>
+  <span class="rating-stars" id="site-rating-stars">★★★★★</span>
+  <span class="rating-text" id="site-rating-value">5.0 / 5</span>
   <span class="rating-sep">|</span>
   <span class="rating-text">+5 تقييمات موثقة</span>
 </div>
@@ -269,6 +269,133 @@ function closeLightbox(){document.getElementById('lightbox').classList.remove('a
     loadAnalyticsSystem();
   } else {
     window.addEventListener('load', loadAnalyticsSystem);
+  }
+})();
+</script>
+<!-- نظام التقييمات الحقيقي (Firebase) — تحميل مؤجَّل (Lazy Load) لحين اقتراب الزائر من قسم التقييمات، لتخفيف ضغط المعالج (main-thread) بالتحميل الأولي للصفحة -->
+<script>
+(function () {
+  let srLoaded = false;
+
+  function loadScriptTag(src) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.onload = resolve;
+      s.onerror = reject;
+      document.body.appendChild(s);
+    });
+  }
+
+  function loadReviewsSystem() {
+    if (srLoaded) return;
+    srLoaded = true;
+
+    loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js')
+      .then(() => loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js'))
+      .then(() => loadScriptTag('/reviews-widget.js'))
+      .then(() => {
+        initProductReviews('site', 'site-reviews-mount');
+
+        srSubscribe('site', reviews => {
+          // مزامنة شريط التقييم الظاهر أعلى الصفحة مع نفس بيانات Firestore المستخدمة بالـSchema (لتجنّب أي تناقض بين الرقم الظاهر والفعلي)
+          const starsEl = document.getElementById('site-rating-stars');
+          const valueEl = document.getElementById('site-rating-value');
+          const countEl = document.getElementById('site-rating-count');
+          if (reviews && reviews.length > 0) {
+            const liveAvg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
+            const rounded = Math.round(liveAvg);
+            if (starsEl) starsEl.textContent = '★★★★★'.slice(0, rounded) + '☆☆☆☆☆'.slice(0, 5 - rounded);
+            if (valueEl) valueEl.textContent = `${liveAvg.toFixed(1)} / 5`;
+            if (countEl) countEl.textContent = `+${reviews.length} تقييمات موثقة`;
+          }
+          // إذا ما فيه تقييمات بعد بـFirestore، تبقى القيم الثابتة الحالية بالـHTML كحالة احتياطية (fallback) للزوار وبوتات البحث التي لا تُنفّذ JavaScript
+
+          const schemaEl = document.getElementById('site-reviews-schema');
+          if (!reviews || reviews.length === 0) { schemaEl.textContent = ''; return; }
+          const avg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
+          const schema = {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "سالفورد للأثاث والمفروشات",
+            "brand": { "@type": "Brand", "name": "سالفورد للأثاث والمفروشات" },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": avg.toFixed(1),
+              "reviewCount": String(reviews.length),
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": reviews.slice(0, 20).map(r => ({
+              "@type": "Review",
+              "author": { "@type": "Person", "name": r.name || "عميل" },
+              "reviewRating": { "@type": "Rating", "ratingValue": String(r.rating || 5), "bestRating": "5" },
+              "reviewBody": r.comment || ""
+            }))
+          };
+          schemaEl.textContent = JSON.stringify(schema);
+        });
+      })
+      .catch(err => console.error('فشل تحميل نظام التقييمات', err));
+  }
+
+  const reviewsSection = document.querySelector('.reviews');
+  if ('IntersectionObserver' in window && reviewsSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadReviewsSystem();
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: '300px 0px' });
+    observer.observe(reviewsSection);
+  } else {
+    // دعم احتياطي للمتصفحات القديمة بلا IntersectionObserver، أو إذا لم يوجد قسم تقييمات بالصفحة
+    loadReviewsSystem();
+  }
+})();
+</script>
+
+<script>
+// ============================================================
+// تحديث معاينات الأقسام بالصفحة الرئيسية (آخر منتجين بكل قسم)
+// المحتوى الأساسي مكتوب ثابتاً بالـ HTML أعلاه (للسيو وبوتات
+// الذكاء الاصطناعي التي لا تُنفّذ JavaScript). هذا السكربت يحدّث
+// المعاينة تلقائياً من products.json عند إضافة منتجات جديدة من
+// لوحة التحكم، بدون الحاجة لتعديل هذا الملف يدوياً كل مرة.
+// ============================================================
+(async function updateHomePreviews() {
+  try {
+    const r = await fetch('/products.json?v=' + Date.now());
+    if (!r.ok) return;
+    const data = await r.json();
+
+    const sections = [
+      { key: 'sajjad', gridId: 'preview-sajjad', link: '/sajjad.html' },
+      { key: 'majalis', gridId: 'preview-majalis', link: '/majalis.html' },
+      { key: 'athath', gridId: 'preview-athath', link: '/athath.html' },
+      { key: 'sataer', gridId: 'preview-sataer', link: '/sataer.html' }
+    ];
+
+    for (const sec of sections) {
+      const items = data[sec.key];
+      if (!Array.isArray(items) || items.length === 0) continue;
+      const latest = items.slice(-2).reverse();
+      if (latest.length === 0) continue;
+
+      const grid = document.getElementById(sec.gridId);
+      if (!grid) continue;
+
+      grid.innerHTML = latest.map(p => `
+        <a href="${sec.link}" class="thumb-card">
+          <div class="thumb-img-wrap"><img src="${p.img}" alt="${(p.code||'').replace(/"/g,'')} - سالفورد" loading="lazy"></div>
+          <div class="thumb-title">${p.code || ''}</div>
+        </a>
+      `).join('');
+    }
+  } catch (e) {
+    // في حال فشل الجلب، تبقى المعاينة الثابتة بالـ HTML كما هي
   }
 })();
 </script>
