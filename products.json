@@ -453,32 +453,6 @@
       "slug": "تفصيل-خاص-تحت-طاولة"
     },
     {
-      "id": "prod_1786222132213_mfcqd",
-      "code": "باركيه تركي",
-      "desc": "باركيه تركي \nجودة عالية \nاسعار مميزة",
-      "img": "https://salfordkw.shop/products/product_1786222122589_w8hs0.webp",
-      "images": [
-        "https://salfordkw.shop/products/product_1786222122589_w8hs0.webp",
-        "https://salfordkw.shop/products/product_1786222124823_gydgk.webp",
-        "https://salfordkw.shop/products/product_1786222126731_34nyf.webp",
-        "https://salfordkw.shop/products/product_1786222128090_hz4k0.webp",
-        "https://salfordkw.shop/products/product_1786222130104_nw3p0.webp"
-      ],
-      "video": "",
-      "price": "8",
-      "unit": "م",
-      "imgLarge": "https://salfordkw.shop/products/product_1786222122589_w8hs0-large.webp",
-      "imagesLarge": [
-        "https://salfordkw.shop/products/product_1786222122589_w8hs0-large.webp",
-        "https://salfordkw.shop/products/product_1786222124823_gydgk-large.webp",
-        "https://salfordkw.shop/products/product_1786222126731_34nyf-large.webp",
-        "https://salfordkw.shop/products/product_1786222128090_hz4k0-large.webp",
-        "https://salfordkw.shop/products/product_1786222130104_nw3p0-large.webp"
-      ],
-      "installDate": "2026-08-12",
-      "slug": "باركيه-تركي"
-    },
-    {
       "id": "prod_1786222314226_ow1z7",
       "code": "سجاد مشجر جملة",
       "desc": "سجاد مشجر تركي\nجودة عالية \nسماكة 20مم",
@@ -1027,7 +1001,7 @@
         "https://salfordkw.shop/products/product_1786221359342_a3wg1.webp"
       ],
       "video": "",
-      "price": "17",
+      "price": "9",
       "unit": "م",
       "imgLarge": "https://salfordkw.shop/products/product_1786221353375_bt0he-large.webp",
       "imagesLarge": [
@@ -2755,6 +2729,32 @@
       "img_small": "https://salfordkw.shop/products/parquet-05-small.webp",
       "featured": false,
       "slug": "parquet-diqqat-tafseel"
+    },
+    {
+      "id": "prod_1786222132213_mfcqd",
+      "code": "باركيه تركي",
+      "desc": "باركيه تركي \nجودة عالية \nاسعار مميزة",
+      "img": "https://salfordkw.shop/products/product_1786222122589_w8hs0.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786222122589_w8hs0.webp",
+        "https://salfordkw.shop/products/product_1786222124823_gydgk.webp",
+        "https://salfordkw.shop/products/product_1786222126731_34nyf.webp",
+        "https://salfordkw.shop/products/product_1786222128090_hz4k0.webp",
+        "https://salfordkw.shop/products/product_1786222130104_nw3p0.webp"
+      ],
+      "video": "",
+      "price": "8",
+      "unit": "م",
+      "imgLarge": "https://salfordkw.shop/products/product_1786222122589_w8hs0-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786222122589_w8hs0-large.webp",
+        "https://salfordkw.shop/products/product_1786222124823_gydgk-large.webp",
+        "https://salfordkw.shop/products/product_1786222126731_34nyf-large.webp",
+        "https://salfordkw.shop/products/product_1786222128090_hz4k0-large.webp",
+        "https://salfordkw.shop/products/product_1786222130104_nw3p0-large.webp"
+      ],
+      "installDate": "2026-08-12",
+      "slug": "باركيه-تركي"
     }
   ]
 }
