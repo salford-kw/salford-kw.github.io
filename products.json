@@ -670,6 +670,28 @@
       "price": "11",
       "unit": "م",
       "installDate": "2026-08-15"
+    },
+    {
+      "id": "prod_1786753357535_53c2d",
+      "code": "سجاد مشجر تركي",
+      "slug": "سجاد-مشجر-تركي",
+      "sub": "mashjar",
+      "area": "الشامية",
+      "desc": "سجاد مشجر تركي \nسماكة 16 مم \nضغط الخيط : 15 \nتركيب ورشتنا في منطقة  الشامية | الكويت",
+      "img": "https://salfordkw.shop/products/product_1786753343702_p7fbx-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786753343702_p7fbx-small.webp",
+        "https://salfordkw.shop/products/product_1786753350542_a67y0-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786753343702_p7fbx-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786753343702_p7fbx-large.webp",
+        "https://salfordkw.shop/products/product_1786753350542_a67y0-large.webp"
+      ],
+      "video": "",
+      "price": "9",
+      "unit": "م",
+      "installDate": "2026-08-15"
     }
   ],
   "majalis": [
