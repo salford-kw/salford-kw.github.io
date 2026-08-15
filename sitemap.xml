@@ -1856,4 +1856,13 @@
       <image:loc>https://salfordkw.shop/products/product_1786673114474_fdotk-small.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/sajjad-سجاد-ساده-بيج.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786753221191_8ewoq-small.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
