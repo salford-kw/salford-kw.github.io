@@ -790,6 +790,28 @@
       "price": "10",
       "unit": "م",
       "installDate": "2026-08-01"
+    },
+    {
+      "id": "prod_1786754353644_7qd4h",
+      "code": "سجاد مشجر  غرفة استقبال",
+      "slug": "سجاد-مشجر-غرفة-استقبال",
+      "sub": "mashjar",
+      "area": "العدان",
+      "desc": "النوع :  سجاد مشجر\nالسماكة : 14 مم\nضغط الخيط : 18\nبلد الصنع : تركي\nمنطقة التركيب : الكويت - العدان",
+      "img": "https://salfordkw.shop/products/product_1786754344544_wepuz-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786754344544_wepuz-small.webp",
+        "https://salfordkw.shop/products/product_1786754348613_1kk88-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786754344544_wepuz-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786754344544_wepuz-large.webp",
+        "https://salfordkw.shop/products/product_1786754348613_1kk88-large.webp"
+      ],
+      "video": "",
+      "price": "11",
+      "unit": "م",
+      "installDate": "2026-08-02"
     }
   ],
   "majalis": [
