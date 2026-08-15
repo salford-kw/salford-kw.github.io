@@ -812,6 +812,32 @@
       "price": "11",
       "unit": "م",
       "installDate": "2026-08-02"
+    },
+    {
+      "id": "prod_1786754560927_ra5l5",
+      "code": "سجاد درج و ممر",
+      "slug": "سجاد-درج-و-ممر",
+      "sub": "saada",
+      "area": "النسيم",
+      "desc": "النوع :  سجاد بلاطة امازون\nالسماكة : 6\nضغط الخيط : 22\nبلد الصنع : سعودي\nمنطقة التركيب : الكويت - النسيم",
+      "img": "https://salfordkw.shop/products/product_1786754545534_5izwq-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786754545534_5izwq-small.webp",
+        "https://salfordkw.shop/products/product_1786754549593_aexfd-small.webp",
+        "https://salfordkw.shop/products/product_1786754553006_y2aod-small.webp",
+        "https://salfordkw.shop/products/product_1786754556942_zgab1-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786754545534_5izwq-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786754545534_5izwq-large.webp",
+        "https://salfordkw.shop/products/product_1786754549593_aexfd-large.webp",
+        "https://salfordkw.shop/products/product_1786754553006_y2aod-large.webp",
+        "https://salfordkw.shop/products/product_1786754556942_zgab1-large.webp"
+      ],
+      "video": "",
+      "price": "5",
+      "unit": "م",
+      "installDate": "2026-08-07"
     }
   ],
   "majalis": [
