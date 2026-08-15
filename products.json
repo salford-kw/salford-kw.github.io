@@ -2057,6 +2057,34 @@
       "price": "25",
       "unit": "م",
       "installDate": "2026-08-13"
+    },
+    {
+      "id": "prod_1786771106848_fvaie",
+      "code": "تنجيد قنفات كنب",
+      "slug": "تنجيد-قنفات-كنب-3",
+      "sub": "tanjeed-ganafat",
+      "area": "الدعية",
+      "desc": "الخام شانيل تركي",
+      "img": "https://salfordkw.shop/products/product_1786754739088_d6zps-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786754739088_d6zps-small.webp",
+        "https://salfordkw.shop/products/product_1786754747023_3prjg-small.webp",
+        "https://salfordkw.shop/products/product_1786754762384_ay4cr-small.webp",
+        "https://salfordkw.shop/products/product_1786754770722_jddvi-small.webp",
+        "https://salfordkw.shop/products/product_1786754780648_w7ue8-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786754739088_d6zps-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786754739088_d6zps-large.webp",
+        "https://salfordkw.shop/products/product_1786754747023_3prjg-large.webp",
+        "https://salfordkw.shop/products/product_1786754762384_ay4cr-large.webp",
+        "https://salfordkw.shop/products/product_1786754770722_jddvi-large.webp",
+        "https://salfordkw.shop/products/product_1786754780648_w7ue8-large.webp"
+      ],
+      "video": "",
+      "price": "25",
+      "unit": "م",
+      "installDate": "2026-08-06"
     }
   ],
   "sataer": [
