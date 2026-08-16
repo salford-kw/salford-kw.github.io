@@ -7,6 +7,8 @@
      يجب أن يطابق src في السلايدر الثابت + data-static-first-img تماماً.
      يُحدَّث تلقائياً عند كل نشر من worker.js (دالة syncLcpPreload). -->
 <link rel="preload" as="image" fetchpriority="high" href="https://salfordkw.shop/products/product_1786817384476_fzysc-small.webp" id="lcp-preload">
+<!-- الشريحة الثانية: preload بأولوية منخفضة كضمانة لو انتقل السلايدر مبكراً -->
+<link rel="preload" as="image" fetchpriority="low" href="https://salfordkw.shop/products/product_1786817239235_9m3oz-small.webp" id="lcp-preload-2">
 <!-- ✅ TITLE محسّن -->
 <title>سالفورد للأثاث | مجالس ديكور وسجاد تركي - توصيل لكل الكويت</title>
 <!-- ✅ META DESCRIPTION محسّنة -->
@@ -506,7 +508,18 @@ function goToSlide(i) { currentSlideIndex = i; updateSlider(); resetAutoScroll()
 
 function startAutoScroll() {
   stopAutoScroll();
-  autoScrollTimer = setInterval(() => { nextSlide(); }, 4000);
+  // ⚡ LCP: لا نبدأ التمرير التلقائي إلا بعد اكتمال تحميل الصفحة + مهلة قصيرة.
+  // السبب: الانتقال للشريحة الثانية (loading="lazy" وبلا preload) كان يجعل
+  // المتصفح يعتبرها عنصر LCP جديداً ويعيد احتساب LCP من الصفر — وهذا سبب
+  // تذبذب النتيجة بين 2.8s و5.4s رغم أن الكود والصورة لم يتغيّرا.
+  const begin = () => {
+    autoScrollTimer = setInterval(() => { nextSlide(); }, 4000);
+  };
+  if (document.readyState === 'complete') {
+    setTimeout(begin, 3000);
+  } else {
+    window.addEventListener('load', () => setTimeout(begin, 3000), { once: true });
+  }
 }
 function stopAutoScroll() { if (autoScrollTimer) { clearInterval(autoScrollTimer); autoScrollTimer = null; } }
 function resetAutoScroll() { stopAutoScroll(); startAutoScroll(); }
