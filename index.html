@@ -104,9 +104,34 @@
 {"@context":"https://schema.org","@type":"WebSite","@id":"https://salfordkw.shop/#website","url":"https://salfordkw.shop/","name":"سالفورد للأثاث والمفروشات","publisher":{"@id":"https://salfordkw.shop/#business"},"inLanguage":"ar","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://salfordkw.shop/blog.html?s={search_term_string}"},"query-input":"required name=search_term_string"}}
 </script>
 <!-- Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-6824246360"></script>
+
 <!-- ✅ Google Analytics 4 -->
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-6824246360');gtag('config','G-8WRQFKRYXP');</script>
+<!-- ⚡ LCP: تأجيل Google Tag Manager (301 KiB) حتى بعد اكتمال الرسم أو أول
+     تفاعل. كان يُحمَّل قبل المحتوى ويزاحمه على النطاق الترددي — أكبر سبب
+     منفرد لتذبذب LCP. gtag() معرَّفة فوراً كطابور، فكل استدعاءات الأزرار
+     في الصفحة تعمل بلا تغيير وتُرسَل فور جهوز المكتبة. -->
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','AW-6824246360');
+gtag('config','G-8WRQFKRYXP');
+(function(){
+  var loaded=false;
+  function loadGtag(){
+    if(loaded) return; loaded=true;
+    var s=document.createElement('script');
+    s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id=AW-6824246360';
+    document.head.appendChild(s);
+  }
+  ['touchstart','scroll','click','keydown','mousemove'].forEach(function(ev){
+    window.addEventListener(ev, loadGtag, {once:true, passive:true});
+  });
+  if(document.readyState==='complete'){ setTimeout(loadGtag,3500); }
+  else { window.addEventListener('load', function(){ setTimeout(loadGtag,3500); }, {once:true}); }
+})();
+</script>
 
 <!-- تم إلغاء خط Cairo من Google Fonts لتسريع LCP — استُبدل بخط النظام (system-ui) -->
 
