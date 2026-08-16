@@ -1528,6 +1528,26 @@
       "price": "19",
       "unit": "م",
       "installDate": "2026-08-16"
+    },
+    {
+      "id": "prod_1786913884305_ewsem",
+      "code": "مجلس نساء ارضي مساند",
+      "slug": "مجلس-نساء-ارضي-مساند",
+      "sub": "",
+      "area": "الصليبيخات",
+      "desc": "مجلس نساء استقبال \nالاسفنج مصنع الوطنية \nالخام شانيل تركي بورصلي",
+      "img": "https://salfordkw.shop/products/product_1786913876321_0xawc-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786913876321_0xawc-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786913876321_0xawc-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786913876321_0xawc-large.webp"
+      ],
+      "video": "",
+      "price": "23",
+      "unit": "م",
+      "installDate": "2026-08-16"
     }
   ],
   "athath": [
