@@ -319,7 +319,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
 <section class="latest-works" aria-label="آخر أعمالنا">
   <span class="sec-title">آخر أعمالنا</span>
   <div class="slider-container" id="slider-container">
-    <div class="slider-track" id="home-works-grid">
+    <div class="slider-track" id="home-works-grid" data-static-first-img="https://salfordkw.shop/products/product_1786817384476_fzysc-small.webp">
       <!-- محتوى ثابت احتياطي مطابق لآخر 5 منشورات فعلية (posts.json) لضمان تطابق SEO + سرعة LCP -->
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/majalis-مساند-ظهر-اسفنج-البغلي-2.html'">
@@ -433,6 +433,16 @@ async function loadLatestWorks() {
 
   const latest = [...posts].reverse().slice(0, 5);
   currentLatestWorks = latest;
+
+  // لو أول صورة بالبيانات الجديدة نفسها المكتوبة بالـ HTML الثابت، لا داعي
+  // لمسح وإعادة بناء الـ DOM — هذا كان يسبب ظهور عنصر LCP جديد متأخر
+  // رغم إن المحتوى نفسه، لأن المتصفح يتعامل معه كعنصر مختلف تماماً.
+  if (track.dataset.staticFirstImg && latest[0] && latest[0].img === track.dataset.staticFirstImg) {
+    dotsRender();
+    currentSlideIndex = 0;
+    updateSlider();
+    return;
+  }
 
   track.innerHTML = latest.map((p, i) => `
     <div class="slide-item">
