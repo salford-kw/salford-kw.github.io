@@ -275,8 +275,27 @@ async function syncLcpPreload(env, posts) {
   const oldImg = oldImgMatch[1];
   if (oldImg === latest.img) return; // لا تغيير — لا حاجة لكتابة commit
 
-  // استبدال كل مواضع الصورة القديمة (preload + data-attr + src بالسلايدر)
+  // استبدال كل مواضع الصورة القديمة (data-attr + أي روابط أخرى)
   html = html.split(oldImg).join(latest.img);
+
+  // ⚡ دمج الصورة الجديدة كـdata URI داخل HTML — يلغي طلب الشبكة المنفصل
+  // للصورة تماماً، وهو مصدر التذبذب المتبقي (Fastly edge cold/warm).
+  try {
+    const imgRes = await fetch(latest.img);
+    if (imgRes.ok) {
+      const buf = await imgRes.arrayBuffer();
+      if (buf.byteLength > 0 && buf.byteLength < 120000) { // حد أمان: لا تدمج صورة ضخمة
+        let bin = '';
+        const bytes = new Uint8Array(buf);
+        for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+        const dataUri = 'data:image/webp;base64,' + btoa(bin);
+        html = html.replace(
+          /<img src="(?:data:image\/webp;base64,[^"]*|https:\/\/salfordkw\.shop\/products\/[^"]*)" data-real-src="[^"]*"/,
+          `<img src="${dataUri}" data-real-src="${latest.img}"`
+        );
+      }
+    }
+  } catch (e) {}
 
   await putTextFile(env, 'index.html', html, 'مزامنة صورة LCP مع أحدث منشور');
 }
