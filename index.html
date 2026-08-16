@@ -273,6 +273,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
 .lightbox-caption{text-align:center;color:var(--gold-light);font-size:13px;margin-top:10px;max-width:520px;}
 .lightbox-close{position:absolute;top:16px;left:16px;color:#fff;font-size:24px;cursor:pointer;background:rgba(200,169,110,.35);border:none;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;z-index:3;}
 </style>
+<link rel="preload" href="/posts.json" as="fetch" crossorigin>
 </head>
 <body>
 
@@ -386,193 +387,6 @@ footer a { color: var(--gold-light); text-decoration: none; }
     📸 شاهد جميع أعمالنا ←
   </a>
 </section>
-
-<!-- ✅ معاينة مصغّرة لكل قسم -->
-<section class="categories-preview" aria-label="معرض الأقسام المفصلة">
-  <div class="cat-preview-block">
-    <div class="cat-preview-header">
-      <span class="cat-preview-title">🧶 السجاد والموكيت والعينات</span>
-      <a href="/sajjad.html" class="cat-preview-more">عرض الكل ←</a>
-    </div>
-    <div class="cat-preview-grid" id="preview-sajjad">
-      <a href="/sajjad.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/نقشة-حفر-يدوي-سالفورد.webp" alt="سجاد تركي فاخر - سالفورد" loading="lazy"></div>
-        <div class="thumb-title">سجاد تركي حفر يدوي</div>
-      </a>
-      <a href="/sajjad.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/سجاد-تركي-اكادير-سالفورد.webp" alt="سجاد تركي اكادير - سالفورد" loading="lazy"></div>
-        <div class="thumb-title">سجاد تركي بالمتر</div>
-      </a>
-    </div>
-  </div>
-
-  <div class="cat-preview-block">
-    <div class="cat-preview-header">
-      <span class="cat-preview-title">🏠 مجالس ديكور ومساند ديكور</span>
-      <a href="/majalis.html" class="cat-preview-more">عرض الكل ←</a>
-    </div>
-    <div class="cat-preview-grid" id="preview-majalis">
-      <a href="/majalis.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد-2.webp" alt="مجلس خشب ديكور - سالفورد" loading="lazy"></div>
-        <div class="thumb-title">مجلس خشب ديكور</div>
-      </a>
-      <a href="/tafseel-diwaniyat.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-ديكور-الكويت-صباح-الاحمد-سالفورد.webp" alt="مساند ظهر ديكور - سالفورد" loading="lazy"></div>
-        <div class="thumb-title">تفصيل ديوانيات</div>
-      </a>
-    </div>
-  </div>
-
-  <div class="cat-preview-block">
-    <div class="cat-preview-header">
-      <span class="cat-preview-title">🛋️ الأثاث والديكور الداخلي</span>
-      <a href="/athath.html" class="cat-preview-more">عرض الكل ←</a>
-    </div>
-    <div class="cat-preview-grid" id="preview-athath">
-      <a href="/athath.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786196403904_3aq2d.webp" alt="كنب عصري مميز - سالفورد" loading="lazy"></div>
-        <div class="thumb-title">كنب عصري مميز</div>
-      </a>
-      <a href="/athath.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786196493883_huspb.webp" alt="كنب استقبال منطقة سلوى - سالفورد" loading="lazy"></div>
-        <div class="thumb-title">كنب استقبال منطقة سلوى</div>
-      </a>
-    </div>
-  </div>
-
-  <div class="cat-preview-block">
-    <div class="cat-preview-header">
-      <span class="cat-preview-title">🪟 الستائر — ويفي وبلاك اوت ورول</span>
-      <a href="/sataer.html" class="cat-preview-more">عرض الكل ←</a>
-    </div>
-    <div class="cat-preview-grid" id="preview-sataer">
-      <a href="/sataer.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786140561206_9ojky.webp" alt="ستائر مودرن - سالفورد" loading="lazy" onerror="this.src='https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد-2.webp'"></div>
-        <div class="thumb-title">ستائر مودرن للمجالس</div>
-      </a>
-      <a href="/sataer.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786140563125_iuomt.webp" alt="ستائر كلاسيك - سالفورد" loading="lazy" onerror="this.src='https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد-3.webp'"></div>
-        <div class="thumb-title">ستائر كلاسيكية راقية</div>
-      </a>
-    </div>
-  </div>
-
-  <a href="/works.html" class="see-all-link">📸 شاهد جميع مشاريعنا وأعمالنا ←</a>
-</section>
-
-<section class="nav-sections" aria-label="تصفح أقسامنا">
-  <span class="sec-title">تصفّح أقسامنا</span>
-  <div class="categories-grid">
-    <a href="/sajjad.html" class="cat-card"><span class="cat-icon">🧶</span><span class="cat-title">السجاد والموكيت والعينات</span></a>
-    <a href="/majalis.html" class="cat-card"><span class="cat-icon">🏠</span><span class="cat-title">مجالس ديكور ومساند ديكور</span></a>
-    <a href="/athath.html" class="cat-card"><span class="cat-icon">🛋️</span><span class="cat-title">الأثاث والديكور الداخلي</span></a>
-    <a href="/sataer.html" class="cat-card"><span class="cat-icon">🪟</span><span class="cat-title">الستائر — ويفي وبلاك اوت ورول</span></a>
-    <a href="/reviews.html" class="cat-card"><span class="cat-icon">⭐</span><span class="cat-title">آراء وتقييمات عملائنا</span></a>
-    <a href="/works.html" class="cat-card" style="grid-column: span 2; background: rgba(200,169,110,0.08); border-style: dashed;"><span class="cat-icon">📸</span><span class="cat-title">أعمالنا ومشاريعنا الأخيرة</span></a>
-  </div>
-</section>
-
-<div class="why">
-  <div class="why-item"><div class="why-icon">✨</div><div class="why-text">مجالس ديكور فاخرة</div></div>
-  <div class="why-item"><div class="why-icon">🚚</div><div class="why-text">توصيل وتركيب لجميع الكويت</div></div>
-  <div class="why-item"><div class="why-icon">💰</div><div class="why-text">أسعار تنافسية</div></div>
-  <div class="why-item"><div class="why-icon">📐</div><div class="why-text">تفصيل حسب الطلب</div></div>
-</div>
-
-<div class="cta">
-  <a class="btn btn-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener" onclick="gtag('event','whatsapp_click');">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    تواصل واتساب
-  </a>
-  <a class="btn btn-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});gtag('event','phone_click');">
-    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-    اتصل بنا الآن
-  </a>
-</div>
-
-<section class="reviews" aria-label="تقييمات عملائنا">
-  <span class="sec-title">آراء عملائنا ⭐</span>
-  <div id="site-reviews-mount"></div>
-</section>
-<script id="site-reviews-schema" type="application/ld+json"></script>
-
-<section class="faq" aria-label="أسئلة شائعة">
-  <span class="sec-title">أسئلة شائعة</span>
-  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">كم سعر الموكيت بالمتر في الكويت؟<span class="faq-icon">+</span></button><div class="faq-a"><p>يتفاوت السعر حسب النوع والجودة. تواصل معنا للحصول على أفضل الأسعار في الكويت.</p></div></div>
-  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">هل توصلون لجميع مناطق الكويت؟<span class="faq-icon">+</span></button><div class="faq-a"><p>نعم، نوفر التوصيل والتركيب لجميع مناطق الكويت. اتصل على 55943343.</p></div></div>
-  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">أقدر أطلب مجلس ديكور ومساند ظهر على المقاس اللي أبيه؟<span class="faq-icon">+</span></button><div class="faq-a"><p>نعم، نتخصص في تفصيل مجالس ديكور فاخرة ومساند ديكور والديوانيات حسب المقاس والذوق.</p></div></div>
-  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">ما هو الثيل الصناعي وأين يُستخدم؟<span class="faq-icon">+</span></button><div class="faq-a"><p>الثيل الصناعي عشب اصطناعي مقاوم للحرارة والبلل، يُستخدم في الحدائق والملاعب والأماكن الخارجية.</p></div></div>
-  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">هل لسالفورد محل يمكن زيارته؟<span class="faq-icon">+</span></button><div class="faq-a"><p>سالفورد متجر أونلاين بدون فرع للزيارة، ونوفر المعاينة والتوصيل والتركيب مباشرة في موقعك. أوقات العمل من 10 صباحاً حتى 9 مساءً يومياً.</p></div></div>
-  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">هل تركّبون السجاد والموكيت في الكويت؟<span class="faq-icon">+</span></button><div class="faq-a"><p>نعم، نوفر خدمة تركيب سجاد وتركيب موكيت احترافية لجميع مناطق الكويت بأسعار مميزة.</p></div></div>
-</section>
-
-<section class="about">
-  <h2>سالفورد للأثاث والمفروشات — الكويت</h2>
-  <p>سالفورد للأثاث والمفروشات متجر أونلاين كويتي متخصص في تفصيل مجالس الديكور والديوانيات، تنجيد وتجديد الأثاث القائم، توريد وتركيب السجاد التركي والموكيت، وتركيب الستائر بأنواعها. تأسسنا عام 2016 ونفّذنا حتى الآن أكثر من 790 مشروعاً في مختلف مناطق الكويت.</p>
-  <p>نغطي أربعة أقسام رئيسية: <a href="/majalis.html" style="color:var(--gold-light);text-decoration:none;">مجالس ومساند</a> (تفصيل وتنجيد ديوانيات كويتية ومجالس عربية فاخرة)، <a href="/sajjad.html" style="color:var(--gold-light);text-decoration:none;">سجاد وموكيت</a> (سجاد تركي بالمتر، موكيت الكويت، زل وثيل صناعي)، <a href="/athath.html" style="color:var(--gold-light);text-decoration:none;">أثاث وديكور</a> (كنب مودرن وتنجيد كنب وديكورات داخلية)، و<a href="/sataer.html" style="color:var(--gold-light);text-decoration:none;">ستائر</a> (ستائر رول، بلاك أوت، ومقاسات حسب الطلب مع تركيب احترافي).</p>
-  <p>عملاؤنا يختارون سالفورد لأن كل قطعة تمر عبر ورشتنا الخاصة من المعاينة حتى التسليم — لا مقاولة من الباطن — مع كتالوج منتجات حقيقي منفَّذ فعلياً بمناطق الكويت المختلفة يمكنك تصفحه قبل الطلب، ومعاينة وقياس مجاني بالمنزل لجميع الخدمات.</p>
-  <p>سالفورد متجر أونلاين بدون فرع للزيارة، ونوفر خدمة المعاينة والتوصيل والتركيب الاحترافي مباشرة في موقعك لجميع مناطق الكويت. أوقات العمل من الساعة 10 صباحاً حتى 9 مساءً يومياً بما فيها الجمعة.</p>
-  <p>🔗 <a href="/tafseel-diwaniyat.html" style="color:var(--gold);text-decoration:underline;">تفصيل ديوانيات بالكويت</a> — صفحة مخصصة لتفاصيل ديوانيات الخشب والفخمة والخارجية.</p>
-  <p>🔗 <a href="/tanjeed-diwaniyat.html" style="color:var(--gold);text-decoration:underline;">تنجيد ديوانيات الكويت</a> — صفحة مخصصة لتجديد ديوانيتك القائمة بتغيير القماش والاسفنج.</p>
-  <p>🔗 <a href="/tanjeed-kanab.html" style="color:var(--gold);text-decoration:underline;">تنجيد كنب الكويت</a> — صفحة مخصصة لتجديد كنبتك القائمة بتغيير القماش والاسفنج.</p>
-  <p>🔗 <a href="/tafseel-sataer-rol.html" style="color:var(--gold);text-decoration:underline;">تفصيل ستائر رول الكويت</a> — صفحة مخصصة لتفصيل ستارة الرول حسب المقاس والخامة بأسعار المتر المربع.</p>
-  <p>🔗 <a href="/tafseel-sajjad-kuwait.html" style="color:var(--gold);text-decoration:underline;">تفصيل سجاد الكويت</a> — صفحة مخصصة لقص السجاد حسب مقاس الغرفة أو المجلس بسيرفلة احترافية.</p>
-  <p>🔗 <a href="/tarkib-sataer-rol.html" style="color:var(--gold);text-decoration:underline;">تركيب ستائر رول الكويت</a> — صفحة مخصصة لتركيب ستائر الرول بالمنازل والمكاتب مع توريد السكك.</p>
-  <p>🔗 <a href="/sataer-blackout-kuwait.html" style="color:var(--gold);text-decoration:underline;">ستائر بلاك اوت الكويت</a> — صفحة مخصصة لخامة معتمة كثيفة تمنع الضوء والحرارة تماماً.</p>
-  <p>🔗 <a href="/sajjad-bel-meter-kuwait.html" style="color:var(--gold);text-decoration:underline;">سجاد بالمتر الكويت</a> — صفحة مخصصة لبيع السجاد التركي بالمتر من الرول مباشرة للسلالم والممرات والمعارض والمكاتب.</p>
-  <p>🔗 <a href="/afdal-mokeet-kuwait.html" style="color:var(--gold);text-decoration:underline;">أفضل موكيت في الكويت</a> — دليل مخصص لاختيار نوع وسماكة الموكيت المناسبة حسب مكان التركيب.</p>
-  <p>🔗 <a href="/jalsat-diwaniya-khashab.html" style="color:var(--gold);text-decoration:underline;">جلسات ديوانية خشب</a> — صفحة مخصصة لهياكل الخشب (قشرة جوز أو مدهون) بتصاميم مستقيمة أو زاوية أو دائرية.</p>
-  <p>🔗 <a href="/tanjeed-ganafat-kuwait.html" style="color:var(--gold);text-decoration:underline;">تنجيد قنفات الكويت</a> — صفحة مخصصة لتجديد القنفة القديمة بقماش وحشوة جديدة كاملة.</p>
-  <p>🔗 <a href="/talbees-kanab-kuwait.html" style="color:var(--gold);text-decoration:underline;">تلبيس كنب الكويت</a> — صفحة مخصصة لتغطية سريعة للكنب بقماش جديد بدون فك الحشوة.</p>
-  <p>🔗 <a href="/sataer-shifon-kuwait.html" style="color:var(--gold);text-decoration:underline;">ستائر شيفون الكويت</a> — صفحة مخصصة لخامة شفافة خفيفة تنفّذ ضوءاً هادئاً لصالات المعيشة.</p>
-  <p>🔗 <a href="/diwaniyat-modern-kuwait.html" style="color:var(--gold);text-decoration:underline;">ديوانيات مودرن الكويت</a> — صفحة مخصصة لتفصيل ديوانيات بخطوط بسيطة وألوان محايدة.</p>
-  <p>🔗 <a href="/diwaniyat-kharjiya-kuwait.html" style="color:var(--gold);text-decoration:underline;">ديوانيات خارجية الكويت</a> — صفحة مخصصة لجلسات ومساند بخامات مقاومة للطقس للحدائق والشاليهات والخيام.</p>
-  <p>🔗 <a href="/jalsat-ardiya-jahza-kuwait.html" style="color:var(--gold);text-decoration:underline;">جلسات أرضية جاهزة الكويت</a> — صفحة مخصصة لجلسات جاهزة أو شبه جاهزة بتسليم أسرع.</p>
-  <p>🔗 <a href="/sajjad-mashjar-kuwait.html" style="color:var(--gold);text-decoration:underline;">سجاد مشجر الكويت</a> — صفحة مخصصة لسجاد تركي بنقشة مشجرة ممتدة للصالات الواسعة والممرات الطويلة.</p>
-</section>
-
-<section class="areas">
-  <h2>نخدم جميع مناطق الكويت</h2>
-  <p>حولي • السالمية • الفروانية • العاصمة • الأحمدي • الجهراء • مبارك الكبير • الضجيج • خيطان • الرقعي • بيان • سلوى • الرميثية • الفحيحيل • المهبولة • الصباحية • القرين • العدان • صباح السالم • الشعب • بنيد القار • كيفان • الروضة • العديلية • النزهة • الشامية • القادسية • الشويخ • غرناطة • الدوحة • الأندلس • النهضة • إشبيلية • جليب الشيوخ • عبد الله المبارك • الصليبية • ميناء عبد الله • الفنيطيس • أبو فطيرة • الخيران • وجميع أنحاء الكويت</p>
-</section>
-
-<section class="howto">
-  <h2>كيف تطلب من سالفورد؟</h2>
-  <ol>
-    <li>تواصل معنا عبر واتساب أو اتصال هاتفي وحدد الخدمة (سجاد، مجالس، أثاث، أو غيرها).</li>
-    <li>يزورك مندوبنا لأخذ المقاسات الدقيقة ومعاينة الموقع على الطبيعة.</li>
-    <li>نعرض عليك العينات الفعلية (النوع، السماكة، الخامة) لتختار ما يناسبك.</li>
-    <li>نتفق معك على مدة التنفيذ المناسبة لنوع الخدمة المطلوبة.</li>
-    <li>يُنفَّذ العمل عبر ورشتنا المختصة ويُسلَّم في الموعد المتفق عليه.</li>
-  </ol>
-</section>
-</main>
-
-<footer>
-  <div><strong style="color:var(--gold)">سالفورد للأثاث والمفروشات</strong></div>
-  <div>مجالس ديكور • مساند ديكور • سجاد • موكيت • زل • ثيل صناعي</div>
-  <div>🚚 توصيل لجميع مناطق الكويت &nbsp;|&nbsp; 🕒 10 ص - 9 م</div>
-  <div>📞 <a href="tel:+96555943343" onclick="gtag('event','phone_click');">55943343</a> &nbsp;|&nbsp; <a href="https://wa.me/96555943343" onclick="gtag('event','whatsapp_click');">واتساب</a></div>
-  <div>🔗 <a href="/about.html">من نحن</a> &nbsp;|&nbsp; <a href="/faq.html">الأسئلة الشائعة</a> &nbsp;|&nbsp; <a href="/blog.html">مركز المعرفة</a> &nbsp;|&nbsp; <a href="https://www.instagram.com/salforad/" target="_blank" rel="noopener">إنستقرام</a> &nbsp;|&nbsp; <a href="https://www.tiktok.com/@salford_kuwait" target="_blank" rel="noopener">تيك توك</a></div>
-  <div style="margin-top:6px;font-size:11px;opacity:.5;">© 2026 جميع الحقوق محفوظة</div>
-</footer>
-
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <div class="lightbox-carousel" onclick="event.stopPropagation()">
-    <button class="lightbox-nav prev" onclick="lbPrev()" id="lb-prev" style="display:none;">›</button>
-    <div class="lightbox-slide-wrap" id="lb-slide-wrap"></div>
-    <button class="lightbox-nav next" onclick="lbNext()" id="lb-next" style="display:none;">‹</button>
-  </div>
-  <div class="lightbox-dots" id="lb-dots"></div>
-  <div class="lightbox-caption" id="lb-caption"></div>
-</div>
-
-<div class="sticky">
-  <a class="s-btn s-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener" onclick="gtag('event','whatsapp_click');">💬 واتساب</a>
-  <a class="s-btn s-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});gtag('event','phone_click');">📞 اتصال</a>
-</div>
-
 <script>
 // ============================================================
 // آخر 5 منشورات من posts.json — تظهر في السلايدر بالصفحة الرئيسية
@@ -597,7 +411,7 @@ async function loadLatestWorks() {
 
   if (posts.length === 0) {
     try {
-      const r = await fetch('/posts.json?v=' + Date.now());
+      const r = await fetch('/posts.json');
       if (r.ok) {
         const p = await r.json();
         if (Array.isArray(p)) posts = p;
@@ -787,12 +601,197 @@ function closeLightbox(){
   document.body.style.overflow = '';
 }
 
-if ('requestIdleCallback' in window) {
-  requestIdleCallback(loadLatestWorks, { timeout: 2000 });
-} else {
-  setTimeout(loadLatestWorks, 150);
-}
+loadLatestWorks();
 </script>
+
+
+<!-- ✅ معاينة مصغّرة لكل قسم -->
+<section class="categories-preview" aria-label="معرض الأقسام المفصلة">
+  <div class="cat-preview-block">
+    <div class="cat-preview-header">
+      <span class="cat-preview-title">🧶 السجاد والموكيت والعينات</span>
+      <a href="/sajjad.html" class="cat-preview-more">عرض الكل ←</a>
+    </div>
+    <div class="cat-preview-grid" id="preview-sajjad">
+      <a href="/sajjad.html" class="thumb-card">
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/نقشة-حفر-يدوي-سالفورد.webp" alt="سجاد تركي فاخر - سالفورد" loading="lazy"></div>
+        <div class="thumb-title">سجاد تركي حفر يدوي</div>
+      </a>
+      <a href="/sajjad.html" class="thumb-card">
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/سجاد-تركي-اكادير-سالفورد.webp" alt="سجاد تركي اكادير - سالفورد" loading="lazy"></div>
+        <div class="thumb-title">سجاد تركي بالمتر</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="cat-preview-block">
+    <div class="cat-preview-header">
+      <span class="cat-preview-title">🏠 مجالس ديكور ومساند ديكور</span>
+      <a href="/majalis.html" class="cat-preview-more">عرض الكل ←</a>
+    </div>
+    <div class="cat-preview-grid" id="preview-majalis">
+      <a href="/majalis.html" class="thumb-card">
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد-2.webp" alt="مجلس خشب ديكور - سالفورد" loading="lazy"></div>
+        <div class="thumb-title">مجلس خشب ديكور</div>
+      </a>
+      <a href="/tafseel-diwaniyat.html" class="thumb-card">
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-ديكور-الكويت-صباح-الاحمد-سالفورد.webp" alt="مساند ظهر ديكور - سالفورد" loading="lazy"></div>
+        <div class="thumb-title">تفصيل ديوانيات</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="cat-preview-block">
+    <div class="cat-preview-header">
+      <span class="cat-preview-title">🛋️ الأثاث والديكور الداخلي</span>
+      <a href="/athath.html" class="cat-preview-more">عرض الكل ←</a>
+    </div>
+    <div class="cat-preview-grid" id="preview-athath">
+      <a href="/athath.html" class="thumb-card">
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786196403904_3aq2d.webp" alt="كنب عصري مميز - سالفورد" loading="lazy"></div>
+        <div class="thumb-title">كنب عصري مميز</div>
+      </a>
+      <a href="/athath.html" class="thumb-card">
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786196493883_huspb.webp" alt="كنب استقبال منطقة سلوى - سالفورد" loading="lazy"></div>
+        <div class="thumb-title">كنب استقبال منطقة سلوى</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="cat-preview-block">
+    <div class="cat-preview-header">
+      <span class="cat-preview-title">🪟 الستائر — ويفي وبلاك اوت ورول</span>
+      <a href="/sataer.html" class="cat-preview-more">عرض الكل ←</a>
+    </div>
+    <div class="cat-preview-grid" id="preview-sataer">
+      <a href="/sataer.html" class="thumb-card">
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786140561206_9ojky.webp" alt="ستائر مودرن - سالفورد" loading="lazy" onerror="this.src='https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد-2.webp'"></div>
+        <div class="thumb-title">ستائر مودرن للمجالس</div>
+      </a>
+      <a href="/sataer.html" class="thumb-card">
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786140563125_iuomt.webp" alt="ستائر كلاسيك - سالفورد" loading="lazy" onerror="this.src='https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد-3.webp'"></div>
+        <div class="thumb-title">ستائر كلاسيكية راقية</div>
+      </a>
+    </div>
+  </div>
+
+  <a href="/works.html" class="see-all-link">📸 شاهد جميع مشاريعنا وأعمالنا ←</a>
+</section>
+
+<section class="nav-sections" aria-label="تصفح أقسامنا">
+  <span class="sec-title">تصفّح أقسامنا</span>
+  <div class="categories-grid">
+    <a href="/sajjad.html" class="cat-card"><span class="cat-icon">🧶</span><span class="cat-title">السجاد والموكيت والعينات</span></a>
+    <a href="/majalis.html" class="cat-card"><span class="cat-icon">🏠</span><span class="cat-title">مجالس ديكور ومساند ديكور</span></a>
+    <a href="/athath.html" class="cat-card"><span class="cat-icon">🛋️</span><span class="cat-title">الأثاث والديكور الداخلي</span></a>
+    <a href="/sataer.html" class="cat-card"><span class="cat-icon">🪟</span><span class="cat-title">الستائر — ويفي وبلاك اوت ورول</span></a>
+    <a href="/reviews.html" class="cat-card"><span class="cat-icon">⭐</span><span class="cat-title">آراء وتقييمات عملائنا</span></a>
+    <a href="/works.html" class="cat-card" style="grid-column: span 2; background: rgba(200,169,110,0.08); border-style: dashed;"><span class="cat-icon">📸</span><span class="cat-title">أعمالنا ومشاريعنا الأخيرة</span></a>
+  </div>
+</section>
+
+<div class="why">
+  <div class="why-item"><div class="why-icon">✨</div><div class="why-text">مجالس ديكور فاخرة</div></div>
+  <div class="why-item"><div class="why-icon">🚚</div><div class="why-text">توصيل وتركيب لجميع الكويت</div></div>
+  <div class="why-item"><div class="why-icon">💰</div><div class="why-text">أسعار تنافسية</div></div>
+  <div class="why-item"><div class="why-icon">📐</div><div class="why-text">تفصيل حسب الطلب</div></div>
+</div>
+
+<div class="cta">
+  <a class="btn btn-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener" onclick="gtag('event','whatsapp_click');">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    تواصل واتساب
+  </a>
+  <a class="btn btn-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});gtag('event','phone_click');">
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    اتصل بنا الآن
+  </a>
+</div>
+
+<section class="reviews" aria-label="تقييمات عملائنا">
+  <span class="sec-title">آراء عملائنا ⭐</span>
+  <div id="site-reviews-mount"></div>
+</section>
+<script id="site-reviews-schema" type="application/ld+json"></script>
+
+<section class="faq" aria-label="أسئلة شائعة">
+  <span class="sec-title">أسئلة شائعة</span>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">كم سعر الموكيت بالمتر في الكويت؟<span class="faq-icon">+</span></button><div class="faq-a"><p>يتفاوت السعر حسب النوع والجودة. تواصل معنا للحصول على أفضل الأسعار في الكويت.</p></div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">هل توصلون لجميع مناطق الكويت؟<span class="faq-icon">+</span></button><div class="faq-a"><p>نعم، نوفر التوصيل والتركيب لجميع مناطق الكويت. اتصل على 55943343.</p></div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">أقدر أطلب مجلس ديكور ومساند ظهر على المقاس اللي أبيه؟<span class="faq-icon">+</span></button><div class="faq-a"><p>نعم، نتخصص في تفصيل مجالس ديكور فاخرة ومساند ديكور والديوانيات حسب المقاس والذوق.</p></div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">ما هو الثيل الصناعي وأين يُستخدم؟<span class="faq-icon">+</span></button><div class="faq-a"><p>الثيل الصناعي عشب اصطناعي مقاوم للحرارة والبلل، يُستخدم في الحدائق والملاعب والأماكن الخارجية.</p></div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">هل لسالفورد محل يمكن زيارته؟<span class="faq-icon">+</span></button><div class="faq-a"><p>سالفورد متجر أونلاين بدون فرع للزيارة، ونوفر المعاينة والتوصيل والتركيب مباشرة في موقعك. أوقات العمل من 10 صباحاً حتى 9 مساءً يومياً.</p></div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">هل تركّبون السجاد والموكيت في الكويت؟<span class="faq-icon">+</span></button><div class="faq-a"><p>نعم، نوفر خدمة تركيب سجاد وتركيب موكيت احترافية لجميع مناطق الكويت بأسعار مميزة.</p></div></div>
+</section>
+
+<section class="about">
+  <h2>سالفورد للأثاث والمفروشات — الكويت</h2>
+  <p>سالفورد للأثاث والمفروشات متجر أونلاين كويتي متخصص في تفصيل مجالس الديكور والديوانيات، تنجيد وتجديد الأثاث القائم، توريد وتركيب السجاد التركي والموكيت، وتركيب الستائر بأنواعها. تأسسنا عام 2016 ونفّذنا حتى الآن أكثر من 790 مشروعاً في مختلف مناطق الكويت.</p>
+  <p>نغطي أربعة أقسام رئيسية: <a href="/majalis.html" style="color:var(--gold-light);text-decoration:none;">مجالس ومساند</a> (تفصيل وتنجيد ديوانيات كويتية ومجالس عربية فاخرة)، <a href="/sajjad.html" style="color:var(--gold-light);text-decoration:none;">سجاد وموكيت</a> (سجاد تركي بالمتر، موكيت الكويت، زل وثيل صناعي)، <a href="/athath.html" style="color:var(--gold-light);text-decoration:none;">أثاث وديكور</a> (كنب مودرن وتنجيد كنب وديكورات داخلية)، و<a href="/sataer.html" style="color:var(--gold-light);text-decoration:none;">ستائر</a> (ستائر رول، بلاك أوت، ومقاسات حسب الطلب مع تركيب احترافي).</p>
+  <p>عملاؤنا يختارون سالفورد لأن كل قطعة تمر عبر ورشتنا الخاصة من المعاينة حتى التسليم — لا مقاولة من الباطن — مع كتالوج منتجات حقيقي منفَّذ فعلياً بمناطق الكويت المختلفة يمكنك تصفحه قبل الطلب، ومعاينة وقياس مجاني بالمنزل لجميع الخدمات.</p>
+  <p>سالفورد متجر أونلاين بدون فرع للزيارة، ونوفر خدمة المعاينة والتوصيل والتركيب الاحترافي مباشرة في موقعك لجميع مناطق الكويت. أوقات العمل من الساعة 10 صباحاً حتى 9 مساءً يومياً بما فيها الجمعة.</p>
+  <p>🔗 <a href="/tafseel-diwaniyat.html" style="color:var(--gold);text-decoration:underline;">تفصيل ديوانيات بالكويت</a> — صفحة مخصصة لتفاصيل ديوانيات الخشب والفخمة والخارجية.</p>
+  <p>🔗 <a href="/tanjeed-diwaniyat.html" style="color:var(--gold);text-decoration:underline;">تنجيد ديوانيات الكويت</a> — صفحة مخصصة لتجديد ديوانيتك القائمة بتغيير القماش والاسفنج.</p>
+  <p>🔗 <a href="/tanjeed-kanab.html" style="color:var(--gold);text-decoration:underline;">تنجيد كنب الكويت</a> — صفحة مخصصة لتجديد كنبتك القائمة بتغيير القماش والاسفنج.</p>
+  <p>🔗 <a href="/tafseel-sataer-rol.html" style="color:var(--gold);text-decoration:underline;">تفصيل ستائر رول الكويت</a> — صفحة مخصصة لتفصيل ستارة الرول حسب المقاس والخامة بأسعار المتر المربع.</p>
+  <p>🔗 <a href="/tafseel-sajjad-kuwait.html" style="color:var(--gold);text-decoration:underline;">تفصيل سجاد الكويت</a> — صفحة مخصصة لقص السجاد حسب مقاس الغرفة أو المجلس بسيرفلة احترافية.</p>
+  <p>🔗 <a href="/tarkib-sataer-rol.html" style="color:var(--gold);text-decoration:underline;">تركيب ستائر رول الكويت</a> — صفحة مخصصة لتركيب ستائر الرول بالمنازل والمكاتب مع توريد السكك.</p>
+  <p>🔗 <a href="/sataer-blackout-kuwait.html" style="color:var(--gold);text-decoration:underline;">ستائر بلاك اوت الكويت</a> — صفحة مخصصة لخامة معتمة كثيفة تمنع الضوء والحرارة تماماً.</p>
+  <p>🔗 <a href="/sajjad-bel-meter-kuwait.html" style="color:var(--gold);text-decoration:underline;">سجاد بالمتر الكويت</a> — صفحة مخصصة لبيع السجاد التركي بالمتر من الرول مباشرة للسلالم والممرات والمعارض والمكاتب.</p>
+  <p>🔗 <a href="/afdal-mokeet-kuwait.html" style="color:var(--gold);text-decoration:underline;">أفضل موكيت في الكويت</a> — دليل مخصص لاختيار نوع وسماكة الموكيت المناسبة حسب مكان التركيب.</p>
+  <p>🔗 <a href="/jalsat-diwaniya-khashab.html" style="color:var(--gold);text-decoration:underline;">جلسات ديوانية خشب</a> — صفحة مخصصة لهياكل الخشب (قشرة جوز أو مدهون) بتصاميم مستقيمة أو زاوية أو دائرية.</p>
+  <p>🔗 <a href="/tanjeed-ganafat-kuwait.html" style="color:var(--gold);text-decoration:underline;">تنجيد قنفات الكويت</a> — صفحة مخصصة لتجديد القنفة القديمة بقماش وحشوة جديدة كاملة.</p>
+  <p>🔗 <a href="/talbees-kanab-kuwait.html" style="color:var(--gold);text-decoration:underline;">تلبيس كنب الكويت</a> — صفحة مخصصة لتغطية سريعة للكنب بقماش جديد بدون فك الحشوة.</p>
+  <p>🔗 <a href="/sataer-shifon-kuwait.html" style="color:var(--gold);text-decoration:underline;">ستائر شيفون الكويت</a> — صفحة مخصصة لخامة شفافة خفيفة تنفّذ ضوءاً هادئاً لصالات المعيشة.</p>
+  <p>🔗 <a href="/diwaniyat-modern-kuwait.html" style="color:var(--gold);text-decoration:underline;">ديوانيات مودرن الكويت</a> — صفحة مخصصة لتفصيل ديوانيات بخطوط بسيطة وألوان محايدة.</p>
+  <p>🔗 <a href="/diwaniyat-kharjiya-kuwait.html" style="color:var(--gold);text-decoration:underline;">ديوانيات خارجية الكويت</a> — صفحة مخصصة لجلسات ومساند بخامات مقاومة للطقس للحدائق والشاليهات والخيام.</p>
+  <p>🔗 <a href="/jalsat-ardiya-jahza-kuwait.html" style="color:var(--gold);text-decoration:underline;">جلسات أرضية جاهزة الكويت</a> — صفحة مخصصة لجلسات جاهزة أو شبه جاهزة بتسليم أسرع.</p>
+  <p>🔗 <a href="/sajjad-mashjar-kuwait.html" style="color:var(--gold);text-decoration:underline;">سجاد مشجر الكويت</a> — صفحة مخصصة لسجاد تركي بنقشة مشجرة ممتدة للصالات الواسعة والممرات الطويلة.</p>
+</section>
+
+<section class="areas">
+  <h2>نخدم جميع مناطق الكويت</h2>
+  <p>حولي • السالمية • الفروانية • العاصمة • الأحمدي • الجهراء • مبارك الكبير • الضجيج • خيطان • الرقعي • بيان • سلوى • الرميثية • الفحيحيل • المهبولة • الصباحية • القرين • العدان • صباح السالم • الشعب • بنيد القار • كيفان • الروضة • العديلية • النزهة • الشامية • القادسية • الشويخ • غرناطة • الدوحة • الأندلس • النهضة • إشبيلية • جليب الشيوخ • عبد الله المبارك • الصليبية • ميناء عبد الله • الفنيطيس • أبو فطيرة • الخيران • وجميع أنحاء الكويت</p>
+</section>
+
+<section class="howto">
+  <h2>كيف تطلب من سالفورد؟</h2>
+  <ol>
+    <li>تواصل معنا عبر واتساب أو اتصال هاتفي وحدد الخدمة (سجاد، مجالس، أثاث، أو غيرها).</li>
+    <li>يزورك مندوبنا لأخذ المقاسات الدقيقة ومعاينة الموقع على الطبيعة.</li>
+    <li>نعرض عليك العينات الفعلية (النوع، السماكة، الخامة) لتختار ما يناسبك.</li>
+    <li>نتفق معك على مدة التنفيذ المناسبة لنوع الخدمة المطلوبة.</li>
+    <li>يُنفَّذ العمل عبر ورشتنا المختصة ويُسلَّم في الموعد المتفق عليه.</li>
+  </ol>
+</section>
+</main>
+
+<footer>
+  <div><strong style="color:var(--gold)">سالفورد للأثاث والمفروشات</strong></div>
+  <div>مجالس ديكور • مساند ديكور • سجاد • موكيت • زل • ثيل صناعي</div>
+  <div>🚚 توصيل لجميع مناطق الكويت &nbsp;|&nbsp; 🕒 10 ص - 9 م</div>
+  <div>📞 <a href="tel:+96555943343" onclick="gtag('event','phone_click');">55943343</a> &nbsp;|&nbsp; <a href="https://wa.me/96555943343" onclick="gtag('event','whatsapp_click');">واتساب</a></div>
+  <div>🔗 <a href="/about.html">من نحن</a> &nbsp;|&nbsp; <a href="/faq.html">الأسئلة الشائعة</a> &nbsp;|&nbsp; <a href="/blog.html">مركز المعرفة</a> &nbsp;|&nbsp; <a href="https://www.instagram.com/salforad/" target="_blank" rel="noopener">إنستقرام</a> &nbsp;|&nbsp; <a href="https://www.tiktok.com/@salford_kuwait" target="_blank" rel="noopener">تيك توك</a></div>
+  <div style="margin-top:6px;font-size:11px;opacity:.5;">© 2026 جميع الحقوق محفوظة</div>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <div class="lightbox-carousel" onclick="event.stopPropagation()">
+    <button class="lightbox-nav prev" onclick="lbPrev()" id="lb-prev" style="display:none;">›</button>
+    <div class="lightbox-slide-wrap" id="lb-slide-wrap"></div>
+    <button class="lightbox-nav next" onclick="lbNext()" id="lb-next" style="display:none;">‹</button>
+  </div>
+  <div class="lightbox-dots" id="lb-dots"></div>
+  <div class="lightbox-caption" id="lb-caption"></div>
+</div>
+
+<div class="sticky">
+  <a class="s-btn s-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener" onclick="gtag('event','whatsapp_click');">💬 واتساب</a>
+  <a class="s-btn s-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});gtag('event','phone_click');">📞 اتصال</a>
+</div>
+
+
 
 <!-- نظام التقييمات الحقيقي (Firebase) — تحميل مؤجَّل (Lazy Load) لحين اقتراب الزائر من قسم التقييمات، لتخفيف ضغط المعالج (main-thread) بالتحميل الأولي للصفحة -->
 <script>
