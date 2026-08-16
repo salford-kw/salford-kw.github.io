@@ -1504,6 +1504,30 @@
       "price": "11",
       "unit": "م",
       "installDate": "2026-08-15"
+    },
+    {
+      "id": "prod_1786912867848_oyn00",
+      "code": "مساند ظهر مع اطار ديكور خشب",
+      "slug": "مساند-ظهر-مع-اطار-ديكور-خشب",
+      "sub": "masanid-khashab",
+      "area": "المطلاع",
+      "desc": "الخشب المستخدم قشر جوز \nالاسفنج : البغلي مكفول \nالخام شانيل تركي \nتركيب سالفورد في منطقة المطلاع",
+      "img": "https://salfordkw.shop/products/product_1786912859076_28t2n-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786912859076_28t2n-small.webp",
+        "https://salfordkw.shop/products/product_1786912861756_71ofi-small.webp",
+        "https://salfordkw.shop/products/product_1786912864631_bjlhw-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786912859076_28t2n-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786912859076_28t2n-large.webp",
+        "https://salfordkw.shop/products/product_1786912861756_71ofi-large.webp",
+        "https://salfordkw.shop/products/product_1786912864631_bjlhw-large.webp"
+      ],
+      "video": "",
+      "price": "19",
+      "unit": "م",
+      "installDate": "2026-08-16"
     }
   ],
   "athath": [
