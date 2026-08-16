@@ -833,6 +833,26 @@
       "price": "5",
       "unit": "م",
       "installDate": "2026-08-16"
+    },
+    {
+      "id": "prod_1786914173997_f8nz6",
+      "code": "سجاد حفر و مساند ظهر",
+      "slug": "سجاد-حفر-و-مساند-ظهر",
+      "sub": "saada",
+      "area": "الرحاب",
+      "desc": "تنفيذ سالفورد في منطقة الرحاب الكويت \nالسجاد تركي نخب اول \nسماكة 28مم \nالمساند اسفنج البغلي \nخام شانيل تركي \nالسعر المعروض : متر مساند الظهر",
+      "img": "https://salfordkw.shop/products/product_1786914170437_k1gq7-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786914170437_k1gq7-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786914170437_k1gq7-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786914170437_k1gq7-large.webp"
+      ],
+      "video": "",
+      "price": "11",
+      "unit": "م",
+      "installDate": "2026-08-17"
     }
   ],
   "majalis": [
