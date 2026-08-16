@@ -273,7 +273,6 @@ footer a { color: var(--gold-light); text-decoration: none; }
 .lightbox-caption{text-align:center;color:var(--gold-light);font-size:13px;margin-top:10px;max-width:520px;}
 .lightbox-close{position:absolute;top:16px;left:16px;color:#fff;font-size:24px;cursor:pointer;background:rgba(200,169,110,.35);border:none;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;z-index:3;}
 </style>
-<link rel="preload" href="/posts.json" as="fetch" crossorigin>
 </head>
 <body>
 
@@ -387,223 +386,6 @@ footer a { color: var(--gold-light); text-decoration: none; }
     📸 شاهد جميع أعمالنا ←
   </a>
 </section>
-<script>
-// ============================================================
-// آخر 5 منشورات من posts.json — تظهر في السلايدر بالصفحة الرئيسية
-// المحتوى الأساسي مكتوب ثابتاً في HTML أعلاه (للسيو وبوتات الذكاء
-// الاصطناعي التي لا تُنفّذ JavaScript). هذا السكربت يحدّث المحتوى
-// تلقائياً عند إضافة مشاريع جديدة من لوحة التحكم.
-// ============================================================
-const POSTS_KEY = 'salford_posts';
-let currentLatestWorks = [];
-let currentSlideIndex = 0;
-let autoScrollTimer = null;
-
-async function loadLatestWorks() {
-  let posts = [];
-  try {
-    const local = localStorage.getItem(POSTS_KEY);
-    if (local) {
-      const p = JSON.parse(local);
-      if (Array.isArray(p) && p.length > 0) posts = p;
-    }
-  } catch(e) {}
-
-  if (posts.length === 0) {
-    try {
-      const r = await fetch('/posts.json');
-      if (r.ok) {
-        const p = await r.json();
-        if (Array.isArray(p)) posts = p;
-      }
-    } catch(e) {}
-  }
-
-  const track = document.getElementById('home-works-grid');
-
-  if (posts.length === 0) {
-    track.innerHTML = '<div class="slide-item"><div class="no-works">📷 سيتم نشر أحدث أعمالنا هنا قريباً</div></div>';
-    return;
-  }
-
-  const latest = [...posts].reverse().slice(0, 5);
-  currentLatestWorks = latest;
-
-  track.innerHTML = latest.map((p, i) => `
-    <div class="slide-item">
-      <div class="work-card" onclick="${p.productUrl ? `location.href='${p.productUrl}'` : `openLightbox(${i})`}">
-        <div class="work-card-img">
-          <img src="${p.img}" alt="${esc(p.title)} - سالفورد للأثاث والمفروشات الكويت" loading="${i === 0 ? 'eager' : 'lazy'}" ${i === 0 ? 'fetchpriority="high"' : ''} width="800" height="800" onerror="this.style.opacity='.2'">
-          ${(p.images && p.images.length > 1) ? `<span class="work-card-badge imgs">📷 ${p.images.length}</span>` : ''}
-          ${p.video ? `<span class="work-card-badge video">🎬 فيديو</span>` : ''}
-        </div>
-        <div class="work-card-info">
-          <div class="work-card-title">${esc(p.title)}</div>
-          ${p.price ? `<div class="work-card-price">${esc(p.price)} د.ك / ${esc(p.unit||'م')}</div>` : ''}
-          <div class="work-card-date">${relativeDate(p.date)}</div>
-        </div>
-      </div>
-    </div>
-  `).join('');
-
-  dotsRender();
-  currentSlideIndex = 0;
-  updateSlider();
-
-  if (posts.length > 0) {
-    document.getElementById('see-all-btn').style.display = 'flex';
-  }
-
-  startAutoScroll();
-}
-
-function dotsRender() {
-  const dotsContainer = document.getElementById('slider-dots');
-  dotsContainer.innerHTML = currentLatestWorks.map((_, i) => `
-    <span class="slider-dot ${i === 0 ? 'active' : ''}" onclick="goToSlide(${i})"></span>
-  `).join('');
-}
-
-function updateSlider() {
-  const track = document.getElementById('home-works-grid');
-  if (!track) return;
-  track.style.transform = `translateX(${currentSlideIndex * 100}%)`;
-  document.querySelectorAll('.slider-dot').forEach((dot, idx) => {
-    dot.classList.toggle('active', idx === currentSlideIndex);
-  });
-}
-
-function nextSlide() {
-  if (currentLatestWorks.length === 0) return;
-  currentSlideIndex = (currentSlideIndex + 1) % currentLatestWorks.length;
-  updateSlider();
-}
-function prevSlide() {
-  if (currentLatestWorks.length === 0) return;
-  currentSlideIndex = (currentSlideIndex - 1 + currentLatestWorks.length) % currentLatestWorks.length;
-  updateSlider();
-}
-function goToSlide(i) { currentSlideIndex = i; updateSlider(); resetAutoScroll(); }
-
-function startAutoScroll() {
-  stopAutoScroll();
-  autoScrollTimer = setInterval(() => { nextSlide(); }, 4000);
-}
-function stopAutoScroll() { if (autoScrollTimer) { clearInterval(autoScrollTimer); autoScrollTimer = null; } }
-function resetAutoScroll() { stopAutoScroll(); startAutoScroll(); }
-
-const sliderElem = document.getElementById('slider-container');
-if (sliderElem) {
-  sliderElem.addEventListener('mouseenter', stopAutoScroll);
-  sliderElem.addEventListener('mouseleave', startAutoScroll);
-  sliderElem.addEventListener('touchstart', stopAutoScroll, {passive: true});
-  sliderElem.addEventListener('touchend', startAutoScroll, {passive: true});
-}
-
-function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
-
-function relativeDate(dateStr) {
-  if (!dateStr) return '';
-  const today = new Date(); today.setHours(0,0,0,0);
-  const d = new Date(dateStr); d.setHours(0,0,0,0);
-  const diff = Math.round((today - d) / 86400000);
-  if (diff <= 0)  return '🟢 اليوم';
-  if (diff === 1) return '🟡 أمس';
-  if (diff === 2) return '⚪ قبل يومين';
-  if (diff <= 6)  return `⚪ منذ ${diff} أيام`;
-  if (diff <= 13) return '⚪ منذ أسبوع';
-  if (diff <= 29) return '⚪ منذ أسبوعين';
-  if (diff <= 59) return '⚪ منذ شهر';
-  return '⚪ منذ فترة';
-}
-
-function toggleFaq(btn){const item=btn.parentElement;const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');}
-
-let lbSlides = [];
-let lbIndex = 0;
-
-function buildSlides(post) {
-  const slides = [];
-  if (post.video) slides.push({ type: 'video', src: post.video });
-  const imgs = (post.images && post.images.length > 0) ? post.images : (post.img ? [post.img] : []);
-  imgs.forEach(src => slides.push({ type: 'image', src }));
-  return slides.length ? slides : [{ type: 'image', src: post.img || '' }];
-}
-
-function isYouTube(url) { return /youtube\.com|youtu\.be/.test(url); }
-function youTubeEmbed(url) {
-  let id = '';
-  const m1 = url.match(/[?&]v=([^&]+)/);
-  const m2 = url.match(/youtu\.be\/([^?&]+)/);
-  if (m1) id = m1[1]; else if (m2) id = m2[1];
-  return `https://www.youtube.com/embed/${id}`;
-}
-
-function openLightbox(index) {
-  const post = currentLatestWorks[index];
-  if (!post) return;
-  lbSlides = buildSlides(post);
-  lbIndex = 0;
-  document.getElementById('lb-caption').textContent = post.title || '';
-  renderLbSlide();
-  document.getElementById('lightbox').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function renderLbSlide() {
-  const wrap = document.getElementById('lb-slide-wrap');
-  const slide = lbSlides[lbIndex];
-  wrap.innerHTML = '';
-  if (slide.type === 'video') {
-    if (isYouTube(slide.src)) {
-      wrap.innerHTML = `<iframe src="${youTubeEmbed(slide.src)}" style="width:100%;aspect-ratio:16/9;border:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-    } else {
-      const v = document.createElement('video');
-      v.src = slide.src;
-      v.controls = true;
-      v.playsInline = true;
-      v.style.width = '100%';
-      v.addEventListener('loadedmetadata', () => {
-        if (v.videoWidth && v.videoHeight) {
-          wrap.style.aspectRatio = `${v.videoWidth} / ${v.videoHeight}`;
-        }
-      });
-      wrap.appendChild(v);
-    }
-  } else {
-    const img = document.createElement('img');
-    img.src = slide.src;
-    img.alt = 'صورة - سالفورد للأثاث والمفروشات الكويت';
-    wrap.appendChild(img);
-  }
-
-  const prevBtn = document.getElementById('lb-prev');
-  const nextBtn = document.getElementById('lb-next');
-  const showNav = lbSlides.length > 1;
-  prevBtn.style.display = showNav ? 'flex' : 'none';
-  nextBtn.style.display = showNav ? 'flex' : 'none';
-
-  const dotsWrap = document.getElementById('lb-dots');
-  if (showNav) {
-    dotsWrap.innerHTML = lbSlides.map((_, i) => `<span class="lightbox-dot ${i===lbIndex?'active':''}" onclick="event.stopPropagation();lbGoTo(${i})"></span>`).join('');
-  } else {
-    dotsWrap.innerHTML = '';
-  }
-}
-
-function lbNext() { lbIndex = (lbIndex + 1) % lbSlides.length; renderLbSlide(); }
-function lbPrev() { lbIndex = (lbIndex - 1 + lbSlides.length) % lbSlides.length; renderLbSlide(); }
-function lbGoTo(i) { lbIndex = i; renderLbSlide(); }
-
-function closeLightbox(){
-  document.getElementById('lightbox').classList.remove('active');
-  document.getElementById('lb-slide-wrap').innerHTML = '';
-  document.body.style.overflow = '';
-}
-
-loadLatestWorks();
-</script>
-
 
 <!-- ✅ معاينة مصغّرة لكل قسم -->
 <section class="categories-preview" aria-label="معرض الأقسام المفصلة">
@@ -791,7 +573,226 @@ loadLatestWorks();
   <a class="s-btn s-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});gtag('event','phone_click');">📞 اتصال</a>
 </div>
 
+<script>
+// ============================================================
+// آخر 5 منشورات من posts.json — تظهر في السلايدر بالصفحة الرئيسية
+// المحتوى الأساسي مكتوب ثابتاً في HTML أعلاه (للسيو وبوتات الذكاء
+// الاصطناعي التي لا تُنفّذ JavaScript). هذا السكربت يحدّث المحتوى
+// تلقائياً عند إضافة مشاريع جديدة من لوحة التحكم.
+// ============================================================
+const POSTS_KEY = 'salford_posts';
+let currentLatestWorks = [];
+let currentSlideIndex = 0;
+let autoScrollTimer = null;
 
+async function loadLatestWorks() {
+  let posts = [];
+  try {
+    const local = localStorage.getItem(POSTS_KEY);
+    if (local) {
+      const p = JSON.parse(local);
+      if (Array.isArray(p) && p.length > 0) posts = p;
+    }
+  } catch(e) {}
+
+  if (posts.length === 0) {
+    try {
+      const r = await fetch('/posts.json?v=' + Date.now());
+      if (r.ok) {
+        const p = await r.json();
+        if (Array.isArray(p)) posts = p;
+      }
+    } catch(e) {}
+  }
+
+  const track = document.getElementById('home-works-grid');
+
+  if (posts.length === 0) {
+    track.innerHTML = '<div class="slide-item"><div class="no-works">📷 سيتم نشر أحدث أعمالنا هنا قريباً</div></div>';
+    return;
+  }
+
+  const latest = [...posts].reverse().slice(0, 5);
+  currentLatestWorks = latest;
+
+  track.innerHTML = latest.map((p, i) => `
+    <div class="slide-item">
+      <div class="work-card" onclick="${p.productUrl ? `location.href='${p.productUrl}'` : `openLightbox(${i})`}">
+        <div class="work-card-img">
+          <img src="${p.img}" ${p.imgLarge && p.imgLarge !== p.img ? `srcset="${p.img} 800w, ${p.imgLarge} 1400w" sizes="(max-width: 600px) 100vw, 800px"` : ''} alt="${esc(p.title)} - سالفورد للأثاث والمفروشات الكويت" loading="${i === 0 ? 'eager' : 'lazy'}" ${i === 0 ? 'fetchpriority="high"' : ''} width="800" height="800" onerror="this.style.opacity='.2'">
+          ${(p.images && p.images.length > 1) ? `<span class="work-card-badge imgs">📷 ${p.images.length}</span>` : ''}
+          ${p.video ? `<span class="work-card-badge video">🎬 فيديو</span>` : ''}
+        </div>
+        <div class="work-card-info">
+          <div class="work-card-title">${esc(p.title)}</div>
+          ${p.price ? `<div class="work-card-price">${esc(p.price)} د.ك / ${esc(p.unit||'م')}</div>` : ''}
+          <div class="work-card-date">${relativeDate(p.date)}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  dotsRender();
+  currentSlideIndex = 0;
+  updateSlider();
+
+  if (posts.length > 0) {
+    document.getElementById('see-all-btn').style.display = 'flex';
+  }
+
+  startAutoScroll();
+}
+
+function dotsRender() {
+  const dotsContainer = document.getElementById('slider-dots');
+  dotsContainer.innerHTML = currentLatestWorks.map((_, i) => `
+    <span class="slider-dot ${i === 0 ? 'active' : ''}" onclick="goToSlide(${i})"></span>
+  `).join('');
+}
+
+function updateSlider() {
+  const track = document.getElementById('home-works-grid');
+  if (!track) return;
+  track.style.transform = `translateX(${currentSlideIndex * 100}%)`;
+  document.querySelectorAll('.slider-dot').forEach((dot, idx) => {
+    dot.classList.toggle('active', idx === currentSlideIndex);
+  });
+}
+
+function nextSlide() {
+  if (currentLatestWorks.length === 0) return;
+  currentSlideIndex = (currentSlideIndex + 1) % currentLatestWorks.length;
+  updateSlider();
+}
+function prevSlide() {
+  if (currentLatestWorks.length === 0) return;
+  currentSlideIndex = (currentSlideIndex - 1 + currentLatestWorks.length) % currentLatestWorks.length;
+  updateSlider();
+}
+function goToSlide(i) { currentSlideIndex = i; updateSlider(); resetAutoScroll(); }
+
+function startAutoScroll() {
+  stopAutoScroll();
+  autoScrollTimer = setInterval(() => { nextSlide(); }, 4000);
+}
+function stopAutoScroll() { if (autoScrollTimer) { clearInterval(autoScrollTimer); autoScrollTimer = null; } }
+function resetAutoScroll() { stopAutoScroll(); startAutoScroll(); }
+
+const sliderElem = document.getElementById('slider-container');
+if (sliderElem) {
+  sliderElem.addEventListener('mouseenter', stopAutoScroll);
+  sliderElem.addEventListener('mouseleave', startAutoScroll);
+  sliderElem.addEventListener('touchstart', stopAutoScroll, {passive: true});
+  sliderElem.addEventListener('touchend', startAutoScroll, {passive: true});
+}
+
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
+function relativeDate(dateStr) {
+  if (!dateStr) return '';
+  const today = new Date(); today.setHours(0,0,0,0);
+  const d = new Date(dateStr); d.setHours(0,0,0,0);
+  const diff = Math.round((today - d) / 86400000);
+  if (diff <= 0)  return '🟢 اليوم';
+  if (diff === 1) return '🟡 أمس';
+  if (diff === 2) return '⚪ قبل يومين';
+  if (diff <= 6)  return `⚪ منذ ${diff} أيام`;
+  if (diff <= 13) return '⚪ منذ أسبوع';
+  if (diff <= 29) return '⚪ منذ أسبوعين';
+  if (diff <= 59) return '⚪ منذ شهر';
+  return '⚪ منذ فترة';
+}
+
+function toggleFaq(btn){const item=btn.parentElement;const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');}
+
+let lbSlides = [];
+let lbIndex = 0;
+
+function buildSlides(post) {
+  const slides = [];
+  if (post.video) slides.push({ type: 'video', src: post.video });
+  const imgs = (post.images && post.images.length > 0) ? post.images : (post.img ? [post.img] : []);
+  imgs.forEach(src => slides.push({ type: 'image', src }));
+  return slides.length ? slides : [{ type: 'image', src: post.img || '' }];
+}
+
+function isYouTube(url) { return /youtube\.com|youtu\.be/.test(url); }
+function youTubeEmbed(url) {
+  let id = '';
+  const m1 = url.match(/[?&]v=([^&]+)/);
+  const m2 = url.match(/youtu\.be\/([^?&]+)/);
+  if (m1) id = m1[1]; else if (m2) id = m2[1];
+  return `https://www.youtube.com/embed/${id}`;
+}
+
+function openLightbox(index) {
+  const post = currentLatestWorks[index];
+  if (!post) return;
+  lbSlides = buildSlides(post);
+  lbIndex = 0;
+  document.getElementById('lb-caption').textContent = post.title || '';
+  renderLbSlide();
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function renderLbSlide() {
+  const wrap = document.getElementById('lb-slide-wrap');
+  const slide = lbSlides[lbIndex];
+  wrap.innerHTML = '';
+  if (slide.type === 'video') {
+    if (isYouTube(slide.src)) {
+      wrap.innerHTML = `<iframe src="${youTubeEmbed(slide.src)}" style="width:100%;aspect-ratio:16/9;border:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+    } else {
+      const v = document.createElement('video');
+      v.src = slide.src;
+      v.controls = true;
+      v.playsInline = true;
+      v.style.width = '100%';
+      v.addEventListener('loadedmetadata', () => {
+        if (v.videoWidth && v.videoHeight) {
+          wrap.style.aspectRatio = `${v.videoWidth} / ${v.videoHeight}`;
+        }
+      });
+      wrap.appendChild(v);
+    }
+  } else {
+    const img = document.createElement('img');
+    img.src = slide.src;
+    img.alt = 'صورة - سالفورد للأثاث والمفروشات الكويت';
+    wrap.appendChild(img);
+  }
+
+  const prevBtn = document.getElementById('lb-prev');
+  const nextBtn = document.getElementById('lb-next');
+  const showNav = lbSlides.length > 1;
+  prevBtn.style.display = showNav ? 'flex' : 'none';
+  nextBtn.style.display = showNav ? 'flex' : 'none';
+
+  const dotsWrap = document.getElementById('lb-dots');
+  if (showNav) {
+    dotsWrap.innerHTML = lbSlides.map((_, i) => `<span class="lightbox-dot ${i===lbIndex?'active':''}" onclick="event.stopPropagation();lbGoTo(${i})"></span>`).join('');
+  } else {
+    dotsWrap.innerHTML = '';
+  }
+}
+
+function lbNext() { lbIndex = (lbIndex + 1) % lbSlides.length; renderLbSlide(); }
+function lbPrev() { lbIndex = (lbIndex - 1 + lbSlides.length) % lbSlides.length; renderLbSlide(); }
+function lbGoTo(i) { lbIndex = i; renderLbSlide(); }
+
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('active');
+  document.getElementById('lb-slide-wrap').innerHTML = '';
+  document.body.style.overflow = '';
+}
+
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(loadLatestWorks, { timeout: 2000 });
+} else {
+  setTimeout(loadLatestWorks, 150);
+}
+</script>
 
 <!-- نظام التقييمات الحقيقي (Firebase) — تحميل مؤجَّل (Lazy Load) لحين اقتراب الزائر من قسم التقييمات، لتخفيف ضغط المعالج (main-thread) بالتحميل الأولي للصفحة -->
 <script>
@@ -923,3 +924,4 @@ loadLatestWorks();
 <script src="/analytics.js"></script>
 </body>
 </html>
+
