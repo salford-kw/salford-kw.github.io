@@ -886,9 +886,9 @@ loadLatestWorks();
 // المعاينة تلقائياً من products.json عند إضافة منتجات جديدة من
 // لوحة التحكم، بدون الحاجة لتعديل هذا الملف يدوياً كل مرة.
 // ============================================================
-(async function updateHomePreviews() {
+async function updateHomePreviews() {
   try {
-    const r = await fetch('/products.json?v=' + Date.now());
+    const r = await fetch('/products.json');
     if (!r.ok) return;
     const data = await r.json();
 
@@ -918,7 +918,22 @@ loadLatestWorks();
   } catch (e) {
     // في حال فشل الجلب، تبقى المعاينة الثابتة بالـ HTML كما هي
   }
-})();
+}
+
+const catPreviewSection = document.querySelector('.categories-preview');
+if ('IntersectionObserver' in window && catPreviewSection) {
+  const catObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        updateHomePreviews();
+        catObserver.disconnect();
+      }
+    });
+  }, { rootMargin: '300px 0px' });
+  catObserver.observe(catPreviewSection);
+} else {
+  updateHomePreviews();
+}
 </script>
 <script src="/analytics.js"></script>
 </body>
