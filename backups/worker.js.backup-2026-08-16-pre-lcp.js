@@ -255,32 +255,6 @@ async function deleteFile(env, path, commitMessage) {
   return { skipped: false };
 }
 
-
-// ⚡ LCP: مزامنة صورة السلايدر الأولى داخل index.html مع أحدث منشور.
-// السبب: صورة LCP لو لم تكن في HTML من البداية، لا يكتشفها المتصفح إلا بعد
-// جلب posts.json وتحليله — سلسلة تُضخّم أي تذبذب شبكي وترفع LCP بشدة.
-// هذه الدالة تُبقي الـpreload والسلايدر الثابت مطابقين لأحدث صورة دائماً.
-// آمنة بالكامل: أي فشل هنا لا يُفشل النشر (تُستدعى داخل try/catch صامت).
-async function syncLcpPreload(env, posts) {
-  if (!Array.isArray(posts) || posts.length === 0) return;
-  const latest = [...posts].reverse()[0];
-  if (!latest || !latest.img) return;
-
-  const { res, data } = await ghRequestJson(env, 'index.html', {}, 2);
-  if (!res.ok || !data.content) return;
-  let html = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ''))));
-
-  const oldImgMatch = html.match(/data-static-first-img="([^"]*)"/);
-  if (!oldImgMatch) return;
-  const oldImg = oldImgMatch[1];
-  if (oldImg === latest.img) return; // لا تغيير — لا حاجة لكتابة commit
-
-  // استبدال كل مواضع الصورة القديمة (preload + data-attr + src بالسلايدر)
-  html = html.split(oldImg).join(latest.img);
-
-  await putTextFile(env, 'index.html', html, 'مزامنة صورة LCP مع أحدث منشور');
-}
-
 // حد بسيط لمنع محاولات تخمين كلمة المرور المتكررة (في الذاكرة، لكل نسخة worker)
 const attempts = new Map();
 function rateLimited(ip) {
@@ -377,8 +351,6 @@ export default {
       if (url.pathname === '/api/publish-posts') {
         if (!Array.isArray(payload.posts)) return json({ error: 'بيانات المقالات غير صالحة' }, 400, origin);
         await putJSONFile(env, 'posts.json', payload.posts, 'تحديث posts.json');
-        // ⚡ مزامنة صورة LCP — فشلها لا يُفشل النشر
-        try { await syncLcpPreload(env, payload.posts); } catch (e) {}
         return json({ ok: true }, 200, origin);
       }
 
