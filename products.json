@@ -812,6 +812,26 @@
       "price": "5",
       "unit": "م",
       "installDate": "2026-08-07"
+    },
+    {
+      "id": "prod_1786863263461_upx9z",
+      "code": "سجاد امازون سعودي",
+      "slug": "سجاد-امازون-سعودي",
+      "sub": "saada",
+      "area": "الضجيج",
+      "desc": "سجاد امازون سعودي للدرج والممرات",
+      "img": "https://salfordkw.shop/products/product_1786863255173_penht-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786863255173_penht-small.webp"
+      ],
+      "imgLarge": "https://salfordkw.shop/products/product_1786863255173_penht-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786863255173_penht-large.webp"
+      ],
+      "video": "",
+      "price": "5",
+      "unit": "م",
+      "installDate": "2026-08-16"
     }
   ],
   "majalis": [
