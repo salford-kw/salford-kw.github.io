@@ -925,19 +925,12 @@ async function updateHomePreviews() {
   }
 }
 
-const catPreviewSection = document.querySelector('.categories-preview');
-if ('IntersectionObserver' in window && catPreviewSection) {
-  const catObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        updateHomePreviews();
-        catObserver.disconnect();
-      }
-    });
-  }, { rootMargin: '300px 0px' });
-  catObserver.observe(catPreviewSection);
-} else {
+// يُؤجَّل حتى اكتمال تحميل الصفحة بالكامل (بعد LCP) — لا علاقة له بالسكرول،
+// لأن هذا القسم قريب من أعلى الصفحة والـ IntersectionObserver كان يشتغل شبه فوري
+if (document.readyState === 'complete') {
   updateHomePreviews();
+} else {
+  window.addEventListener('load', updateHomePreviews);
 }
 </script>
 <script src="/analytics.js"></script>
