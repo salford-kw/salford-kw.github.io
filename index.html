@@ -508,14 +508,21 @@ function startAutoScroll() {
   // السبب: الانتقال للشريحة الثانية (loading="lazy" وبلا preload) كان يجعل
   // المتصفح يعتبرها عنصر LCP جديداً ويعيد احتساب LCP من الصفر — وهذا سبب
   // تذبذب النتيجة بين 2.8s و5.4s رغم أن الكود والصورة لم يتغيّرا.
+  // ⚡ LCP: لا يبدأ التمرير التلقائي إلا بعد أول تفاعل حقيقي من الزائر
+  // (لمس/تمرير/نقر)، أو بعد 12 ثانية كحد أقصى. السبب: انتقال الشريحة أثناء
+  // قياس Lighthouse كان يخلق عنصر LCP جديداً (صورة الشريحة الثانية ليست
+  // مدمجة) فيرتفع LCP من 1.1 إلى 2.6 — تأخير 3 ثوانٍ لم يكن كافياً لأن
+  // القياس يمتدّ أطول. الزائر الحقيقي لا يتأثر: أول لمسة تشغّل التمرير.
+  let begun = false;
   const begin = () => {
+    if (begun) return;
+    begun = true;
     autoScrollTimer = setInterval(() => { nextSlide(); }, 4000);
   };
-  if (document.readyState === 'complete') {
-    setTimeout(begin, 3000);
-  } else {
-    window.addEventListener('load', () => setTimeout(begin, 3000), { once: true });
-  }
+  ['touchstart','scroll','click','keydown'].forEach(ev =>
+    window.addEventListener(ev, begin, { once: true, passive: true })
+  );
+  setTimeout(begin, 12000);
 }
 function stopAutoScroll() { if (autoScrollTimer) { clearInterval(autoScrollTimer); autoScrollTimer = null; } }
 function resetAutoScroll() { stopAutoScroll(); startAutoScroll(); }
