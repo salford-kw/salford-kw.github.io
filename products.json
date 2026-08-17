@@ -1543,6 +1543,25 @@
       "price": "23",
       "unit": "م",
       "installDate": "2026-08-16"
+    },
+    {
+      "id": "prod_1786199443865_oug4o",
+      "code": "مساند ديوانية اسفنج",
+      "desc": "مساند ديوانية تصميم مميز \nاسفنج البغلي درجة اولى \nخام تركي \nتنفيذ سالفورد للأثاث والمفروشات \nمنطقة صباح الناصر",
+      "img": "https://salfordkw.shop/products/product_1786199435881_w36nv.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786199435881_w36nv.webp"
+      ],
+      "video": "",
+      "price": "14",
+      "unit": "م",
+      "imgLarge": "https://salfordkw.shop/products/product_1786199435881_w36nv-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786199435881_w36nv-large.webp"
+      ],
+      "installDate": "2026-08-09",
+      "slug": "مساند-ديوانية-اسفنج",
+      "sub": "masanid-tafseel"
     }
   ],
   "athath": [
