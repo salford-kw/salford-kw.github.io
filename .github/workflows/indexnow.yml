@@ -1,0 +1,71 @@
+name: IndexNow Auto Submit
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect changed/new HTML pages
+        id: changes
+        run: |
+          git diff --name-only --diff-filter=ACM ${{ github.event.before }} ${{ github.sha }} -- '*.html' \
+            | grep -v '^backups/' > changed_files.txt || true
+          echo "الصفحات المتغيرة:"
+          cat changed_files.txt
+
+      - name: Submit to IndexNow
+        env:
+          INDEXNOW_KEY: "2c6659d2883d7235ddef3670d1292ffc"
+          HOST: "salfordkw.shop"
+        run: |
+          python3 << 'PYEOF'
+          import json, os, urllib.request, urllib.parse
+
+          key = os.environ["INDEXNOW_KEY"]
+          host = os.environ["HOST"]
+
+          with open("changed_files.txt", encoding="utf-8") as f:
+              files = [l.strip() for l in f if l.strip()]
+
+          if not files:
+              print("لا توجد صفحات HTML متغيرة بهذا الـ push")
+              raise SystemExit(0)
+
+          urls = []
+          for path in files:
+              segments = [urllib.parse.quote(seg) for seg in path.split("/")]
+              url = f"https://{host}/" + "/".join(segments)
+              urls.append(url)
+
+          print(f"إرسال {len(urls)} رابط إلى IndexNow:")
+          for u in urls:
+              print(" -", u)
+
+          payload = {
+              "host": host,
+              "key": key,
+              "keyLocation": f"https://{host}/{key}.txt",
+              "urlList": urls,
+          }
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=json.dumps(payload).encode("utf-8"),
+              headers={"Content-Type": "application/json; charset=utf-8"},
+              method="POST",
+          )
+          try:
+              resp = urllib.request.urlopen(req, timeout=20)
+              print("حالة الإرسال:", resp.status)
+          except urllib.error.HTTPError as e:
+              print("خطأ HTTP:", e.code, e.read().decode(errors="replace"))
+          except Exception as e:
+              print("خطأ:", e)
+          PYEOF
