@@ -2768,6 +2768,32 @@
       "unit": "م",
       "installDate": "2026-02-04",
       "slug": "ستارة-ويفي-كتان"
+    },
+    {
+      "id": "prod_1786936422940_anmr7",
+      "code": "ستائر ويفي",
+      "sub": "wafi",
+      "area": "سلوى",
+      "desc": "ستائر ويف (Wave / S-Fold) بكسرات متناسقة ودقيقة.\nالخامة: شيفون بوليستر عالي الجودة متين ومقاوم للتجعد.\nالتصميم: شيفون منقّط بتطريز بارز ناعم (Tufted Dots).\nمرونة الضوء: تسمح بنفاذ الضوء بنعومة مع الحفاظ على الخصوصية النهارية.\nالملاءمة: مثالية لصالات الاستقبال، الصالونات، وغرف النوم العصريّة.",
+      "img": "https://salfordkw.shop/products/product_1786936411041_l1ylj-small.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1786936411041_l1ylj-small.webp",
+        "https://salfordkw.shop/products/product_1786936413041_v5y0y-small.webp",
+        "https://salfordkw.shop/products/product_1786936415041_sfm9b-small.webp",
+        "https://salfordkw.shop/products/product_1786936417041_23y1l-small.webp"
+      ],
+      "video": "",
+      "price": "7",
+      "unit": "م",
+      "imgLarge": "https://salfordkw.shop/products/product_1786936411041_l1ylj-large.webp",
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1786936411041_l1ylj-large.webp",
+        "https://salfordkw.shop/products/product_1786936413041_v5y0y-large.webp",
+        "https://salfordkw.shop/products/product_1786936415041_sfm9b-large.webp",
+        "https://salfordkw.shop/products/product_1786936417041_23y1l-large.webp"
+      ],
+      "installDate": "2026-08-17",
+      "slug": "ستائر-ويفي"
     }
   ],
   "theel": [

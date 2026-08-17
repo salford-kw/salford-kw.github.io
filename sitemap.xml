@@ -2021,4 +2021,22 @@
       <image:loc>https://salfordkw.shop/products/product_1786723964224_540t1-small.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/sataer-ستائر-ويفي.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786936411041_l1ylj-large.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786936413041_v5y0y-large.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786936415041_sfm9b-large.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1786936417041_23y1l-large.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
