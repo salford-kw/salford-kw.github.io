@@ -1562,6 +1562,33 @@
       "installDate": "2026-08-09",
       "slug": "مساند-ديوانية-اسفنج",
       "sub": "masanid-tafseel"
+    },
+    {
+      "code": "مجلس ديكور ارضي مع كنب",
+      "desc": "مجلس ديكور ديوانية وكنب \nالقماش شانيل تركي \nالخشب جوز \nالكويت الدعية",
+      "price": "21",
+      "unit": "المتر",
+      "area": "الرميثية",
+      "availability": "https://schema.org/InStock",
+      "stock": "10",
+      "color": "بيج كريمي",
+      "material": "شانيل تركي",
+      "dimensions": "50x20 سم ارتفاع 50 سماكة 20 ",
+      "mpn": "SLM02173",
+      "deliveryTime": "12",
+      "days": "",
+      "img": "https://salfordkw.shop/products/product_1787178749906_2rxuy_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1787178749906_2rxuy_0-large.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1787178749906_2rxuy_0-small.webp",
+        "https://salfordkw.shop/products/product_1787178753552_uz67b_1-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1787178749906_2rxuy_0-large.webp",
+        "https://salfordkw.shop/products/product_1787178753552_uz67b_1-large.webp"
+      ],
+      "id": "prod_1787178760552_99431",
+      "slug": "مجلس-ديكور-ارضي-مع-كنب"
     }
   ],
   "athath": [
