@@ -92,4 +92,24 @@
     safeSet(counterRef, { device: deviceField });
     safeSet(dailyRef, { clicks: clicksField });
   }, true);
+
+  // 4) نقرات أزرار "تصفّح أقسامنا" بالصفحة الرئيسية (class="cat-card")
+  //    تُسجَّل بمفتاح ثابت مبني من رابط القسم (مو النص) — ما يتأثر لو
+  //    تغيّر عنوان القسم لاحقاً. إجمالي + حسب الجهاز + سجل يومي.
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest && e.target.closest('.cat-card');
+    if (!card || !card.getAttribute) return;
+    var href = card.getAttribute('href') || '';
+    if (!href) return;
+
+    var catKey = href.replace(/^\//, '').replace(/\.html$/, '') || 'other';
+    var device = isMobile() ? 'mobile' : 'desktop';
+
+    var catField = {}; catField[catKey] = inc;
+    var catDeviceField = {}; catDeviceField[catKey] = {}; catDeviceField[catKey][device] = inc;
+
+    safeSet(counterRef, { category_clicks: catField });
+    safeSet(counterRef, { category_clicks_device: catDeviceField });
+    safeSet(dailyRef, { category_clicks: catField });
+  }, true);
 })();
