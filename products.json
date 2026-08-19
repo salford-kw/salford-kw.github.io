@@ -2204,6 +2204,41 @@
       "price": "25",
       "unit": "م",
       "installDate": "2026-08-06"
+    },
+    {
+      "code": "كنب مودرن وطاولات زان ",
+      "desc": "كنب مودرن تفصيل يدوي \nخام تركي ملمس ناعم \nاسفنج كويتي البغلي\nالخشب زان احمر \n",
+      "price": "65",
+      "unit": "المتر",
+      "area": "الشامية",
+      "availability": "https://schema.org/InStock",
+      "stock": "7",
+      "color": "اوف وايت",
+      "material": "مخمل تركي - خشب زان ",
+      "dimensions": "1x1",
+      "mpn": "SL0915",
+      "deliveryTime": "17 يوم عمل",
+      "days": "30",
+      "img": "https://salfordkw.shop/products/product_1787176732076_ticn8_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1787176732076_ticn8_0-large.webp",
+      "images": [
+        "https://salfordkw.shop/products/product_1787176732076_ticn8_0-small.webp",
+        "https://salfordkw.shop/products/product_1787176734769_0jqcf_1-small.webp",
+        "https://salfordkw.shop/products/product_1787176737502_behgs_2-small.webp",
+        "https://salfordkw.shop/products/product_1787176740366_bgmdq_3-small.webp",
+        "https://salfordkw.shop/products/product_1787176743338_eblu7_4-small.webp",
+        "https://salfordkw.shop/products/product_1787176746575_oje9t_5-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1787176732076_ticn8_0-large.webp",
+        "https://salfordkw.shop/products/product_1787176734769_0jqcf_1-large.webp",
+        "https://salfordkw.shop/products/product_1787176737502_behgs_2-large.webp",
+        "https://salfordkw.shop/products/product_1787176740366_bgmdq_3-large.webp",
+        "https://salfordkw.shop/products/product_1787176743338_eblu7_4-large.webp",
+        "https://salfordkw.shop/products/product_1787176746575_oje9t_5-large.webp"
+      ],
+      "id": "prod_1787176752917_d35sb",
+      "slug": "كنب-مودرن-وطاولات-زان"
     }
   ],
   "sataer": [
