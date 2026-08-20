@@ -457,18 +457,6 @@ footer a{color:var(--gold-light);text-decoration:none;}
       <a class="p-link" href="/catalog/sajjad-سجاد-شقة-كاملة-المطلاع.html" onclick="event.stopPropagation()">التفاصيل والسعر ←</a>
       </div>
     </article>
-    <article class="product-card" onclick="openLightbox('https://salfordkw.shop/products/product_1786222042461_bmcnn-large.webp')">
-      <img src="https://salfordkw.shop/products/product_1786222042461_bmcnn.webp" alt="تفصيل خاص تحت طاولة - سالفورد الكويت" loading="lazy"
-           onerror="this.src='https://placehold.co/200x200/1c1805/C8A96E?text=سالفورد'">
-      <div class="product-info">
-        <span class="product-badge">✅ متوفر</span>
-        <h3>تفصيل خاص تحت طاولة</h3>
-        <p>سجاد لصالة الاستقبال 
-تفصيل خاص 
-تنفيذ منطقة سلوى</p>
-      <a class="p-link" href="/catalog/sajjad-تفصيل-خاص-تحت-طاولة.html" onclick="event.stopPropagation()">التفاصيل والسعر ←</a>
-      </div>
-    </article>
     <article class="product-card" onclick="openLightbox('https://salfordkw.shop/products/product_1786222307838_0g3et-large.webp')">
       <img src="https://salfordkw.shop/products/product_1786222307838_0g3et.webp" alt="سجاد مشجر جملة - سالفورد الكويت" loading="lazy"
            onerror="this.src='https://placehold.co/200x200/1c1805/C8A96E?text=سالفورد'">
@@ -493,6 +481,7 @@ footer a{color:var(--gold-light);text-decoration:none;}
   <a href="/sajjad-saada-kuwait.html">🟫 صفحة مخصصة: سجاد ساده الكويت (ألوان موحّدة تناسب كل ديكور)</a>
   <a href="/sajjad-masjid-kuwait.html">🕌 صفحة مخصصة: سجاد مساجد ومصليات الكويت (نقشة صفوف وسجادات صلاة)</a>
     <a href="/sajjad-al-dajeej-kuwait.html">🏬 محل سالفورد في الضجيج — الموقع وساعات العمل والعيّنات</a>
+    <a href="/tarkib-sajjad-kuwait.html">🔧 خدمة تركيب سجاد الكويت</a>
   </section>
   <section class="steps" aria-label="خطوات تركيب السجاد والزل والموكيت">
     <h2 class="sec-title">كيف تتم عملية تركيب السجاد والزل والموكيت</h2>
@@ -707,7 +696,7 @@ function toggleFaq(btn){const item=btn.parentElement;const isOpen=item.classList
   if (document.readyState === 'complete') {
     loadAnalyticsSystem();
   } else {
-    window.addEventListener('load', loadAnalyticsSystem);
+    window.addEventListener('load', function(){ setTimeout(loadGtag,3500); }, {once:true});
   }
 })();
 </script>
