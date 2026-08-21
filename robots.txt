@@ -23,3 +23,4 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://salfordkw.shop/sitemap.xml
+Sitemap: https://salfordkw.shop/sitemap-pages.xml
