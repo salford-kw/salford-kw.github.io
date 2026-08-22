@@ -593,7 +593,7 @@ async function loadProducts() {
   
   // 2. Fetch products.json
   try {
-    const res = await fetch('/products.json?v=' + Date.now());
+    const res = await fetch('/products.json?v=' + Math.floor(Date.now() / 3600000));
     if (res.ok) { const data = await res.json(); renderProducts(data); return; }
   } catch(e) {}
 
@@ -738,7 +738,7 @@ function toggleFaq(btn){const item=btn.parentElement;const isOpen=item.classList
 // ============================================================
 (async function updateHomePreviews() {
   try {
-    const r = await fetch('/products.json?v=' + Date.now());
+    const r = await fetch('/products.json?v=' + Math.floor(Date.now() / 3600000));
     if (!r.ok) return;
     const data = await r.json();
 

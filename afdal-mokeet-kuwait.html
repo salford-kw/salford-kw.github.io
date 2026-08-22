@@ -401,7 +401,7 @@ function closeLightbox(){document.getElementById('lightbox').classList.remove('a
 // ============================================================
 (async function updateHomePreviews() {
   try {
-    const r = await fetch('/products.json?v=' + Date.now());
+    const r = await fetch('/products.json?v=' + Math.floor(Date.now() / 3600000));
     if (!r.ok) return;
     const data = await r.json();
 
