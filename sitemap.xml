@@ -2201,4 +2201,13 @@
       <image:loc>https://salfordkw.shop/products/product_1787370707010_77em6_0-large.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/diwaniyat-ديوانيه-قنفات-رسميه.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1787372891547_iw224_0-large.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
