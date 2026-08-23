@@ -2415,6 +2415,33 @@
       ],
       "id": "prod_1787177856805_ygkyd",
       "slug": "طقم-كنب-كلاسيكي---لمسة-كلاسيكية-فاخرة"
+    },
+    {
+      "code": "كنب شخصين مودرن",
+      "desc": "كنب مودرن لشخصين \nالطول 220سم \n",
+      "price": "35",
+      "unit": "المتر",
+      "area": "",
+      "availability": "https://schema.org/InStock",
+      "stock": "8",
+      "color": "",
+      "material": "",
+      "dimensions": "",
+      "mpn": "SLK09373",
+      "deliveryTime": "5",
+      "days": "",
+      "img": "https://salfordkw.shop/products/product_1787447666506_t4mgg_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1787447666506_t4mgg_0-large.webp",
+      "imgLargeW": 1200,
+      "imgLargeH": 554,
+      "images": [
+        "https://salfordkw.shop/products/product_1787447666506_t4mgg_0-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1787447666506_t4mgg_0-large.webp"
+      ],
+      "id": "prod_1787447672000_g3pmn",
+      "slug": "كنب-شخصين-مودرن"
     }
   ],
   "sataer": [
