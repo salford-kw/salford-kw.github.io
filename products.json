@@ -2469,6 +2469,33 @@
       ],
       "id": "prod_1787447672000_g3pmn",
       "slug": "كنب-شخصين-مودرن"
+    },
+    {
+      "code": "كنب مفرد مودرن",
+      "desc": "كنب مودرن كرسي\nتفصيل سالفورد ",
+      "price": "40",
+      "unit": "القطعة",
+      "area": "الدسمة",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "",
+      "material": "",
+      "dimensions": "",
+      "mpn": "Slk09474",
+      "deliveryTime": "",
+      "days": "5",
+      "img": "https://salfordkw.shop/products/product_1787464130893_ohipg_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1787464130893_ohipg_0-large.webp",
+      "imgLargeW": 900,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1787464130893_ohipg_0-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1787464130893_ohipg_0-large.webp"
+      ],
+      "id": "prod_1787464136300_rqqid",
+      "slug": "كنب-مفرد-مودرن"
     }
   ],
   "sataer": [
