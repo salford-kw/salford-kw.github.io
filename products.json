@@ -3400,6 +3400,37 @@
       ],
       "id": "prod_1787450543800_qmqa7",
       "slug": "مساند-و-كنب-ديوانية"
+    },
+    {
+      "code": "مجلس مساند ديكور خشب",
+      "desc": "مجلس مساند ظهر \nتفصيل مشغل سالفورد \n",
+      "price": "18",
+      "unit": "المتر",
+      "area": "الفردوس",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "بيج كريمي",
+      "material": "خام تركي / خشب قشر جوز / اسفنج البغلي",
+      "dimensions": "",
+      "mpn": "SLM0011",
+      "deliveryTime": "15 يوم تفصيل وتركيب",
+      "days": "",
+      "img": "https://salfordkw.shop/products/product_1787464887103_gdogr_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1787464887103_gdogr_0-large.webp",
+      "imgLargeW": 1080,
+      "imgLargeH": 1080,
+      "images": [
+        "https://salfordkw.shop/products/product_1787464887103_gdogr_0-small.webp",
+        "https://salfordkw.shop/products/product_1787464889293_3rdn4_1-small.webp",
+        "https://salfordkw.shop/products/product_1787464891256_59f2k_2-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1787464887103_gdogr_0-large.webp",
+        "https://salfordkw.shop/products/product_1787464889293_3rdn4_1-large.webp",
+        "https://salfordkw.shop/products/product_1787464891256_59f2k_2-large.webp"
+      ],
+      "id": "prod_1787464896569_i87jo",
+      "slug": "مجلس-مساند-ديكور-خشب"
     }
   ]
 }
