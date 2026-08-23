@@ -288,7 +288,7 @@ footer a{color:var(--gold-light);text-decoration:none;}
   <a class="s-btn s-call" href="tel:+96555943343" onclick="gtag('event','conversion',{'send_to':'AW-6824246360/call_salford'});gtag('event','phone_click');">📞 اتصال</a>
 </div>
 <script>
-function swapHero(el){var h=document.getElementById('hero-img');h.src=el.getAttribute('src');h.setAttribute('data-large', el.getAttribute('data-large')||el.getAttribute('src'));}
+function swapHero(el){var h=document.getElementById('hero-img');var big=el.getAttribute('data-large')||el.getAttribute('src');h.src=big;h.setAttribute('data-large', big);}
 function openLightbox(src){document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden';}
 function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow='';}
 </script>
