@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- الشريحة الثانية: preload بأولوية منخفضة كضمانة لو انتقل السلايدر مبكراً -->
-<link rel="preload" as="image" fetchpriority="low" href="https://salfordkw.shop/products/product_1786817239235_9m3oz-small.webp" id="lcp-preload-2">
+<link rel="preload" as="image" fetchpriority="low" href="https://salfordkw.shop/products/product_1786817239235_9m3oz-large.webp" id="lcp-preload-2">
 <!-- ✅ TITLE محسّن -->
 <title>سالفورد للأثاث | مجالس ديكور وسجاد تركي - توصيل لكل الكويت</title>
 <!-- ✅ META DESCRIPTION محسّنة -->
@@ -365,7 +365,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/majalis-مساند-ظهر-4.html'">
           <div class="work-card-img">
-            <img src="https://salfordkw.shop/products/product_1786817239235_9m3oz-small.webp" alt="مساند ظهر - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
+            <img src="https://salfordkw.shop/products/product_1786817239235_9m3oz-large.webp" alt="مساند ظهر - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
           </div>
           <div class="work-card-info">
             <div class="work-card-title">مساند ظهر</div>
@@ -377,7 +377,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/sajjad-سجاد-مشجر-غرفة-استقبال.html'">
           <div class="work-card-img">
-            <img src="https://salfordkw.shop/products/product_1786754344544_wepuz-small.webp" alt="سجاد مشجر  غرفة استقبال - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
+            <img src="https://salfordkw.shop/products/product_1786754344544_wepuz-large.webp" alt="سجاد مشجر  غرفة استقبال - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
           </div>
           <div class="work-card-info">
             <div class="work-card-title">سجاد مشجر  غرفة استقبال</div>
@@ -389,7 +389,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/sajjad-سجاد-ساده-قص.html'">
           <div class="work-card-img">
-            <img src="https://salfordkw.shop/products/product_1786754182512_8hxey-small.webp" alt="سجاد ساده قص - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
+            <img src="https://salfordkw.shop/products/product_1786754182512_8hxey-large.webp" alt="سجاد ساده قص - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
           </div>
           <div class="work-card-info">
             <div class="work-card-title">سجاد ساده قص</div>
@@ -401,7 +401,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/sajjad-سجاد-ساده.html'">
           <div class="work-card-img">
-            <img src="https://salfordkw.shop/products/product_1786754037274_v3tp4-small.webp" alt="سجاد ساده - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
+            <img src="https://salfordkw.shop/products/product_1786754037274_v3tp4-large.webp" alt="سجاد ساده - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
           </div>
           <div class="work-card-info">
             <div class="work-card-title">سجاد ساده</div>
@@ -477,7 +477,7 @@ async function loadLatestWorks() {
     <div class="slide-item">
       <div class="work-card" onclick="${p.productUrl ? `location.href='${p.productUrl}'` : `openLightbox(${i})`}">
         <div class="work-card-img">
-          <img src="${p.img}" alt="${esc(p.title)} - سالفورد للأثاث والمفروشات الكويت" loading="${i === 0 ? 'eager' : 'lazy'}" ${i === 0 ? 'fetchpriority="high"' : ''} width="800" height="800" onerror="this.style.opacity='.2'">
+          <img src="${i === 0 ? p.img : (p.imgLarge || p.img)}" alt="${esc(p.title)} - سالفورد للأثاث والمفروشات الكويت" loading="${i === 0 ? 'eager' : 'lazy'}" ${i === 0 ? 'fetchpriority="high"' : ''} width="800" height="800" onerror="this.style.opacity='.2'">
           ${(p.images && p.images.length > 1) ? `<span class="work-card-badge imgs">📷 ${p.images.length}</span>` : ''}
           ${p.video ? `<span class="work-card-badge video">🎬 فيديو</span>` : ''}
         </div>
