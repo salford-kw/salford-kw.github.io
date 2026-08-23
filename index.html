@@ -477,7 +477,7 @@ async function loadLatestWorks() {
     <div class="slide-item">
       <div class="work-card" onclick="${p.productUrl ? `location.href='${p.productUrl}'` : `openLightbox(${i})`}">
         <div class="work-card-img">
-          <img src="${i === 0 ? p.img : (p.imgLarge || p.img)}" alt="${esc(p.title)} - سالفورد للأثاث والمفروشات الكويت" loading="${i === 0 ? 'eager' : 'lazy'}" ${i === 0 ? 'fetchpriority="high"' : ''} width="800" height="800" onerror="this.style.opacity='.2'">
+          <img src="${p.imgLarge || p.img}" alt="${esc(p.title)} - سالفورد للأثاث والمفروشات الكويت" loading="${i === 0 ? 'eager' : 'lazy'}" ${i === 0 ? 'fetchpriority="high"' : ''} width="800" height="800" onerror="this.style.opacity='.2'">
           ${(p.images && p.images.length > 1) ? `<span class="work-card-badge imgs">📷 ${p.images.length}</span>` : ''}
           ${p.video ? `<span class="work-card-badge video">🎬 فيديو</span>` : ''}
         </div>
