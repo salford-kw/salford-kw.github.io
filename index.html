@@ -587,9 +587,14 @@ let lbIndex = 0;
 function buildSlides(post) {
   const slides = [];
   if (post.video) slides.push({ type: 'video', src: post.video });
-  const imgs = (post.images && post.images.length > 0) ? post.images : (post.img ? [post.img] : []);
+  // 🛡️ اللايت بوكس يعرض الصورة ملء الشاشة (max-height:78vh) — لازم النسخة
+  // الكبيرة. النسخة الصغيرة كانت تُمدَّد على كامل الشاشة فتظهر ضبابية.
+  // بلا أثر على LCP: لا تُحمَّل إطلاقاً إلا بعد ضغط الزائر على الصورة.
+  const imgs = (post.imagesLarge && post.imagesLarge.length > 0) ? post.imagesLarge
+             : (post.images && post.images.length > 0) ? post.images
+             : (post.imgLarge || post.img) ? [post.imgLarge || post.img] : [];
   imgs.forEach(src => slides.push({ type: 'image', src }));
-  return slides.length ? slides : [{ type: 'image', src: post.img || '' }];
+  return slides.length ? slides : [{ type: 'image', src: post.imgLarge || post.img || '' }];
 }
 
 function isYouTube(url) { return /youtube\.com|youtu\.be/.test(url); }

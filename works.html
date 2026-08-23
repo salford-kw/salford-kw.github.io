@@ -716,9 +716,9 @@ function renderPosts(posts) {
   document.getElementById('schema-container').replaceChildren(s);
 
   grid.innerHTML = sorted.map(p => `
-    <article class="post-card" onclick="${p.productUrl ? `location.href='${p.productUrl}'` : `openLightbox('${p.img}','${escHtml(p.title)}','${escHtml(p.desc||'')}')`}">
+    <article class="post-card" onclick="${p.productUrl ? `location.href='${p.productUrl}'` : `openLightbox('${p.imgLarge || p.img}','${escHtml(p.title)}','${escHtml(p.desc||'')}')`}">
       <div class="post-img-wrap">
-        <img src="${p.img}" alt="${escHtml(p.title)} - سالفورد للأثاث الكويت" loading="lazy" onerror="this.style.opacity='.3'">
+        <img src="${p.imgLarge || p.img}" alt="${escHtml(p.title)} - سالفورد للأثاث الكويت" loading="lazy" onerror="this.style.opacity='.3'">
       </div>
       <div class="post-info">
         <div class="post-title">${escHtml(p.title)}</div>
@@ -859,7 +859,14 @@ loadPosts();
   }
 
   const reviewsSection = document.querySelector('.reviews');
-  if ('IntersectionObserver' in window && reviewsSection) {
+  const reviewsMount = document.getElementById('site-reviews-mount');
+  // 🛡️ إصلاح: هذي الصفحة لا تحتوي قسم تقييمات ولا عنصر site-reviews-mount،
+  // وكان الفرع الاحتياطي (else) يشغّل النظام رغم ذلك — فيحمّل Firebase مرة
+  // ثانية بلا داعٍ ويرمي أخطاء بالكونسول لأن العناصر غير موجودة.
+  // الآن لا يعمل إلا إذا وُجد فعلاً مكان لعرض التقييمات.
+  if (!reviewsSection || !reviewsMount) {
+    // لا شيء — الصفحة بلا قسم تقييمات
+  } else if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -870,7 +877,6 @@ loadPosts();
     }, { rootMargin: '300px 0px' });
     observer.observe(reviewsSection);
   } else {
-    // دعم احتياطي للمتصفحات القديمة بلا IntersectionObserver، أو إذا لم يوجد قسم تقييمات بالصفحة
     loadReviewsSystem();
   }
 })();
