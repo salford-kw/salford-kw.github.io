@@ -1409,16 +1409,7 @@
       <image:loc>https://salfordkw.shop/products/product_1786222042461_bmcnn.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://salfordkw.shop/catalog/sajjad-باركيه-تركي.html</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <image:image>
-      <image:loc>https://salfordkw.shop/products/product_1786222122589_w8hs0.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
+<url>
     <loc>https://salfordkw.shop/catalog/sajjad-سجاد-مشجر-جملة.html</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
