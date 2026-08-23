@@ -3292,6 +3292,33 @@
       ],
       "id": "prod_1787372908721_oddd8",
       "slug": "ديوانيه-قنفات-رسميه"
+    },
+    {
+      "code": "مساند و كنب ديوانية ",
+      "desc": "مساند ظهر ديكور \nمع قنفات في الواجهة \nتفصيل مشغل سالفورد \nالسعر 18 لمتر مساند الظهر \nالسعر 45 للكنب الواجهة ",
+      "price": "18",
+      "unit": "المتر",
+      "area": "النعيم",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "بيج",
+      "material": "خام تركي / خشب قشر جوز / اسفنج البغلي",
+      "dimensions": "",
+      "mpn": "SLM09885",
+      "deliveryTime": "15 يوم عمل",
+      "days": "",
+      "img": "https://salfordkw.shop/products/product_1787450539949_mbjii_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1787450539949_mbjii_0-large.webp",
+      "imgLargeW": 923,
+      "imgLargeH": 1152,
+      "images": [
+        "https://salfordkw.shop/products/product_1787450539949_mbjii_0-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1787450539949_mbjii_0-large.webp"
+      ],
+      "id": "prod_1787450543800_qmqa7",
+      "slug": "مساند-و-كنب-ديوانية"
     }
   ]
 }
