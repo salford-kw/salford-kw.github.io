@@ -853,6 +853,33 @@
       "price": "11",
       "unit": "م",
       "installDate": "2026-08-17"
+    },
+    {
+      "code": "عينة سجاد تركي سماكة 28مم",
+      "desc": "سجاد تركي للديوانية \nالسماكة 28 مم \nضغط الخيط 30\nصناعة تركية ",
+      "price": "13",
+      "unit": "المتر",
+      "area": "جميع مناطق الكويت",
+      "availability": "https://schema.org/InStock",
+      "stock": "50",
+      "color": "عدة الوان",
+      "material": "",
+      "dimensions": "4x1",
+      "mpn": "SLSJ0011",
+      "deliveryTime": "يوم واحد ",
+      "days": "1",
+      "img": "https://salfordkw.shop/products/product_1787464356797_lipiw_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1787464356797_lipiw_0-large.webp",
+      "imgLargeW": 1080,
+      "imgLargeH": 1080,
+      "images": [
+        "https://salfordkw.shop/products/product_1787464356797_lipiw_0-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1787464356797_lipiw_0-large.webp"
+      ],
+      "id": "prod_1787464363624_pwmot",
+      "slug": "عينة-سجاد-تركي-سماكة-28مم"
     }
   ],
   "majalis": [
