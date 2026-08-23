@@ -14,6 +14,36 @@
    وتنبيه الصفحات بدون زيارات.
    ============================================================ */
 (function () {
+  // 🛡️ إصلاح: بالصفحة الرئيسية يُحمَّل Firebase تحميلاً مؤجّلاً (عند التمرير
+  // لقسم التقييمات)، بينما هذا الملف يُنفّذ عند تحليل الصفحة — فكان يجد
+  // firebase غير معرّف ويخرج فوراً بلا تسجيل أي زيارة. الآن ننتظر اكتمال
+  // تحميل الصفحة (load)، ثم نحمّل Firebase بأنفسنا إن لم يكن محمّلاً.
+  // التنفيذ كله بعد حدث load، فلا يؤثر إطلاقاً على LCP أو العرض الأولي.
+  var FB_APP = 'https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js';
+  var FB_FS = 'https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js';
+
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      s.src = src;
+      s.onload = resolve;
+      s.onerror = reject;
+      document.body.appendChild(s);
+    });
+  }
+
+  function boot() {
+    if (typeof firebase !== 'undefined') return start();
+    loadScript(FB_APP)
+      .then(function () { return loadScript(FB_FS); })
+      .then(start)
+      .catch(function () {});
+  }
+
+  if (document.readyState === 'complete') boot();
+  else window.addEventListener('load', boot);
+
+  function start() {
   if (typeof firebase === 'undefined') return;
 
   var firebaseConfig = {
@@ -44,22 +74,40 @@
     try { return new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Kuwait' }); }
     catch (e) { return new Date().toISOString().slice(0, 10); }
   }
+  // مفتاح الساعة بتوقيت الكويت: YYYY-MM-DD-HH — يتيح فلاتر "آخر ساعة" و"آخر 24 ساعة"
+  function getHourStr() {
+    try {
+      var parts = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Asia/Kuwait', year: 'numeric', month: '2-digit',
+        day: '2-digit', hour: '2-digit', hour12: false
+      }).formatToParts(new Date());
+      var o = {};
+      parts.forEach(function (p) { o[p.type] = p.value; });
+      var hh = (o.hour === '24') ? '00' : o.hour;
+      return o.year + '-' + o.month + '-' + o.day + '-' + hh;
+    } catch (e) {
+      return new Date().toISOString().slice(0, 13).replace('T', '-');
+    }
+  }
   function isMobile() {
     return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent || '');
   }
 
   var page = getPageName();
   var today = getDateStr();
+  var thisHour = getHourStr();
   var dailyRef = db.collection('analytics_daily').doc(today);
+  var hourlyRef = db.collection('analytics_hourly').doc(thisHour);
 
   function safeSet(ref, data) { ref.set(data, { merge: true }).catch(function () {}); }
 
-  // 1) زيارة صفحة — إجمالي دائم + سجل يومي
+  // 1) زيارة صفحة — إجمالي دائم + سجل يومي + سجل بالساعة
   var pageField = {}; pageField[page] = inc;
   safeSet(counterRef, { pages: pageField });
   safeSet(dailyRef, { pages: pageField });
+  safeSet(hourlyRef, { pages: pageField });
 
-  // 2) زيارة موقع (جلسة متصفح) — تُحتسب مرة واحدة لكل جلسة، وأيضاً مرة لكل يوم
+  // 2) زيارة موقع (جلسة متصفح) — تُحتسب مرة واحدة لكل جلسة، وأيضاً مرة لكل يوم ولكل ساعة
   try {
     if (!sessionStorage.getItem('salford_visited')) {
       sessionStorage.setItem('salford_visited', '1');
@@ -70,10 +118,15 @@
       sessionStorage.setItem(visitedTodayKey, '1');
       safeSet(dailyRef, { site_visits: inc });
     }
+    var visitedHourKey = 'salford_visited_h_' + thisHour;
+    if (!sessionStorage.getItem(visitedHourKey)) {
+      sessionStorage.setItem(visitedHourKey, '1');
+      safeSet(hourlyRef, { site_visits: inc });
+    }
   } catch (e) {}
 
   // 3) نقرات الاتصال وواتساب — تُلتقط تلقائياً من أي رابط tel: أو wa.me
-  //    بدون الحاجة لتعديل أي زر موجود بالصفحة — تُسجَّل إجمالي + لكل صفحة/منتج + حسب الجهاز
+  //    بدون الحاجة لتعديل أي زر موجود بالصفحة — تُسجّل إجمالي + لكل صفحة/منتج + حسب الجهاز
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a');
     if (!a || !a.href) return;
@@ -90,11 +143,12 @@
     safeSet(counterRef, { clicks: clicksField });
     safeSet(counterRef, { clicks_by_page: byPageField });
     safeSet(counterRef, { device: deviceField });
-    safeSet(dailyRef, { clicks: clicksField });
+    safeSet(dailyRef, { clicks: clicksField, device: deviceField });
+    safeSet(hourlyRef, { clicks: clicksField, device: deviceField });
   }, true);
 
   // 4) نقرات أزرار "تصفّح أقسامنا" بالصفحة الرئيسية (class="cat-card")
-  //    تُسجَّل بمفتاح ثابت مبني من رابط القسم (مو النص) — ما يتأثر لو
+  //    تُسجّل بمفتاح ثابت مبني من رابط القسم (مو النص) — ما يتأثر لو
   //    تغيّر عنوان القسم لاحقاً. إجمالي + حسب الجهاز + سجل يومي.
   document.addEventListener('click', function (e) {
     var card = e.target.closest && e.target.closest('.cat-card');
@@ -111,5 +165,7 @@
     safeSet(counterRef, { category_clicks: catField });
     safeSet(counterRef, { category_clicks_device: catDeviceField });
     safeSet(dailyRef, { category_clicks: catField });
+    safeSet(hourlyRef, { category_clicks: catField });
   }, true);
+  } // نهاية start()
 })();
