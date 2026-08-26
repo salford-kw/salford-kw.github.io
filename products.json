@@ -880,6 +880,38 @@
       ],
       "id": "prod_1787464363624_pwmot",
       "slug": "عينة-سجاد-تركي-سماكة-28مم"
+    },
+    {
+      "code": "سجاد مسجد سماكه عاليه ومضغوط",
+      "sub": "masjid",
+      "desc": "سجاد تركي جامع \nل المساجد و الجوامع \n",
+      "price": "7.5",
+      "unit": "المتر المربع",
+      "area": "",
+      "availability": "https://schema.org/InStock",
+      "stock": "250",
+      "color": "",
+      "material": "",
+      "dimensions": "1.33x1.00",
+      "mpn": "SLSM0926",
+      "deliveryTime": "",
+      "days": "",
+      "img": "https://salfordkw.shop/products/product_1787747252222_44ffy_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1787747252222_44ffy_0-large.webp",
+      "imgLargeW": 900,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1787747252222_44ffy_0-small.webp",
+        "https://salfordkw.shop/products/product_1787747255251_lbttq_1-small.webp",
+        "https://salfordkw.shop/products/product_1787747257980_u32e2_2-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1787747252222_44ffy_0-large.webp",
+        "https://salfordkw.shop/products/product_1787747255251_lbttq_1-large.webp",
+        "https://salfordkw.shop/products/product_1787747257980_u32e2_2-large.webp"
+      ],
+      "id": "prod_1787747263712_uky3v",
+      "slug": "سجاد-مسجد-سماكه-عاليه-ومضغوط"
     }
   ],
   "majalis": [
