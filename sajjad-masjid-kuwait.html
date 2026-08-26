@@ -214,6 +214,14 @@ footer a{color:var(--gold-light);text-decoration:none;}
   <h3>المتانة والتنظيف في مصلى كثيف الاستخدام</h3>
   <p>سجاد المسجد يتعرض لضغط استخدام أعلى بكثير من سجاد المنزل — خمسة أوقات يومياً بأقدام كثيرة في نفس المواضع. لذلك نرشّح خامات ذات وبر كثيف ومقاوم للانضغاط تحديداً في ممرات الدخول والصف الأول، وهي المواضع التي تظهر فيها آثار الاستخدام أولاً. عند التركيب نحرص أن تكون الوصلات بين القطع في مواضع لا تقع عليها حركة مباشرة قدر الإمكان.</p>
 </section>
+<section class="masjid-products" aria-label="نماذج من سجاد المساجد المنفَّذ" style="padding:16px 0;">
+  <h2 class="sec-title" style="text-align:center;font-size:19px;margin-bottom:14px;">نماذج من أعمالنا في سجاد المساجد</h2>
+  <div id="masjid-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;padding:0 14px 8px;"></div>
+  <p style="text-align:center;padding:0 16px;font-size:13px;color:var(--text-muted);">
+    نُنفّذ سجاد المساجد بالمحاريب أو السادة على مقاس المصلى واتجاه القبلة — <a href="/sajjad.html" style="color:var(--gold);">تصفّح كل تشكيلة السجاد والموكيت</a>
+  </p>
+</section>
+
 <section class="related-links" aria-label="روابط ذات صلة">
   <a href="/sajjad.html">🧶 تصفّح كل تشكيلة السجاد والزل والموكيت</a>
   <a href="/sajjad-bel-meter-kuwait.html">📏 سجاد وزل بالمتر الكويت</a>
@@ -393,6 +401,48 @@ function closeLightbox(){document.getElementById('lightbox').classList.remove('a
     }
   } catch (e) {
     // في حال فشل الجلب، تبقى المعاينة الثابتة بالـ HTML كما هي
+  }
+})();
+</script>
+<script>
+// ============================================================
+// شبكة منتجات سجاد المساجد — تُملأ تلقائياً من products.json
+// تعرض فقط منتجات قسم sajjad التي قسمها الفرعي sub === 'masjid'
+// (نفس المفتاح المستخدم في SUBSECTIONS بصفحة sajjad.html وفي
+// لوحة الإدارة). أي منتج جديد يُنشر بهذا القسم الفرعي يظهر هنا
+// تلقائياً بلا تعديل هذا الملف.
+// ملاحظة: المحتوى النصي للصفحة مكتوب ثابتاً بالـHTML أعلاه لأجل
+// السيو وبوتات الذكاء الاصطناعي؛ هذي الشبكة إثراء بصري إضافي.
+// ============================================================
+(async function loadMasjidProducts() {
+  const grid = document.getElementById('masjid-grid');
+  if (!grid) return;
+  const section = grid.closest('section');
+  try {
+    const r = await fetch('/products.json?v=' + Math.floor(Date.now() / 3600000));
+    if (!r.ok) throw new Error('fetch failed');
+    const data = await r.json();
+    const items = (data.sajjad || [])
+      .map((p, idx) => ({ p, idx }))
+      .filter(({ p }) => !p.hidden && p.sub === 'masjid');
+
+    if (!items.length) { if (section) section.style.display = 'none'; return; }
+
+    grid.innerHTML = items.map(({ p, idx }) => `
+      <article style="background:var(--bg-card);border:1px solid rgba(200,169,110,.2);border-radius:12px;overflow:hidden;">
+        <img src="${p.img}" alt="${(p.code || 'سجاد مساجد')} - سالفورد الكويت" loading="lazy"
+             style="width:100%;aspect-ratio:1;object-fit:cover;display:block;background:var(--bg-sub);"
+             onerror="this.src='https://placehold.co/200x200/1c1805/C8A96E?text=سالفورد'">
+        <div style="padding:12px 14px;text-align:right;">
+          <h3 style="font-size:13px;font-weight:700;color:var(--gold-light);margin-bottom:5px;line-height:1.4;">${p.code || ''}</h3>
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.6;">${p.desc || ''}</p>
+          <a href="/catalog/sajjad-${p.slug || String(idx + 1).padStart(2, '0')}.html"
+             style="display:block;margin-top:6px;font-size:11px;color:var(--gold);text-decoration:none;font-weight:700;">التفاصيل والسعر ←</a>
+        </div>
+      </article>`).join('');
+  } catch (e) {
+    // فشل التحميل: نخفي القسم بدل ترك شبكة فارغة
+    if (section) section.style.display = 'none';
   }
 })();
 </script>
