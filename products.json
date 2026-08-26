@@ -912,6 +912,36 @@
       ],
       "id": "prod_1787747263712_uky3v",
       "slug": "سجاد-مسجد-سماكه-عاليه-ومضغوط"
+    },
+    {
+      "code": "سجاد مصلى و مسجد الكويت",
+      "sub": "masjid",
+      "desc": "صناعة تركية \nسماكة 28 مم\n",
+      "price": "7.5",
+      "unit": "المتر المربع",
+      "area": "جميع مناطق الكويت",
+      "availability": "https://schema.org/InStock",
+      "stock": "250",
+      "color": "عدة الوان",
+      "material": "",
+      "dimensions": "1.33x1.00",
+      "mpn": "SLSM0966",
+      "deliveryTime": "",
+      "days": "",
+      "img": "https://salfordkw.shop/products/product_1787747440468_jqnnv_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1787747440468_jqnnv_0-large.webp",
+      "imgLargeW": 900,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1787747440468_jqnnv_0-small.webp",
+        "https://salfordkw.shop/products/product_1787747443439_ux2qu_1-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1787747440468_jqnnv_0-large.webp",
+        "https://salfordkw.shop/products/product_1787747443439_ux2qu_1-large.webp"
+      ],
+      "id": "prod_1787747460971_ljasr",
+      "slug": "سجاد-مصلى-و-مسجد-الكويت"
     }
   ],
   "majalis": [
