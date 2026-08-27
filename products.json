@@ -2585,6 +2585,34 @@
       ],
       "id": "prod_1787464136300_rqqid",
       "slug": "كنب-مفرد-مودرن"
+    },
+    {
+      "code": "تفصيل كنب خامات تركيه",
+      "sub": "tafseel-kanab",
+      "desc": "عينة خامات تركيه ",
+      "price": "40",
+      "unit": "المتر",
+      "area": "",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "",
+      "material": "",
+      "dimensions": "",
+      "mpn": "SLSS01743",
+      "deliveryTime": "",
+      "days": "",
+      "img": "https://salfordkw.shop/products/product_1787855738686_679sw_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1787855738686_679sw_0-large.webp",
+      "imgLargeW": 960,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1787855738686_679sw_0-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1787855738686_679sw_0-large.webp"
+      ],
+      "id": "prod_1787855755031_cnioj",
+      "slug": "تفصيل-كنب-خامات-تركيه"
     }
   ],
   "sataer": [
