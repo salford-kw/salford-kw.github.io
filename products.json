@@ -942,6 +942,34 @@
       ],
       "id": "prod_1787747460971_ljasr",
       "slug": "سجاد-مصلى-و-مسجد-الكويت"
+    },
+    {
+      "code": "سجاد تركي مضغوط للديوانيه",
+      "sub": "saada",
+      "desc": "سجاد تركي نخب اول \nضغط الخيط 30\n",
+      "price": "13",
+      "unit": "المتر الطول عرض 4 امتار",
+      "area": "جميع مناطق الكويت",
+      "availability": "https://schema.org/InStock",
+      "stock": "250",
+      "color": "عدة الوان",
+      "material": "",
+      "dimensions": "1x4",
+      "mpn": "SLSJ0911",
+      "deliveryTime": "1 يوم",
+      "days": "",
+      "img": "https://salfordkw.shop/products/product_1788038402770_yly2k_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1788038402770_yly2k_0-large.webp",
+      "imgLargeW": 848,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1788038402770_yly2k_0-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1788038402770_yly2k_0-large.webp"
+      ],
+      "id": "prod_1788038408542_g25gp",
+      "slug": "سجاد-تركي-مضغوط-للديوانيه"
     }
   ],
   "majalis": [
