@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://salfordkw.shop/khadamat.html</loc>
     <lastmod>2026-08-22</lastmod>
@@ -11,5 +11,39 @@
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/wajar-kuwait.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/wajar/wajar-diwaniya-mudalla-rabiya-salford.webp</image:loc>
+      <image:title>وجار ديوانية بخشب مضلّع وكوّات مضاءة — الرابية</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salfordkw.shop/wajar/wajar-diwaniya-fakhir-sabahiya-salford.webp</image:loc>
+      <image:title>وجار ديوانية بإطار خشبي داكن وعمودَي عرض مضاءين — الصباحية</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salfordkw.shop/wajar/wajar-diwaniya-modern-rabiya-salford.webp</image:loc>
+      <image:title>وجار ديوانية مودرن ببانوه جوز ورفوف مضاءة — الرابية</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salfordkw.shop/wajar/wajar-diwaniya-fakhir-sabah-alahmad-salford.webp</image:loc>
+      <image:title>وجار ديوانية فاخر بواجهة جوز عريضة ورفوف مفتوحة — صباح الأحمد</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salfordkw.shop/wajar/wajar-diwaniya-modern-sabahiya-salford.webp</image:loc>
+      <image:title>وجار ديوانية مودرن داكن بتخزين مغلق — الصباحية</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salfordkw.shop/wajar/wajar-diwaniya-modern-mutlaa-salford.webp</image:loc>
+      <image:title>وجار ديوانية مودرن بعمود عرض طويل وبانوه غائر — المطلاع</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salfordkw.shop/wajar/wajar-majlis-classic-mutlaa-salford.webp</image:loc>
+      <image:title>وجار مجلس كلاسيك بتلبيس جداري فاتح — المطلاع</image:title>
+    </image:image>
   </url>
 </urlset>
