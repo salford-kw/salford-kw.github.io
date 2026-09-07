@@ -970,6 +970,38 @@
       ],
       "id": "prod_1788038408542_g25gp",
       "slug": "سجاد-تركي-مضغوط-للديوانيه"
+    },
+    {
+      "code": "سجاد مصلى مسجد ",
+      "sub": "masjid",
+      "desc": "تركيبنا في منطقة اشبيلية \nمن احد فاعلين الخير ",
+      "price": "7",
+      "unit": "المتر",
+      "area": "الفروانية - جميع المناطق",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "اخضر مع محراب",
+      "material": "تركي",
+      "dimensions": "سماكة 25 مم",
+      "mpn": "SLSM0265",
+      "deliveryTime": "2",
+      "days": "2",
+      "img": "https://salfordkw.shop/products/product_1788813779856_tv1wl_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1788813779856_tv1wl_0-large.webp",
+      "imgLargeW": 750,
+      "imgLargeH": 1347,
+      "images": [
+        "https://salfordkw.shop/products/product_1788813779856_tv1wl_0-small.webp",
+        "https://salfordkw.shop/products/product_1788813782546_t2bac_1-small.webp",
+        "https://salfordkw.shop/products/product_1788813785056_qhq38_2-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1788813779856_tv1wl_0-large.webp",
+        "https://salfordkw.shop/products/product_1788813782546_t2bac_1-large.webp",
+        "https://salfordkw.shop/products/product_1788813785056_qhq38_2-large.webp"
+      ],
+      "id": "prod_1788813791738_ndgoy",
+      "slug": "سجاد-مصلى-مسجد"
     }
   ],
   "majalis": [
