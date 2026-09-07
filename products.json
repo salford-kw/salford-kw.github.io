@@ -3581,6 +3581,36 @@
       ],
       "id": "prod_1787464896569_i87jo",
       "slug": "مجلس-مساند-ديكور-خشب"
+    },
+    {
+      "code": "تجهيز ديوانية كاملة",
+      "sub": "",
+      "desc": "اوجار \nسجاد حفر يدوي\nمساند ظهر اسفنج البغلي",
+      "price": "9",
+      "unit": "متر المساند",
+      "area": "الفردوس",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "بيج",
+      "material": "تركي سميك",
+      "dimensions": "",
+      "mpn": "SLN0928377",
+      "deliveryTime": "12",
+      "days": "12",
+      "img": "https://salfordkw.shop/products/product_1788813968800_6ktg7_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1788813968800_6ktg7_0-large.webp",
+      "imgLargeW": 967,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1788813968800_6ktg7_0-small.webp",
+        "https://salfordkw.shop/products/product_1788813971153_j1mvt_1-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1788813968800_6ktg7_0-large.webp",
+        "https://salfordkw.shop/products/product_1788813971153_j1mvt_1-large.webp"
+      ],
+      "id": "prod_1788813976389_7ul3h",
+      "slug": "تجهيز-ديوانية-كاملة"
     }
   ]
 }
