@@ -2300,4 +2300,13 @@
       <image:loc>https://salfordkw.shop/products/product_1788038402770_yly2k_0-large.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/sajjad-سجاد-مصلى-مسجد.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1788813779856_tv1wl_0-large.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
