@@ -3611,6 +3611,42 @@
       ],
       "id": "prod_1788813976389_7ul3h",
       "slug": "تجهيز-ديوانية-كاملة"
+    },
+    {
+      "code": "مجلس كنب ديوانية رسمية",
+      "sub": "",
+      "desc": "مجلس كنب \nمنطقة صباح الاحمد \nتفصيل مشغلنا سالفورد \nخشب زان \nاسفنج البغلي\n",
+      "price": "55",
+      "unit": "المتر",
+      "area": "صباح الأحمد",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "بيج",
+      "material": "شانيل و خشب زان و اسفنج البغلي",
+      "dimensions": "",
+      "mpn": "DLSS0186",
+      "deliveryTime": "25 يوم عمل",
+      "days": "",
+      "img": "https://salfordkw.shop/products/product_1789408999086_vyin1_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1789408999086_vyin1_0-large.webp",
+      "imgLargeW": 1200,
+      "imgLargeH": 900,
+      "images": [
+        "https://salfordkw.shop/products/product_1789408999086_vyin1_0-small.webp",
+        "https://salfordkw.shop/products/product_1789409001904_d81k6_1-small.webp",
+        "https://salfordkw.shop/products/product_1789409004508_6h85o_2-small.webp",
+        "https://salfordkw.shop/products/product_1789409006986_625d4_3-small.webp",
+        "https://salfordkw.shop/products/product_1789409009626_xr1en_4-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1789408999086_vyin1_0-large.webp",
+        "https://salfordkw.shop/products/product_1789409001904_d81k6_1-large.webp",
+        "https://salfordkw.shop/products/product_1789409004508_6h85o_2-large.webp",
+        "https://salfordkw.shop/products/product_1789409006986_625d4_3-large.webp",
+        "https://salfordkw.shop/products/product_1789409009626_xr1en_4-large.webp"
+      ],
+      "id": "prod_1789409015569_j8b1m",
+      "slug": "مجلس-كنب-ديوانية-رسمية"
     }
   ]
 }
