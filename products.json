@@ -3647,6 +3647,38 @@
       ],
       "id": "prod_1789409015569_j8b1m",
       "slug": "مجلس-كنب-ديوانية-رسمية"
+    },
+    {
+      "code": "ديوانية رسمية الكويت الفردوس",
+      "sub": "",
+      "desc": "تجهيز ديوانية رسمية\nكنب ديوانية \nمجلس ديكور خشب جوز \nاسفنج البغلي \nاعمالنا في منطقة الفردوس",
+      "price": "55",
+      "unit": "المتر",
+      "area": "الفردوس",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "بيج",
+      "material": "خشب جوز - اسفنج البغلي ",
+      "dimensions": "",
+      "mpn": "SLK017",
+      "deliveryTime": "25 يوم عمل",
+      "days": "",
+      "img": "https://salfordkw.shop/products/product_1789410908484_u0lvj_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1789410908484_u0lvj_0-large.webp",
+      "imgLargeW": 1147,
+      "imgLargeH": 750,
+      "images": [
+        "https://salfordkw.shop/products/product_1789410908484_u0lvj_0-small.webp",
+        "https://salfordkw.shop/products/product_1789410911543_27y4t_1-small.webp",
+        "https://salfordkw.shop/products/product_1789410913868_5xydb_2-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1789410908484_u0lvj_0-large.webp",
+        "https://salfordkw.shop/products/product_1789410911543_27y4t_1-large.webp",
+        "https://salfordkw.shop/products/product_1789410913868_5xydb_2-large.webp"
+      ],
+      "id": "prod_1789410921317_pe40p",
+      "slug": "ديوانية-رسمية-الكويت-الفردوس"
     }
   ]
 }
