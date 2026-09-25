@@ -1002,6 +1002,36 @@
       ],
       "id": "prod_1788813791738_ndgoy",
       "slug": "سجاد-مصلى-مسجد"
+    },
+    {
+      "code": "سجاد تركي مضغوط",
+      "sub": "saada",
+      "desc": "مسطرة جديدة وتشكيلة جديدة \nسجاد سادة قص بالمتر \n",
+      "price": "13",
+      "unit": "للمتر طول و عرض 4 متر ",
+      "area": "جميع مناطق الكويت",
+      "availability": "https://schema.org/InStock",
+      "stock": "45",
+      "color": "عدة الوان",
+      "material": "تركي مضغوط",
+      "dimensions": "ضغط الخيط 35 مم",
+      "mpn": "SLDN063",
+      "deliveryTime": "1",
+      "days": "1",
+      "img": "https://salfordkw.shop/products/product_1790365657185_lh364_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790365657185_lh364_0-large.webp",
+      "imgLargeW": 928,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790365657185_lh364_0-small.webp",
+        "https://salfordkw.shop/products/product_1790365660110_apdha_1-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790365657185_lh364_0-large.webp",
+        "https://salfordkw.shop/products/product_1790365660110_apdha_1-large.webp"
+      ],
+      "id": "prod_1790365666918_fuqr7",
+      "slug": "سجاد-تركي-مضغوط"
     }
   ],
   "majalis": [
