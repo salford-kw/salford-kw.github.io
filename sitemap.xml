@@ -2371,4 +2371,13 @@
       <image:loc>https://salfordkw.shop/products/product_1790365424670_bdp74_0-large.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/sajjad-سجاد-تركي-مضغوط.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1790365657185_lh364_0-large.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
