@@ -3503,6 +3503,40 @@
       ],
       "id": "prod_1790370623929_bjz1i",
       "slug": "ستاره-ويفي-ملكي-الجهراء"
+    },
+    {
+      "code": "ستاره معدن شتر داخلي",
+      "sub": "",
+      "desc": "ستائر معدن شتر داخلي \nتفصيل مشغل سالفورد ",
+      "price": "7",
+      "unit": "المتر",
+      "area": "العمرية",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "عدة الوان",
+      "material": "منوع",
+      "dimensions": "1x1",
+      "mpn": "SLS01002",
+      "deliveryTime": "3",
+      "days": "3",
+      "img": "https://salfordkw.shop/products/product_1790370973386_rpnef_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790370973386_rpnef_0-large.webp",
+      "imgLargeW": 750,
+      "imgLargeH": 995,
+      "images": [
+        "https://salfordkw.shop/products/product_1790370973386_rpnef_0-small.webp",
+        "https://salfordkw.shop/products/product_1790370976187_w1j9b_1-small.webp",
+        "https://salfordkw.shop/products/product_1790370978964_nda7f_2-small.webp",
+        "https://salfordkw.shop/products/product_1790370981552_0qvax_3-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790370973386_rpnef_0-large.webp",
+        "https://salfordkw.shop/products/product_1790370976187_w1j9b_1-large.webp",
+        "https://salfordkw.shop/products/product_1790370978964_nda7f_2-large.webp",
+        "https://salfordkw.shop/products/product_1790370981552_0qvax_3-large.webp"
+      ],
+      "id": "prod_1790370987574_1zab2",
+      "slug": "ستاره-معدن-شتر-داخلي"
     }
   ],
   "theel": [
