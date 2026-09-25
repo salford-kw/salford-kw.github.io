@@ -1853,6 +1853,34 @@
       ],
       "id": "prod_1790012406155_3j40e",
       "slug": "مساند-ظهر-تفصيل-جابر-الاحمد"
+    },
+    {
+      "code": "مساند ظهر و نقشة حفر ",
+      "sub": "masanid-tafseel",
+      "desc": "مساند ظهر اسفنج البغلي \nنقشة حفر يدوي \n",
+      "price": "11",
+      "unit": "المتر ",
+      "area": "العمرية",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "مساند بيج",
+      "material": "خام كتان ",
+      "dimensions": "15x50",
+      "mpn": "SLN09473Q1Q",
+      "deliveryTime": "4",
+      "days": "4",
+      "img": "https://salfordkw.shop/products/product_1790365424670_bdp74_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790365424670_bdp74_0-large.webp",
+      "imgLargeW": 978,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790365424670_bdp74_0-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790365424670_bdp74_0-large.webp"
+      ],
+      "id": "prod_1790365429903_c92b4",
+      "slug": "مساند-ظهر-و-نقشة-حفر"
     }
   ],
   "athath": [
