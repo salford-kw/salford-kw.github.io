@@ -2425,4 +2425,13 @@
       <image:loc>https://salfordkw.shop/products/product_1790370727660_1fcms_0-large.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/sataer-ستاره-معدن-شتر-داخلي.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1790370973386_rpnef_0-large.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
