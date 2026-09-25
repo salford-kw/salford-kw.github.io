@@ -2407,4 +2407,13 @@
       <image:loc>https://salfordkw.shop/products/product_1790370374039_a3g2f_0-large.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/sataer-ستاره-ويفي-ملكي-الجهراء.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/product_1790370529490_jdkd4_0-large.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
