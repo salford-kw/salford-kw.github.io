@@ -1032,6 +1032,36 @@
       ],
       "id": "prod_1790365666918_fuqr7",
       "slug": "سجاد-تركي-مضغوط"
+    },
+    {
+      "code": "سجاد تركي قص بالمتر",
+      "sub": "mokeet",
+      "desc": "سجاد ضغط عالي \nملمس ناعم و خشن",
+      "price": "13",
+      "unit": "المتر",
+      "area": "جميع مناطق الكويت",
+      "availability": "https://schema.org/InStock",
+      "stock": "60",
+      "color": "عدة الوان",
+      "material": "تركي ",
+      "dimensions": "ضغط الخيط 35 مم",
+      "mpn": "SLDN035",
+      "deliveryTime": "1",
+      "days": "1",
+      "img": "https://salfordkw.shop/products/product_1790365704647_ic6q3_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790365704647_ic6q3_0-large.webp",
+      "imgLargeW": 929,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790365704647_ic6q3_0-small.webp",
+        "https://salfordkw.shop/products/product_1790365707900_5o5r0_1-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790365704647_ic6q3_0-large.webp",
+        "https://salfordkw.shop/products/product_1790365707900_5o5r0_1-large.webp"
+      ],
+      "id": "prod_1790365822982_u9ty9",
+      "slug": "سجاد-تركي-قص-بالمتر"
     }
   ],
   "majalis": [
