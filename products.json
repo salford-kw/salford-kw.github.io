@@ -3407,6 +3407,40 @@
       ],
       "id": "prod_1790370045325_ryh41",
       "slug": "ستاير-ويفي-الصباحية"
+    },
+    {
+      "code": "تفصيل ستاير رول ",
+      "sub": "rol",
+      "desc": "ستائر رول \nتفصيل خاص مشغل سالفورد\n",
+      "price": "6",
+      "unit": "المتر المربع",
+      "area": "جميع مناطق الكويت",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "عدة الوان",
+      "material": "حسب طلب",
+      "dimensions": "",
+      "mpn": "SLT0320",
+      "deliveryTime": "2",
+      "days": "2",
+      "img": "https://salfordkw.shop/products/product_1790370374039_a3g2f_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790370374039_a3g2f_0-large.webp",
+      "imgLargeW": 750,
+      "imgLargeH": 938,
+      "images": [
+        "https://salfordkw.shop/products/product_1790370374039_a3g2f_0-small.webp",
+        "https://salfordkw.shop/products/product_1790370376900_q67db_1-small.webp",
+        "https://salfordkw.shop/products/product_1790370379393_enzky_2-small.webp",
+        "https://salfordkw.shop/products/product_1790370382054_syzyt_3-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790370374039_a3g2f_0-large.webp",
+        "https://salfordkw.shop/products/product_1790370376900_q67db_1-large.webp",
+        "https://salfordkw.shop/products/product_1790370379393_enzky_2-large.webp",
+        "https://salfordkw.shop/products/product_1790370382054_syzyt_3-large.webp"
+      ],
+      "id": "prod_1790370387754_b11gl",
+      "slug": "تفصيل-ستاير-رول"
     }
   ],
   "theel": [
