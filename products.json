@@ -3441,6 +3441,40 @@
       ],
       "id": "prod_1790370387754_b11gl",
       "slug": "تفصيل-ستاير-رول"
+    },
+    {
+      "code": "ستاره ويفي ملكي الجهراء",
+      "sub": "wafi",
+      "desc": "تفصيل مشغل سالفورد \nمنطقة الجهراء القصر لاحد عملاء سالفورد ",
+      "price": "6",
+      "unit": "المتر",
+      "area": "الجهراء - جميع المناطق",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "عدة الوان",
+      "material": "تركي",
+      "dimensions": "1x1",
+      "mpn": "SLT01008",
+      "deliveryTime": "2",
+      "days": "2",
+      "img": "https://salfordkw.shop/products/product_1790370529490_jdkd4_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790370529490_jdkd4_0-large.webp",
+      "imgLargeW": 1080,
+      "imgLargeH": 1080,
+      "images": [
+        "https://salfordkw.shop/products/product_1790370529490_jdkd4_0-small.webp",
+        "https://salfordkw.shop/products/product_1790370532694_rmfkc_1-small.webp",
+        "https://salfordkw.shop/products/product_1790370535406_92mz9_2-small.webp",
+        "https://salfordkw.shop/products/product_1790370538528_0j34l_3-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790370529490_jdkd4_0-large.webp",
+        "https://salfordkw.shop/products/product_1790370532694_rmfkc_1-large.webp",
+        "https://salfordkw.shop/products/product_1790370535406_92mz9_2-large.webp",
+        "https://salfordkw.shop/products/product_1790370538528_0j34l_3-large.webp"
+      ],
+      "id": "prod_1790370623929_bjz1i",
+      "slug": "ستاره-ويفي-ملكي-الجهراء"
     }
   ],
   "theel": [
