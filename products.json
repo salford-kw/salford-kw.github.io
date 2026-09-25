@@ -3377,6 +3377,36 @@
       ],
       "installDate": "2026-08-17",
       "slug": "ستائر-ويفي"
+    },
+    {
+      "code": "ستاير ويفي الصباحية",
+      "sub": "wafi",
+      "desc": "تم التركيب في منطقة الصباحية \nمن مشغل سالفورد",
+      "price": "6",
+      "unit": "المتر المربع",
+      "area": "جميع مناطق الكويت",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "كريمي",
+      "material": "تركي",
+      "dimensions": "3.5x3",
+      "mpn": "SLT0373",
+      "deliveryTime": "3",
+      "days": "2",
+      "img": "https://salfordkw.shop/products/product_1790370026249_bhtqs_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790370026249_bhtqs_0-large.webp",
+      "imgLargeW": 960,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790370026249_bhtqs_0-small.webp",
+        "https://salfordkw.shop/products/product_1790370029052_gj9jo_1-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790370026249_bhtqs_0-large.webp",
+        "https://salfordkw.shop/products/product_1790370029052_gj9jo_1-large.webp"
+      ],
+      "id": "prod_1790370045325_ryh41",
+      "slug": "ستاير-ويفي-الصباحية"
     }
   ],
   "theel": [
