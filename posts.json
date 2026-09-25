@@ -1223,5 +1223,31 @@
     "price": "6",
     "unit": "المتر المربع",
     "productUrl": "https://salfordkw.shop/catalog/sataer-تفصيل-ستاير-رول.html"
+  },
+  {
+    "id": "post_1790371792616_vogus",
+    "title": "ديوانية رسمية تفصيل منطقة صباح الاحمد",
+    "desc": "تفصيل مشغل سالفورد \nديوانية رسمية \nخشب قشر زان \n",
+    "img": "https://salfordkw.shop/products/product_1790371689980_k9jw3_0-small.webp",
+    "images": [
+      "https://salfordkw.shop/products/product_1790371689980_k9jw3_0-small.webp",
+      "https://salfordkw.shop/products/product_1790371692930_ss3k5_1-small.webp",
+      "https://salfordkw.shop/products/product_1790371695646_6dlte_2-small.webp",
+      "https://salfordkw.shop/products/product_1790371698657_4v8ww_3-small.webp",
+      "https://salfordkw.shop/products/product_1790371701195_l480y_4-small.webp"
+    ],
+    "imagesLarge": [
+      "https://salfordkw.shop/products/product_1790371689980_k9jw3_0-large.webp",
+      "https://salfordkw.shop/products/product_1790371692930_ss3k5_1-large.webp",
+      "https://salfordkw.shop/products/product_1790371695646_6dlte_2-large.webp",
+      "https://salfordkw.shop/products/product_1790371698657_4v8ww_3-large.webp",
+      "https://salfordkw.shop/products/product_1790371701195_l480y_4-large.webp"
+    ],
+    "imgLarge": "https://salfordkw.shop/products/product_1790371689980_k9jw3_0-large.webp",
+    "video": "",
+    "date": "2026-09-25",
+    "price": "45",
+    "unit": "المتر",
+    "productUrl": "https://salfordkw.shop/catalog/majalis-ديوانية-رسمية-تفصيل-منطقة-صباح-الاحمد.html"
   }
 ]
