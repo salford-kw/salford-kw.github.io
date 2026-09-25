@@ -3537,6 +3537,38 @@
       ],
       "id": "prod_1790370987574_1zab2",
       "slug": "ستاره-معدن-شتر-داخلي"
+    },
+    {
+      "code": "ستاره رول تركيب مشرف",
+      "sub": "rol",
+      "desc": "تم التركيب في منطقة مشرف لاحد عملاء سالفورد",
+      "price": "6",
+      "unit": "المتر",
+      "area": "مشرف",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "عدة الوان",
+      "material": "تركي",
+      "dimensions": "2x3",
+      "mpn": "SLT01011",
+      "deliveryTime": "2",
+      "days": "2",
+      "img": "https://salfordkw.shop/products/product_1790371232727_dwqtq_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790371232727_dwqtq_0-large.webp",
+      "imgLargeW": 960,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790371232727_dwqtq_0-small.webp",
+        "https://salfordkw.shop/products/product_1790371235519_4job1_1-small.webp",
+        "https://salfordkw.shop/products/product_1790371238174_gxa6n_2-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790371232727_dwqtq_0-large.webp",
+        "https://salfordkw.shop/products/product_1790371235519_4job1_1-large.webp",
+        "https://salfordkw.shop/products/product_1790371238174_gxa6n_2-large.webp"
+      ],
+      "id": "prod_1790371243142_hleuu",
+      "slug": "ستاره-رول-تركيب-مشرف"
     }
   ],
   "theel": [
