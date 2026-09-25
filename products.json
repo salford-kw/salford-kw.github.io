@@ -1062,6 +1062,34 @@
       ],
       "id": "prod_1790365822982_u9ty9",
       "slug": "سجاد-تركي-قص-بالمتر"
+    },
+    {
+      "code": "سجاد مصلى تخطيط يدوي",
+      "sub": "masjid",
+      "desc": "تخطيط يدوي لمصلى في منزل الزبون ",
+      "price": "13",
+      "unit": "المتر",
+      "area": "جميع مناطق الكويت",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "كحلي",
+      "material": "تركي",
+      "dimensions": "3.5x2.5",
+      "mpn": "SLM01001",
+      "deliveryTime": "2",
+      "days": "2",
+      "img": "https://salfordkw.shop/products/product_1790370727660_1fcms_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790370727660_1fcms_0-large.webp",
+      "imgLargeW": 1625,
+      "imgLargeH": 750,
+      "images": [
+        "https://salfordkw.shop/products/product_1790370727660_1fcms_0-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790370727660_1fcms_0-large.webp"
+      ],
+      "id": "prod_1790370736676_lax3g",
+      "slug": "سجاد-مصلى-تخطيط-يدوي"
     }
   ],
   "majalis": [
