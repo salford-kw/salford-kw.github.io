@@ -1969,6 +1969,42 @@
       ],
       "id": "prod_1790365429903_c92b4",
       "slug": "مساند-ظهر-و-نقشة-حفر"
+    },
+    {
+      "code": "ديوانية رسمية تفصيل منطقة صباح الاحمد",
+      "sub": "diwaniyat-modern",
+      "desc": "تفصيل مشغل سالفورد \nديوانية رسمية \nخشب قشر زان \n",
+      "price": "45",
+      "unit": "المتر",
+      "area": "جميع مناطق الكويت",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "اوف وايت ",
+      "material": "خام تركي / خشب قشر زان / اسفنج البغلي ",
+      "dimensions": "0.75x1.5x0.50",
+      "mpn": "SLM0188",
+      "deliveryTime": "20",
+      "days": "20",
+      "img": "https://salfordkw.shop/products/product_1790371689980_k9jw3_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790371689980_k9jw3_0-large.webp",
+      "imgLargeW": 960,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790371689980_k9jw3_0-small.webp",
+        "https://salfordkw.shop/products/product_1790371692930_ss3k5_1-small.webp",
+        "https://salfordkw.shop/products/product_1790371695646_6dlte_2-small.webp",
+        "https://salfordkw.shop/products/product_1790371698657_4v8ww_3-small.webp",
+        "https://salfordkw.shop/products/product_1790371701195_l480y_4-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790371689980_k9jw3_0-large.webp",
+        "https://salfordkw.shop/products/product_1790371692930_ss3k5_1-large.webp",
+        "https://salfordkw.shop/products/product_1790371695646_6dlte_2-large.webp",
+        "https://salfordkw.shop/products/product_1790371698657_4v8ww_3-large.webp",
+        "https://salfordkw.shop/products/product_1790371701195_l480y_4-large.webp"
+      ],
+      "id": "prod_1790371787972_6t5oe",
+      "slug": "ديوانية-رسمية-تفصيل-منطقة-صباح-الاحمد"
     }
   ],
   "athath": [
