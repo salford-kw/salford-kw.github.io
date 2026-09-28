@@ -2005,6 +2005,38 @@
       ],
       "id": "prod_1790371787972_6t5oe",
       "slug": "ديوانية-رسمية-تفصيل-منطقة-صباح-الاحمد"
+    },
+    {
+      "code": "مساند ظهر صباح الاحمد اعمالنا",
+      "sub": "masanid-khashab",
+      "desc": "اعمالنا في منطقة صباح الاحمد \nديوانية مع سجاد وتركيب\nمساند ظهر خشب ديكور ",
+      "price": "22",
+      "unit": "المتر",
+      "area": "صباح الأحمد",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "رمادي فاتح",
+      "material": "خام شانيل تركي",
+      "dimensions": "0.50x0.15",
+      "mpn": "SLMD0188",
+      "deliveryTime": "10",
+      "days": "10",
+      "img": "https://salfordkw.shop/products/product_1790629146686_ybqyj_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790629146686_ybqyj_0-large.webp",
+      "imgLargeW": 932,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790629146686_ybqyj_0-small.webp",
+        "https://salfordkw.shop/products/product_1790629149829_zqkki_1-small.webp",
+        "https://salfordkw.shop/products/product_1790629152696_6tuhx_2-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790629146686_ybqyj_0-large.webp",
+        "https://salfordkw.shop/products/product_1790629149829_zqkki_1-large.webp",
+        "https://salfordkw.shop/products/product_1790629152696_6tuhx_2-large.webp"
+      ],
+      "id": "prod_1790629159048_9643q",
+      "slug": "مساند-ظهر-صباح-الاحمد-اعمالنا"
     }
   ],
   "athath": [
