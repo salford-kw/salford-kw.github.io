@@ -2947,6 +2947,38 @@
       ],
       "id": "prod_1790791350512_zeh68",
       "slug": "تنجيد-كنب-قنفات-الاحمدي"
+    },
+    {
+      "code": "تفصيل قنفات كنب مشرف",
+      "sub": "tafseel-kanab",
+      "desc": "اعمالنا في منطقة مشرف\nتفصيل كنب صالة استقبال \n",
+      "price": "",
+      "unit": "المتر",
+      "area": "مشرف",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "بيج",
+      "material": "حسب الطلب",
+      "dimensions": "0.90x1",
+      "mpn": "SLK0488",
+      "deliveryTime": "12",
+      "days": "12",
+      "img": "https://salfordkw.shop/products/product_1790791387776_tck23_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790791387776_tck23_0-large.webp",
+      "imgLargeW": 900,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790791387776_tck23_0-small.webp",
+        "https://salfordkw.shop/products/product_1790791390656_2fokf_1-small.webp",
+        "https://salfordkw.shop/products/product_1790791393648_8kud8_2-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790791387776_tck23_0-large.webp",
+        "https://salfordkw.shop/products/product_1790791390656_2fokf_1-large.webp",
+        "https://salfordkw.shop/products/product_1790791393648_8kud8_2-large.webp"
+      ],
+      "id": "prod_1790791503943_3sp34",
+      "slug": "تفصيل-قنفات-كنب-مشرف"
     }
   ],
   "sataer": [
