@@ -2919,6 +2919,34 @@
       ],
       "id": "prod_1790791175519_ublgd",
       "slug": "كنب-صالة-تنفيذنا-منطقة-السالمية"
+    },
+    {
+      "code": "تنجيد كنب قنفات الاحمدي",
+      "sub": "tanjeed-ganafat",
+      "desc": "تنجيد كنب اعمالنا في منطقة الأحمدي ",
+      "price": "21",
+      "unit": "المتر",
+      "area": "الأحمدي - جميع المناطق",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "بيج",
+      "material": "شانيل تركي",
+      "dimensions": "0.95",
+      "mpn": "SLKT09299",
+      "deliveryTime": "5",
+      "days": "5",
+      "img": "https://salfordkw.shop/products/product_1790791331978_p5m66_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790791331978_p5m66_0-large.webp",
+      "imgLargeW": 900,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790791331978_p5m66_0-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790791331978_p5m66_0-large.webp"
+      ],
+      "id": "prod_1790791350512_zeh68",
+      "slug": "تنجيد-كنب-قنفات-الاحمدي"
     }
   ],
   "sataer": [
