@@ -2889,6 +2889,36 @@
       ],
       "id": "prod_1787855755031_cnioj",
       "slug": "تفصيل-كنب-خامات-تركيه"
+    },
+    {
+      "code": "كنب صالة تنفيذنا منطقة السالمية",
+      "sub": "tafseel-kanab",
+      "desc": "كنب صالة \nتفصيل سالفورد \n",
+      "price": "37",
+      "unit": "للمتر",
+      "area": "السالمية",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "رمادي فاتح",
+      "material": "مخمل / اسفنج دانلوب البغلي",
+      "dimensions": "0.95",
+      "mpn": "SLKN012P",
+      "deliveryTime": "7",
+      "days": "7",
+      "img": "https://salfordkw.shop/products/product_1790791026801_o54ig_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790791026801_o54ig_0-large.webp",
+      "imgLargeW": 900,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790791026801_o54ig_0-small.webp",
+        "https://salfordkw.shop/products/product_1790791030158_4mcea_1-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790791026801_o54ig_0-large.webp",
+        "https://salfordkw.shop/products/product_1790791030158_4mcea_1-large.webp"
+      ],
+      "id": "prod_1790791175519_ublgd",
+      "slug": "كنب-صالة-تنفيذنا-منطقة-السالمية"
     }
   ],
   "sataer": [
