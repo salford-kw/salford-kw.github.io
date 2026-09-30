@@ -3727,6 +3727,36 @@
       ],
       "id": "prod_1790371243142_hleuu",
       "slug": "ستاره-رول-تركيب-مشرف"
+    },
+    {
+      "code": "ستائر ويفي منطقة جابر الأحمد ",
+      "sub": "wafi",
+      "desc": "اعمالنا ستائر ويفي \nتركيب منطقة جابر الاحمد ",
+      "price": "7",
+      "unit": "المتر",
+      "area": "جميع مناطق الكويت",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "عدة الوان",
+      "material": "مخمل و كتان و شانيل",
+      "dimensions": "1x1",
+      "mpn": "SLS03394",
+      "deliveryTime": "3",
+      "days": "3",
+      "img": "https://salfordkw.shop/products/product_1790791745616_jwyk1_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790791745616_jwyk1_0-large.webp",
+      "imgLargeW": 906,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790791745616_jwyk1_0-small.webp",
+        "https://salfordkw.shop/products/product_1790791748337_dorjm_1-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790791745616_jwyk1_0-large.webp",
+        "https://salfordkw.shop/products/product_1790791748337_dorjm_1-large.webp"
+      ],
+      "id": "prod_1790791896959_5wu7f",
+      "slug": "ستائر-ويفي-منطقة-جابر-الأحمد"
     }
   ],
   "theel": [
