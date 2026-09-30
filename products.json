@@ -1090,6 +1090,36 @@
       ],
       "id": "prod_1790370736676_lax3g",
       "slug": "سجاد-مصلى-تخطيط-يدوي"
+    },
+    {
+      "code": "سجاد مصلى مسجد عبدالله المبارك ",
+      "sub": "masjid",
+      "desc": "اعمالنا في منطقة عبدالله المبارك الكويت\nتتوفر عدة الوان و اشكال",
+      "price": "7",
+      "unit": "المتر المربع",
+      "area": "الفروانية - جميع المناطق",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "عدة الوان / ازرق / عنابي / اخضر / كحلي",
+      "material": "تركي ضغط عالي",
+      "dimensions": "1x1",
+      "mpn": "SLMS01885K",
+      "deliveryTime": "2",
+      "days": "2",
+      "img": "https://salfordkw.shop/products/product_1790793057349_83sae_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790793057349_83sae_0-large.webp",
+      "imgLargeW": 900,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790793057349_83sae_0-small.webp",
+        "https://salfordkw.shop/products/product_1790793060206_e2nwy_1-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790793057349_83sae_0-large.webp",
+        "https://salfordkw.shop/products/product_1790793060206_e2nwy_1-large.webp"
+      ],
+      "id": "prod_1790793200435_34esd",
+      "slug": "سجاد-مصلى-مسجد-عبدالله-المبارك"
     }
   ],
   "majalis": [
