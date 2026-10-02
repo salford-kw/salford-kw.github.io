@@ -6,8 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- ✅ إصلاح LCP: preload لصورة الشريحة الأولى (كانت base64 ضخم مضمّن بالـHTML) -->
 <link rel="preload" as="image" fetchpriority="high" href="https://salfordkw.shop/products/product_1786817384476_fzysc-small.webp" id="lcp-preload-1">
-<!-- الشريحة الثانية: preload بأولوية منخفضة كضمانة لو انتقل السلايدر مبكراً -->
-<link rel="preload" as="image" fetchpriority="low" href="https://salfordkw.shop/products/product_1786817239235_9m3oz-large.webp" id="lcp-preload-2">
 <!-- ✅ TITLE محسّن -->
 <title>سالفورد للأثاث | مجالس ديكور وسجاد تركي - توصيل لكل الكويت</title>
 <!-- ✅ META DESCRIPTION محسّنة -->
@@ -119,7 +117,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());
 gtag('config','AW-6824246360');
 gtag('config','G-8WRQFKRYXP');
-gtag('config','G-714VYZ0K2L');
 (function(){
   var loaded=false;
   function loadGtag(){
@@ -351,7 +348,8 @@ footer a { color: var(--gold-light); text-decoration: none; }
   <span class="sec-title">آخر أعمالنا</span>
   <div class="slider-container" id="slider-container">
     <div class="slider-track" id="home-works-grid" data-static-first-img="https://salfordkw.shop/products/product_1786817384476_fzysc-small.webp">
-      <!-- محتوى ثابت احتياطي مطابق لآخر 5 منشورات فعلية (posts.json) لضمان تطابق SEO + سرعة LCP -->
+      <!-- الشريحة الأولى ثابتة ولا يعاد بناؤها (عنصر LCP + preload أعلاه). الشرائح 2–5 محتواها النصي ثابت للسيو وبوتات الذكاء الاصطناعي،
+           وصورها بـ data-src (لا تُحمَّل) إلى أن يستبدلها السكربت بعد load بآخر المنشورات من posts.json (نسخة small). -->
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/majalis-مساند-ظهر-اسفنج-البغلي-2.html'">
           <div class="work-card-img">
@@ -367,7 +365,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/majalis-مساند-ظهر-4.html'">
           <div class="work-card-img">
-            <img src="https://salfordkw.shop/products/product_1786817239235_9m3oz-large.webp" alt="مساند ظهر - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
+            <img data-src="https://salfordkw.shop/products/product_1786817239235_9m3oz-large.webp" alt="مساند ظهر - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
           </div>
           <div class="work-card-info">
             <div class="work-card-title">مساند ظهر</div>
@@ -379,7 +377,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/sajjad-سجاد-مشجر-غرفة-استقبال.html'">
           <div class="work-card-img">
-            <img src="https://salfordkw.shop/products/product_1786754344544_wepuz-large.webp" alt="سجاد مشجر  غرفة استقبال - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
+            <img data-src="https://salfordkw.shop/products/product_1786754344544_wepuz-large.webp" alt="سجاد مشجر  غرفة استقبال - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
           </div>
           <div class="work-card-info">
             <div class="work-card-title">سجاد مشجر  غرفة استقبال</div>
@@ -391,7 +389,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/sajjad-سجاد-ساده-قص.html'">
           <div class="work-card-img">
-            <img src="https://salfordkw.shop/products/product_1786754182512_8hxey-large.webp" alt="سجاد ساده قص - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
+            <img data-src="https://salfordkw.shop/products/product_1786754182512_8hxey-large.webp" alt="سجاد ساده قص - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
           </div>
           <div class="work-card-info">
             <div class="work-card-title">سجاد ساده قص</div>
@@ -403,7 +401,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/sajjad-سجاد-ساده.html'">
           <div class="work-card-img">
-            <img src="https://salfordkw.shop/products/product_1786754037274_v3tp4-large.webp" alt="سجاد ساده - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
+            <img data-src="https://salfordkw.shop/products/product_1786754037274_v3tp4-large.webp" alt="سجاد ساده - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
           </div>
           <div class="work-card-info">
             <div class="work-card-title">سجاد ساده</div>
@@ -425,15 +423,41 @@ footer a { color: var(--gold-light); text-decoration: none; }
 </section>
 <script>
 // ============================================================
-// آخر 5 منشورات من posts.json — تظهر في السلايدر بالصفحة الرئيسية
-// المحتوى الأساسي مكتوب ثابتاً في HTML أعلاه (للسيو وبوتات الذكاء
-// الاصطناعي التي لا تُنفّذ JavaScript). هذا السكربت يحدّث المحتوى
-// تلقائياً عند إضافة مشاريع جديدة من لوحة التحكم.
+// آخر المنشورات من posts.json — تظهر في السلايدر بالصفحة الرئيسية
+// الشريحة الأولى ثابتة في HTML (LCP مستقر ومحمّل مسبقاً) ولا يعاد بناؤها.
+// بعد حدث load يستبدل هذا السكربت الشرائح 2–5 بأحدث منشورات
+// posts.json (بنسخة small الخفيفة) — فلا تزاحم الصور خارج الشاشة صورة LCP.
 // ============================================================
 const POSTS_KEY = 'salford_posts';
 let currentLatestWorks = [];
 let currentSlideIndex = 0;
 let autoScrollTimer = null;
+
+function hydrateStaticSlides(track) {
+  track.querySelectorAll('img[data-src]').forEach(img => {
+    img.src = img.getAttribute('data-src');
+    img.removeAttribute('data-src');
+  });
+}
+
+function slideHTML(p, i) {
+  return `
+    <div class="slide-item">
+      <div class="work-card" onclick="${p.productUrl ? `location.href='${p.productUrl}'` : `openLightbox(${i})`}">
+        <div class="work-card-img">
+          <img src="${p.img || p.imgLarge}" alt="${esc(p.title)} - سالفورد للأثاث والمفروشات الكويت" loading="lazy" decoding="async" width="800" height="800" onerror="this.style.opacity='.2'">
+          ${(p.images && p.images.length > 1) ? `<span class="work-card-badge imgs">📷 ${p.images.length}</span>` : ''}
+          ${p.video ? `<span class="work-card-badge video">🎬 فيديو</span>` : ''}
+        </div>
+        <div class="work-card-info">
+          <div class="work-card-title">${esc(p.title)}</div>
+          ${p.price ? `<div class="work-card-price">${esc(p.price)} د.ك / ${esc(p.unit||'م')}</div>` : ''}
+          <div class="work-card-date">${relativeDate(p.date)}</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
 
 async function loadLatestWorks() {
   let posts = [];
@@ -458,48 +482,29 @@ async function loadLatestWorks() {
   const track = document.getElementById('home-works-grid');
 
   if (posts.length === 0) {
-    track.innerHTML = '<div class="slide-item"><div class="no-works">📷 سيتم نشر أحدث أعمالنا هنا قريباً</div></div>';
-    return;
-  }
-
-  const latest = [...posts].reverse().slice(0, 5);
-  currentLatestWorks = latest;
-
-  // لو أول صورة بالبيانات الجديدة نفسها المكتوبة بالـ HTML الثابت، لا داعي
-  // لمسح وإعادة بناء الـ DOM — هذا كان يسبب ظهور عنصر LCP جديد متأخر
-  // رغم إن المحتوى نفسه، لأن المتصفح يتعامل معه كعنصر مختلف تماماً.
-  if (track.dataset.staticFirstImg && latest[0] && latest[0].img === track.dataset.staticFirstImg) {
+    // لا بيانات: نُبقي الشرائح الثابتة ونُفعّل صورها بدل مسح السلايدر
+    hydrateStaticSlides(track);
+    currentLatestWorks = new Array(track.querySelectorAll('.slide-item').length).fill(null);
     dotsRender();
     currentSlideIndex = 0;
     updateSlider();
+    startAutoScroll();
     return;
   }
 
-  track.innerHTML = latest.map((p, i) => `
-    <div class="slide-item">
-      <div class="work-card" onclick="${p.productUrl ? `location.href='${p.productUrl}'` : `openLightbox(${i})`}">
-        <div class="work-card-img">
-          <img src="${p.imgLarge || p.img}" alt="${esc(p.title)} - سالفورد للأثاث والمفروشات الكويت" loading="${i === 0 ? 'eager' : 'lazy'}" ${i === 0 ? 'fetchpriority="high"' : ''} width="800" height="800" onerror="this.style.opacity='.2'">
-          ${(p.images && p.images.length > 1) ? `<span class="work-card-badge imgs">📷 ${p.images.length}</span>` : ''}
-          ${p.video ? `<span class="work-card-badge video">🎬 فيديو</span>` : ''}
-        </div>
-        <div class="work-card-info">
-          <div class="work-card-title">${esc(p.title)}</div>
-          ${p.price ? `<div class="work-card-price">${esc(p.price)} د.ك / ${esc(p.unit||'م')}</div>` : ''}
-          <div class="work-card-date">${relativeDate(p.date)}</div>
-        </div>
-      </div>
-    </div>
-  `).join('');
+  const staticFirst = track.dataset.staticFirstImg || '';
+  const rest = [...posts].reverse().filter(p => p.img !== staticFirst).slice(0, 4);
+
+  // نحذف الشرائح الثابتة 2–5 فقط (الأولى تبقى كما هي)
+  Array.from(track.querySelectorAll('.slide-item')).slice(1).forEach(n => n.remove());
+  currentLatestWorks = [null, ...rest];
+  track.insertAdjacentHTML('beforeend', rest.map((p, k) => slideHTML(p, k + 1)).join(''));
 
   dotsRender();
   currentSlideIndex = 0;
   updateSlider();
 
-  if (posts.length > 0) {
-    document.getElementById('see-all-btn').style.display = 'flex';
-  }
-
+  document.getElementById('see-all-btn').style.display = 'flex';
   startAutoScroll();
 }
 
@@ -670,7 +675,9 @@ function closeLightbox(){
   document.body.style.overflow = '';
 }
 
-loadLatestWorks();
+// ⚡ LCP: يُنفَّذ بعد load حتى لا تزاحم صور الشرائح الجديدة صورة LCP الثابتة
+if (document.readyState === 'complete') { loadLatestWorks(); }
+else { window.addEventListener('load', loadLatestWorks, { once: true }); }
 </script>
 
 
@@ -683,7 +690,7 @@ loadLatestWorks();
     </div>
     <div class="cat-preview-grid" id="preview-sajjad">
       <a href="/sajjad.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/نقشة-حفر-يدوي-سالفورد.webp" alt="سجاد تركي فاخر - سالفورد" loading="lazy"></div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786386337301_90uny-small.webp" alt="سجاد تركي فاخر - سالفورد" loading="lazy"></div>
         <div class="thumb-title">سجاد تركي حفر يدوي</div>
       </a>
       <a href="/sajjad.html" class="thumb-card">
