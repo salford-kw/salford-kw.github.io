@@ -3075,6 +3075,40 @@
       ],
       "id": "prod_1790791503943_3sp34",
       "slug": "تفصيل-قنفات-كنب-مشرف"
+    },
+    {
+      "code": "تفصيل كنب استقبال الأحمدي ",
+      "sub": "tafseel-kanab",
+      "desc": "تركيبنا و اعمالنا منطقة الاحمدي \nتفصيل كنب قنفات",
+      "price": "37",
+      "unit": "المتر",
+      "area": "الأحمدي",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "عدة الوان",
+      "material": "شانيل تركي",
+      "dimensions": "0.95",
+      "mpn": "SL220410",
+      "deliveryTime": "12",
+      "days": "12",
+      "img": "https://salfordkw.shop/products/product_1790902333675_bc3qv_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790902333675_bc3qv_0-large.webp",
+      "imgLargeW": 1080,
+      "imgLargeH": 1080,
+      "images": [
+        "https://salfordkw.shop/products/product_1790902333675_bc3qv_0-small.webp",
+        "https://salfordkw.shop/products/product_1790902336483_2mwvs_1-small.webp",
+        "https://salfordkw.shop/products/product_1790902339058_vau3c_2-small.webp",
+        "https://salfordkw.shop/products/product_1790902341403_cmi77_3-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790902333675_bc3qv_0-large.webp",
+        "https://salfordkw.shop/products/product_1790902336483_2mwvs_1-large.webp",
+        "https://salfordkw.shop/products/product_1790902339058_vau3c_2-large.webp",
+        "https://salfordkw.shop/products/product_1790902341403_cmi77_3-large.webp"
+      ],
+      "id": "prod_1790902450788_euuee",
+      "slug": "تفصيل-كنب-استقبال-الأحمدي"
     }
   ],
   "sataer": [
