@@ -3923,6 +3923,36 @@
       ],
       "id": "prod_1790791896959_5wu7f",
       "slug": "ستائر-ويفي-منطقة-جابر-الأحمد"
+    },
+    {
+      "code": "ستائر رول الكويت شرق",
+      "sub": "rol",
+      "desc": "مكتب محاماة ستائر رول \nتنفذ سالفورد للأثاث والمفروشات ",
+      "price": "6",
+      "unit": "المتر المربع",
+      "area": "شرق",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "رمادي فاتح",
+      "material": "تركي",
+      "dimensions": "2x2",
+      "mpn": "SLST009583",
+      "deliveryTime": "2",
+      "days": "2",
+      "img": "https://salfordkw.shop/products/product_1790973733645_wf9v5_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1790973733645_wf9v5_0-large.webp",
+      "imgLargeW": 960,
+      "imgLargeH": 1200,
+      "images": [
+        "https://salfordkw.shop/products/product_1790973733645_wf9v5_0-small.webp",
+        "https://salfordkw.shop/products/product_1790973737039_2ueth_1-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1790973733645_wf9v5_0-large.webp",
+        "https://salfordkw.shop/products/product_1790973737039_2ueth_1-large.webp"
+      ],
+      "id": "prod_1790973742057_w6tqt",
+      "slug": "ستائر-رول-الكويت-شرق"
     }
   ],
   "theel": [
