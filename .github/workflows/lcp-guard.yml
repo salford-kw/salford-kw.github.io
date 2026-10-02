@@ -1,0 +1,55 @@
+name: LCP Guard
+
+# يشتغل عند أي تغيير بالصور أو posts.json (أي عند الإضافة/الحذف من لوحة الإدارة)
+# ويمكن تشغيله يدوياً من تبويب Actions.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'products/**'
+      - 'posts.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# تشغيل واحد في كل مرة، حتى لا يتعارض مع تعديلات لوحة الإدارة
+concurrency:
+  group: lcp-guard
+  cancel-in-progress: false
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install sharp
+        run: npm install --no-save --no-package-lock sharp@0.33
+
+      - name: Run LCP guard
+        run: node .github/scripts/lcp-guard.mjs
+
+      - name: Commit changes
+        run: |
+          git config user.name "salford-lcp-guard"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A products index.html
+          if git diff --cached --quiet; then
+            echo "لا تغييرات للرفع"
+            exit 0
+          fi
+          git commit -m "perf: LCP guard — تحسين الصور وتحديث شريحة LCP تلقائياً"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
+            echo "إعادة المحاولة ($i)"; sleep 5
+          done
+          exit 1
