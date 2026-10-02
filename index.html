@@ -301,7 +301,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
 .lightbox-caption{text-align:center;color:var(--gold-light);font-size:13px;margin-top:10px;max-width:520px;}
 .lightbox-close{position:absolute;top:16px;left:16px;color:#fff;font-size:24px;cursor:pointer;background:rgba(200,169,110,.35);border:none;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;z-index:3;}
 </style>
-<link rel="preload" href="/posts.json" as="fetch">
+<!-- ⚡ LCP: أُزيل preload لـ posts.json — كان يُحمَّل مع بداية الصفحة ويزاحم صورة LCP، بينما لا يُقرأ إلا بعد حدث load -->
 </head>
 <body>
 
@@ -681,7 +681,8 @@ else { window.addEventListener('load', loadLatestWorks, { once: true }); }
 </script>
 
 
-<!-- ✅ معاينة مصغّرة لكل قسم -->
+<!-- ✅ معاينة مصغّرة لكل قسم
+     ⚡ الصور هنا تستخدم نسخة -small الخفيفة، وإن لم توجد يعود المتصفح تلقائياً للأصلية عبر data-o (onerror). -->
 <section class="categories-preview" aria-label="معرض الأقسام المفصلة">
   <div class="cat-preview-block">
     <div class="cat-preview-header">
@@ -690,11 +691,11 @@ else { window.addEventListener('load', loadLatestWorks, { once: true }); }
     </div>
     <div class="cat-preview-grid" id="preview-sajjad">
       <a href="/sajjad.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786386337301_90uny-small.webp" alt="سجاد تركي فاخر - سالفورد" loading="lazy"></div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786386337301_90uny-small.webp" alt="سجاد تركي فاخر - سالفورد" loading="lazy" decoding="async"></div>
         <div class="thumb-title">سجاد تركي حفر يدوي</div>
       </a>
       <a href="/sajjad.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/سجاد-تركي-اكادير-سالفورد.webp" alt="سجاد تركي اكادير - سالفورد" loading="lazy"></div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/سجاد-تركي-اكادير-سالفورد.webp" alt="سجاد تركي اكادير - سالفورد" loading="lazy" decoding="async"></div>
         <div class="thumb-title">سجاد تركي بالمتر</div>
       </a>
     </div>
@@ -707,11 +708,11 @@ else { window.addEventListener('load', loadLatestWorks, { once: true }); }
     </div>
     <div class="cat-preview-grid" id="preview-majalis">
       <a href="/majalis.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد-2.webp" alt="مجلس خشب ديكور - سالفورد" loading="lazy"></div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد-2.webp" alt="مجلس خشب ديكور - سالفورد" loading="lazy" decoding="async"></div>
         <div class="thumb-title">مجلس خشب ديكور</div>
       </a>
       <a href="/tafseel-diwaniyat.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-ديكور-الكويت-صباح-الاحمد-سالفورد.webp" alt="مساند ظهر ديكور - سالفورد" loading="lazy"></div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-ديكور-الكويت-صباح-الاحمد-سالفورد.webp" alt="مساند ظهر ديكور - سالفورد" loading="lazy" decoding="async"></div>
         <div class="thumb-title">تفصيل ديوانيات</div>
       </a>
     </div>
@@ -724,11 +725,11 @@ else { window.addEventListener('load', loadLatestWorks, { once: true }); }
     </div>
     <div class="cat-preview-grid" id="preview-athath">
       <a href="/athath.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786196403904_3aq2d.webp" alt="كنب عصري مميز - سالفورد" loading="lazy"></div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786196403904_3aq2d-small.webp" data-o="https://salfordkw.shop/products/product_1786196403904_3aq2d.webp" alt="كنب عصري مميز - سالفورد" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=this.dataset.o"></div>
         <div class="thumb-title">كنب عصري مميز</div>
       </a>
       <a href="/athath.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786196493883_huspb.webp" alt="كنب استقبال منطقة سلوى - سالفورد" loading="lazy"></div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786196493883_huspb-small.webp" data-o="https://salfordkw.shop/products/product_1786196493883_huspb.webp" alt="كنب استقبال منطقة سلوى - سالفورد" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=this.dataset.o"></div>
         <div class="thumb-title">كنب استقبال منطقة سلوى</div>
       </a>
     </div>
@@ -741,11 +742,11 @@ else { window.addEventListener('load', loadLatestWorks, { once: true }); }
     </div>
     <div class="cat-preview-grid" id="preview-sataer">
       <a href="/sataer.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786140561206_9ojky.webp" alt="ستائر مودرن - سالفورد" loading="lazy" onerror="this.src='https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد-2.webp'"></div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786140561206_9ojky-small.webp" data-o="https://salfordkw.shop/products/product_1786140561206_9ojky.webp" alt="ستائر مودرن - سالفورد" loading="lazy" decoding="async" onerror="this.onerror=function(){this.src='https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد-2.webp'};this.src=this.dataset.o"></div>
         <div class="thumb-title">ستائر مودرن للمجالس</div>
       </a>
       <a href="/sataer.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786140563125_iuomt.webp" alt="ستائر كلاسيك - سالفورد" loading="lazy" onerror="this.src='https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد-3.webp'"></div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/product_1786140563125_iuomt-small.webp" data-o="https://salfordkw.shop/products/product_1786140563125_iuomt.webp" alt="ستائر كلاسيك - سالفورد" loading="lazy" decoding="async" onerror="this.onerror=function(){this.src='https://salfordkw.shop/products/مجلس-ديكور-الرئيسية-سالفورد-3.webp'};this.src=this.dataset.o"></div>
         <div class="thumb-title">ستائر كلاسيكية راقية</div>
       </a>
     </div>
@@ -964,7 +965,12 @@ else { window.addEventListener('load', loadLatestWorks, { once: true }); }
 // الذكاء الاصطناعي التي لا تُنفّذ JavaScript). هذا السكربت يحدّث
 // المعاينة تلقائياً من products.json عند إضافة منتجات جديدة من
 // لوحة التحكم، بدون الحاجة لتعديل هذا الملف يدوياً كل مرة.
+// ⚡ الصور: نستخدم نسخة -small الخفيفة (بدل الأصلية الكبيرة 1080px)،
+//    وإن لم توجد تعود تلقائياً للأصلية — فلا تنكسر أي صورة.
 // ============================================================
+function thumbSmall(u) {
+  return (/\.webp$/i.test(u) && !/-(small|large)\.webp$/i.test(u)) ? u.replace(/\.webp$/i, '-small.webp') : u;
+}
 async function updateHomePreviews() {
   try {
     const r = await fetch('/products.json');
@@ -987,12 +993,15 @@ async function updateHomePreviews() {
       const grid = document.getElementById(sec.gridId);
       if (!grid) continue;
 
-      grid.innerHTML = latest.map(p => `
+      grid.innerHTML = latest.map(p => {
+        const orig = String(p.img || '').replace(/"/g, '&quot;');
+        const sm = thumbSmall(orig);
+        return `
         <a href="${sec.link}" class="thumb-card">
-          <div class="thumb-img-wrap"><img src="${p.img}" alt="${(p.code||'').replace(/"/g,'')} - سالفورد" loading="lazy"></div>
+          <div class="thumb-img-wrap"><img src="${sm}" data-o="${orig}" alt="${(p.code||'').replace(/"/g,'')} - سالفورد" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=this.dataset.o"></div>
           <div class="thumb-title">${p.code || ''}</div>
-        </a>
-      `).join('');
+        </a>`;
+      }).join('');
     }
   } catch (e) {
     // في حال فشل الجلب، تبقى المعاينة الثابتة بالـ HTML كما هي
@@ -1007,6 +1016,6 @@ if (document.readyState === 'complete') {
   window.addEventListener('load', updateHomePreviews);
 }
 </script>
-<script src="/analytics.js"></script>
+<script src="/analytics.js" defer></script>
 </body>
 </html>
