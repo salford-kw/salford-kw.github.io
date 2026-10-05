@@ -4432,6 +4432,36 @@
       ],
       "id": "prod_1789410921317_pe40p",
       "slug": "ديوانية-رسمية-الكويت-الفردوس"
+    },
+    {
+      "code": "ديوانية مساند و سجاد ونقش حفر العبدلي",
+      "sub": "",
+      "desc": "ديوانية كاملة \nسجاد حفر يدوي\nاوجار \nمساند ظهر اسفنج البغلي\nاعمالنا في منطقة العبدلي",
+      "price": "11",
+      "unit": "المتر المساند",
+      "area": "جميع مناطق الكويت",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "بيج",
+      "material": "اسفنج البغلي / سجاد تركي",
+      "dimensions": "15x50",
+      "mpn": "SLMJ0199",
+      "deliveryTime": "12",
+      "days": "12",
+      "img": "https://salfordkw.shop/products/product_1791237346540_krvj9_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1791237346540_krvj9_0-large.webp",
+      "imgLargeW": 1076,
+      "imgLargeH": 1043,
+      "images": [
+        "https://salfordkw.shop/products/product_1791237346540_krvj9_0-small.webp",
+        "https://salfordkw.shop/products/product_1791237349081_q1wgy_1-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1791237346540_krvj9_0-large.webp",
+        "https://salfordkw.shop/products/product_1791237349081_q1wgy_1-large.webp"
+      ],
+      "id": "prod_1791237499137_a07kl",
+      "slug": "ديوانية-مساند-و-سجاد-ونقش-حفر-العبدلي"
     }
   ]
 }
