@@ -314,11 +314,11 @@ function closeLightbox(){document.getElementById('lightbox').classList.remove('a
     if (srLoaded) return;
     srLoaded = true;
 
-    loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js')
-      .then(() => loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js'))
-      .then(() => loadScriptTag('/reviews-widget.js'))
+    (window.firebase ? Promise.resolve() : loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js'))
+      .then(() => (window.firebase && window.firebase.firestore) ? null : loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js'))
+      .then(() => (typeof window.srSubscribe === 'function') ? null : loadScriptTag('/reviews-widget.js'))
       .then(() => {
-        initProductReviews('site', 'site-reviews-mount');
+        if (document.getElementById('site-reviews-mount')) initProductReviews('site', 'site-reviews-mount');
 
         srSubscribe('site', reviews => {
           const starsEl = document.getElementById('site-rating-stars');
@@ -333,6 +333,7 @@ function closeLightbox(){document.getElementById('lightbox').classList.remove('a
           }
 
           const schemaEl = document.getElementById('site-reviews-schema');
+          if (!schemaEl) return;
           if (!reviews || reviews.length === 0) { schemaEl.textContent = ''; return; }
           const avg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
           const schema = {

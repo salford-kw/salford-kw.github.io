@@ -239,11 +239,11 @@ footer a{color:var(--gold-light);text-decoration:none;}
     if (srLoaded) return;
     srLoaded = true;
 
-    loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js')
-      .then(() => loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js'))
-      .then(() => loadScriptTag('/reviews-widget.js'))
+    (window.firebase ? Promise.resolve() : loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js'))
+      .then(() => (window.firebase && window.firebase.firestore) ? null : loadScriptTag('https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js'))
+      .then(() => (typeof window.srSubscribe === 'function') ? null : loadScriptTag('/reviews-widget.js'))
       .then(() => {
-        initProductReviews('site', 'site-reviews-mount');
+        if (document.getElementById('site-reviews-mount')) initProductReviews('site', 'site-reviews-mount');
 
         // بناء Schema حقيقي من التقييمات الفعلية فقط (بدون تقييمات وهمية)
         srSubscribe('site', reviews => {
