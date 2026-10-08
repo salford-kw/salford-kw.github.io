@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  pull-requests: write
 jobs:
   apply:
     runs-on: ubuntu-latest
@@ -107,4 +108,7 @@ jobs:
           git add -A -- . ":!.github"
           test "$(git diff --cached --name-only | wc -l)" -eq 36
           git commit -m "إصلاحات SEO آمنة: كروت الستائر 13-18، رابط سجاد بالمتر، وصف الويفي، حماية سكربت التقييمات، حذف سكربت المعاينات من غير الرئيسية، تصحيح lastmod" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
-          git push origin HEAD:main
+          git push -f origin HEAD:refs/heads/safe-fixes-20261008
+          gh pr create --base main --head safe-fixes-20261008 --title "إصلاحات SEO آمنة (C28) — 36 ملفًا" --body "كروت الستائر 13-18، رابط سجاد بالمتر، وصف الويفي، حماية سكربت التقييمات، حذف سكربت المعاينات من غير الرئيسية، تصحيح lastmod. مبني على a0f69f5." || echo "PR not created automatically - open it from the branch"
+        env:
+          GH_TOKEN: ${{ github.token }}
