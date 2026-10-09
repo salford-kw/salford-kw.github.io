@@ -129,8 +129,8 @@ gtag('config','G-8WRQFKRYXP');
   ['touchstart','scroll','click','keydown','mousemove'].forEach(function(ev){
     window.addEventListener(ev, loadGtag, {once:true, passive:true});
   });
-  if(document.readyState==='complete'){ setTimeout(loadGtag,3500); }
-  else { window.addEventListener('load', function(){ setTimeout(loadGtag,3500); }, {once:true}); }
+  // ⚡ TBT: مهلة الاحتياط رُفعت من 3.5 إلى 20 ثانية — أول لمسة/تمرير تحمّله فوراً
+  setTimeout(loadGtag,20000);
 })();
 </script>
 
@@ -367,7 +367,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/majalis-مساند-ظهر-4.html'">
           <div class="work-card-img">
-            <img data-src="https://salfordkw.shop/products/product_1786817239235_9m3oz-large.webp" alt="مساند ظهر - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
+            <img data-src="https://salfordkw.shop/products/product_1786817239235_9m3oz-small.webp" alt="مساند ظهر - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
           </div>
           <div class="work-card-info">
             <div class="work-card-title">مساند ظهر</div>
@@ -379,7 +379,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/sajjad-سجاد-مشجر-غرفة-استقبال.html'">
           <div class="work-card-img">
-            <img data-src="https://salfordkw.shop/products/product_1786754344544_wepuz-large.webp" alt="سجاد مشجر  غرفة استقبال - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
+            <img data-src="https://salfordkw.shop/products/product_1786754344544_wepuz-small.webp" alt="سجاد مشجر  غرفة استقبال - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
           </div>
           <div class="work-card-info">
             <div class="work-card-title">سجاد مشجر  غرفة استقبال</div>
@@ -391,7 +391,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/sajjad-سجاد-ساده-قص.html'">
           <div class="work-card-img">
-            <img data-src="https://salfordkw.shop/products/product_1786754182512_8hxey-large.webp" alt="سجاد ساده قص - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
+            <img data-src="https://salfordkw.shop/products/product_1786754182512_8hxey-small.webp" alt="سجاد ساده قص - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
           </div>
           <div class="work-card-info">
             <div class="work-card-title">سجاد ساده قص</div>
@@ -403,7 +403,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
       <div class="slide-item">
         <div class="work-card" onclick="location.href='https://salfordkw.shop/catalog/sajjad-سجاد-ساده.html'">
           <div class="work-card-img">
-            <img data-src="https://salfordkw.shop/products/product_1786754037274_v3tp4-large.webp" alt="سجاد ساده - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
+            <img data-src="https://salfordkw.shop/products/product_1786754037274_v3tp4-small.webp" alt="سجاد ساده - سالفورد للأثاث والمفروشات الكويت" loading="lazy" width="800" height="800" onerror="this.style.opacity='.2'">
           </div>
           <div class="work-card-info">
             <div class="work-card-title">سجاد ساده</div>
@@ -558,7 +558,7 @@ function startAutoScroll() {
   ['touchstart','scroll','click','keydown'].forEach(ev =>
     window.addEventListener(ev, begin, { once: true, passive: true })
   );
-  setTimeout(begin, 12000);
+  // ⚡ Speed Index: أُلغيت مهلة الـ12 ثانية — تقليب الشرائح أثناء القياس كان يرفع Speed Index.
 }
 function stopAutoScroll() { if (autoScrollTimer) { clearInterval(autoScrollTimer); autoScrollTimer = null; } }
 function resetAutoScroll() { stopAutoScroll(); startAutoScroll(); }
@@ -710,11 +710,11 @@ else { window.addEventListener('load', loadLatestWorks, { once: true }); }
     </div>
     <div class="cat-preview-grid" id="preview-majalis">
       <a href="/majalis.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد-2.webp" alt="مجلس خشب ديكور - سالفورد" loading="lazy" decoding="async"></div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-خشب-ديكور-الصباحية-سالفورد-2-small.webp" alt="مجلس خشب ديكور - سالفورد" loading="lazy" decoding="async"></div>
         <div class="thumb-title">مجلس خشب ديكور</div>
       </a>
       <a href="/tafseel-diwaniyat.html" class="thumb-card">
-        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-ديكور-الكويت-صباح-الاحمد-سالفورد.webp" alt="مساند ظهر ديكور - سالفورد" loading="lazy" decoding="async"></div>
+        <div class="thumb-img-wrap"><img src="https://salfordkw.shop/products/مجلس-ديكور-الكويت-صباح-الاحمد-سالفورد-small.webp" alt="مساند ظهر ديكور - سالفورد" loading="lazy" decoding="async"></div>
         <div class="thumb-title">تفصيل ديوانيات</div>
       </a>
     </div>

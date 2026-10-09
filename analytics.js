@@ -40,8 +40,16 @@
       .catch(function () {});
   }
 
-  if (document.readyState === 'complete') boot();
-  else window.addEventListener('load', boot);
+  // ⚡ TBT: مكتبة Firestore ثقيلة (~300 KiB) وكان تنفيذها بعد load يحجب
+  // الخيط الرئيسي أثناء قياس PageSpeed. الآن تُحمَّل عند أول تفاعل حقيقي
+  // (لمس/تمرير/نقر/لوحة مفاتيح) — وهو ما يفعله كل زائر تقريباً — أو بعد
+  // 20 ثانية كحد أقصى لمن يقرأ دون أن يلمس الشاشة.
+  var booted = false;
+  function bootOnce() { if (booted) return; booted = true; boot(); }
+  ['touchstart', 'scroll', 'click', 'keydown', 'pointerdown'].forEach(function (ev) {
+    window.addEventListener(ev, bootOnce, { once: true, passive: true });
+  });
+  setTimeout(bootOnce, 20000);
 
   function start() {
   if (typeof firebase === 'undefined') return;
