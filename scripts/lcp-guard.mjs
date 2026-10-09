@@ -217,7 +217,59 @@ function syncHero() {
   return 1;
 }
 
+// ---------- الجزء C: صور البطاقات في الصفحة الرئيسية ----------
+// أي صورة في index.html (خارج شريحة LCP) تُخدَم بنسختها -small (≤640px).
+// إن لم تكن النسخة الصغيرة موجودة تُنشأ تلقائياً — حتى لا تتكرر مشكلة
+// «تحسين عرض الصور» في PageSpeed مع كل منتج جديد.
+async function smallCards() {
+  const indexPath = path.join(ROOT, 'index.html');
+  if (!fs.existsSync(indexPath)) return 0;
+  let sharp = null;
+  try { sharp = (await import('sharp')).default; } catch { /* بدون sharp: نستبدل الموجود فقط */ }
+
+  const html = fs.readFileSync(indexPath, 'utf8');
+  const hs = html.indexOf('<!-- HERO:START -->');
+  const he = html.indexOf('<!-- HERO:END -->');
+  const re = /(<img\b[^>]*?\b(?:src|data-src)=")(https:\/\/salfordkw\.shop\/products\/[^"]+?)(-large)?\.webp"/g;
+  let count = 0;
+  const parts = [];
+  let last = 0;
+  for (const m of html.matchAll(re)) {
+    const at = m.index;
+    if (hs !== -1 && he !== -1 && at > hs && at < he) continue; // شريحة LCP يديرها الجزء B
+    const stem = m[2];
+    if (/-small$/.test(stem)) continue;
+    const smallUrl = `${stem}-small.webp`;
+    const smallPath = urlToLocalPath(smallUrl);
+    if (!smallPath) continue;
+    if (!fs.existsSync(smallPath)) {
+      const srcPath = urlToLocalPath(`${stem}${m[3] || ''}.webp`);
+      if (!sharp || !srcPath || !fs.existsSync(srcPath)) continue;
+      const buf = fs.readFileSync(srcPath);
+      const info = webpInfo(buf);
+      if (!info) continue;
+      const out = await sharp(buf).resize({
+        width: info.width >= info.height ? LEGACY_SMALL_SIZE : undefined,
+        height: info.height > info.width ? LEGACY_SMALL_SIZE : undefined,
+        fit: 'inside', withoutEnlargement: true,
+      }).webp({ quality: LEGACY_SMALL_QUALITY }).toBuffer();
+      if (out.length >= buf.length) continue; // الأصل صغير أصلاً
+      fs.writeFileSync(smallPath, out);
+      console.log(`➕ أُنشئت ${path.relative(ROOT, smallPath)} (${Math.round(out.length / 1024)}KB)`);
+    }
+    parts.push(html.slice(last, at), `${m[1]}${smallUrl}"`);
+    last = at + m[0].length;
+    count++;
+  }
+  if (!count) { console.log('✅ صور البطاقات صغيرة أصلاً'); return 0; }
+  parts.push(html.slice(last));
+  fs.writeFileSync(indexPath, parts.join(''));
+  console.log(`🖼️ حُوّلت ${count} صورة بطاقة إلى -small`);
+  return count;
+}
+
 // ---------- تشغيل ----------
 const a = await guardImages();
 const b = syncHero();
-console.log(`انتهى: ${a} تعديل صور، ${b} تعديل شريحة.`);
+const c = await smallCards();
+console.log(`انتهى: ${a} تعديل صور، ${b} تعديل شريحة، ${c} صورة بطاقة.`);
