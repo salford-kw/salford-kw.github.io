@@ -4574,6 +4574,36 @@
       ],
       "id": "prod_1791237499137_a07kl",
       "slug": "ديوانية-مساند-و-سجاد-ونقش-حفر-العبدلي"
+    },
+    {
+      "code": "ديوانية سجاد و مساند ام الهيمان",
+      "sub": "",
+      "desc": "تجهيزاتنا ديوانية \nمساند اسفنج البغلي \nخام تركي\nسجاد تركي \n",
+      "price": "11",
+      "unit": "المتر",
+      "area": "الأحمدي - جميع المناطق",
+      "availability": "https://schema.org/InStock",
+      "stock": "",
+      "color": "بيج",
+      "material": "شانيل تركي",
+      "dimensions": "50x15",
+      "mpn": "SLM090070",
+      "deliveryTime": "6",
+      "days": "6",
+      "img": "https://salfordkw.shop/products/product_1791552658552_45vb0_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1791552658552_45vb0_0-large.webp",
+      "imgLargeW": 1200,
+      "imgLargeH": 900,
+      "images": [
+        "https://salfordkw.shop/products/product_1791552658552_45vb0_0-small.webp",
+        "https://salfordkw.shop/products/product_1791552662561_fqisb_1-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1791552658552_45vb0_0-large.webp",
+        "https://salfordkw.shop/products/product_1791552662561_fqisb_1-large.webp"
+      ],
+      "id": "prod_1791552669028_4jqsh",
+      "slug": "ديوانية-سجاد-و-مساند-ام-الهيمان"
     }
   ]
 }
