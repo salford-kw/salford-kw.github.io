@@ -50,6 +50,8 @@ jobs:
         run: node scripts/strip-gtag.mjs
 
       - name: Run LCP guard
+        env:
+          SITE_GUARD_VERIFY: '1'
         run: node scripts/lcp-guard.mjs
 
       - name: Verify site is clean

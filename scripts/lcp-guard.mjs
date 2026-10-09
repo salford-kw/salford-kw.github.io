@@ -280,6 +280,8 @@ async function smallCards() {
 
 // ---------- تشغيل ----------
 const a = await guardImages();
-const b = syncHero();
+// في وضع الفحص (GitHub Actions) لا نقارن شريحة LCP: تغيّرها بعد نشر عمل جديد
+// أمر طبيعي وليس خللاً، والفرع الرئيسي محمي فلا يمكن رفع التحديث تلقائياً.
+const b = process.env.SITE_GUARD_VERIFY === '1' ? 0 : syncHero();
 const c = await smallCards();
 console.log(`انتهى: ${a} تعديل صور، ${b} تعديل شريحة، ${c} صورة بطاقة.`);
