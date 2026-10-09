@@ -2189,6 +2189,34 @@
       ],
       "id": "prod_1791202800456_2u3xo",
       "slug": "مساند-وسجاد-حفر-اطار-الجهراء"
+    },
+    {
+      "code": "مساند جاهزة جلسة شانيل",
+      "sub": "jalsat-ardiya",
+      "desc": "مساند جاهزة قابلة للتعديل والقص حسب مقاسات مكانك \n",
+      "price": "8",
+      "unit": "المتر",
+      "area": "جميع مناطق الكويت",
+      "availability": "https://schema.org/InStock",
+      "stock": "95",
+      "color": "رمادي مشجر",
+      "material": "خام مشجر شانيل تركي ",
+      "dimensions": "50x15",
+      "mpn": "SLMS03307",
+      "deliveryTime": "2",
+      "days": "2",
+      "img": "https://salfordkw.shop/products/product_1791583443118_afwak_0-small.webp",
+      "imgLarge": "https://salfordkw.shop/products/product_1791583443118_afwak_0-large.webp",
+      "imgLargeW": 1625,
+      "imgLargeH": 750,
+      "images": [
+        "https://salfordkw.shop/products/product_1791583443118_afwak_0-small.webp"
+      ],
+      "imagesLarge": [
+        "https://salfordkw.shop/products/product_1791583443118_afwak_0-large.webp"
+      ],
+      "id": "prod_1791583448389_xr15z",
+      "slug": "مساند-جاهزة-جلسة-شانيل"
     }
   ],
   "athath": [
@@ -4671,5 +4699,6 @@
       "id": "prod_1791574206197_gt0xk",
       "slug": "مجلس-رسمي-زان-مع-انارة"
     }
-  ]
+  ],
+  "mukhayyamat": []
 }
