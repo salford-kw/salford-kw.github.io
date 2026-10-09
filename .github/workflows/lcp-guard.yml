@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 # تشغيل واحد في كل مرة، حتى لا يتعارض مع تعديلات لوحة الإدارة
 concurrency:
@@ -44,18 +44,16 @@ jobs:
       - name: Run LCP guard
         run: node scripts/lcp-guard.mjs
 
-      - name: Commit changes
+      - name: Verify site is clean
         run: |
-          git config user.name "salford-lcp-guard"
-          git config user.email "actions@users.noreply.github.com"
-          git add -A products '*.html'
+          # فحص فقط — لا يرفع شيئاً (الفرع الرئيسي محمي).
+          # لو فشل هذا الفحص فمعناه أن لوحة الإدارة أنتجت صفحة فيها Google Tag
+          # أو صورة غير محسّنة، ويجب إصلاح المصدر لا ترقيع النتيجة.
+          git add -A
           if git diff --cached --quiet; then
-            echo "لا تغييرات للرفع"
-            exit 0
+            echo "✅ الموقع نظيف"
+          else
+            echo "❌ ملفات تحتاج إصلاح من المصدر:"
+            git diff --cached --stat
+            exit 1
           fi
-          git commit -m "perf: Site guard — حذف Google Tag وتحسين الصور تلقائياً"
-          for i in 1 2 3; do
-            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
-            echo "إعادة المحاولة ($i)"; sleep 5
-          done
-          exit 1

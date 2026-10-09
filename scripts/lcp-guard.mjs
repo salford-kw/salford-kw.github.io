@@ -81,7 +81,17 @@ async function guardImages() {
     let buf;
     try { buf = fs.readFileSync(file); } catch { continue; }
     const info = webpInfo(buf);
-    if (!info) { console.warn(`⚠️ ليست WebP حقيقية، تُترك كما هي: ${rel}`); continue; }
+    if (!info) {
+      // JPEG/PNG مرفوع باسم .webp — يُحوَّل إلى WebP حقيقي بنفس الاسم
+      try {
+        const out = await sharp(buf).rotate().resize({ width: RESIZE_TO, height: RESIZE_TO, fit: 'inside', withoutEnlargement: true })
+          .webp({ quality: RESIZE_QUALITY }).toBuffer();
+        fs.writeFileSync(file, out);
+        changed++;
+        console.log(`🔁 حُوّلت إلى WebP حقيقي ${rel}: ${Math.round(buf.length / 1024)}KB → ${Math.round(out.length / 1024)}KB`);
+      } catch { console.warn(`⚠️ تعذّر تحويل ${rel}`); }
+      continue;
+    }
 
     const long = Math.max(info.width, info.height);
 
