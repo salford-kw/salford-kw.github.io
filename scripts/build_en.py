@@ -171,7 +171,11 @@ def render(p):
     ar = f"{SITE}{p['ar']}"
     hero = p.get("hero")
     ld = [business_ld(url)]
-    crumbs = [("Home", f"{SITE}/en/")] + ([(p["crumb"], url)] if p.get("crumb") else [])
+    crumbs = [("Home", f"{SITE}/en/")]
+    if p.get("parent"):
+        crumbs.append((p["parent"][0], f"{SITE}{p['parent'][1]}"))
+    if p.get("crumb"):
+        crumbs.append((p["crumb"], url))
     if len(crumbs) > 1:
         ld.append(crumbs_ld(crumbs))
     if p.get("faqs"):
@@ -182,7 +186,8 @@ def render(p):
     preload = (f'<link rel="preload" as="image" fetchpriority="high" href="{IMG}{hero[0]}">' if hero else "")
     crumb_html = ""
     if p.get("crumb"):
-        crumb_html = f'<nav class="crumbs" aria-label="Breadcrumb"><a href="/en/">Home</a> › {e(p["crumb"])}</nav>'
+        mid = f' › <a href="{p['parent'][1]}">{e(p['parent'][0])}</a>' if p.get("parent") else ""
+        crumb_html = f'<nav class="crumbs" aria-label="Breadcrumb"><a href="/en/">Home</a>{mid} › {e(p["crumb"])}</nav>'
     nav = " · ".join(f'<a href="{u}">{t}</a>' for u, t in nav_links())
     return f"""<!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -281,7 +286,7 @@ PAGES.append(dict(
 <section>
 <h2>What we make</h2>
 <div class="cards">
-<div class="card"><h3><a href="/en/curtains-kuwait.html">Curtains and blinds →</a></h3><p>Wave, blackout, sheer and roller blinds, made to the size of each window. Roller blinds <span class="price">5 KD per square metre</span>.</p></div>
+<div class="card"><h3><a href="/en/curtains-kuwait.html">Curtains and blinds →</a></h3><p>Wave, <a href="/en/blackout-curtains-kuwait.html">blackout</a>, <a href="/en/sheer-curtains-kuwait.html">sheer</a> and <a href="/en/roller-blinds-kuwait.html">roller blinds</a>, made to the size of each window. Roller blinds <span class="price">5 KD per square metre</span>.</p></div>
 <div class="card"><h3>Sofas and upholstery</h3><p>New sofas built to your measurements, plus re-upholstery and slipcovers for the sofas you already own.</p></div>
 <div class="card"><h3>Arabic majlis seating</h3><p>Floor seating, back cushions and wooden majlis frames for diwaniyas and living rooms.</p></div>
 <div class="card"><h3>Carpets</h3><p>Turkish carpets from Bursa mills, cut-to-size carpet by the metre, and mosque and office carpet.</p></div>
@@ -340,13 +345,13 @@ PAGES.append(dict(
 </section>
 <section>
 <h2>Which curtain suits which room?</h2>
-<h3>Blackout curtains — bedrooms and day sleepers</h3>
+<h3><a href="/en/blackout-curtains-kuwait.html">Blackout curtains</a> — bedrooms and day sleepers</h3>
 <p>A dense, opaque fabric that blocks almost all light and much of the sun's heat. It is the first choice for bedrooms through the Kuwaiti summer, and for anyone who sleeps during the day.</p>
 <h3>Wave curtains — living rooms and majlis</h3>
 <p>Fabric folded into even waves that hide the track completely. It gives a neat, hotel-style look in living rooms, reception rooms and large bedrooms.</p>
-<h3>Sheer curtains — soft daylight</h3>
+<h3><a href="/en/sheer-curtains-kuwait.html">Sheer curtains</a> — soft daylight</h3>
 <p>A light, see-through fabric that lets in soft light instead of full darkness. It is often paired with a heavier curtain so you can switch between privacy and light.</p>
-<h3>Roller blinds — kitchens, offices and small windows</h3>
+<h3><a href="/en/roller-blinds-kuwait.html">Roller blinds</a> — kitchens, offices and small windows</h3>
 <p>A single panel that rolls up and down on one mechanism. It is practical, easy to clean, and suits kitchens, bathrooms, offices and shop fronts. Sun-blocking fabric works well on large glass windows.</p>
 </section>
 <section>
@@ -383,6 +388,210 @@ PAGES.append(dict(
             {"@type": "Offer", "name": "Blackout curtains", "priceCurrency": "KWD",
              "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 14, "priceCurrency": "KWD", "unitText": "metre"}},
         ]}],
+))
+
+# ---- Blackout curtains
+PAGES.append(dict(
+    path="/en/blackout-curtains-kuwait.html", file="en/blackout-curtains-kuwait.html", ar="/sataer-blackout-kuwait.html",
+    crumb="Blackout curtains", parent=("Curtains in Kuwait", "/en/curtains-kuwait.html"),
+    title="Blackout Curtains in Kuwait — From 14 KD per Metre | Salford",
+    desc="Made-to-measure blackout curtains in Kuwait from 14 KD per metre. Block light and summer heat in bedrooms. Free home measuring, installed in 1–3 days.",
+    h1="Blackout curtains in Kuwait",
+    lead="A dense, layered fabric that blocks as much outside light and heat as possible — unlike ordinary curtains, which only soften the light. Made to the size of each window, from <span class='price'>14 KD per metre</span>.",
+    hero=("product_1786197817583_avoyf-small.webp", "Grey sun-blocking drapes with tiebacks over a white sheer, Hawally"),
+    wa="Hello Salford, I'd like a quote for blackout curtains (from salfordkw.shop/en/blackout-curtains-kuwait.html)",
+    body="""<div class="stats"><div class="stat"><b>14 KD</b><span>From, per metre</span></div><div class="stat"><b>1–3 days</b><span>Made and installed</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
+<section>
+<h2>Why blackout curtains matter in a Kuwaiti summer</h2>
+<p>Direct summer sun makes east- and west-facing rooms very hot, even behind ordinary curtains. A dense blackout layer reflects much of that sunlight before it enters the room, which eases the load on your air conditioning and keeps the room cooler for longer, especially around midday.</p>
+<p>They are most useful in children's bedrooms, for people who work night shifts and sleep during the day, and in media rooms. They also suit living rooms and diwaniyas that face the street, cutting glare on screens and furniture while blocking the view from outside.</p>
+</section>
+<section>
+<h2>Blackout curtain prices</h2>
+<table>
+<thead><tr><th>Item</th><th>Price or time</th></tr></thead>
+<tbody>
+<tr><td>Blackout fabric, made to measure</td><td class="price">from 14 KD per metre</td></tr>
+<tr><td>Home measuring visit</td><td>free</td></tr>
+<tr><td>One or a few standard windows</td><td>1 to 2 days</td></tr>
+<tr><td>A whole room or several rooms</td><td>up to 3 days</td></tr>
+</tbody>
+</table>
+<p>You get the final price in writing after the free visit. Pay by KNET, Wamd or cash.</p>
+</section>
+<section>
+<h2>Types of blackout curtain we make</h2>
+<p>"Blackout" describes the fabric, not the style. You choose the final look for your room:</p>
+<ul>
+<li><strong>Wave blackout</strong> — the opaque fabric sewn in even waves on a track. The most requested style for bedrooms and living rooms, with a neat hotel look.</li>
+<li><strong>Blackout with sheer</strong> — two layers on a double track: the sheer for soft daylight with privacy, the blackout for full darkness. Ideal for a room used day and night.</li>
+<li><strong>Plain blackout</strong> — a single opaque layer, the economical choice for bedrooms, storerooms and staff rooms.</li>
+<li><strong>Heavy royal blackout</strong> — a heavier, richer fabric for diwaniyas and formal living rooms.</li>
+<li><strong>Sun-blocking roller blind</strong> — the opaque fabric on a <a href="/en/roller-blinds-kuwait.html">roller blind</a>, lighter and better for small windows and kitchens.</li>
+</ul>
+<p>Colour does not decide how much light is blocked — the weave and the inner lining do. So blackout curtains come in many colours and patterns, not only black.</p>
+</section>
+<section>
+<h2>Blackout or sun-blocking: what is the difference?</h2>
+<p>The two names are often used interchangeably in Kuwait, but they do different jobs. Sun-blocking or dimming curtains reduce strong light and block the view from outside, but some light still comes through, especially at the edges. Blackout curtains are thicker and have an inner insulating layer designed to stop the light itself.</p>
+<p>The simple rule: if you want privacy, dimming is enough. If you want to sleep in full darkness, choose blackout.</p>
+</section>
+<section>
+<h2>How to choose the right level of darkness</h2>
+<ul>
+<li><strong>Bedroom facing direct sun or street lights</strong> — the darkest fabric available, fitted on a track wider than the window to reduce light at the sides.</li>
+<li><strong>Children's room or inner bedroom</strong> — a medium level is usually enough and keeps the curtain light to open every day.</li>
+<li><strong>Living room or diwaniya</strong> — the aim is to cut glare, not to make the room dark, so blackout with a sheer layer works best.</li>
+</ul>
+<p>We bring real fabric samples to the visit so you can compare them in your own light before deciding.</p>
+</section>
+<section>
+<h2>Recent blackout and sun-blocking work</h2>
+""" + gallery([
+        ("product_1786198170852_7o0ir-small.webp", "Sun-blocking roller blind in a bedroom, Mahboula"),
+        ("product_1786198315153_52wc7-small.webp", "Sun-blocking roller blinds in an office, Capital Governorate"),
+        ("product_1786197817583_avoyf-small.webp", "Grey sun-blocking drapes over a white sheer, Hawally"),
+        ("product_1786220498508_suibg-small.webp", "Grey wave drapes layered with a white sheer"),
+    ]) + """
+</section>""",
+    faqs=[
+        ("How much do blackout curtains cost in Kuwait?", "Our made-to-measure blackout curtains start from 14 KD per metre. You get the final price in writing after the free home visit."),
+        ("Do blackout curtains block heat as well as light?", "Yes. The dense blackout layer reflects much of the direct sunlight before it enters the room, which keeps the room cooler and eases the load on the air conditioning."),
+        ("Are blackout curtains only available in black?", "No. The darkness comes from the weave and the inner lining, not the colour, so they come in many colours and patterns."),
+        ("Can I have blackout and sheer together?", "Yes. We fit both on a double track: the sheer for soft daylight and privacy, the blackout for full darkness."),
+        ("How long does it take?", "One or a few standard windows take 1 to 2 days. A whole room or several rooms take up to 3 days."),
+    ],
+    extra_ld=[{
+        "@context": "https://schema.org", "@type": "Service", "inLanguage": "en",
+        "serviceType": "Blackout curtains", "name": "Made-to-measure blackout curtains in Kuwait",
+        "provider": {"@id": f"{SITE}/#business"}, "areaServed": {"@type": "Country", "name": "Kuwait"},
+        "offers": {"@type": "Offer", "priceCurrency": "KWD",
+                   "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 14, "priceCurrency": "KWD", "unitText": "metre"}}}],
+))
+
+# ---- Roller blinds
+PAGES.append(dict(
+    path="/en/roller-blinds-kuwait.html", file="en/roller-blinds-kuwait.html", ar="/tafseel-sataer-rol.html",
+    crumb="Roller blinds", parent=("Curtains in Kuwait", "/en/curtains-kuwait.html"),
+    title="Roller Blinds in Kuwait — 5 KD per Square Metre | Salford",
+    desc="Made-to-measure roller blinds in Kuwait: 5 KD per square metre for every fabric — standard, silver heat-reflective or sun-blocking. Installation included.",
+    h1="Roller blinds in Kuwait, made to your window",
+    lead="We cut each roller blind to the exact size of your window, in the fabric and colour you choose from real samples. One price for every fabric: <span class='price'>5 KD per square metre</span>, installation included.",
+    hero=("product_1786198230102_2d8yi-small.webp", "Dark grey roller blinds made to measure, Rumaithiya"),
+    wa="Hello Salford, I'd like a quote for roller blinds (from salfordkw.shop/en/roller-blinds-kuwait.html)",
+    body="""<div class="stats"><div class="stat"><b>5 KD</b><span>Per square metre</span></div><div class="stat"><b>1–3 days</b><span>Made and installed</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
+<section>
+<h2>Roller blind fabrics — all at the same price</h2>
+<p>Every fabric costs 5 KD per square metre, so you choose by what the room needs, not by budget.</p>
+<table>
+<thead><tr><th>Fabric</th><th>What it does</th><th>Best for</th></tr></thead>
+<tbody>
+<tr><td>Standard roller</td><td>Blocks the view and lets soft light through</td><td>Living rooms and family rooms where you want privacy and daylight</td></tr>
+<tr><td>Silver heat-reflective</td><td>A silver back reflects direct sun, cutting heat and screen glare</td><td>South- and west-facing windows, offices</td></tr>
+<tr><td>Sun-blocking</td><td>A denser fabric that stops almost all light</td><td>Bedrooms and day sleepers</td></tr>
+<tr><td>Linen-look roller</td><td>A natural fabric texture, closer to traditional curtains</td><td>Rooms where you want a softer look</td></tr>
+</tbody>
+</table>
+<p>We bring samples of each fabric to your window, because a fabric looks very different in your own light than on a screen.</p>
+</section>
+<section>
+<h2>Manual chain or electric motor</h2>
+<p>We fit manual roller blinds with a side chain for simple daily use, and motorised blinds for remote control or a smart-home system. A motor makes most sense for high windows, large glass fronts, or a row of windows you want to open together. At the visit we check whether power can reach the window without building work, and explain the price difference before you decide.</p>
+</section>
+<section>
+<h2>Roller blinds for offices and companies</h2>
+<p>Roller blinds are one of the most requested options for offices: they take little space at the window, do not clash with desks against the wall, and give a uniform look across a whole facade. Silver heat-reflective fabric suits offices facing direct sun, cutting glare on computer screens while keeping natural light. For multi-window orders we measure every window separately, because a few centimetres of difference between windows is common.</p>
+</section>
+<section>
+<h2>How it works</h2>
+<ol>
+<li><strong>Free visit</strong> — we measure each window or opening precisely.</li>
+<li><strong>Choose fabric and colour</strong> from real samples.</li>
+<li><strong>Made in our workshop</strong> to the exact measurement — non-standard and very wide windows are fine.</li>
+<li><strong>Installed</strong> — usually about an hour per window, and several windows on the same visit. Offices and shops with many units take 1 to 2 days.</li>
+</ol>
+<p>The same team measures, makes and installs your blinds, which keeps measuring mistakes to a minimum.</p>
+</section>
+<section>
+<h2>Recent roller blind work in Kuwait</h2>
+""" + gallery([
+        ("product_1786198230102_2d8yi-small.webp", "Dark grey roller blinds in a bedroom, Rumaithiya"),
+        ("product_1786198365428_vaf21-small.webp", "Taupe roller blinds on corner windows in an office"),
+        ("product_1786198038983_l25ke-small.webp", "Day-and-night blind on a sliding door, Salwa"),
+        ("product_1786198082795_c7oqu-small.webp", "Grey day-and-night blind in a home office"),
+        ("product_1786197982498_ekn0c-small.webp", "Day-and-night blind on a bathroom window, Hawally"),
+        ("product_1786198170852_7o0ir-small.webp", "Sun-blocking roller blind in a bedroom, Mahboula"),
+        ("product_1786198315153_52wc7-small.webp", "Grey roller blinds in an office, Capital Governorate"),
+    ]) + """
+</section>""",
+    faqs=[
+        ("How much do roller blinds cost in Kuwait?", "5 KD per square metre for every fabric — standard, silver heat-reflective, sun-blocking or linen-look. Installation is included."),
+        ("How is the square metre calculated?", "We multiply the width by the height of the blind in metres. For example, a blind 2 m wide and 1.5 m high is 3 square metres. The exact price is confirmed in writing after the free visit."),
+        ("Do you make motorised roller blinds?", "Yes. We fit manual chain blinds and electric motorised blinds, which can work with a remote or a smart-home system. We explain the price difference at the visit."),
+        ("Can you install a roller blind I bought somewhere else?", "We mainly install blinds we make, so the track and size match exactly. For ready-made blinds, contact us first so we can check whether they can be installed to the same standard."),
+        ("How long does it take?", "Making and installing usually takes 1 to 3 days depending on the number of windows. Fitting itself takes about an hour per window."),
+    ],
+    extra_ld=[{
+        "@context": "https://schema.org", "@type": "Service", "inLanguage": "en",
+        "serviceType": "Roller blinds", "name": "Made-to-measure roller blinds in Kuwait",
+        "provider": {"@id": f"{SITE}/#business"}, "areaServed": {"@type": "Country", "name": "Kuwait"},
+        "offers": {"@type": "Offer", "priceCurrency": "KWD",
+                   "priceSpecification": {"@type": "UnitPriceSpecification", "price": 5, "priceCurrency": "KWD", "unitText": "square metre"}}}],
+))
+
+# ---- Sheer curtains
+PAGES.append(dict(
+    path="/en/sheer-curtains-kuwait.html", file="en/sheer-curtains-kuwait.html", ar="/sataer-shifon-kuwait.html",
+    crumb="Sheer curtains", parent=("Curtains in Kuwait", "/en/curtains-kuwait.html"),
+    title="Sheer Curtains in Kuwait — Made to Measure | Salford",
+    desc="Made-to-measure sheer (chiffon) curtains in Kuwait in soft silky Turkish fabric. Soft daylight with privacy for living rooms. Free measuring, tracks included.",
+    h1="Sheer curtains in Kuwait",
+    lead="A light, semi-transparent fabric that lets daylight in softly instead of blocking it — the right choice for living and reception rooms. Made to the size of your window, with tracks and installation included.",
+    hero=("product_1786220577670_dz6ih-small.webp", "White sheer wave curtain made by Salford, Sabah Al-Salem"),
+    wa="Hello Salford, I'd like a quote for sheer curtains (from salfordkw.shop/en/sheer-curtains-kuwait.html)",
+    body="""<div class="stats"><div class="stat"><b>2–3 days</b><span>One window</span></div><div class="stat"><b>3–4 days</b><span>A whole room</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
+<section>
+<h2>Soft light instead of full darkness</h2>
+<p>Sheer curtains do the opposite job to <a href="/en/blackout-curtains-kuwait.html">blackout curtains</a>. Blackout is made for bedrooms that need full darkness; sheer is made for living and reception rooms that want soft natural light with a little privacy, without darkening the room during the day.</p>
+</section>
+<section>
+<h2>Where sheer curtains work best</h2>
+<p>Most often in living and reception rooms, where they soften the decor while keeping the room bright. They also work as a front layer over a heavier curtain — a <a href="/en/roller-blinds-kuwait.html">roller blind</a> or blackout. Open the heavy layer in the day and the sheer alone gives light privacy; close it at night.</p>
+</section>
+<section>
+<h2>Our sheer fabric</h2>
+<p>We use a silky, soft-touch Turkish fabric that reflects light gently rather than glaring. It usually comes in light and neutral colours that suit most interiors. It is lighter than wave or roller fabric, so it moves easily and makes the room feel lighter.</p>
+<p>Do sheer curtains need a lining? Usually not, because their job is soft light. But if the window faces the street, or you want more privacy at night with the lights on, we recommend pairing it with a second layer that you close in the evening.</p>
+</section>
+<section>
+<h2>Timing and payment</h2>
+<table>
+<thead><tr><th>Order</th><th>Made and installed in</th></tr></thead>
+<tbody>
+<tr><td>Sheer curtain for one window</td><td>2 to 3 days</td></tr>
+<tr><td>Sheer curtains for a whole living room</td><td>3 to 4 days</td></tr>
+</tbody>
+</table>
+<p>The price depends on the fabric and the size; you get it in writing after the free visit. Pay by KNET, Wamd or cash.</p>
+</section>
+<section>
+<h2>Recent sheer curtain work in Kuwait</h2>
+""" + gallery([
+        ("product_1786220577670_dz6ih-small.webp", "White sheer wave curtain in a bedroom, Sabah Al-Salem"),
+        ("product_1786220974971_4z3av-small.webp", "White sheer with lace edging on a double track, Jahra"),
+        ("product_1786199839154_hqlc9-small.webp", "Beige drapes with a full-width sheer in a living room, Fahad Al-Ahmad"),
+        ("product_1786198933149_374vc-small.webp", "Patterned grey drapes over a lace-edged sheer, Mangaf"),
+        ("product_1786382432376_ijsgz-small.webp", "Brown drape with a tasselled tieback over a sheer, Sulaibikhat"),
+        ("product_1786197567265_jz8bl-small.webp", "Gold velvet drapes over a white swag sheer, Khaitan"),
+    ]) + """
+</section>""",
+    faqs=[
+        ("What is the difference between sheer and blackout curtains?", "Sheer is a light, see-through fabric that lets soft light in. Blackout is a dense, opaque fabric that blocks light almost completely and suits bedrooms."),
+        ("Do sheer curtains block the view from outside during the day?", "They give light privacy during the day but are not opaque. For more privacy with natural light, pair them with a roller or wave curtain."),
+        ("Can I use sheer curtains in a bedroom?", "Yes, as a decorative extra layer, but not on their own — they do not give enough darkness for sleeping compared with blackout."),
+        ("What colours are available?", "Light and neutral colours are the most available and popular because they suit most interiors. We bring the real samples to the visit."),
+        ("How long does it take to make and install sheer curtains?", "Usually 2 to 3 days for one window and up to 4 days for a whole living room."),
+    ],
 ))
 
 # ---- About

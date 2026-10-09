@@ -266,6 +266,11 @@
   
   <url>
     <loc>https://salfordkw.shop/sataer-blackout-kuwait.html</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/sataer-blackout-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/blackout-curtains-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/sataer-blackout-kuwait.html"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -283,6 +288,11 @@
   
   <url>
     <loc>https://salfordkw.shop/tafseel-sataer-rol.html</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/tafseel-sataer-rol.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/roller-blinds-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/tafseel-sataer-rol.html"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1134,6 +1144,11 @@
   
   <url>
     <loc>https://salfordkw.shop/sataer-shifon-kuwait.html</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/sataer-shifon-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/sheer-curtains-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/sataer-shifon-kuwait.html"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -2680,6 +2695,30 @@
     <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/sataer.html"/>
     <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/curtains-kuwait.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/sataer.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/en/blackout-curtains-kuwait.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/sataer-blackout-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/blackout-curtains-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/sataer-blackout-kuwait.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/en/roller-blinds-kuwait.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/tafseel-sataer-rol.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/roller-blinds-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/tafseel-sataer-rol.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/en/sheer-curtains-kuwait.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/sataer-shifon-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/sheer-curtains-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/sataer-shifon-kuwait.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
