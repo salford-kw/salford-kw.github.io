@@ -49,7 +49,7 @@ jobs:
           # فحص فقط — لا يرفع شيئاً (الفرع الرئيسي محمي).
           # لو فشل هذا الفحص فمعناه أن لوحة الإدارة أنتجت صفحة فيها Google Tag
           # أو صورة غير محسّنة، ويجب إصلاح المصدر لا ترقيع النتيجة.
-          git add -A -- . ":(exclude)node_modules"
+          git add -A
           if git diff --cached --quiet; then
             echo "✅ الموقع نظيف"
           else
