@@ -122,7 +122,7 @@ footer a{color:var(--gold-light)}
 
 
 def nav_links():
-    return [("/en/", "Home"), ("/en/curtains-kuwait.html", "Curtains"), ("/en/custom-sofas-kuwait.html", "Sofas"),
+    return [("/en/", "Home"), ("/en/curtains-kuwait.html", "Curtains"), ("/en/custom-sofas-kuwait.html", "Sofas"), ("/en/carpets-kuwait.html", "Carpets"),
             ("/en/about.html", "About"), ("/en/faq.html", "FAQ"), ("/en/contact.html", "Contact")]
 
 
@@ -289,7 +289,7 @@ PAGES.append(dict(
 <div class="card"><h3><a href="/en/curtains-kuwait.html">Curtains and blinds →</a></h3><p>Wave, <a href="/en/blackout-curtains-kuwait.html">blackout</a>, <a href="/en/sheer-curtains-kuwait.html">sheer</a> and <a href="/en/roller-blinds-kuwait.html">roller blinds</a>, made to the size of each window. Roller blinds <span class="price">5 KD per square metre</span>.</p></div>
 <div class="card"><h3><a href="/en/custom-sofas-kuwait.html">Sofas and upholstery →</a></h3><p><a href="/en/custom-sofas-kuwait.html">New sofas</a> built to your measurements, plus <a href="/en/sofa-upholstery-kuwait.html">re-upholstery</a> and <a href="/en/sofa-slipcovers-kuwait.html">slipcovers</a> for the sofas you already own.</p></div>
 <div class="card"><h3>Arabic majlis seating</h3><p>Floor seating, back cushions and wooden majlis frames for diwaniyas and living rooms.</p></div>
-<div class="card"><h3>Carpets</h3><p>Turkish carpets from Bursa mills, cut-to-size carpet by the metre, and mosque and office carpet.</p></div>
+<div class="card"><h3><a href="/en/carpets-kuwait.html">Carpets →</a></h3><p>Turkish carpet from Bursa mills, cut to size or by the metre, from <span class="price">11 KD per metre</span>, plus <a href="/en/mosque-carpet-kuwait.html">mosque carpet</a> and office carpet.</p></div>
 <div class="card"><h3>Artificial grass and flooring</h3><p>Artificial grass for gardens and roofs, and parquet flooring, supplied and installed.</p></div>
 </div>
 </section>
@@ -786,6 +786,171 @@ PAGES.append(dict(
                    "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 10, "maxPrice": 18, "priceCurrency": "KWD", "unitText": "metre"}}}],
 ))
 
+CARPET_PHOTOS = {
+    "agadir": ("سجاد-تركي-اكادير-سالفورد-small.webp", "Agadir range of Turkish carpet samples in beige, brown and grey"),
+    "marrakesh": ("سجاد-تركي-مراكش-سالفورد-small.webp", "Marrakesh range of soft Turkish carpet samples"),
+    "nabel": ("سجاد-تركي-نابل-سالفورد-small.webp", "Nabel range of Turkish carpet samples"),
+    "loop": ("سجاد-تركي-فندقي-سالفورد-small.webp", "Hotel-grade loop-pile carpet samples"),
+    "geo05": ("سجاد-تركي-سالفورد-05-small.webp", "Patterned Turkish carpet samples with geometric designs"),
+    "geo06": ("سجاد-تركي-سالفورد-06-small.webp", "Heavy-pile patterned carpet samples for majlis rooms"),
+    "majlis_motif": ("سجاد-تركي-سالفورد-07-small.webp", "Blue-grey wall-to-wall carpet with a carved centre motif in a majlis"),
+    "fit_majlis": ("tarkib-sajjad-1-small.webp", "Grey wall-to-wall carpet fitted in a majlis with floor seating"),
+    "fit_room": ("tarkib-sajjad-2-small.webp", "Carpet fitted across a whole room"),
+    "fit_edge": ("tarkib-sajjad-3-small.webp", "Clean carpet edge finished against a marble floor"),
+    "carved_medallion": ("product_1786197423291_fvwuq-small.webp", "Hand-carved arabesque medallion carpet, Al-Rabiya"),
+    "carved_border": ("product_1786199578906_qwb31-small.webp", "Hand-carved geometric border on a cream majlis carpet"),
+    "mosque_blue": ("sajjad-masjid-01-small.webp", "Blue mosque carpet with gold prayer-row lines"),
+    "mosque_red": ("sajjad-masjid-02-small.webp", "Red mosque carpet with gold prayer rows"),
+    "mosque_roll": ("sajjad-masjid-03-small.webp", "Red mosque carpet roll with patterned row borders"),
+    "prayer_rug": ("sajjad-musalla-02-small.webp", "Single prayer rug with a blue mihrab design"),
+}
+
+# ---- Carpets (hub)
+PAGES.append(dict(
+    path="/en/carpets-kuwait.html", file="en/carpets-kuwait.html", ar="/sajjad.html",
+    crumb="Carpets in Kuwait",
+    title="Carpets in Kuwait — Turkish Carpet, Cut & Fitted | Salford",
+    desc="Turkish carpet and wall-to-wall moquette in Kuwait, imported from Bursa mills. From 11 KD per metre, cut to size and installed in one day. Free home measuring.",
+    h1="Carpets in Kuwait — Turkish carpet, cut to size and fitted",
+    lead="We import our carpet directly from mills in Bursa, Turkey, cut it to the exact shape of your room, majlis or office, and fit it — usually in a single day. Carpet starts from <span class='price'>11 KD per metre</span>, with free home measuring anywhere in Kuwait.",
+    hero=CARPET_PHOTOS["fit_majlis"],
+    wa="Hello Salford, I'd like a quote for carpet (from salfordkw.shop/en/carpets-kuwait.html)",
+    body="""<div class="stats"><div class="stat"><b>11 KD</b><span>From, per metre</span></div><div class="stat"><b>1 day</b><span>Typical fitting</span></div><div class="stat"><b>790+</b><span>Projects since 2016</span></div></div>
+<section>
+<h2>Carpet prices in Kuwait</h2>
+<p>Our carpet is priced per metre of roll, depending on the type and pile. Mosque carpet is the exception: it is priced per square metre. You get a written quote after the free visit.</p>
+<table>
+<thead><tr><th>Carpet</th><th>Price</th><th>Unit</th></tr></thead>
+<tbody>
+<tr><td>Turkish moquette (wall-to-wall carpet)</td><td class="price">from 11 KD</td><td>per metre</td></tr>
+<tr><td>Medium-pile carpet for offices and corridors</td><td class="price">from about 13 KD</td><td>per metre</td></tr>
+<tr><td>Standard Turkish carpet by the metre, straight from the roll</td><td class="price">from about 13 KD</td><td>per metre</td></tr>
+<tr><td>High-pile luxury carpet for majlis rooms</td><td>depends on type and thickness</td><td>quoted after the visit</td></tr>
+<tr><td><a href="/en/mosque-carpet-kuwait.html">Mosque and prayer-room carpet</a></td><td class="price">7.5–9 KD</td><td>per square metre, installed</td></tr>
+<tr><td>Fitting only, for carpet bought elsewhere</td><td>10–35 KD</td><td>per job, by area and location</td></tr>
+</tbody>
+</table>
+<p>When you buy and have the carpet cut by us, fitting is part of the order and is not charged as a separate job. Hand-carved patterns are priced separately from the carpet itself.</p>
+</section>
+<section>
+<h2>Why Turkish carpet from Bursa</h2>
+<p>We import exclusive carpet ranges that are not available elsewhere in Kuwait, made in the mills of Bursa, Turkey. Their denser weave and more stable colours mean a longer life before matting or fading — which matters most in majlis rooms and other heavily used spaces. Density (threads per centimetre) matters more than pile length alone in how long a carpet lasts.</p>
+</section>
+<section>
+<h2>Choosing the right carpet for each space</h2>
+<table>
+<thead><tr><th>Space</th><th>What works best</th></tr></thead>
+<tbody>
+<tr><td>Majlis and diwaniya</td><td>High-pile, dense carpet — comfortable to sit on and good at absorbing sound</td></tr>
+<tr><td>Bedrooms</td><td>Medium to high pile, balancing softness underfoot with easy care</td></tr>
+<tr><td>Offices and shops</td><td>Medium to low pile that handles daily foot traffic and is quick to vacuum</td></tr>
+<tr><td>Corridors and stairs</td><td>A hard-wearing carpet where durability matters more than softness</td></tr>
+</tbody>
+</table>
+<p>Plain carpet in a single colour suits almost any interior. A large flowing pattern works as the centrepiece of a big living room. For something unique, a pattern can be hand-carved into the carpet after it is cut to your room.</p>
+</section>
+<section>
+<h2>Cut to size, or bought by the metre?</h2>
+<ul>
+<li><strong>Cut to size and fitted</strong> — we measure the exact shape of your room or majlis, cut the carpet to it, finish the edges cleanly against the tiles or marble, and fit it. This is right for rooms where you want full, wall-to-wall coverage.</li>
+<li><strong>By the metre from the roll</strong> — the length you need, cut straight from a standard roll with no final shaping. It is faster and suits stairs, long corridors, offices, exhibitions and short-term events. You can buy small amounts, such as 3 or 5 metres, without taking a whole roll.</li>
+</ul>
+</section>
+<section>
+<h2>How carpet fitting works</h2>
+<ol>
+<li><strong>Free visit</strong> — we measure your space and bring carpet samples in different piles and thicknesses.</li>
+<li><strong>Floor preparation</strong> — we clean the floor and remove old adhesive or carpet, because any grit under the carpet shows as a bump after a few weeks.</li>
+<li><strong>Laying</strong> — the carpet is unrolled and allowed to relax before it is fixed, especially if it was folded in storage.</li>
+<li><strong>Fixing and finishing</strong> — edges are fixed and doorways are finished so nobody trips moving between rooms. On stairs every step is cut and fixed separately, with the pile running downwards.</li>
+</ol>
+<p>Fitting is usually done the same day or the next day after the visit.</p>
+</section>
+<section>
+<h2>Commercial carpet projects</h2>
+<p>We carry out carpet projects by the metre for large spaces, not only single rooms: hotels and serviced apartments, mosques, offices and companies, wedding halls and large diwaniyas. Hotel-grade carpet differs from home carpet in two ways: a denser weave for constant traffic, and colour that holds under strong lighting.</p>
+<p>For a project we measure on site, then quote per metre including supply, cutting and fitting, with a better rate for larger areas. Fitting can be done outside working hours so your business is not interrupted. Send us the approximate area and type of building on WhatsApp for a first quote.</p>
+</section>
+<section>
+<h2>See the samples in person</h2>
+<p>Pile weight and softness are much easier to judge by touch than in photos. You can see our carpet samples at our carpet store in Al-Dajeej, or we bring them to your home on the free measuring visit.</p>
+</section>
+<section>
+<h2>Our carpet ranges and recent fitting work</h2>
+""" + gallery([CARPET_PHOTOS[k] for k in ("majlis_motif", "fit_room", "carved_medallion", "carved_border", "agadir", "marrakesh", "loop", "fit_edge")]) + """
+</section>""",
+    faqs=[
+        ("How much does carpet cost per metre in Kuwait?", "Our Turkish moquette starts from 11 KD per metre, and standard carpet by the metre from about 13 KD, depending on type and pile. Mosque carpet is 7.5 to 9 KD per square metre. You get the exact price after the free visit."),
+        ("What is the difference between a linear metre and a square metre of carpet?", "A linear metre is one metre of length cut from the roll, at the full width of that roll. A square metre is an area of one metre by one metre. Most of our carpet is priced per linear metre; mosque carpet is priced per square metre."),
+        ("How long does carpet installation take?", "Usually one day. Fitting is normally done the same day or the day after the measuring visit, depending on the area."),
+        ("Do you fit carpet I bought from another shop?", "Yes. Fitting only costs 10 to 35 KD depending on the area and location. If you buy and have the carpet cut by us, fitting is included in the order."),
+        ("Can I buy a small amount of carpet, like 3 or 5 metres?", "Yes. Buying by the metre lets you take exactly what you need, without buying a whole roll, for example for a small staircase or a short corridor."),
+        ("Do you supply carpet for hotels, offices and mosques?", "Yes. We supply and fit carpet by the metre for hotels, serviced apartments, offices, mosques, wedding halls and large diwaniyas, with on-site measuring and a per-metre project quote."),
+        ("What is the difference between modern and classic carpet?", "Classic carpet has traditional patterns and warm colours for heritage-style interiors. Modern carpet has simple designs and neutral colours for contemporary interiors. We offer both in Turkish quality."),
+    ],
+    extra_ld=[{
+        "@context": "https://schema.org", "@type": "Service", "inLanguage": "en",
+        "serviceType": "Carpet supply and installation", "name": "Turkish carpet cut to size and fitted in Kuwait",
+        "provider": {"@id": f"{SITE}/#business"}, "areaServed": {"@type": "Country", "name": "Kuwait"},
+        "offers": [
+            {"@type": "Offer", "name": "Turkish moquette", "priceCurrency": "KWD",
+             "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 11, "priceCurrency": "KWD", "unitText": "metre"}},
+            {"@type": "Offer", "name": "Mosque carpet", "priceCurrency": "KWD",
+             "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 7.5, "maxPrice": 9, "priceCurrency": "KWD", "unitText": "square metre"}}]}],
+))
+
+# ---- Mosque carpet
+PAGES.append(dict(
+    path="/en/mosque-carpet-kuwait.html", file="en/mosque-carpet-kuwait.html", ar="/sajjad-masjid-kuwait.html",
+    crumb="Mosque carpet", parent=("Carpets in Kuwait", "/en/carpets-kuwait.html"),
+    title="Mosque Carpet in Kuwait — 7.5–9 KD per Square Metre | Salford",
+    desc="Mosque and prayer-room carpet in Kuwait with prayer-row designs, 7.5 to 9 KD per square metre installed. Qibla direction measured on site, free visit.",
+    h1="Mosque and prayer-room carpet in Kuwait",
+    lead="Carpet with prayer-row designs for mosques, home prayer rooms and office musallas, cut to your space and aligned to the qibla. From <span class='price'>7.5 to 9 KD per square metre</span>, installed, with a free measuring visit.",
+    hero=CARPET_PHOTOS["mosque_red"],
+    wa="Hello Salford, I'd like a quote for mosque carpet (from salfordkw.shop/en/mosque-carpet-kuwait.html)",
+    body="""<div class="stats"><div class="stat"><b>7.5–9 KD</b><span>Per square metre</span></div><div class="stat"><b>Free</b><span>Measuring visit</span></div><div class="stat"><b>All Kuwait</b><span>Mosques and musallas</span></div></div>
+<section>
+<h2>The row pattern is not decoration — it organises the prayer</h2>
+<p>Mosque carpet works differently from any other carpet. Its long running pattern marks the prayer rows, so worshippers line up neatly without extra lines or reminders. The row width gives each person comfortable room to prostrate, which is why the qibla direction is measured before anything is cut.</p>
+</section>
+<section>
+<h2>Mosque, prayer room or single prayer rug</h2>
+<ul>
+<li><strong>Mosque carpet</strong> — wide rolls laid over large areas with a repeating row pattern, cut to the prayer hall.</li>
+<li><strong>Prayer-room carpet</strong> — for smaller spaces such as a home musalla, a prayer room in an office or company, or a women's prayer area, cut to the exact room with finished edges.</li>
+<li><strong>Single prayer rugs</strong> — one piece with or without a mihrab, for personal use, gifts or distribution.</li>
+</ul>
+<p>Carpet with printed mihrabs is the most requested for mosques, because each mihrab marks one worshipper's place. Plain carpet with printed row lines suits smaller prayer rooms in offices and schools, where the number of people changes.</p>
+</section>
+<section>
+<h2>Colours and material</h2>
+<p>Red and blue are the most requested colours for mosques: they hide heavy use and give the space dignity. The material has a dense pile to withstand repeated prostration and daily traffic, and resists crushing, so it keeps its shape in the front rows where it is used most.</p>
+</section>
+<section>
+<h2>Qibla, measuring and installation</h2>
+<p>The most important step is setting the qibla direction precisely, because the carpet is cut and fixed along it and cannot be turned afterwards. We measure on site, work out how many rows fit, and leave the right space at entrances and around any columns. In large mosques every piece is cut with the pile running the same way; otherwise the colour looks different from one piece to the next under the same light.</p>
+<p>We recommend extra-dense, crush-resistant carpet at the entrances and in the first row, and place the joins between pieces away from direct foot traffic wherever possible. Installation includes fixing the edges and the transitions at doors and around the mihrab.</p>
+</section>
+<section>
+<h2>Mosque carpet and prayer rugs we supply</h2>
+""" + gallery([CARPET_PHOTOS[k] for k in ("mosque_red", "mosque_blue", "mosque_roll", "prayer_rug")]) + """
+</section>""",
+    faqs=[
+        ("How much does mosque carpet cost in Kuwait?", "Our mosque carpet costs 7.5 to 9 KD per square metre, including installation. Measuring and the site visit are free."),
+        ("Why is mosque carpet priced per square metre?", "Because it is laid across the whole prayer hall and cut to its area, so it is calculated on the area covered rather than the length of the roll."),
+        ("How do you align the carpet with the qibla?", "We set the qibla direction on site before cutting. The carpet is cut and fixed along it, because it cannot be rotated once installed."),
+        ("Do you supply prayer-room carpet for offices and homes?", "Yes. We cut carpet to the exact size of home musallas, office and company prayer rooms, and women's prayer areas, with finished edges."),
+        ("Do you sell single prayer rugs?", "Yes, with or without a mihrab, for personal use, gifts or distribution."),
+    ],
+    extra_ld=[{
+        "@context": "https://schema.org", "@type": "Service", "inLanguage": "en",
+        "serviceType": "Mosque carpet", "name": "Mosque and prayer-room carpet in Kuwait",
+        "provider": {"@id": f"{SITE}/#business"}, "areaServed": {"@type": "Country", "name": "Kuwait"},
+        "offers": {"@type": "Offer", "priceCurrency": "KWD",
+                   "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 7.5, "maxPrice": 9, "priceCurrency": "KWD", "unitText": "square metre"}}}],
+))
+
 # ---- About
 PAGES.append(dict(
     path="/en/about.html", file="en/about.html", ar="/about.html", crumb="About Salford",
@@ -806,7 +971,7 @@ PAGES.append(dict(
 <li><a href="/en/curtains-kuwait.html">Curtains and blinds</a> — wave, blackout, sheer and roller.</li>
 <li><a href="/en/custom-sofas-kuwait.html">Sofas made to measure</a>, <a href="/en/sofa-upholstery-kuwait.html">re-upholstery</a> and <a href="/en/sofa-slipcovers-kuwait.html">slipcovers</a>.</li>
 <li>Arabic majlis seating and back cushions.</li>
-<li>Turkish carpets and carpet by the metre.</li>
+<li><a href="/en/carpets-kuwait.html">Turkish carpets</a>, carpet by the metre and <a href="/en/mosque-carpet-kuwait.html">mosque carpet</a>.</li>
 <li>Artificial grass for gardens and outdoor spaces.</li>
 </ul>
 </section>

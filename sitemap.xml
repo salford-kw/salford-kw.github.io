@@ -17,6 +17,11 @@
   
   <url>
     <loc>https://salfordkw.shop/sajjad.html</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/sajjad.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/carpets-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/sajjad.html"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -1068,6 +1073,11 @@
   </url>
 <url>
     <loc>https://salfordkw.shop/sajjad-masjid-kuwait.html</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/sajjad-masjid-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/mosque-carpet-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/sajjad-masjid-kuwait.html"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -2758,6 +2768,22 @@
     <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/talbees-kanab-kuwait.html"/>
     <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/sofa-slipcovers-kuwait.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/talbees-kanab-kuwait.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/en/carpets-kuwait.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/sajjad.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/carpets-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/sajjad.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/en/mosque-carpet-kuwait.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/sajjad-masjid-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/mosque-carpet-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/sajjad-masjid-kuwait.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
