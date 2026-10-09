@@ -10,6 +10,8 @@ on:
       - 'posts.json'
       - '**.html'
       - 'scripts/**'
+      - 'en/**'
+      - 'sitemap.xml'
       - '.github/workflows/lcp-guard.yml'
   workflow_dispatch:
 
@@ -37,6 +39,12 @@ jobs:
 
       - name: Install sharp
         run: npm install --no-save --no-package-lock sharp@0.33
+
+      - name: Rebuild English pages and hreflang
+        run: |
+          pip install --quiet --break-system-packages pillow
+          python3 scripts/build_en.py
+          python3 scripts/link_en.py
 
       - name: Remove Google Tag
         run: node scripts/strip-gtag.mjs

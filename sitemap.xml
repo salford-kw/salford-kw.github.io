@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
   
   <url>
     <loc>https://salfordkw.shop/</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -216,6 +221,11 @@
   
   <url>
     <loc>https://salfordkw.shop/sataer.html</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/sataer.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/curtains-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/sataer.html"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -464,6 +474,11 @@
   
   <url>
     <loc>https://salfordkw.shop/about.html</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/about.html"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -472,6 +487,11 @@
   
   <url>
     <loc>https://salfordkw.shop/faq.html</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/faq.html"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -480,6 +500,11 @@
   
   <url>
     <loc>https://salfordkw.shop/contact.html</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/contact.html"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2641,4 +2666,46 @@
       <image:loc>https://salfordkw.shop/products/product_1791574725517_n19dw_0-large.webp</image:loc>
     </image:image>
   </url>
+  <!-- EN:START -->
+  <url>
+    <loc>https://salfordkw.shop/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/en/curtains-kuwait.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/sataer.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/curtains-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/sataer.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/about.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/en/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/faq.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/contact.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- EN:END -->
 </urlset>
