@@ -122,7 +122,7 @@ footer a{color:var(--gold-light)}
 
 
 def nav_links():
-    return [("/en/", "Home"), ("/en/curtains-kuwait.html", "Curtains"),
+    return [("/en/", "Home"), ("/en/curtains-kuwait.html", "Curtains"), ("/en/custom-sofas-kuwait.html", "Sofas"),
             ("/en/about.html", "About"), ("/en/faq.html", "FAQ"), ("/en/contact.html", "Contact")]
 
 
@@ -287,7 +287,7 @@ PAGES.append(dict(
 <h2>What we make</h2>
 <div class="cards">
 <div class="card"><h3><a href="/en/curtains-kuwait.html">Curtains and blinds →</a></h3><p>Wave, <a href="/en/blackout-curtains-kuwait.html">blackout</a>, <a href="/en/sheer-curtains-kuwait.html">sheer</a> and <a href="/en/roller-blinds-kuwait.html">roller blinds</a>, made to the size of each window. Roller blinds <span class="price">5 KD per square metre</span>.</p></div>
-<div class="card"><h3>Sofas and upholstery</h3><p>New sofas built to your measurements, plus re-upholstery and slipcovers for the sofas you already own.</p></div>
+<div class="card"><h3><a href="/en/custom-sofas-kuwait.html">Sofas and upholstery →</a></h3><p><a href="/en/custom-sofas-kuwait.html">New sofas</a> built to your measurements, plus <a href="/en/sofa-upholstery-kuwait.html">re-upholstery</a> and <a href="/en/sofa-slipcovers-kuwait.html">slipcovers</a> for the sofas you already own.</p></div>
 <div class="card"><h3>Arabic majlis seating</h3><p>Floor seating, back cushions and wooden majlis frames for diwaniyas and living rooms.</p></div>
 <div class="card"><h3>Carpets</h3><p>Turkish carpets from Bursa mills, cut-to-size carpet by the metre, and mosque and office carpet.</p></div>
 <div class="card"><h3>Artificial grass and flooring</h3><p>Artificial grass for gardens and roofs, and parquet flooring, supplied and installed.</p></div>
@@ -594,6 +594,198 @@ PAGES.append(dict(
     ],
 ))
 
+SOFA_PHOTOS = {
+    "beige": ("product_1786196106227_tntws-small.webp", "Beige modern sofas with brown cushions in a formal living room"),
+    "white_l": ("product_1786196266520_sd8ih-small.webp", "White L-shaped corner sofa made to fit the room"),
+    "channel": ("product_1786196403904_3aq2d-small.webp", "Beige channel-stitched sofa set in a living room"),
+    "cream": ("product_1786220875517_rmxk5-small.webp", "Cream tufted corner sofa, West Abdullah Al-Mubarak"),
+    "navy": ("product_1786220770321_lknst-small.webp", "Navy blue L-shaped velvet sofa with gold legs"),
+    "grey": ("product_1786196493883_huspb-small.webp", "Long grey reception sofa along the wall, Salwa"),
+}
+SOFA_COMPARE = """<section>
+<h2>Upholstery, slipcovers or a new sofa?</h2>
+<p>These are three different jobs with different prices. People often mix them up:</p>
+<table>
+<thead><tr><th>Service</th><th>What it involves</th><th>Price</th></tr></thead>
+<tbody>
+<tr><td><a href="/en/sofa-upholstery-kuwait.html">Re-upholstery</a></td><td>Strip the fabric and filling, replace the foam, re-cover</td><td class="price">18–28 KD per metre</td></tr>
+<tr><td><a href="/en/sofa-slipcovers-kuwait.html">Slipcovers</a></td><td>New fabric fitted over the existing filling, without stripping it</td><td class="price">10–18 KD per metre</td></tr>
+<tr><td><a href="/en/custom-sofas-kuwait.html">Custom sofa</a></td><td>A new sofa built from scratch to your measurements</td><td class="price">from 33 KD per metre</td></tr>
+</tbody>
+</table>
+<p>The simple rule: sit on the sofa. If it is still comfortable and firm, slipcovers are enough. If you sink in or feel the wooden frame, the problem is inside and you need full re-upholstery. If the frame itself is damaged, or you want a different size or shape, a new custom sofa is the answer. At the visit we tell you honestly which one suits your sofa — even when it is the cheaper option.</p>
+<p>Prices are per metre of fabric used. You get the full price in writing after the free visit, and it does not change during the work.</p>
+</section>"""
+
+# ---- Sofa upholstery
+PAGES.append(dict(
+    path="/en/sofa-upholstery-kuwait.html", file="en/sofa-upholstery-kuwait.html", ar="/tanjeed-kanab.html",
+    crumb="Sofa upholstery",
+    title="Sofa Upholstery in Kuwait — 18–28 KD per Metre | Salford",
+    desc="Sofa re-upholstery in Kuwait from 18 to 28 KD per metre: new fabric and new foam on your existing frame. Free home visit, free pickup and return, 3–5 days.",
+    h1="Sofa upholstery in Kuwait",
+    lead="Renew the sofa you already have instead of buying a new set. If the wooden frame is sound but the fabric is worn or the foam has sagged, re-upholstery brings back the comfort of a new sofa for much less. From <span class='price'>18 to 28 KD per metre</span>, depending on the fabric.",
+    hero=SOFA_PHOTOS["channel"],
+    wa="Hello Salford, I'd like a quote for sofa upholstery (from salfordkw.shop/en/sofa-upholstery-kuwait.html)",
+    body="""<div class="stats"><div class="stat"><b>18–28 KD</b><span>Per metre</span></div><div class="stat"><b>3–5 days</b><span>Full sofa set</span></div><div class="stat"><b>Free</b><span>Pickup and return</span></div></div>
+<section>
+<h2>What full re-upholstery includes</h2>
+<p>We do not just change the outer cover. We take the sofa apart piece by piece, replace the old foam with first-grade Al-Baghli foam suited to each part — seat, back and arms — then cut and sew the new fabric onto the frame in our own workshop. The result is a sofa that is properly comfortable again, not only better looking.</p>
+</section>
+<section>
+<h2>Every sofa shape</h2>
+<p>We upholster standard sofas, L-shaped corner sofas, modular sofas and full reception sets of 3 or 4 pieces. Each piece of a corner set is measured and upholstered separately so the colour and filling match perfectly when it is put back together.</p>
+<p>We also upholster gunfat (floor sofas), diwaniya seating, back cushions, chairs and fabric-covered tables. If you have several pieces in one home, do them in the same round: fabric batches vary slightly in colour when they are bought months apart.</p>
+</section>
+<section>
+<h2>Fabrics</h2>
+<p>We bring real fabric samples to your home: durable Turkish chenille for formal reception sofas, and stain- and wear-resistant fabrics for family living rooms, especially with children. You can also choose a colour close to the current one if you want to keep your room as it is.</p>
+</section>
+<section>
+<h2>How long it takes</h2>
+<table>
+<thead><tr><th>Job</th><th>Time</th></tr></thead>
+<tbody>
+<tr><td>Single two-seater sofa</td><td>2 to 3 days</td></tr>
+<tr><td>Full sofa set (3–4 pieces)</td><td>3 to 5 days</td></tr>
+<tr><td>L-shaped corner sofa</td><td>4 to 6 days</td></tr>
+</tbody>
+</table>
+<p>Full re-upholstery is done in our workshop, because the piece has to be taken apart. We collect and return your sofa free of charge and put it back in place. Measuring and choosing fabric happen at your home first. Pay by KNET, Wamd or cash.</p>
+</section>
+""" + SOFA_COMPARE + """
+<section>
+<h2>Sofas we have made and upholstered</h2>
+""" + gallery([SOFA_PHOTOS[k] for k in ("channel", "beige", "white_l", "cream", "navy", "grey")]) + """
+</section>""",
+    faqs=[
+        ("How much does sofa upholstery cost in Kuwait?", "From 18 to 28 KD per metre depending on the fabric, including new fabric and new foam. The total depends on the number of metres and the size of the sofa. We give you a fixed final price after the free home visit."),
+        ("Can you re-upholster L-shaped corner sofas?", "Yes. We cover standard, L-shaped and modular sofas. Each piece of a corner set is measured and upholstered separately so the fabric and filling match."),
+        ("Does upholstery include replacing the foam?", "Yes. Full upholstery always replaces the old foam with first-grade Al-Baghli foam, because sagging foam is the most common reason a sofa becomes uncomfortable."),
+        ("Do you upholster at my home or in the workshop?", "In our workshop, because the sofa has to be taken apart. We collect and return it free of charge and set it back in place."),
+        ("Should I re-upholster or buy a new sofa?", "If the wooden frame is sound, re-upholstery is cheaper and faster and feels almost like new. If the frame is damaged, a new custom sofa is the better choice."),
+    ],
+    extra_ld=[{
+        "@context": "https://schema.org", "@type": "Service", "inLanguage": "en",
+        "serviceType": "Sofa upholstery", "name": "Sofa re-upholstery in Kuwait",
+        "provider": {"@id": f"{SITE}/#business"}, "areaServed": {"@type": "Country", "name": "Kuwait"},
+        "offers": {"@type": "Offer", "priceCurrency": "KWD",
+                   "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 18, "maxPrice": 28, "priceCurrency": "KWD", "unitText": "metre"}}}],
+))
+
+# ---- Custom sofas
+PAGES.append(dict(
+    path="/en/custom-sofas-kuwait.html", file="en/custom-sofas-kuwait.html", ar="/tafseel-kanab-kuwait.html",
+    crumb="Custom sofas",
+    title="Custom Sofas in Kuwait — Made to Measure | Salford",
+    desc="Custom sofas and living room sets made to measure in Kuwait, from 33 KD per metre: modern, corner and reception sofas in beech or walnut frames. Ready in 12–15 days.",
+    h1="Custom sofas in Kuwait, made to measure",
+    lead="Ready-made sofas come in fixed sizes, so they are either too big for the room or leave awkward gaps. We measure your actual space and build the sofa to fit it, in the fabric, foam and wood you choose. From <span class='price'>33 KD per metre</span>.",
+    hero=SOFA_PHOTOS["white_l"],
+    wa="Hello Salford, I'd like a quote for a custom sofa (from salfordkw.shop/en/custom-sofas-kuwait.html)",
+    body="""<div class="stats"><div class="stat"><b>33 KD</b><span>From, per metre</span></div><div class="stat"><b>12–15 days</b><span>Made and delivered</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
+<section>
+<h2>What we make</h2>
+<ul>
+<li>Modern sofas and full sofa sets</li>
+<li>L-shaped corner sofas, built to fit both walls of your corner</li>
+<li>Gunfat-style low sofas</li>
+<li>Reception sofas, and complete reception rooms with matching coffee tables</li>
+</ul>
+<p>Everything is built in the Salford workshop — no middleman — so we control the foam thickness, the stitching and the strength of the frame directly.</p>
+</section>
+<section>
+<h2>The materials that make the difference</h2>
+<table>
+<thead><tr><th>Part</th><th>What we use</th></tr></thead>
+<tbody>
+<tr><td>Foam</td><td>Kuwaiti Al-Baghli foam, including the stamped pink grade where extra firmness is needed. Seat foam is denser than back foam, so the sofa does not sag after months of daily use.</td></tr>
+<tr><td>Fabric</td><td>Turkish chenille is the most popular for its durability, with silky chenille for a richer look. Liquid-resistant fabrics are available for homes with children or frequent guests.</td></tr>
+<tr><td>Frame</td><td>Beech or walnut wood, depending on the design. The frame decides how long the sofa really lasts — fabric can be changed later, a weak frame cannot be fixed.</td></tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>Corner sofas and difficult spaces</h2>
+<p>Corner sofas are among the most requested custom pieces, because ready-made ones rarely match the corner of a room exactly. We measure both walls and the right seat height, and build the sofa to sit in the corner with no gap and without blocking the way through. The same applies to long, narrow living rooms and irregular entrances.</p>
+<p>Many customers order the whole room at once: reception sofas with matching coffee tables, or sofas that match an existing majlis or diwaniya. Give us a sample of the existing fabric and we will match the colour and texture as closely as possible.</p>
+</section>
+<section>
+<h2>How it works</h2>
+<ol>
+<li><strong>Free visit</strong> — usually within a day or two of your request. We bring the tape measure and fabric and foam samples.</li>
+<li><strong>Agreement</strong> — you choose the fabric and design, and get the full price and timing before we start.</li>
+<li><strong>Made in our workshop</strong> — 12 to 15 days, including the wooden frame, foam, upholstery and sewing.</li>
+<li><strong>Delivery and installation</strong> in place, anywhere in Kuwait.</li>
+</ol>
+</section>
+""" + SOFA_COMPARE + """
+<section>
+<h2>Custom sofas we have made</h2>
+""" + gallery([SOFA_PHOTOS[k] for k in ("white_l", "navy", "beige", "cream", "channel", "grey")]) + """
+</section>""",
+    faqs=[
+        ("How much does a custom sofa cost in Kuwait?", "Our custom sofas start from 33 KD per metre, whether modern, corner, gunfat or reception sofas. The final price depends on the metres, fabric, foam and wood, and is confirmed after measuring with no obligation."),
+        ("How long does it take to make a custom sofa?", "12 to 15 days from the agreement date, including the frame, foam, upholstery and installation in place. We confirm the exact time after measuring."),
+        ("What foam, fabric and wood do you use?", "Kuwaiti Al-Baghli foam (including the stamped pink grade), Turkish chenille or silky chenille fabric, with liquid-resistant options, and beech or walnut frames."),
+        ("Can you make a corner sofa for a specific space?", "Yes. We measure both walls and the seat height and build the sofa to fit the corner exactly, without gaps or blocking the walkway."),
+        ("Can you make a sofa that matches my existing majlis?", "Yes. We take a sample of the existing fabric to match the colour and texture, and match the seat height so the pieces look consistent."),
+    ],
+    extra_ld=[{
+        "@context": "https://schema.org", "@type": "Service", "inLanguage": "en",
+        "serviceType": "Custom sofas", "name": "Made-to-measure sofas in Kuwait",
+        "provider": {"@id": f"{SITE}/#business"}, "areaServed": {"@type": "Country", "name": "Kuwait"},
+        "offers": {"@type": "Offer", "priceCurrency": "KWD",
+                   "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 33, "priceCurrency": "KWD", "unitText": "metre"}}}],
+))
+
+# ---- Sofa slipcovers
+PAGES.append(dict(
+    path="/en/sofa-slipcovers-kuwait.html", file="en/sofa-slipcovers-kuwait.html", ar="/talbees-kanab-kuwait.html",
+    crumb="Sofa slipcovers",
+    title="Sofa Slipcovers in Kuwait — 10–18 KD per Metre | Salford",
+    desc="Tailored sofa slipcovers in Kuwait from 10 to 18 KD per metre: new fabric over your existing filling. Faster and cheaper than re-upholstery, done in 2–3 days.",
+    h1="Sofa slipcovers in Kuwait",
+    lead="A new fabric cover fitted over your sofa's existing filling, without stripping it. It is faster and noticeably cheaper than full upholstery — the right choice when the foam is still good. From <span class='price'>10 to 18 KD per metre</span>.",
+    hero=SOFA_PHOTOS["cream"],
+    wa="Hello Salford, I'd like a quote for sofa slipcovers (from salfordkw.shop/en/sofa-slipcovers-kuwait.html)",
+    body="""<div class="stats"><div class="stat"><b>10–18 KD</b><span>Per metre</span></div><div class="stat"><b>2–3 days</b><span>Full sofa set</span></div><div class="stat"><b>Free</b><span>Home visit</span></div></div>
+<section>
+<h2>When slipcovers are the right choice</h2>
+<p>If the sofa is still comfortable and the foam has kept its shape, but the outer fabric is the problem — faded, lightly torn, or you are simply tired of the colour — a slipcover fixes it in the least time and at the lowest cost, without opening the sofa.</p>
+<p>At the visit we check the filling under the current fabric. If the foam is damaged, we tell you honestly that <a href="/en/sofa-upholstery-kuwait.html">full upholstery</a> is the better long-term investment, rather than covering an internal problem.</p>
+</section>
+<section>
+<h2>How it is done</h2>
+<p>You choose the new fabric from real samples — a completely different colour and texture if you like. We cut it in our workshop to the exact dimensions of your sofa, so the new cover is tight and neat, never loose. If we notice small problems during the visit, such as a loose spring or a wobbly wooden corner, we can usually fix them in the same job without a large extra cost.</p>
+<table>
+<thead><tr><th>Job</th><th>Time</th></tr></thead>
+<tbody>
+<tr><td>A chair or a single piece</td><td>1 to 2 days</td></tr>
+<tr><td>Full sofa set (3-2-1)</td><td>2 to 3 days</td></tr>
+</tbody>
+</table>
+<p>Pay by KNET, Wamd or cash.</p>
+</section>
+""" + SOFA_COMPARE + """
+<section>
+<h2>Sofa work by Salford</h2>
+""" + gallery([SOFA_PHOTOS[k] for k in ("cream", "grey", "beige", "navy")]) + """
+</section>""",
+    faqs=[
+        ("What is the difference between slipcovers and upholstery?", "Slipcovers put new fabric over the existing filling without stripping it, from 10 to 18 KD per metre. Full upholstery strips the fabric and filling and replaces the foam, from 18 to 28 KD per metre."),
+        ("Are slipcovers suitable for every sofa?", "Only when the filling and foam under the current fabric are still in good condition. If the foam is damaged or sagging, we recommend full upholstery."),
+        ("How long does it take to slipcover a full sofa set?", "Usually 2 to 3 days for a full 3-2-1 set, and less for a single piece."),
+        ("Can I choose a completely different fabric?", "Yes. You choose the new fabric from real samples, in a completely different colour and texture if you wish."),
+    ],
+    extra_ld=[{
+        "@context": "https://schema.org", "@type": "Service", "inLanguage": "en",
+        "serviceType": "Sofa slipcovers", "name": "Tailored sofa slipcovers in Kuwait",
+        "provider": {"@id": f"{SITE}/#business"}, "areaServed": {"@type": "Country", "name": "Kuwait"},
+        "offers": {"@type": "Offer", "priceCurrency": "KWD",
+                   "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 10, "maxPrice": 18, "priceCurrency": "KWD", "unitText": "metre"}}}],
+))
+
 # ---- About
 PAGES.append(dict(
     path="/en/about.html", file="en/about.html", ar="/about.html", crumb="About Salford",
@@ -612,7 +804,7 @@ PAGES.append(dict(
 <h2>Our services</h2>
 <ul>
 <li><a href="/en/curtains-kuwait.html">Curtains and blinds</a> — wave, blackout, sheer and roller.</li>
-<li>Sofas made to measure, re-upholstery and slipcovers.</li>
+<li><a href="/en/custom-sofas-kuwait.html">Sofas made to measure</a>, <a href="/en/sofa-upholstery-kuwait.html">re-upholstery</a> and <a href="/en/sofa-slipcovers-kuwait.html">slipcovers</a>.</li>
 <li>Arabic majlis seating and back cushions.</li>
 <li>Turkish carpets and carpet by the metre.</li>
 <li>Artificial grass for gardens and outdoor spaces.</li>

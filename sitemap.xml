@@ -151,6 +151,11 @@
   
   <url>
     <loc>https://salfordkw.shop/tanjeed-kanab.html</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/tanjeed-kanab.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/sofa-upholstery-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/tanjeed-kanab.html"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -166,6 +171,11 @@
   </url>
   <url>
     <loc>https://salfordkw.shop/tafseel-kanab-kuwait.html</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/tafseel-kanab-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/custom-sofas-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/tafseel-kanab-kuwait.html"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1127,6 +1137,11 @@
   
   <url>
     <loc>https://salfordkw.shop/talbees-kanab-kuwait.html</loc>
+    <!-- EN-ALT -->
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/talbees-kanab-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/sofa-slipcovers-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/talbees-kanab-kuwait.html"/>
+    <!-- /EN-ALT -->
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -2719,6 +2734,30 @@
     <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/sataer-shifon-kuwait.html"/>
     <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/sheer-curtains-kuwait.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/sataer-shifon-kuwait.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/en/sofa-upholstery-kuwait.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/tanjeed-kanab.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/sofa-upholstery-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/tanjeed-kanab.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/en/custom-sofas-kuwait.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/tafseel-kanab-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/custom-sofas-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/tafseel-kanab-kuwait.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/en/sofa-slipcovers-kuwait.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://salfordkw.shop/talbees-kanab-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://salfordkw.shop/en/sofa-slipcovers-kuwait.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://salfordkw.shop/talbees-kanab-kuwait.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
