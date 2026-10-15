@@ -345,21 +345,27 @@ function closeLightbox(){document.getElementById('lightbox').classList.remove('a
       .catch(err => console.error('فشل تحميل نظام التقييمات', err));
   }
 
-  const reviewsSection = document.querySelector('.reviews');
-  if ('IntersectionObserver' in window && reviewsSection) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          loadReviewsSystem();
-          observer.disconnect();
-        }
-      });
-    }, { rootMargin: '300px 0px' });
-    observer.observe(reviewsSection);
-  } else {
-    // دعم احتياطي للمتصفحات القديمة بلا IntersectionObserver، أو إذا لم يوجد قسم تقييمات بالصفحة
+  // لا تحمّل Firebase/التقييمات بمجرد فتح الصفحة أو قرب القسم؛ ابدأ بعد أول تفاعل فعلي.
+  // يبقى شريط التقييم الثابت أعلى الصفحة ظاهراً حتى يبدأ نظام التقييمات الحي بالتحميل.
+  let reviewsTriggerRemoved = false;
+  const interactionEvents = ['pointerdown', 'touchstart', 'keydown', 'wheel', 'scroll'];
+
+  function removeReviewsTriggers() {
+    if (reviewsTriggerRemoved) return;
+    reviewsTriggerRemoved = true;
+    interactionEvents.forEach(eventName => {
+      window.removeEventListener(eventName, onFirstInteraction);
+    });
+  }
+
+  function onFirstInteraction() {
+    removeReviewsTriggers();
     loadReviewsSystem();
   }
+
+  interactionEvents.forEach(eventName => {
+    window.addEventListener(eventName, onFirstInteraction, { once: true, passive: true });
+  });
 })();
 </script>
 
