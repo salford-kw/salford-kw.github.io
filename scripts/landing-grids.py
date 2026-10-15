@@ -44,12 +44,16 @@ SUB_PAGES = {
     ('sataer', 'shifon'): ('sataer-shifon-kuwait.html', 'ستائر شيفون'),
 }
 
-# المرحلة الأولى (2026-10-15): أربع صفحات فقط، ثم المقارنة في Search Console قبل التعميم.
+# المرحلة الأولى (2026-10-15): أربع صفحات ضعيفة الظهور فقط، ثم المقارنة في Search Console قبل التعميم.
+# الصفحات القوية (من أعلى 10 صفحات بالنقرات في Search Console) تُترك للمرحلة الأخيرة:
+# jalsat-ardiya-jahza, sajjad-al-dajeej, sajjad-bel-meter, sajjad-masjid, tafseel-kanab,
+# tafseel-sajjad, afdal-mokeet, wajar.
+# خط الأساس (آخر 3 أشهر حتى 2026-10-15): 685 نقرة، 19.9 ألف ظهور، CTR 3.4%، متوسط الترتيب 8.2.
 ENABLED = {
     ('sajjad', 'saada'),
     ('sajjad', 'hafr'),
     ('majalis', 'masanid-khashab'),
-    ('athath', 'tafseel-kanab'),
+    ('majalis', 'masanid-tafseel'),
 }
 
 START = '<!-- LANDING_GRID:START -->'
