@@ -1058,7 +1058,7 @@
   </url>
 <url>
     <loc>https://salfordkw.shop/sajjad-hafr-yadawi-kuwait.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1242,7 +1242,7 @@
   
   <url>
     <loc>https://salfordkw.shop/masanid-khashab-dekor-kuwait.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -3206,6 +3206,18 @@
     </image:image>
     <image:image>
       <image:loc>https://salfordkw.shop/products/سجاد-صالة-حفر-يدوي-مودرن-عنابي-وبني-في-صباح-السالم-سالفورد-4-large.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://salfordkw.shop/catalog/majalis-تجهيز-ديوانية-مساند-ظهر-خشب-وسجاد-حفر-يدوي.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/تجهيز-ديوانية-مساند-ظهر-خشب-وسجاد-حفر-يدوي-سالفورد-1-large.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://salfordkw.shop/products/تجهيز-ديوانية-مساند-ظهر-خشب-وسجاد-حفر-يدوي-سالفورد-2-large.webp</image:loc>
     </image:image>
   </url>
 </urlset>
