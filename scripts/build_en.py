@@ -338,7 +338,8 @@ PAGES.append(dict(
 <tbody>
 <tr><td>Roller blinds — plain, silver heat-reflective or blackout fabric</td><td class="price">5 KD</td><td>per square metre</td></tr>
 <tr><td>Blackout curtains</td><td class="price">from 14 KD</td><td>per metre</td></tr>
-<tr><td>Wave and sheer curtains</td><td>depends on the fabric</td><td>quoted after the visit</td></tr>
+<tr><td>Wave curtains (single layer)</td><td class="price">12 KD</td><td>per linear metre</td></tr>
+<tr><td>Wave curtains with sheer (double layer)</td><td class="price">19 KD</td><td>per linear metre</td></tr>
 </tbody>
 </table>
 <p>Roller blinds are priced by the square metre of the window. Other curtains are priced by the metre of fabric width. Tracks and installation are included in the service.</p>
@@ -374,7 +375,7 @@ PAGES.append(dict(
         ("Are tracks and installation included?", "Yes. We supply and fit the tracks and install the curtains, all the way to the final handover."),
         ("Can you match a fabric sample I already have?", "Yes. Give us your fabric sample and we will match the colour and material as closely as possible."),
         ("How much do roller blinds cost in Kuwait?", "Our roller blinds are 5 KD per square metre for plain, silver heat-reflective and blackout fabrics."),
-        ("How much do wave or sheer curtains cost?", "It depends on the fabric, its weight and the size. We give you the final price in writing after the free home visit, with no obligation."),
+        ("How much do wave curtains cost?", "Wave curtains are priced per linear metre of curtain width: 12 KD for a single layer and 19 KD for a double layer with sheer. We confirm the final price in writing after the free home visit."),
     ],
     extra_ld=[{
         "@context": "https://schema.org", "@type": "Service", "inLanguage": "en",
