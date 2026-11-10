@@ -15,6 +15,9 @@ Rules baked in (do not remove):
 - prices always carry their unit (per linear metre / per square metre)
 """
 import html
+import importlib.util as _ilu, pathlib as _pl
+_spec=_ilu.spec_from_file_location('wa_src', _pl.Path(__file__).with_name('inject-wa-src.py')); _m=_ilu.module_from_spec(_spec); _spec.loader.exec_module(_m)
+WA_SRC=_m.snippet()
 import json
 import os
 from PIL import Image
@@ -246,6 +249,7 @@ def render(p):
 </footer>
 <div class="sticky"><a class="btn wa" href="{wa}" target="_blank" rel="noopener">WhatsApp</a><a class="btn call" href="tel:{PHONE}">Call</a></div>
 <script src="/analytics.js" defer></script>
+{WA_SRC}
 </body>
 </html>
 """
