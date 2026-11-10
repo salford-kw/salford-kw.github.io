@@ -130,24 +130,34 @@ def nav_links():
 
 
 def business_ld(url):
+    # بيانات النشاط موحّدة مع scripts/seo-unify.py (BUSINESS) — نفس العنوان والهاتف والأوقات
+    # في العربية والإنجليزية، و url دائماً الصفحة الرئيسية للكيان لا رابط الصفحة الحالية.
     return {
         "@context": "https://schema.org",
         "@type": ["FurnitureStore", "LocalBusiness"],
         "@id": f"{SITE}/#business",
         "name": "Salford Furniture & Furnishings",
         "alternateName": "سالفورد للأثاث والمفروشات",
-        "url": url,
+        "url": f"{SITE}/",
         "logo": f"{SITE}/favicon-192.png",
         "telephone": PHONE,
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ali Abdulwahab Complex, Basement",
+            "addressLocality": "Al-Dajeej",
+            "addressRegion": "Al Farwaniyah Governorate",
+            "addressCountry": "KW",
+        },
+        "hasMap": "https://www.google.com/maps?q=%D8%A7%D9%84%D9%83%D9%88%D9%8A%D8%AA+%D8%A7%D9%84%D8%B6%D8%AC%D9%8A%D8%AC+%D9%85%D8%AC%D9%85%D8%B9+%D8%B9%D9%84%D9%8A+%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%88%D9%87%D8%A7%D8%A8+%D8%A7%D9%84%D8%B3%D8%B1%D8%AF%D8%A7%D8%A8",
         "foundingDate": "2016",
         "priceRange": "$$",
         "currenciesAccepted": "KWD",
         "paymentAccepted": "Cash, KNET, Wamd, Bank Transfer",
         "areaServed": {"@type": "Country", "name": "Kuwait"},
-        "openingHoursSpecification": [{
+        "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "10:00", "closes": "21:00"}],
+            "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "10:00", "closes": "21:00"},
         "sameAs": ["https://www.instagram.com/salforad/", "https://www.tiktok.com/@salford_kuwait"],
         "inLanguage": "en",
     }
@@ -967,7 +977,7 @@ PAGES.append(dict(
     body=STATS + """
 <section>
 <h2>Who we are</h2>
-<p>Salford is an online furnishings store with its own workshop. Every order — from carpet installation to majlis seating, upholstery and curtains — is handled by our team, from the first measuring visit to the final handover.</p>
+<p>Salford is a Kuwaiti furnishings company with a branch in Al-Dajeej (Ali Abdulwahab Complex, basement) and its own workshop. Every order — from carpet installation to majlis seating, upholstery and curtains — is handled by our team, from the first measuring visit to the final handover.</p>
 <p>We import exclusive carpet ranges directly from mills in Bursa, Turkey. They are dense and soft, and last longer than many carpets found in the local market.</p>
 </section>
 <section>

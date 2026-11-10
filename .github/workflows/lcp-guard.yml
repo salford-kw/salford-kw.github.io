@@ -54,6 +54,9 @@ jobs:
           SITE_GUARD_VERIFY: '1'
         run: node scripts/lcp-guard.mjs
 
+      - name: Verify business identity and schema are unified
+        run: python3 scripts/seo-unify.py --check
+
       - name: Verify site is clean
         run: |
           # فحص فقط — لا يرفع شيئاً (الفرع الرئيسي محمي).
