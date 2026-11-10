@@ -29,7 +29,7 @@
 </script>
 <!-- ✅ SCHEMA: LocalBusiness (يشير لنفس الكيان في الصفحة الرئيسية) -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":["FurnitureStore","LocalBusiness"],"@id":"https://salfordkw.shop/#business","name":"سالفورد للأثاث والمفروشات","url":"https://salfordkw.shop/works.html","telephone":"+96555943343","priceRange":"$$","currenciesAccepted":"KWD","paymentAccepted":"Cash, Bank Transfer","areaServed":{"@type":"Country","name":"Kuwait"}}
+{"@context": "https://schema.org", "@type": ["FurnitureStore", "LocalBusiness"], "@id": "https://salfordkw.shop/#business", "name": "سالفورد للأثاث والمفروشات", "alternateName": "Salford Furniture Kuwait", "url": "https://salfordkw.shop/", "telephone": "+96555943343", "logo": "https://salfordkw.shop/favicon-192.png", "address": {"@type": "PostalAddress", "streetAddress": "مجمع علي عبدالوهاب - السرداب", "addressLocality": "الضجيج", "addressRegion": "محافظة الفروانية", "addressCountry": "KW"}, "hasMap": "https://www.google.com/maps?q=%D8%A7%D9%84%D9%83%D9%88%D9%8A%D8%AA+%D8%A7%D9%84%D8%B6%D8%AC%D9%8A%D8%AC+%D9%85%D8%AC%D9%85%D8%B9+%D8%B9%D9%84%D9%8A+%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%88%D9%87%D8%A7%D8%A8+%D8%A7%D9%84%D8%B3%D8%B1%D8%AF%D8%A7%D8%A8", "foundingDate": "2016", "priceRange": "$$", "currenciesAccepted": "KWD", "paymentAccepted": "Cash, KNET, Wamd, Bank Transfer", "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "21:00"}, "areaServed": {"@type": "Country", "name": "Kuwait"}, "sameAs": ["https://www.instagram.com/salforad/", "https://www.tiktok.com/@salford_kuwait"]}
 </script>
 <!-- ✅ SCHEMA: FAQPage خاص بصفحة الأعمال -->
 <script type="application/ld+json">
@@ -830,30 +830,6 @@ loadPosts();
           }
           // إذا ما فيه تقييمات بعد بـFirestore، تبقى القيم الثابتة الحالية بالـHTML كحالة احتياطية (fallback) للزوار وبوتات البحث التي لا تُنفّذ JavaScript
 
-          const schemaEl = document.getElementById('site-reviews-schema');
-          if (!schemaEl) return;
-          if (!reviews || reviews.length === 0) { schemaEl.textContent = ''; return; }
-          const avg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
-          const schema = {
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "سالفورد للأثاث والمفروشات",
-            "brand": { "@type": "Brand", "name": "سالفورد للأثاث والمفروشات" },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": avg.toFixed(1),
-              "reviewCount": String(reviews.length),
-              "bestRating": "5",
-              "worstRating": "1"
-            },
-            "review": reviews.slice(0, 20).map(r => ({
-              "@type": "Review",
-              "author": { "@type": "Person", "name": r.name || "عميل" },
-              "reviewRating": { "@type": "Rating", "ratingValue": String(r.rating || 5), "bestRating": "5" },
-              "reviewBody": r.comment || ""
-            }))
-          };
-          schemaEl.textContent = JSON.stringify(schema);
         });
       })
       .catch(err => console.error('فشل تحميل نظام التقييمات', err));

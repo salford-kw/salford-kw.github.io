@@ -374,30 +374,6 @@ function closeLightbox(){document.getElementById('lightbox').classList.remove('a
           }
           // إذا ما فيه تقييمات بعد بـFirestore، تبقى القيم الثابتة الحالية بالـHTML كحالة احتياطية (fallback) للزوار وبوتات البحث التي لا تُنفّذ JavaScript
 
-          const schemaEl = document.getElementById('site-reviews-schema');
-          if (!schemaEl) return;
-          if (!reviews || reviews.length === 0) { schemaEl.textContent = ''; return; }
-          const avg = reviews.reduce((s, r) => s + (r.rating || 0), 0) / reviews.length;
-          const schema = {
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "سالفورد للأثاث والمفروشات",
-            "brand": { "@type": "Brand", "name": "سالفورد للأثاث والمفروشات" },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": avg.toFixed(1),
-              "reviewCount": String(reviews.length),
-              "bestRating": "5",
-              "worstRating": "1"
-            },
-            "review": reviews.slice(0, 20).map(r => ({
-              "@type": "Review",
-              "author": { "@type": "Person", "name": r.name || "عميل" },
-              "reviewRating": { "@type": "Rating", "ratingValue": String(r.rating || 5), "bestRating": "5" },
-              "reviewBody": r.comment || ""
-            }))
-          };
-          schemaEl.textContent = JSON.stringify(schema);
         });
       })
       .catch(err => console.error('فشل تحميل نظام التقييمات', err));
