@@ -300,7 +300,7 @@ PAGES.append(dict(
 <section>
 <h2>What we make</h2>
 <div class="cards">
-<div class="card"><h3><a href="/en/curtains-kuwait.html">Curtains and blinds →</a></h3><p>Wave, <a href="/en/blackout-curtains-kuwait.html">blackout</a>, <a href="/en/sheer-curtains-kuwait.html">sheer</a> and <a href="/en/roller-blinds-kuwait.html">roller blinds</a>, made to the size of each window. Roller blinds <span class="price">5 KD per square metre</span>.</p></div>
+<div class="card"><h3><a href="/en/curtains-kuwait.html">Curtains and blinds →</a></h3><p>Wave, <a href="/en/blackout-curtains-kuwait.html">blackout</a>, <a href="/en/sheer-curtains-kuwait.html">sheer</a> and <a href="/en/roller-blinds-kuwait.html">roller blinds</a>, made to the size of each window. Roller blinds <span class="price">8 KD per square metre</span>.</p></div>
 <div class="card"><h3><a href="/en/custom-sofas-kuwait.html">Sofas and upholstery →</a></h3><p><a href="/en/custom-sofas-kuwait.html">New sofas</a> built to your measurements, plus <a href="/en/sofa-upholstery-kuwait.html">re-upholstery</a> and <a href="/en/sofa-slipcovers-kuwait.html">slipcovers</a> for the sofas you already own.</p></div>
 <div class="card"><h3>Arabic majlis seating</h3><p>Floor seating, back cushions and wooden majlis frames for diwaniyas and living rooms.</p></div>
 <div class="card"><h3><a href="/en/carpets-kuwait.html">Carpets →</a></h3><p>Turkish carpet from Bursa mills, cut to size or by the metre, from <span class="price">11 KD per metre</span>, plus <a href="/en/mosque-carpet-kuwait.html">mosque carpet</a> and office carpet.</p></div>
@@ -338,7 +338,7 @@ PAGES.append(dict(
 PAGES.append(dict(
     path="/en/curtains-kuwait.html", file="en/curtains-kuwait.html", ar="/sataer.html", crumb="Curtains in Kuwait",
     title="Custom Curtains in Kuwait, Measured & Installed | Salford",
-    desc="Made-to-measure curtains in Kuwait: roller blinds 5 KD per sq m, blackout from 14 KD per metre. Free home measuring, installed in 1–3 days.",
+    desc="Made-to-measure curtains in Kuwait: roller blinds 8 KD per sq m, blackout from 14 KD per metre. Free home measuring, installed in 1–3 days.",
     h1="Custom curtains in Kuwait, measured and installed",
     lead="We make wave, blackout, sheer and roller curtains to the exact size of your windows, then install them with the tracks included. Most orders are made and installed within 1 to 3 days.",
     hero=("product_1786197651322_1zw0r-small.webp", "Floor-to-ceiling beige wave curtains made by Salford in Kuwait"),
@@ -350,7 +350,7 @@ PAGES.append(dict(
 <table>
 <thead><tr><th>Type</th><th>Price</th><th>Unit</th></tr></thead>
 <tbody>
-<tr><td>Roller blinds — plain, silver heat-reflective or blackout fabric</td><td class="price">5 KD</td><td>per square metre</td></tr>
+<tr><td>Roller blinds — plain, silver heat-reflective or blackout fabric</td><td class="price">8 KD</td><td>per square metre</td></tr>
 <tr><td>Blackout curtains</td><td class="price">from 14 KD</td><td>per metre</td></tr>
 <tr><td>Wave curtains (single layer)</td><td class="price">12 KD</td><td>per linear metre</td></tr>
 <tr><td>Wave curtains with sheer (double layer)</td><td class="price">19 KD</td><td>per linear metre</td></tr>
@@ -388,7 +388,7 @@ PAGES.append(dict(
         ("How long does it take to make and install curtains?", "Usually 1 to 3 days, depending on the sizes, the number of windows and the availability of the fabric you choose."),
         ("Are tracks and installation included?", "Yes. We supply and fit the tracks and install the curtains, all the way to the final handover."),
         ("Can you match a fabric sample I already have?", "Yes. Give us your fabric sample and we will match the colour and material as closely as possible."),
-        ("How much do roller blinds cost in Kuwait?", "Our roller blinds are 5 KD per square metre for plain, silver heat-reflective and blackout fabrics."),
+        ("How much do roller blinds cost in Kuwait?", "Our roller blinds are 8 KD per square metre for plain, silver heat-reflective and blackout fabrics."),
         ("How much do wave curtains cost?", "Wave curtains are priced per linear metre of curtain width: 12 KD for a single layer and 19 KD for a double layer with sheer. We confirm the final price in writing after the free home visit."),
     ],
     extra_ld=[{
@@ -399,7 +399,7 @@ PAGES.append(dict(
         "areaServed": {"@type": "Country", "name": "Kuwait"},
         "offers": [
             {"@type": "Offer", "name": "Roller blinds", "priceCurrency": "KWD",
-             "priceSpecification": {"@type": "UnitPriceSpecification", "price": 5, "priceCurrency": "KWD", "unitText": "square metre"}},
+             "priceSpecification": {"@type": "UnitPriceSpecification", "price": 8, "priceCurrency": "KWD", "unitText": "square metre"}},
             {"@type": "Offer", "name": "Blackout curtains", "priceCurrency": "KWD",
              "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 14, "priceCurrency": "KWD", "unitText": "metre"}},
         ]}],
@@ -488,16 +488,16 @@ PAGES.append(dict(
 PAGES.append(dict(
     path="/en/roller-blinds-kuwait.html", file="en/roller-blinds-kuwait.html", ar="/tafseel-sataer-rol.html",
     crumb="Roller blinds", parent=("Curtains in Kuwait", "/en/curtains-kuwait.html"),
-    title="Roller Blinds in Kuwait — 5 KD per Square Metre | Salford",
-    desc="Made-to-measure roller blinds in Kuwait: 5 KD per square metre for every fabric — standard, silver heat-reflective or sun-blocking. Installation included.",
+    title="Roller Blinds in Kuwait — 8 KD per Square Metre | Salford",
+    desc="Made-to-measure roller blinds in Kuwait: 8 KD per square metre for every fabric — standard, silver heat-reflective or sun-blocking. Installation included.",
     h1="Roller blinds in Kuwait, made to your window",
-    lead="We cut each roller blind to the exact size of your window, in the fabric and colour you choose from real samples. One price for every fabric: <span class='price'>5 KD per square metre</span>, installation included.",
+    lead="We cut each roller blind to the exact size of your window, in the fabric and colour you choose from real samples. One price for every fabric: <span class='price'>8 KD per square metre</span>, installation included.",
     hero=("product_1786198230102_2d8yi-small.webp", "Dark grey roller blinds made to measure, Rumaithiya"),
     wa="Hello Salford, I'd like a quote for roller blinds (from salfordkw.shop/en/roller-blinds-kuwait.html)",
-    body="""<div class="stats"><div class="stat"><b>5 KD</b><span>Per square metre</span></div><div class="stat"><b>1–3 days</b><span>Made and installed</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
+    body="""<div class="stats"><div class="stat"><b>8 KD</b><span>Per square metre</span></div><div class="stat"><b>1–3 days</b><span>Made and installed</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
 <section>
 <h2>Roller blind fabrics — all at the same price</h2>
-<p>Every fabric costs 5 KD per square metre, so you choose by what the room needs, not by budget.</p>
+<p>Every fabric costs 8 KD per square metre, so you choose by what the room needs, not by budget.</p>
 <table>
 <thead><tr><th>Fabric</th><th>What it does</th><th>Best for</th></tr></thead>
 <tbody>
@@ -540,7 +540,7 @@ PAGES.append(dict(
     ]) + """
 </section>""",
     faqs=[
-        ("How much do roller blinds cost in Kuwait?", "5 KD per square metre for every fabric — standard, silver heat-reflective, sun-blocking or linen-look. Installation is included."),
+        ("How much do roller blinds cost in Kuwait?", "8 KD per square metre for every fabric — standard, silver heat-reflective, sun-blocking or linen-look. Installation is included."),
         ("How is the square metre calculated?", "We multiply the width by the height of the blind in metres. For example, a blind 2 m wide and 1.5 m high is 3 square metres. The exact price is confirmed in writing after the free visit."),
         ("Do you make motorised roller blinds?", "Yes. We fit manual chain blinds and electric motorised blinds, which can work with a remote or a smart-home system. We explain the price difference at the visit."),
         ("Can you install a roller blind I bought somewhere else?", "We mainly install blinds we make, so the track and size match exactly. For ready-made blinds, contact us first so we can check whether they can be installed to the same standard."),
@@ -551,7 +551,7 @@ PAGES.append(dict(
         "serviceType": "Roller blinds", "name": "Made-to-measure roller blinds in Kuwait",
         "provider": {"@id": f"{SITE}/#business"}, "areaServed": {"@type": "Country", "name": "Kuwait"},
         "offers": {"@type": "Offer", "priceCurrency": "KWD",
-                   "priceSpecification": {"@type": "UnitPriceSpecification", "price": 5, "priceCurrency": "KWD", "unitText": "square metre"}}}],
+                   "priceSpecification": {"@type": "UnitPriceSpecification", "price": 8, "priceCurrency": "KWD", "unitText": "square metre"}}}],
 ))
 
 # ---- Sheer curtains
