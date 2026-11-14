@@ -9,6 +9,7 @@ ALL_PRODUCTS:START / ALL_PRODUCTS:END قبل </main> مباشرة.
 
 قواعد ثابتة (حماية الترتيب):
 - لا يغيّر العنوان أو الوصف أو H1 أو النص أو الـSchema الموجود في الصفحة.
+- المنتجات المعلَّمة hidden:true تُستثنى، مثل ما تفعل صفحة القسم نفسها.
 - إضافة فقط في آخر المحتوى؛ إعادة التشغيل تستبدل القسم القديم (لا تكرار).
 
 شغّله بعد أي إضافة/حذف/تعديل اسم منتج:
@@ -40,6 +41,8 @@ BLOCK_RE = re.compile(r'<!-- ALL_PRODUCTS:START -->.*?<!-- ALL_PRODUCTS:END -->\
 def block(section, title, products):
     items = []
     for p in products:
+        if p.get('hidden'):  # نفس قاعدة صفحة القسم: المنتج المخفي (بلا سعر مؤكَّد) لا يُعرض ولا يُربط
+            continue
         slug = p.get('slug')
         if not slug or not (ROOT / 'catalog' / f'{section}-{slug}.html').exists():
             continue
