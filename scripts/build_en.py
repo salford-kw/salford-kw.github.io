@@ -300,11 +300,11 @@ PAGES.append(dict(
 <section>
 <h2>What we make</h2>
 <div class="cards">
-<div class="card"><h3><a href="/en/curtains-kuwait.html">Curtains and blinds →</a></h3><p>Wave, <a href="/en/blackout-curtains-kuwait.html">blackout</a>, <a href="/en/sheer-curtains-kuwait.html">sheer</a> and <a href="/en/roller-blinds-kuwait.html">roller blinds</a>, made to the size of each window. Roller blinds <span class="price">8 KD per square metre</span>.</p></div>
+<div class="card"><h3><a href="/en/curtains-kuwait.html">Curtains and blinds →</a></h3><p><a href="/en/wave-curtains-kuwait.html">Wave</a>, <a href="/en/blackout-curtains-kuwait.html">blackout</a>, <a href="/en/sheer-curtains-kuwait.html">sheer</a> and <a href="/en/roller-blinds-kuwait.html">roller blinds</a>, made to the size of each window. Roller blinds <span class="price">8 KD per square metre</span>.</p></div>
 <div class="card"><h3><a href="/en/custom-sofas-kuwait.html">Sofas and upholstery →</a></h3><p><a href="/en/custom-sofas-kuwait.html">New sofas</a> built to your measurements, plus <a href="/en/sofa-upholstery-kuwait.html">re-upholstery</a> and <a href="/en/sofa-slipcovers-kuwait.html">slipcovers</a> for the sofas you already own.</p></div>
-<div class="card"><h3>Arabic majlis seating</h3><p>Floor seating, back cushions and wooden majlis frames for diwaniyas and living rooms.</p></div>
+<div class="card"><h3><a href="/en/majlis-seating-kuwait.html">Arabic majlis seating →</a></h3><p>Floor seating, back cushions and wooden majlis frames for diwaniyas and living rooms.</p></div>
 <div class="card"><h3><a href="/en/carpets-kuwait.html">Carpets →</a></h3><p>Turkish carpet from Bursa mills, cut to size or by the metre, from <span class="price">11 KD per metre</span>, plus <a href="/en/mosque-carpet-kuwait.html">mosque carpet</a> and office carpet.</p></div>
-<div class="card"><h3>Artificial grass and flooring</h3><p>Artificial grass for gardens and roofs, and parquet flooring, supplied and installed.</p></div>
+<div class="card"><h3>Artificial grass and flooring</h3><p><a href="/en/artificial-grass-kuwait.html">Artificial grass</a> for gardens and roofs, and <a href="/en/parquet-flooring-kuwait.html">parquet flooring</a>, supplied and installed.</p></div>
 </div>
 </section>
 <section>
@@ -362,7 +362,7 @@ PAGES.append(dict(
 <h2>Which curtain suits which room?</h2>
 <h3><a href="/en/blackout-curtains-kuwait.html">Blackout curtains</a> — bedrooms and day sleepers</h3>
 <p>A dense, opaque fabric that blocks almost all light and much of the sun's heat. It is the first choice for bedrooms through the Kuwaiti summer, and for anyone who sleeps during the day.</p>
-<h3>Wave curtains — living rooms and majlis</h3>
+<h3><a href="/en/wave-curtains-kuwait.html">Wave curtains</a> — living rooms and majlis</h3>
 <p>Fabric folded into even waves that hide the track completely. It gives a neat, hotel-style look in living rooms, reception rooms and large bedrooms.</p>
 <h3><a href="/en/sheer-curtains-kuwait.html">Sheer curtains</a> — soft daylight</h3>
 <p>A light, see-through fabric that lets in soft light instead of full darkness. It is often paired with a heavier curtain so you can switch between privacy and light.</p>
@@ -1017,6 +1017,200 @@ PAGES.append(dict(
         ("Is there a warranty?", "The warranty depends on the service and the materials used, and is agreed with you when you order."),
         ("How do I book a measuring visit or get a quote?", "Message us on WhatsApp or call +965 5594 3343. We visit to take measurements and inspect the space, free of charge."),
         ("How long has Salford been in business?", "Salford was founded in 2016 and has completed more than 790 projects in Kuwait since then."),
+    ],
+))
+
+# ---- Wave curtains
+PAGES.append(dict(
+    path="/en/wave-curtains-kuwait.html", file="en/wave-curtains-kuwait.html", ar="/sataer-wafi-kuwait.html",
+    crumb="Wave curtains", parent=("Curtains in Kuwait", "/en/curtains-kuwait.html"),
+    title="Wave Curtains in Kuwait — From 12 KD per Linear Metre | Salford",
+    desc="Made-to-measure wave curtains in Kuwait: 12 KD per linear metre for a single layer, 19 KD with a sheer layer. Free home measuring, tracks and fitting included.",
+    h1="Wave curtains in Kuwait",
+    lead="Wave curtains hang in even, continuous folds that hide the track completely. We make them to the width of your window: <span class='price'>12 KD per linear metre</span> for a single layer and <span class='price'>19 KD per linear metre</span> for a double layer with sheer.",
+    hero=("product_1786197651322_1zw0r-small.webp", "Wave curtain made and installed by Salford in Kuwait"),
+    wa="Hello Salford, I'd like a quote for wave curtains (from salfordkw.shop/en/wave-curtains-kuwait.html)",
+    body="""<div class="stats"><div class="stat"><b>12 KD</b><span>Per linear metre, single layer</span></div><div class="stat"><b>19 KD</b><span>Per linear metre, with sheer</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
+<section>
+<h2>What a wave curtain is</h2>
+<p>The fabric is sewn onto a special wave tape that makes it fall in regular, equal folds along the track. The folds cover the track, so the curtain looks neat and tailored compared with traditional pleats. It is the style most often chosen for living rooms and majlis rooms.</p>
+</section>
+<section>
+<h2>Wave curtain prices</h2>
+<table>
+<thead><tr><th>Type</th><th>Price</th><th>Unit</th></tr></thead>
+<tbody>
+<tr><td>Single layer (fabric only)</td><td class="price">12 KD</td><td>per linear metre</td></tr>
+<tr><td>Double layer (fabric with sheer)</td><td class="price">19 KD</td><td>per linear metre</td></tr>
+</tbody>
+</table>
+<p>Wave curtains are priced by the linear metre of curtain width. The final price is confirmed after the free measuring visit, according to the width of the window and the fabric you choose.</p>
+</section>
+<section>
+<h2>Wave, roller or blackout?</h2>
+<p>Wave curtains are folded fabric with an elegant look for living rooms and majlis. <a href="/en/roller-blinds-kuwait.html">Roller blinds</a> are a single panel that rolls up with a simple movement and suit practical spaces. <a href="/en/blackout-curtains-kuwait.html">Blackout</a> is a dense, opaque fabric that blocks the light and suits bedrooms. A wave curtain can also be made in blackout fabric, which combines the tailored look with full darkness, and it can be paired with a <a href="/en/sheer-curtains-kuwait.html">sheer</a> layer.</p>
+</section>
+<section>
+<h2>Fabrics, colours and timing</h2>
+<p>We stock Turkish fabrics in several weights and colours, from light neutrals to dark shades, and bring the real samples to the visit.</p>
+<table>
+<thead><tr><th>Order</th><th>Made and installed in</th></tr></thead>
+<tbody>
+<tr><td>Wave curtain for one window</td><td>2 to 3 days</td></tr>
+<tr><td>Wave curtains for a whole living room</td><td>3 to 4 days</td></tr>
+</tbody>
+</table>
+<p>Pay by KNET, Wamd or cash.</p>
+</section>
+<section>
+<h2>Recent wave curtain work in Kuwait</h2>
+""" + gallery([
+        ("product_1786197651322_1zw0r-small.webp", "Wave curtain made by Salford"),
+        ("product_1786197817583_avoyf-small.webp", "Wave curtain installed in Hawally"),
+        ("product_1786197896191_q4zpp-small.webp", "Wave curtain installed in Sulaibikhat"),
+        ("product_1786198933149_374vc-small.webp", "Wave curtain installed in Mangaf"),
+        ("product_1786400488164_4y442-small.webp", "Linen wave curtain installed in Surra"),
+        ("product_1786936411041_l1ylj-small.webp", "Wave curtains installed in Salwa"),
+    ]) + """
+</section>""",
+    faqs=[
+        ("How much do wave curtains cost in Kuwait?", "Wave curtains are priced per linear metre of curtain width: 12 KD for a single layer and 19 KD for a double layer with sheer. Measuring at home is free, and the final price is confirmed after measuring."),
+        ("What is a wave curtain?", "A curtain sewn onto wave tape so the fabric falls in regular, even folds that hide the track completely."),
+        ("Can a wave curtain be made in blackout fabric?", "Yes. A wave curtain can be made in an opaque blackout fabric, which is a popular choice for bedrooms."),
+        ("What colours and fabrics are available?", "Turkish fabrics in several weights and colours, from light and neutral to dark. We show you the real samples during the visit."),
+        ("How long does it take to make and install wave curtains?", "Usually 2 to 3 days for one window and up to 4 days for a whole living room, depending on the number of windows and the fabric."),
+    ],
+))
+
+# ---- Majlis seating
+PAGES.append(dict(
+    path="/en/majlis-seating-kuwait.html", file="en/majlis-seating-kuwait.html", ar="/majalis.html",
+    crumb="Majlis seating",
+    title="Arabic Majlis Seating in Kuwait — Made to Measure | Salford",
+    desc="Custom Arabic majlis seating in Kuwait: back cushions from 9 KD per metre, wood-framed majlis and diwaniya seating made to the size of your room. Free home measuring.",
+    h1="Arabic majlis seating in Kuwait",
+    lead="We make majlis and diwaniya seating to the exact size of the room: floor seating, back cushions and wood-framed decor majlis. Foam back cushions start from <span class='price'>9 KD per metre</span>.",
+    hero=("product_1786197137080_9mvpg-small.webp", "Decor majlis with back cushions made by Salford, Sabah Al-Nasser"),
+    wa="Hello Salford, I'd like a quote for majlis seating (from salfordkw.shop/en/majlis-seating-kuwait.html)",
+    body="""<div class="stats"><div class="stat"><b>3 days</b><span>Back cushions</span></div><div class="stat"><b>15 days</b><span>Wooden decor majlis</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
+<section>
+<h2>What we make</h2>
+<p>A majlis is the traditional Arabic sitting room, with seating that runs along the walls. We make the seating for it in our own workshop: foam back cushions, back cushions with a decorative wooden frame, ready floor seating, and full diwaniya seating in modern or formal styles.</p>
+</section>
+<section>
+<h2>Majlis seating prices</h2>
+<table>
+<thead><tr><th>Type</th><th>Price</th><th>Unit</th></tr></thead>
+<tbody>
+<tr><td>Foam back cushions</td><td class="price">9–11 KD</td><td>per metre</td></tr>
+<tr><td>Back cushions with a decorative wooden frame</td><td class="price">18–22 KD</td><td>per metre</td></tr>
+<tr><td>Formal diwaniya seating</td><td class="price">from 45 KD</td><td>per metre</td></tr>
+</tbody>
+</table>
+<p>Prices are per metre of seating. You get the full price in writing after the free measuring visit.</p>
+</section>
+<section>
+<h2>Fabrics</h2>
+<p>We offer a wide range of fabrics, including jacquard, chenille and velvet, as well as stain-resistant fabrics for everyday use, in colours to suit your room. We bring the samples to the visit.</p>
+</section>
+<section>
+<h2>Timing and payment</h2>
+<table>
+<thead><tr><th>Order</th><th>Ready in</th></tr></thead>
+<tbody>
+<tr><td>Back cushions</td><td>3 days</td></tr>
+<tr><td>Wooden decor majlis</td><td>15 days</td></tr>
+</tbody>
+</table>
+<p>The time depends on the size of the order and the design. Pay by KNET, Wamd or cash. Many customers pair the majlis with <a href="/en/carpets-kuwait.html">fitted carpet</a> and <a href="/en/curtains-kuwait.html">curtains</a>.</p>
+</section>
+<section>
+<h2>Recent majlis work in Kuwait</h2>
+""" + gallery([
+        ("product_1786197137080_9mvpg-small.webp", "Decor majlis with back cushions, Sabah Al-Nasser"),
+        ("product_1786197241858_htow3-small.webp", "Foam back cushions, Rumaithiya"),
+        ("product_1786197321662_86vbd-small.webp", "Foam back cushions, Jahra"),
+        ("product_1786199228713_43tsh-small.webp", "Diwaniya back cushions, Mangaf"),
+        ("product_1786199322367_bigmt-small.webp", "Majlis back cushions with a decorative wooden frame"),
+        ("product_1786199152811_tdgp5-small.webp", "Foam diwaniya back cushions"),
+    ]) + """
+</section>""",
+    faqs=[
+        ("Do you make majlis seating to order?", "Yes. We specialise in custom decor majlis, back cushions and Kuwaiti diwaniya seating, made to the size and style you choose."),
+        ("What fabrics are available?", "A wide range including jacquard, chenille and velvet, plus stain-resistant fabrics for everyday use, in many colours."),
+        ("Do you measure at home?", "Yes. Measuring and inspection at home are free in every area of Kuwait, so the majlis is made to the correct size."),
+        ("How long does a majlis take to make?", "It depends on the size and design: back cushions take about 3 days and a wooden decor majlis about 15 days."),
+        ("Is there a warranty?", "Yes, we give a warranty on the quality of the tailoring and stitching. Call +965 5594 3343 for the details."),
+    ],
+))
+
+# ---- Parquet
+PAGES.append(dict(
+    path="/en/parquet-flooring-kuwait.html", file="en/parquet-flooring-kuwait.html", ar="/parquet-kuwait.html",
+    crumb="Parquet flooring",
+    title="Parquet Flooring in Kuwait — From 9 KD per Metre | Salford",
+    desc="Moisture-resistant synthetic parquet flooring in Kuwait from 9 KD per metre, in light and dark wood shades. Supplied and installed, with free home measuring.",
+    h1="Parquet flooring in Kuwait",
+    lead="Synthetic parquet that resists moisture and handles daily use, in a wide range of light and dark wood shades. From <span class='price'>9 KD per metre</span>, supplied and installed.",
+    hero=("parquet-04-small.webp", "Synthetic parquet installed in a bright living room by Salford"),
+    wa="Hello Salford, I'd like a quote for parquet flooring (from salfordkw.shop/en/parquet-flooring-kuwait.html)",
+    body="""<div class="stats"><div class="stat"><b>From 9 KD</b><span>Per metre</span></div><div class="stat"><b>Moisture</b><span>Resistant</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
+<section>
+<h2>Why synthetic parquet</h2>
+<p>The material is made to resist moisture and to take daily use without cracking or swelling, unlike natural wood parquet, which is easily affected by moisture. It suits bedrooms, living rooms and offices.</p>
+</section>
+<section>
+<h2>Shades and price</h2>
+<p>We carry a wide range of wood shades, light and dark, and show them to you during the visit so you can choose what suits your interior. Synthetic parquet starts from <span class="price">9 KD per metre</span>. Measuring at home is free, and the final price depends on the area and the shade you choose. Pay by KNET, Wamd or cash.</p>
+</section>
+<section>
+<h2>Parquet shades and installations</h2>
+""" + gallery([
+        ("parquet-04-small.webp", "Synthetic parquet installed in a bright living room"),
+        ("parquet-05-small.webp", "Parquet fitted neatly along the wall edges"),
+        ("parquet-01-small.webp", "A range of synthetic parquet colours"),
+        ("parquet-02-small.webp", "Different wood shades of synthetic parquet"),
+    ]) + """
+</section>""",
+    faqs=[
+        ("How much does parquet flooring cost in Kuwait?", "Synthetic parquet starts from 9 KD per metre. Measuring at home is free, and the final price depends on the area and the shade you choose."),
+        ("Is synthetic parquet really moisture-resistant?", "Yes. The material is designed to resist moisture and handles daily use without cracking or swelling, unlike natural wood parquet."),
+        ("Are different colours and shades available?", "Yes, a wide range of light and dark wood shades. We show them to you during the visit."),
+    ],
+))
+
+# ---- Artificial grass
+PAGES.append(dict(
+    path="/en/artificial-grass-kuwait.html", file="en/artificial-grass-kuwait.html", ar="/theel-sinaei-kuwait.html",
+    crumb="Artificial grass",
+    title="Artificial Grass in Kuwait — 6 mm, From 9 KD per Metre | Salford",
+    desc="Artificial grass in Kuwait, 6 mm thick, from 9 KD per metre. Sun-resistant with good water drainage, for gardens, roofs and outdoor seating. Free home measuring.",
+    h1="Artificial grass in Kuwait",
+    lead="Artificial grass 6 mm thick with a natural look, made for outdoor use in Kuwait's sun. From <span class='price'>9 KD per metre</span>, with free home measuring.",
+    hero=("theel-sinaei-02-small.webp", "Artificial grass laid for an outdoor seating area on a house roof"),
+    wa="Hello Salford, I'd like a quote for artificial grass (from salfordkw.shop/en/artificial-grass-kuwait.html)",
+    body="""<div class="stats"><div class="stat"><b>From 9 KD</b><span>Per metre</span></div><div class="stat"><b>6 mm</b><span>Thickness</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
+<section>
+<h2>Made for outdoor use</h2>
+<p>The grass resists sunlight and is made for long outdoor use without losing its green colour. It drains water well, so water does not collect on it in the rainy season. It suits gardens, roofs and outdoor seating areas.</p>
+</section>
+<section>
+<h2>Price</h2>
+<p>Artificial grass 6 mm thick starts from <span class="price">9 KD per metre</span>. Measuring at home is free, and the final price depends on the area. Pay by KNET, Wamd or cash.</p>
+</section>
+<section>
+<h2>Artificial grass photos</h2>
+""" + gallery([
+        ("theel-sinaei-02-small.webp", "Artificial grass for an outdoor seating area on a house roof"),
+        ("theel-sinaei-01-small.webp", "Artificial grass, 6 mm thick"),
+        ("theel-sinaei-03-small.webp", "The artificial grass material up close"),
+        ("theel-sinaei-04-small.webp", "Close view in sunlight showing the density of the pile"),
+    ]) + """
+</section>""",
+    faqs=[
+        ("How much does artificial grass cost in Kuwait?", "Artificial grass 6 mm thick starts from 9 KD per metre. Measuring at home is free, and the final price depends on the area."),
+        ("Does artificial grass fade in the sun?", "No. The material resists sunlight and is made for long outdoor use without losing its natural green colour."),
+        ("Does water collect on artificial grass in winter?", "No. The grass has good water drainage that stops water collecting, which makes it suitable for outdoor use in the rainy season."),
     ],
 ))
 
