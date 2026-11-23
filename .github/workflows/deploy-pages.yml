@@ -1,0 +1,88 @@
+name: نشر الموقع مع المجدول
+
+# النشر المجدول (2026-11-23): يُبنى الموقع من الفرع الرئيسي كما هو، ثم يُطبَّق عليه كل منتج/عمل مجهّز في
+# scheduled/ حان publishDate له (scripts/release-scheduled.py)، ويُنشر. يعمل مع كل push وكل صباح 6:00
+# بتوقيت الكويت، فيظهر المجدول في يومه دون أي تدخل ودون commits على الفرع المحمي.
+# يتطلب: Settings → Pages → Source = GitHub Actions.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      released: ${{ steps.release.outputs.released }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: تطبيق المنتجات المجدولة التي حان موعدها
+        id: release
+        run: |
+          python3 scripts/release-scheduled.py
+          { echo "released<<EOF"; cat .released-urls.txt; echo; echo "EOF"; } >> "$GITHUB_OUTPUT"
+      - name: تجهيز ملفات الموقع (بدون المجدول)
+        run: |
+          mkdir -p _site
+          rsync -a --exclude '.git' --exclude '.github' --exclude 'scheduled' --exclude '_site' --exclude '.released-urls.txt' ./ _site/
+          touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  # إرسال صفحات المجدول المنشورة اليوم إلى IndexNow (صفحات الـpush يرسلها indexnow.yml)
+  indexnow:
+    needs: [build, deploy]
+    if: needs.build.outputs.released != ''
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Submit
+        env:
+          URLS: ${{ needs.build.outputs.released }}
+        run: |
+          python3 - << 'PYEOF'
+          import json, os, urllib.request
+          key, host = "2c6659d2883d7235ddef3670d1292ffc", "salfordkw.shop"
+          urls = [u.strip() for u in os.environ["URLS"].splitlines() if u.strip()]
+          if not urls: raise SystemExit(0)
+          body = {"host": host, "key": key, "keyLocation": f"https://{host}/{key}.txt", "urlList": urls}
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=json.dumps(body).encode(),
+                                       headers={"Content-Type": "application/json; charset=utf-8"}, method="POST")
+          print(urllib.request.urlopen(req, timeout=20).status, len(urls))
+          PYEOF
+
+  # GitHub يوقف الجداول تلقائيًا بعد 60 يومًا بلا commits؛ إعادة التفعيل عبر الـAPI تُبقي البناء اليومي يعمل
+  keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      actions: write
+    steps:
+      - name: إبقاء الجدول اليومي فعّالًا
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/deploy-pages.yml/enable"
