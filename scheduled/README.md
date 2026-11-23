@@ -7,3 +7,5 @@
 `.github/workflows/deploy-pages.yml` العناصر التي حان موعدها عبر `scripts/release-scheduled.py`.
 
 لعرض الجدول: `python3 scripts/release-scheduled.py --list`
+
+

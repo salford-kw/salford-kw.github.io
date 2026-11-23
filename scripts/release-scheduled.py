@@ -22,6 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'scripts'))
 from salford_items import apply_items, slug_of  # noqa: E402
+from salford_blog import apply_posts  # noqa: E402
 
 KUWAIT = timezone(timedelta(hours=3))
 
@@ -35,10 +36,15 @@ def main():
     if '--list' in args:
         for it in sorted(items, key=lambda it: it.get('publishDate', '')):
             print(it.get('publishDate'), '✅' if it in due else '⏳', it['code'])
+        apply_posts(ROOT, today, listing=True)
         return
     print(f'اليوم (الكويت): {today} — مجدول: {len(items)}، حان موعده: {len(due)}')
+    # المقالات المجدولة (scheduled/blog/) تُنشر مستقلة عن المنتجات
+    post_urls = apply_posts(ROOT, today)
+    for u in post_urls:
+        print('نُشر مقال:', u)
     if not due:
-        (ROOT / '.released-urls.txt').write_text('', encoding='utf-8')
+        (ROOT / '.released-urls.txt').write_text('\n'.join(post_urls), encoding='utf-8')
         return
     for it in due:
         for base, *_ in it['images']:
@@ -52,7 +58,7 @@ def main():
     urls = apply_items(due, ROOT, today)
     for script in ('landing-grids.py', 'catalog-related.py', 'category-index.py', 'inject-wa-src.py'):
         subprocess.run([sys.executable, str(ROOT / 'scripts' / script)], cwd=ROOT, check=True)
-    (ROOT / '.released-urls.txt').write_text('\n'.join(urls), encoding='utf-8')
+    (ROOT / '.released-urls.txt').write_text('\n'.join(urls + post_urls), encoding='utf-8')
     for it in due:
         print('نُشر:', it['publishDate'], slug_of(it))
 
