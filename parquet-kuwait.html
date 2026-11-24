@@ -140,7 +140,7 @@ header{background:linear-gradient(180deg, var(--bg-card) 0%, var(--bg-dark) 100%
 @keyframes pulse{0%,100%{box-shadow:0 4px 20px rgba(16,185,129,.3);}50%{box-shadow:0 4px 30px rgba(16,185,129,.6);}}
 footer{background:var(--bg-card);border-top:1px solid rgba(200,169,110,.15);text-align:center;padding:18px 14px;font-size:11px;color:var(--text-muted);line-height:2;}
 footer a{color:var(--gold-light);text-decoration:none;}
-.sticky{position:fixed;bottom:0;left:0;right:0;width:100%;display:grid;grid-template-columns:1fr 1fr;z-index:998;box-shadow:0 -3px 18px rgba(0,0,0,.6);}
+.sticky{position:fixed;bottom:0;left:0;right:0;width:100%;display:grid;grid-template-columns:1fr;z-index:998;box-shadow:0 -3px 18px rgba(0,0,0,.6);}
 .s-btn{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px;font-family:'Cairo',sans-serif;font-size:14px;font-weight:800;text-decoration:none;}
 .s-wa{background:#10B981;color:#fff;}
 .s-call{background:#C8A96E;color:var(--bg-dark);}
@@ -499,7 +499,6 @@ footer a{color:var(--gold-light);text-decoration:none;}
 </div>
 <div class="sticky">
   <a class="s-btn s-wa" href="https://wa.me/96555943343?text=مرحبا،%20أريد%20الاستفسار%20عن%20الباركيه%20الصناعي" target="_blank" rel="noopener">💬 واتساب</a>
-  <a class="s-btn s-call" href="tel:+96555943343">📞 اتصال</a>
 </div>
 <script>
 function toggleFaq(btn){const item=btn.parentElement;const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');}

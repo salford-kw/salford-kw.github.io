@@ -113,13 +113,13 @@ details{background:var(--card);border:1px solid var(--glow);border-radius:10px;p
 summary{cursor:pointer;font-weight:700;color:var(--gold-light)}
 details p{margin:8px 0 0}
 .areas{font-size:14px;color:var(--muted)}
-.cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.cta{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0}
 .btn{display:flex;align-items:center;justify-content:center;padding:14px 10px;border-radius:10px;font-weight:800;text-decoration:none;font-size:15px}
 .wa{background:#25D366;color:#06210f}
 .call{background:var(--gold);color:#1a1405}
 footer{border-top:1px solid var(--glow);padding:20px 0 10px;text-align:center;font-size:13px;color:var(--muted)}
 footer a{color:var(--gold-light)}
-.sticky{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;background:rgba(9,13,22,.96);border-top:1px solid var(--glow);z-index:50}
+.sticky{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr;gap:8px;padding:8px;background:rgba(9,13,22,.96);border-top:1px solid var(--glow);z-index:50}
 .sticky .btn{padding:12px 8px;font-size:14px}
 @media(min-width:700px){h1{font-size:32px}.grid{grid-template-columns:repeat(4,1fr)}}"""
 
@@ -240,7 +240,7 @@ def render(p):
 <div class="hero">
 <h1>{e(p['h1'])}</h1>
 <p class="lead">{p['lead']}</p>
-<div class="cta"><a class="btn wa" href="{wa}" target="_blank" rel="noopener">WhatsApp us</a><a class="btn call" href="tel:{PHONE}">Call {PHONE_DISPLAY}</a></div>
+<div class="cta"><a class="btn wa" href="{wa}" target="_blank" rel="noopener">WhatsApp us</a></div>
 {f'<div class="hero-img">{picture(hero[0], hero[1], eager=True)}</div>' if hero else ''}
 </div>
 {p['body']}
@@ -248,7 +248,7 @@ def render(p):
 <section>
 <h2>Areas we serve</h2>
 <p class="areas">We deliver and install across all of Kuwait, including {", ".join(AREAS)} and every other area.</p>
-<div class="cta"><a class="btn wa" href="{wa}" target="_blank" rel="noopener">Get a free quote on WhatsApp</a><a class="btn call" href="tel:{PHONE}">Call now</a></div>
+<div class="cta"><a class="btn wa" href="{wa}" target="_blank" rel="noopener">Get a free quote on WhatsApp</a></div>
 </section>
 </main>
 <footer class="wrap">
@@ -257,7 +257,7 @@ def render(p):
 <p><a href="https://www.instagram.com/salforad/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@salford_kuwait" target="_blank" rel="noopener">TikTok</a> · <a href="{p['ar']}" hreflang="ar" lang="ar">النسخة العربية</a></p>
 <p style="opacity:.6;font-size:11px;margin-top:6px">© 2026 Salford. All rights reserved.</p>
 </footer>
-<div class="sticky"><a class="btn wa" href="{wa}" target="_blank" rel="noopener">WhatsApp</a><a class="btn call" href="tel:{PHONE}">Call</a></div>
+<div class="sticky"><a class="btn wa" href="{wa}" target="_blank" rel="noopener">WhatsApp</a></div>
 <script src="/analytics.js" defer></script>
 {WA_SRC}
 </body>
