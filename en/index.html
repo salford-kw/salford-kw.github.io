@@ -71,13 +71,13 @@ details{background:var(--card);border:1px solid var(--glow);border-radius:10px;p
 summary{cursor:pointer;font-weight:700;color:var(--gold-light)}
 details p{margin:8px 0 0}
 .areas{font-size:14px;color:var(--muted)}
-.cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.cta{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0}
 .btn{display:flex;align-items:center;justify-content:center;padding:14px 10px;border-radius:10px;font-weight:800;text-decoration:none;font-size:15px}
 .wa{background:#25D366;color:#06210f}
 .call{background:var(--gold);color:#1a1405}
 footer{border-top:1px solid var(--glow);padding:20px 0 10px;text-align:center;font-size:13px;color:var(--muted)}
 footer a{color:var(--gold-light)}
-.sticky{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;background:rgba(9,13,22,.96);border-top:1px solid var(--glow);z-index:50}
+.sticky{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr;gap:8px;padding:8px;background:rgba(9,13,22,.96);border-top:1px solid var(--glow);z-index:50}
 .sticky .btn{padding:12px 8px;font-size:14px}
 @media(min-width:700px){h1{font-size:32px}.grid{grid-template-columns:repeat(4,1fr)}}</style>
 </head>
@@ -102,7 +102,7 @@ footer a{color:var(--gold-light)}
 <div class="hero">
 <h1>Furniture and furnishings in Kuwait, made to measure</h1>
 <p class="lead">Salford makes curtains, blinds, sofas, majlis seating and carpets to fit your home or office — then delivers and installs them anywhere in Kuwait. We have been doing this since 2016.</p>
-<div class="cta"><a class="btn wa" href="https://wa.me/96555943343?text=Hello%20Salford%2C%20I%27d%20like%20a%20quote%20%28from%20salfordkw.shop/en/%29" target="_blank" rel="noopener">WhatsApp us</a><a class="btn call" href="tel:+96555943343">Call +965 5594 3343</a></div>
+<div class="cta"><a class="btn wa" href="https://wa.me/96555943343?text=Hello%20Salford%2C%20I%27d%20like%20a%20quote%20%28from%20salfordkw.shop/en/%29" target="_blank" rel="noopener">WhatsApp us</a></div>
 <div class="hero-img"><img src="https://salfordkw.shop/products/product_1786197567265_jz8bl-small.webp" alt="Gold velvet drapes over a white swag sheer, made by Salford in Kuwait" width="800" height="800" loading="eager" fetchpriority="high" decoding="async"></div>
 </div>
 <div class="stats"><div class="stat"><b>2016</b><span>Founded</span></div><div class="stat"><b>790+</b><span>Projects completed</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
@@ -142,7 +142,7 @@ footer a{color:var(--gold-light)}
 <section>
 <h2>Areas we serve</h2>
 <p class="areas">We deliver and install across all of Kuwait, including Salmiya, Hawally, Kuwait City, Farwaniya, Jleeb Al-Shuyoukh, Khaitan, Mahboula, Fahaheel, Ahmadi, Jahra, Mubarak Al-Kabeer, Salwa, Rumaithiya, Bayan, Sabah Al-Salem, Qurain, Adan, Sabahiya, Riggae, Shuwaikh, Kaifan, Abdullah Al-Mubarak, Sulaibiya and every other area.</p>
-<div class="cta"><a class="btn wa" href="https://wa.me/96555943343?text=Hello%20Salford%2C%20I%27d%20like%20a%20quote%20%28from%20salfordkw.shop/en/%29" target="_blank" rel="noopener">Get a free quote on WhatsApp</a><a class="btn call" href="tel:+96555943343">Call now</a></div>
+<div class="cta"><a class="btn wa" href="https://wa.me/96555943343?text=Hello%20Salford%2C%20I%27d%20like%20a%20quote%20%28from%20salfordkw.shop/en/%29" target="_blank" rel="noopener">Get a free quote on WhatsApp</a></div>
 </section>
 </main>
 <footer class="wrap">
@@ -151,7 +151,7 @@ footer a{color:var(--gold-light)}
 <p><a href="https://www.instagram.com/salforad/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@salford_kuwait" target="_blank" rel="noopener">TikTok</a> · <a href="/" hreflang="ar" lang="ar">النسخة العربية</a></p>
 <p style="opacity:.6;font-size:11px;margin-top:6px">© 2026 Salford. All rights reserved.</p>
 </footer>
-<div class="sticky"><a class="btn wa" href="https://wa.me/96555943343?text=Hello%20Salford%2C%20I%27d%20like%20a%20quote%20%28from%20salfordkw.shop/en/%29" target="_blank" rel="noopener">WhatsApp</a><a class="btn call" href="tel:+96555943343">Call</a></div>
+<div class="sticky"><a class="btn wa" href="https://wa.me/96555943343?text=Hello%20Salford%2C%20I%27d%20like%20a%20quote%20%28from%20salfordkw.shop/en/%29" target="_blank" rel="noopener">WhatsApp</a></div>
 <script src="/analytics.js" defer></script>
 <script>/*wa-src*/(function(){var S="سالفورد",R=/wa\.me\/\+?\d|(api\.whatsapp\.com\/|whatsapp:\/\/)send\?(.*&)?phone=\d/i;function cl(t){return(t||"").replace(/\s+/g," ").trim()}function sec(){var h=document.querySelector("h1");return(cl(h&&h.textContent)||cl(document.title).split(/ [|—–] /)[0]).slice(0,90)}function item(a){var c=a&&a.closest&&a.closest("article,li,[class*=card],[class*=product]");if(!c||c===document.body)return"";var h=c.querySelector("h2,h3,h4");var t=cl(h&&h.textContent);return t&&t!==sec()?t.slice(0,80):""}function tag(a){var i=item(a);return"📍 "+S+" — "+sec()+(i?" — "+i:"")}function add(u,a){try{if(!u||!R.test(u))return u;var m=u.match(/([?&]text=)([^&#]*)/),t="";if(m){try{t=decodeURIComponent(m[2].replace(/\+/g," "))}catch(e){t=m[2]}}if(t.indexOf("📍")===0)return u;var n=encodeURIComponent(tag(a)+"\n"+t);return m?u.replace(m[0],m[1]+n):u+(u.indexOf("?")<0?"?":"&")+"text="+n}catch(e){return u}}window.waSrc=add;document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.getAttribute("href"),n=add(h,a);if(n!==h)a.setAttribute("href",n)},true);var o=window.open;window.open=function(u){var x=[].slice.call(arguments);if(typeof u=="string")x[0]=add(u,document.activeElement);return o.apply(window,x)}})();</script>
 </body>

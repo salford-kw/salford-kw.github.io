@@ -31,6 +31,8 @@ jobs:
         id: release
         run: |
           python3 scripts/release-scheduled.py
+          # واتساب فقط: أي صفحة (جديدة من لوحة الإدارة أو مجدولة) تُنشر بلا زر اتصال
+          python3 scripts/whatsapp-only.py --check
           { echo "released<<EOF"; cat .released-urls.txt; echo; echo "EOF"; } >> "$GITHUB_OUTPUT"
       - name: تجهيز ملفات الموقع (بدون المجدول)
         run: |
