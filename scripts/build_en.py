@@ -338,7 +338,7 @@ PAGES.append(dict(
 PAGES.append(dict(
     path="/en/curtains-kuwait.html", file="en/curtains-kuwait.html", ar="/sataer.html", crumb="Curtains in Kuwait",
     title="Custom Curtains in Kuwait, Measured & Installed | Salford",
-    desc="Made-to-measure curtains in Kuwait: roller blinds 8 KD per sq m, blackout from 14 KD per metre. Free home measuring, installed in 1–3 days.",
+    desc="Made-to-measure curtains in Kuwait: roller blinds 8 KD per sq m, blackout from 12 KD per linear metre. Free home measuring, installed in 1–3 days.",
     h1="Custom curtains in Kuwait, measured and installed",
     lead="We make wave, blackout, sheer and roller curtains to the exact size of your windows, then install them with the tracks included. Most orders are made and installed within 1 to 3 days.",
     hero=("product_1786197651322_1zw0r-small.webp", "Floor-to-ceiling beige wave curtains made by Salford in Kuwait"),
@@ -351,7 +351,7 @@ PAGES.append(dict(
 <thead><tr><th>Type</th><th>Price</th><th>Unit</th></tr></thead>
 <tbody>
 <tr><td>Roller blinds — plain, silver heat-reflective or blackout fabric</td><td class="price">8 KD</td><td>per square metre</td></tr>
-<tr><td>Blackout curtains</td><td class="price">from 14 KD</td><td>per metre</td></tr>
+<tr><td>Blackout curtains</td><td class="price">from 12 KD</td><td>per linear metre</td></tr>
 <tr><td>Wave curtains (single layer)</td><td class="price">12 KD</td><td>per linear metre</td></tr>
 <tr><td>Wave curtains with sheer (double layer)</td><td class="price">19 KD</td><td>per linear metre</td></tr>
 </tbody>
@@ -401,7 +401,7 @@ PAGES.append(dict(
             {"@type": "Offer", "name": "Roller blinds", "priceCurrency": "KWD",
              "priceSpecification": {"@type": "UnitPriceSpecification", "price": 8, "priceCurrency": "KWD", "unitText": "square metre"}},
             {"@type": "Offer", "name": "Blackout curtains", "priceCurrency": "KWD",
-             "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 14, "priceCurrency": "KWD", "unitText": "metre"}},
+             "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 12, "priceCurrency": "KWD", "unitText": "linear metre"}},
         ]}],
 ))
 
@@ -409,13 +409,13 @@ PAGES.append(dict(
 PAGES.append(dict(
     path="/en/blackout-curtains-kuwait.html", file="en/blackout-curtains-kuwait.html", ar="/sataer-blackout-kuwait.html",
     crumb="Blackout curtains", parent=("Curtains in Kuwait", "/en/curtains-kuwait.html"),
-    title="Blackout Curtains in Kuwait — From 14 KD per Metre | Salford",
-    desc="Made-to-measure blackout curtains in Kuwait from 14 KD per metre. Block light and summer heat in bedrooms. Free home measuring, installed in 1–3 days.",
+    title="Blackout Curtains in Kuwait — From 12 KD per Metre | Salford",
+    desc="Made-to-measure blackout curtains in Kuwait from 12 KD per linear metre. Block light and summer heat in bedrooms. Free home measuring, installed in 1–3 days.",
     h1="Blackout curtains in Kuwait",
-    lead="A dense, layered fabric that blocks as much outside light and heat as possible — unlike ordinary curtains, which only soften the light. Made to the size of each window, from <span class='price'>14 KD per metre</span>.",
+    lead="A dense, layered fabric that blocks as much outside light and heat as possible — unlike ordinary curtains, which only soften the light. Made to the size of each window, from <span class='price'>12 KD per linear metre</span>.",
     hero=("product_1786197817583_avoyf-small.webp", "Grey sun-blocking drapes with tiebacks over a white sheer, Hawally"),
     wa="Hello Salford, I'd like a quote for blackout curtains (from salfordkw.shop/en/blackout-curtains-kuwait.html)",
-    body="""<div class="stats"><div class="stat"><b>14 KD</b><span>From, per metre</span></div><div class="stat"><b>1–3 days</b><span>Made and installed</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
+    body="""<div class="stats"><div class="stat"><b>12 KD</b><span>From, per linear metre</span></div><div class="stat"><b>1–3 days</b><span>Made and installed</span></div><div class="stat"><b>Free</b><span>Home measuring</span></div></div>
 <section>
 <h2>Why blackout curtains matter in a Kuwaiti summer</h2>
 <p>Direct summer sun makes east- and west-facing rooms very hot, even behind ordinary curtains. A dense blackout layer reflects much of that sunlight before it enters the room, which eases the load on your air conditioning and keeps the room cooler for longer, especially around midday.</p>
@@ -426,7 +426,7 @@ PAGES.append(dict(
 <table>
 <thead><tr><th>Item</th><th>Price or time</th></tr></thead>
 <tbody>
-<tr><td>Blackout fabric, made to measure</td><td class="price">from 14 KD per metre</td></tr>
+<tr><td>Blackout fabric, made to measure</td><td class="price">12 KD per linear metre (single layer), 19 KD with sheer</td></tr>
 <tr><td>Home measuring visit</td><td>free</td></tr>
 <tr><td>One or a few standard windows</td><td>1 to 2 days</td></tr>
 <tr><td>A whole room or several rooms</td><td>up to 3 days</td></tr>
@@ -470,7 +470,7 @@ PAGES.append(dict(
     ]) + """
 </section>""",
     faqs=[
-        ("How much do blackout curtains cost in Kuwait?", "Our made-to-measure blackout curtains start from 14 KD per metre. You get the final price in writing after the free home visit."),
+        ("How much do blackout curtains cost in Kuwait?", "Our made-to-measure blackout curtains are 12 KD per linear metre (single layer) or 19 KD with a sheer layer. You get the final price in writing after the free home visit."),
         ("Do blackout curtains block heat as well as light?", "Yes. The dense blackout layer reflects much of the direct sunlight before it enters the room, which keeps the room cooler and eases the load on the air conditioning."),
         ("Are blackout curtains only available in black?", "No. The darkness comes from the weave and the inner lining, not the colour, so they come in many colours and patterns."),
         ("Can I have blackout and sheer together?", "Yes. We fit both on a double track: the sheer for soft daylight and privacy, the blackout for full darkness."),
@@ -481,7 +481,7 @@ PAGES.append(dict(
         "serviceType": "Blackout curtains", "name": "Made-to-measure blackout curtains in Kuwait",
         "provider": {"@id": f"{SITE}/#business"}, "areaServed": {"@type": "Country", "name": "Kuwait"},
         "offers": {"@type": "Offer", "priceCurrency": "KWD",
-                   "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 14, "priceCurrency": "KWD", "unitText": "metre"}}}],
+                   "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 12, "priceCurrency": "KWD", "unitText": "linear metre"}}}],
 ))
 
 # ---- Roller blinds
